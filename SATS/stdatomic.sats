@@ -110,7 +110,7 @@ fun
   atomic_compare_exchange_weak{a:t@ype+}( &a, a, &a ) : bool = "mac#"
 
 fun
-  atomic_fetch_add{a:t@ype+}( &a, a ) : a = "mac#"
+  atomic_fetch_add{a:t@ype+}( &a , a ) : a = "mac#"
 
 fun
   atomic_fetch_add_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
