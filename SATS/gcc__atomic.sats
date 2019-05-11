@@ -21,6 +21,7 @@ fun __atomic_exchange{a:t@ype+}( &a, &a, &a? >> a, memmodel ) : void = "mac#"
 fun __atomic_exchange_n{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
 
 (** Specific sized variants **)
+
 fun __atomic_load_1{a:t@ype+}( &a, memmodel ) : a = "mac#"
 fun __atomic_store_1{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
 fun __atomic_exchange_1{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
@@ -41,25 +42,6 @@ fun __atomic_load_16{a:t@ype+}( &a, memmodel ) : a = "mac#"
 fun __atomic_store_16{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
 fun __atomic_exchange_16{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
 
-fun __atomic_load_i1{a:t@ype+}( &a, memmodel ) : a = "mac#"
-fun __atomic_store_i1{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
-fun __atomic_exchange_i1{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
-
-fun __atomic_load_i2{a:t@ype+}( &a, memmodel ) : a = "mac#"
-fun __atomic_store_i2{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
-fun __atomic_exchange_i2{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
-
-fun __atomic_load_i4{a:t@ype+}( &a, memmodel ) : a = "mac#"
-fun __atomic_store_i4{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
-fun __atomic_exchange_i4{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
-
-fun __atomic_load_i8{a:t@ype+}( &a, memmodel ) : a = "mac#"
-fun __atomic_store_i8{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
-fun __atomic_exchange_i8{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
-
-fun __atomic_load_i16{a:t@ype+}( &a, memmodel ) : a = "mac#"
-fun __atomic_store_i16{a:t@ype+}( &a, a, memmodel ) : void = "mac#"
-fun __atomic_exchange_i16{a:t@ype+}( &a, a, memmodel ) : a = "mac#"
 (** ** **)
 
 fun __atomic_compare_exchange_n{a:t@ype+}( 
