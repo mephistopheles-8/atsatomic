@@ -1,6 +1,165 @@
 #include "share/atspre_staload.hats"
 
 
+fn __atomic_cats(
+   fr : FILEref
+ , ns : string
+ , prens : string
+ , ty : string 
+) : void = (
+    fprintln!(fr, "
+/** **/
+
+#define ",ns,"__atomic_load_",ty,"(p1,p2,mo)\\
+  __atomic_load((",prens,"_",ty,"*)p1, (",prens,"_",ty,"*)p2, mo)
+
+#define ",ns,"__atomic_load_n_",ty,"(p1,mo)\\
+  __atomic_load_n((",prens,"_",ty,"*)p1, mo)
+
+#define ",ns,"__atomic_store_",ty,"(p1,p2,mo)\\
+  __atomic_store((",prens,"_",ty,"*)p1, (",prens,"_",ty,"*)p2, mo)
+
+#define ",ns,"__atomic_store_n_",ty,"(p1,v,mo)\\
+  __atomic_store_n((",prens,"_",ty,"*)p1, v, mo)
+
+#define ",ns,"__atomic_exchange_",ty,"(p1,p2,p3,mo)\\
+  __atomic_exchange((",prens,"_",ty,"*)p1, (",prens,"_",ty,"*)p2, (",prens,"_",ty,"*)p3, mo)
+
+#define ",ns,"__atomic_exchange_n_",ty,"(p1,v,mo)\\
+  __atomic_exchange_n((",prens,"_",ty,"*)p1, v, mo)
+
+#define ",ns,"__atomic_compare_exchange_n_",ty,"(p1,p2,v,w,mo1,mo2)\\
+  __atomic_compare_exchange_n((",prens,"_",ty,"*)p1, (",prens,"_",ty,"*)p2,v,w,mo1,mo2)
+
+#define ",ns,"__atomic_compare_exchange_",ty,"(p1,p2,p3,w,mo1,mo2)\\
+  __atomic_compare_exchange((",prens,"_",ty,"*)p1, (",prens,"_",ty,"*)p2,(",prens,"_",ty,"*)p3,w,mo1,mo2)
+
+#define ",ns,"__atomic_add_fetch_",ty,"( p1, v, mo )\\
+  __atomic_add_fetch((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_sub_fetch_",ty,"( p1, v, mo )\\
+  __atomic_sub_fetch((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_and_fetch_",ty,"( p1, v, mo )\\
+  __atomic_and_fetch((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_xor_fetch_",ty,"( p1, v, mo )\\
+  __atomic_xor_fetch((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_or_fetch_",ty,"( p1, v, mo )\\
+  __atomic_or_fetch((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_nand_fetch_",ty,"( p1, v, mo )\\
+  __atomic_nand_fetch((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_fetch_add_",ty,"( p1, v, mo )\\
+  __atomic_fetch_add((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_fetch_sub_",ty,"( p1, v, mo )\\
+  __atomic_fetch_sub((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_fetch_and_",ty,"( p1, v, mo )\\
+  __atomic_fetch_and((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_fetch_xor_",ty,"( p1, v, mo )\\
+  __atomic_fetch_xor((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_fetch_or_",ty,"( p1, v, mo )\\
+  __atomic_fetch_or((",prens,"_",ty,"*)p1,v,mo)
+
+#define ",ns,"__atomic_fetch_nand_",ty,"( p1, v, mo )\\
+  __atomic_fetch_nand((",prens,"_",ty,"*)p1,v,mo)
+
+")
+
+
+  )
+
+fn __atomic_sats(
+    fr : FILEref 
+  , ty0 : string 
+) : void = (
+    fprintln!(fr,"
+
+fun __atomic_load_",ty0,"( &",ty1,", &",ty1,"? >> ",ty1,", memmodel ) : void = \"mac#%\"
+fun __atomic_load_n_",ty0,"( &",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+
+fun __atomic_store_",ty0,"( &",ty1," >> _, &",ty1,", memmodel ) : void = \"mac#%\"
+fun __atomic_store_n_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : void = \"mac#%\"
+
+fun __atomic_exchange_",ty0,"( &",ty1," >> _, &",ty1,", &",ty1,"? >> ",ty1,", memmodel ) : void = \"mac#%\"
+fun __atomic_exchange_n_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+
+fun __atomic_compare_exchange_n_",ty0,"( 
+      p: &",ty1," >> _
+    , expected: &",ty1,"
+    , desired: ",ty1,"
+    , weak: bool
+    , succ: memmodel
+    , fail: memmodel 
+  ) : bool = \"mac#%\"
+
+fun __atomic_compare_exchange_",ty0,"( 
+      p: &",ty1," >> _
+    , expected: &",ty1,"
+    , desired: &",ty1,"
+    , weak: bool
+    , succ: memmodel
+    , fail: memmodel 
+  ) : bool = \"mac#%\"
+
+fun __atomic_add_fetch_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_sub_fetch_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_and_fetch_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_xor_fetch_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_or_fetch_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_nand_fetch_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+
+fun __atomic_fetch_add_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_fetch_sub_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_fetch_and_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_fetch_xor_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_fetch_or_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+fun __atomic_fetch_nand_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
+
+overload __atomic_load with __atomic_load_",ty0,"
+overload __atomic_load_n with __atomic_load_n_",ty0,"
+
+overload __atomic_store with __atomic_store_",ty0,"
+overload __atomic_store_n with __atomic_store_n_",ty0,"
+
+overload __atomic_exchange with __atomic_exchange_",ty0,"
+overload __atomic_exchange_n with __atomic_exchange_n_",ty0,"
+
+overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_",ty0,"
+
+overload __atomic_compare_exchange with __atomic_compare_exchange_",ty0,"
+
+overload __atomic_add_fetch with __atomic_add_fetch_",ty0,"
+overload __atomic_sub_fetch with __atomic_sub_fetch_",ty0,"
+overload __atomic_and_fetch with __atomic_and_fetch_",ty0,"
+overload __atomic_xor_fetch with __atomic_xor_fetch_",ty0,"
+overload __atomic_or_fetch with __atomic_or_fetch_",ty0,"
+overload __atomic_nand_fetch with __atomic_nand_fetch_",ty0,"
+
+overload __atomic_fetch_add with __atomic_fetch_add_",ty0,"
+overload __atomic_fetch_sub with __atomic_fetch_sub_",ty0,"
+overload __atomic_fetch_and with __atomic_fetch_and_",ty0,"
+overload __atomic_fetch_xor with __atomic_fetch_xor_",ty0,"
+overload __atomic_fetch_or with __atomic_fetch_or_",ty0,"
+overload __atomic_fetch_nand with __atomic_fetch_nand_",ty0,"
+
+")
+  ) where {
+    val ty1 : string = ( 
+      ifcase 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
+      ) : string
+
+  }
+
 
 // We need: CATS / SATS
 // types are unanimous for all fns
@@ -249,6 +408,29 @@ implement main0()
     val _ = list_vt_foreach_env<string><FILEref>( types, fcats ) 
 
 
+
+    val () = fileref_close( fsats )
+    val () = fileref_close( fcats )
+    
+    //
+
+    var fsats = fileref_open_exn("__atomic_gen.sats", file_mode_ww )
+    var fcats = fileref_open_exn("__atomic_gen.cats", file_mode_ww )
+
+
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fsats ) =
+        __atomic_sats( fsats, ty ) 
+
+    val _ = list_vt_foreach_env<string><FILEref>( types, fsats ) 
+    
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fcats ) =
+        __atomic_cats( fcats, "atsatomic", "atstype", ty )
+ 
+    val _ = list_vt_foreach_env<string><FILEref>( types, fcats ) 
+
+    //
 
     val () = fileref_close( fsats )
     val () = fileref_close( fcats )

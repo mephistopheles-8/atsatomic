@@ -1,5 +1,5 @@
-#ifndef _ATS2_ATOMIC
-#define _ATS2_ATOMIC
+#ifndef _ATS2_STDATOMIC
+#define _ATS2_STDATOMIC
 
 #include <stdatomic.h>
 
