@@ -1,6 +1,9 @@
 (**
  ** An ATS2 wrapper for stdatomic.h
  **)
+
+#include "./../HATS/project.hats"
+
 %{#
 #include <stdatomic.h>
 %}
@@ -53,18 +56,16 @@ typedef atomic_intmax = $extype"atomic_intmax_t"
 typedef atomic_uintmax = $extype"atomic_uintmax_t"
 
 
-//#define ATOMIC_VAR_INIT(VALUE)	(VALUE)
+(** Try to bind these directly... **)
 
-fun ATOMIC_VAR_INIT{a:t@ype+}( a ) : a = "mac#"
+fun ATOMIC_VAR_INIT{a:t@ype+}( a ) : a = "mac#%"
 
-fun atomic_init{a:t@ype+}( &a? >> a, a ) : void = "mac#"  
+fun atomic_init{a:t@ype+}( &a? >> a, a ) : void = "mac#%"  
 
-fun kill_dependency{a:t@ype+}( a ) : a = "mac#"
+fun kill_dependency{a:t@ype+}( a ) : a = "mac#%"
 
-fun atomic_thread_fence{a:t@ype+}( mem : memory_order ) : void = "mac#"
-fun atomic_signal_fence{a:t@ype+}( mem : memory_order ) : void = "mac#"
-
-fun  atomic_is_lock_free{a:t@ype+}(&a) : bool = "mac#"
+fun atomic_thread_fence( mem : memory_order ) : void = "mac#%"
+fun atomic_signal_fence( mem : memory_order ) : void = "mac#%"
 
 abst@ype atomic_lock_free
 
@@ -79,73 +80,31 @@ macdef ATOMIC_LONG_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_LONG_LOCK_F
 macdef ATOMIC_LLONG_LOCK_FREE     = $extval(atomic_lock_free,"ATOMIC_LLONG_LOCK_FREE")
 macdef ATOMIC_POINTER_LOCK_FREE   = $extval(atomic_lock_free,"ATOMIC_POINTER_LOCK_FREE")
 
-fun
-  atomic_store_explicit{a:t@ype+}(&a? >> a, a, memory_order) : void = "mac#"
-
-fun
-  atomic_store{a:t@ype+}(&a? >> a, a ) : void = "mac#"
-
-fun
-  atomic_load_explicit{a:t@ype+}( &a, memory_order ) : a = "mac#"
-
-fun
-  atomic_load{a:t@ype+}( &a ) : a = "mac#"
-
-fun
-  atomic_exchange_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
-
-fun
-  atomic_exchange{a:t@ype+}( &a, a ) : a = "mac#"
-
-fun
-  atomic_compare_exchange_strong_explicit{a:t@ype+}( &a, a, &a, memory_order, memory_order  ) : bool = "mac#"
-
-fun
-  atomic_compare_exchange_strong{a:t@ype+}( &a, a, &a   ) : bool = "mac#"
-
-fun
-  atomic_compare_exchange_weak_explicit{a:t@ype+}( &a, a, &a, memory_order, memory_order  ) : bool = "mac#"
-
-fun
-  atomic_compare_exchange_weak{a:t@ype+}( &a, a, &a ) : bool = "mac#"
-
-fun
-  atomic_fetch_add{a:t@ype+}( &a , a ) : a = "mac#"
-
-fun
-  atomic_fetch_add_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
-
-fun
-  atomic_fetch_sub{a:t@ype+}( &a, a ) : a = "mac#"
-
-fun
-  atomic_fetch_sub_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
-
-fun
-  atomic_fetch_or{a:t@ype+}( &a, a ) : a = "mac#"
-
-fun
-  atomic_fetch_or_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
-
-fun
-  atomic_fetch_xor{a:t@ype+}( &a, a ) : a = "mac#"
-
-fun
-  atomic_fetch_xor_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
-
-fun
-  atomic_fetch_and{a:t@ype+}( &a, a ) : a = "mac#"
-
-fun
-  atomic_fetch_and_explicit{a:t@ype+}( &a, a, memory_order ) : a = "mac#"
 
 typedef atomic_flag = $extype"atomic_flag"
-macdef ATOMIC_FLAG_INIT = $extval(void,"ATOMIC_FLAG_INIT")
 
-fun atomic_flag_test_and_set( &atomic_flag ) : bool = "mac#"
-fun atomic_flag_test_and_set_explicit( &atomic_flag, memory_order ) : bool = "mac#"
+macdef ATOMIC_FLAG_INIT = $extval(atomic_flag,"ATOMIC_FLAG_INIT")
 
-fun atomic_flag_clear( &atomic_flag ) : bool = "mac#"
-fun atomic_flag_clear_explicit( &atomic_flag, memory_order ) : bool = "mac#"
+fun atomic_flag_test_and_set( &atomic_flag ) : bool = "mac#%"
+fun atomic_flag_test_and_set_explicit( &atomic_flag, memory_order ) : bool = "mac#%"
+
+fun atomic_flag_clear( &atomic_flag ) : bool = "mac#%"
+fun atomic_flag_clear_explicit( &atomic_flag, memory_order ) : bool = "mac#%"
+
+symintr atomic_init
+symintr atomic_store atomic_store_explicit
+symintr atomic_load atomic_load_explicit
+symintr atomic_exchange atomic_exchange_explicit
+symintr atomic_compare_exchange_strong atomic_compare_exchange_strong_explicit
+symintr atomic_compare_exchange_weak atomic_compare_exchange_weak_explicit
+
+symintr atomic_fetch_add atomic_fetch_add_explicit
+symintr atomic_fetch_sub atomic_fetch_sub_explicit
+symintr atomic_fetch_or atomic_fetch_or_explicit
+symintr atomic_fetch_xor atomic_fetch_xor_explicit
+symintr atomic_fetch_and atomic_fetch_and_explicit
+
+#include "./stdatomic_gen.sats"
+
 
 
