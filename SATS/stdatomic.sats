@@ -5,7 +5,7 @@
 #include "./../HATS/project.hats"
 
 %{#
-#include <stdatomic.h>
+#include "atsatomic/CATS/stdatomic.cats"
 %}
 
 typedef memory_order = $extype"memory_order"
@@ -59,8 +59,6 @@ typedef atomic_uintmax = $extype"atomic_uintmax_t"
 (** Try to bind these directly... **)
 
 fun ATOMIC_VAR_INIT{a:t@ype+}( a ) : a = "mac#%"
-
-fun atomic_init{a:t@ype+}( &a? >> a, a ) : void = "mac#%"  
 
 fun kill_dependency{a:t@ype+}( a ) : a = "mac#%"
 

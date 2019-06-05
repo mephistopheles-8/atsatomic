@@ -16,15 +16,15 @@ fn stdatomic_cats(
     fprintln!( fr, "
 /** **/
 
-#define ", ns ,"_atomic_init_", ty , " (p, v) atomic_init((",prens,"_",ty,"*)p, v)
+#define ", ns ,"_atomic_init_", ty , "(p, v) atomic_init((",prens,"_",ty,"*)p, v)
 
 #define ", ns ,"_atomic_is_lock_free_", ty , "(p) atomic_is_lock_free((",prens,"_",ty,"*)p)
 
 #define ", ns ,"_atomic_store_explicit_", ty , "(p,v,mo) atomic_store_explicit((",prens,",_",ty,"*)p, v, mo)
 
-#define ", ns ,"_atomic_store_", ty , " (p,v) atomic_store((",prens,"_",ty,"*)p, v)
+#define ", ns ,"_atomic_store_", ty , "(p,v) atomic_store((",prens,"_",ty,"*)p, v)
 
-#define ", ns ,"_atomic_load_explicit_", ty , " (p,mo) atomic_load_explicit((",prens,"_",ty,"*)p, mo) 
+#define ", ns ,"_atomic_load_explicit_", ty , "(p,mo) atomic_load_explicit((",prens,"_",ty,"*)p, mo) 
 
 #define ", ns ,"_atomic_load_", ty , "(p) atomic_load((",prens,"_",ty,"*)p) 
 
@@ -81,110 +81,110 @@ fn stdatomic_cats(
 
 fn stdatomic_sats(
     fr : FILEref 
-  , ty : string 
+  , ty0 : string 
 ) : void =
   (
 
     fprintln!( fr, "
 (** **)
 
-fun atomic_init_", ty , "( &", ty, "? >> ", ty ,", ", ty , ") : void = \"mac#%\"  
+fun atomic_init_", ty0 , "( &", ty1, "? >> ", ty1 ,", ", ty1 , ") : void = \"mac#%\"  
 
-fun  atomic_is_lock_free_", ty , "(&", ty , ") : bool = \"mac#%\"
-
-fun
-  atomic_store_explicit_", ty , "(&", ty , "? >> ",ty,", ",ty,", memory_order) : void = \"mac#%\"
+fun  atomic_is_lock_free_", ty0 , "(&", ty1 , ") : bool = \"mac#%\"
 
 fun
-  atomic_store_", ty , "(&", ty , "? >> ",ty,", ",ty," ) : void = \"mac#%\"
+  atomic_store_explicit_", ty0 , "(&", ty1 , "? >> ",ty1,", ",ty1,", memory_order) : void = \"mac#%\"
 
 fun
-  atomic_load_explicit_", ty , "( &", ty , ", memory_order ) : ",ty," = \"mac#%\"
+  atomic_store_", ty0 , "(&", ty1 , "? >> ",ty1,", ",ty1," ) : void = \"mac#%\"
 
 fun
-  atomic_load_", ty , "( &", ty , " ) : ",ty," = \"mac#%\"
+  atomic_load_explicit_", ty0 , "( &", ty1 , ", memory_order ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_exchange_explicit_", ty , "( &", ty , " >> _, ",ty,", memory_order ) : ",ty," = \"mac#%\"
+  atomic_load_", ty0 , "( &", ty1 , " ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_exchange_", ty , "( &", ty , " >> _, ",ty,") : ",ty," = \"mac#%\"
+  atomic_exchange_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_compare_exchange_strong_explicit_", ty , "( &", ty , " >> _, ",ty,", &", ty , " >> _, memory_order, memory_order  ) : bool = \"mac#%\"
+  atomic_exchange_", ty0 , "( &", ty1 , " >> _, ",ty1,") : ",ty1," = \"mac#%\"
 
 fun
-  atomic_compare_exchange_strong_", ty , "( &", ty , " >> _, ",ty,", &", ty , " >> _   ) : bool = \"mac#%\"
+  atomic_compare_exchange_strong_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _, memory_order, memory_order  ) : bool = \"mac#%\"
 
 fun
-  atomic_compare_exchange_weak_explicit_", ty , "( &", ty , " >> _, ",ty,", &", ty , " >> _, memory_order, memory_order  ) : bool = \"mac#%\"
+  atomic_compare_exchange_strong_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _   ) : bool = \"mac#%\"
 
 fun
-  atomic_compare_exchange_weak_", ty , "( &", ty , " >> _, ",ty,", &", ty , " >> _ ) : bool = \"mac#%\"
+  atomic_compare_exchange_weak_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _, memory_order, memory_order  ) : bool = \"mac#%\"
 
 fun
-  atomic_fetch_add_", ty , "( &", ty , " >> _ , ",ty," ) : ",ty," = \"mac#%\"
+  atomic_compare_exchange_weak_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _ ) : bool = \"mac#%\"
 
 fun
-  atomic_fetch_add_explicit_", ty , "( &", ty , " >> _, ",ty,", memory_order ) : ",ty," = \"mac#%\"
+  atomic_fetch_add_", ty0 , "( &", ty1 , " >> _ , ",ty1," ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_sub_", ty , "( &", ty , " >> _, ",ty," ) : ",ty," = \"mac#%\"
+  atomic_fetch_add_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_sub_explicit_", ty , "( &", ty , " >> _, ",ty,", memory_order ) : ",ty," = \"mac#%\"
+  atomic_fetch_sub_", ty0 , "( &", ty1 , " >> _, ",ty1," ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_or_", ty , "( &", ty , " >> _, ",ty," ) : ",ty," = \"mac#%\"
+  atomic_fetch_sub_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_or_explicit_", ty , "( &", ty , " >> _, ",ty,", memory_order ) : ",ty," = \"mac#%\"
+  atomic_fetch_or_", ty0 , "( &", ty1 , " >> _, ",ty1," ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_xor_", ty , "( &", ty , " >> _, ",ty," ) : ",ty," = \"mac#%\"
+  atomic_fetch_or_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_xor_explicit_", ty , "( &", ty , " >> _, ",ty,", memory_order ) : ",ty," = \"mac#%\"
+  atomic_fetch_xor_", ty0 , "( &", ty1 , " >> _, ",ty1," ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_and_", ty , "( &", ty , " >> _, ",ty," ) : ",ty," = \"mac#%\"
+  atomic_fetch_xor_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 fun
-  atomic_fetch_and_explicit_", ty , "( &", ty , " >> _, ",ty,", memory_order ) : ",ty," = \"mac#%\"
+  atomic_fetch_and_", ty0 , "( &", ty1 , " >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+
+fun
+  atomic_fetch_and_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 
-overload atomic_init with atomic_init_",ty,"
-overload atomic_store with atomic_store_",ty,"
-overload atomic_store_explicit with atomic_store_explicit_",ty,"
-overload atomic_load with atomic_load_",ty,"
-overload atomic_load_explicit with atomic_load_explicit_",ty,"
-overload atomic_exchange with atomic_exchange_",ty,"
-overload atomic_exchange_explicit with atomic_exchange_explicit_",ty,"
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_",ty,"
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_",ty,"
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_",ty,"
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_",ty,"
-overload atomic_fetch_add with atomic_fetch_add_",ty,"
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_",ty,"
-overload atomic_fetch_sub with atomic_fetch_sub_",ty,"
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_",ty,"
-overload atomic_fetch_or with atomic_fetch_or_",ty,"
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_",ty,"
-overload atomic_fetch_xor with atomic_fetch_xor_",ty,"
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_",ty,"
-overload atomic_fetch_and with atomic_fetch_and_",ty,"
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_",ty,"
+overload atomic_init with atomic_init_",ty0,"
+overload atomic_store with atomic_store_",ty0,"
+overload atomic_store_explicit with atomic_store_explicit_",ty0,"
+overload atomic_load with atomic_load_",ty0,"
+overload atomic_load_explicit with atomic_load_explicit_",ty0,"
+overload atomic_exchange with atomic_exchange_",ty0,"
+overload atomic_exchange_explicit with atomic_exchange_explicit_",ty0,"
+overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_",ty0,"
+overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_",ty0,"
+overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_",ty0,"
+overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_",ty0,"
+overload atomic_fetch_add with atomic_fetch_add_",ty0,"
+overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_",ty0,"
+overload atomic_fetch_sub with atomic_fetch_sub_",ty0,"
+overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_",ty0,"
+overload atomic_fetch_or with atomic_fetch_or_",ty0,"
+overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_",ty0,"
+overload atomic_fetch_xor with atomic_fetch_xor_",ty0,"
+overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_",ty0,"
+overload atomic_fetch_and with atomic_fetch_and_",ty0,"
+overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_",ty0,"
 
 ")
 
 
   ) where {
 
-    val ty : string = ( 
+    val ty1 : string = ( 
       ifcase 
-       | ty = "size" => "size_t"
-       | ty = "ssize" => "ssize_t"
-       | _ => ty 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
       ) : string
   }
 

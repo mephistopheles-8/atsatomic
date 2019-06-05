@@ -1,15 +1,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_bool (p, v) atomic_init((atstype_bool*)p, v)
+#define atsatomic_atomic_init_bool(p, v) atomic_init((atstype_bool*)p, v)
 
 #define atsatomic_atomic_is_lock_free_bool(p) atomic_is_lock_free((atstype_bool*)p)
 
 #define atsatomic_atomic_store_explicit_bool(p,v,mo) atomic_store_explicit((atstype,_bool*)p, v, mo)
 
-#define atsatomic_atomic_store_bool (p,v) atomic_store((atstype_bool*)p, v)
+#define atsatomic_atomic_store_bool(p,v) atomic_store((atstype_bool*)p, v)
 
-#define atsatomic_atomic_load_explicit_bool (p,mo) atomic_load_explicit((atstype_bool*)p, mo) 
+#define atsatomic_atomic_load_explicit_bool(p,mo) atomic_load_explicit((atstype_bool*)p, mo) 
 
 #define atsatomic_atomic_load_bool(p) atomic_load((atstype_bool*)p) 
 
@@ -63,15 +63,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_char (p, v) atomic_init((atstype_char*)p, v)
+#define atsatomic_atomic_init_char(p, v) atomic_init((atstype_char*)p, v)
 
 #define atsatomic_atomic_is_lock_free_char(p) atomic_is_lock_free((atstype_char*)p)
 
 #define atsatomic_atomic_store_explicit_char(p,v,mo) atomic_store_explicit((atstype,_char*)p, v, mo)
 
-#define atsatomic_atomic_store_char (p,v) atomic_store((atstype_char*)p, v)
+#define atsatomic_atomic_store_char(p,v) atomic_store((atstype_char*)p, v)
 
-#define atsatomic_atomic_load_explicit_char (p,mo) atomic_load_explicit((atstype_char*)p, mo) 
+#define atsatomic_atomic_load_explicit_char(p,mo) atomic_load_explicit((atstype_char*)p, mo) 
 
 #define atsatomic_atomic_load_char(p) atomic_load((atstype_char*)p) 
 
@@ -125,15 +125,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_schar (p, v) atomic_init((atstype_schar*)p, v)
+#define atsatomic_atomic_init_schar(p, v) atomic_init((atstype_schar*)p, v)
 
 #define atsatomic_atomic_is_lock_free_schar(p) atomic_is_lock_free((atstype_schar*)p)
 
 #define atsatomic_atomic_store_explicit_schar(p,v,mo) atomic_store_explicit((atstype,_schar*)p, v, mo)
 
-#define atsatomic_atomic_store_schar (p,v) atomic_store((atstype_schar*)p, v)
+#define atsatomic_atomic_store_schar(p,v) atomic_store((atstype_schar*)p, v)
 
-#define atsatomic_atomic_load_explicit_schar (p,mo) atomic_load_explicit((atstype_schar*)p, mo) 
+#define atsatomic_atomic_load_explicit_schar(p,mo) atomic_load_explicit((atstype_schar*)p, mo) 
 
 #define atsatomic_atomic_load_schar(p) atomic_load((atstype_schar*)p) 
 
@@ -187,15 +187,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uchar (p, v) atomic_init((atstype_uchar*)p, v)
+#define atsatomic_atomic_init_uchar(p, v) atomic_init((atstype_uchar*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uchar(p) atomic_is_lock_free((atstype_uchar*)p)
 
 #define atsatomic_atomic_store_explicit_uchar(p,v,mo) atomic_store_explicit((atstype,_uchar*)p, v, mo)
 
-#define atsatomic_atomic_store_uchar (p,v) atomic_store((atstype_uchar*)p, v)
+#define atsatomic_atomic_store_uchar(p,v) atomic_store((atstype_uchar*)p, v)
 
-#define atsatomic_atomic_load_explicit_uchar (p,mo) atomic_load_explicit((atstype_uchar*)p, mo) 
+#define atsatomic_atomic_load_explicit_uchar(p,mo) atomic_load_explicit((atstype_uchar*)p, mo) 
 
 #define atsatomic_atomic_load_uchar(p) atomic_load((atstype_uchar*)p) 
 
@@ -249,15 +249,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_sint (p, v) atomic_init((atstype_sint*)p, v)
+#define atsatomic_atomic_init_sint(p, v) atomic_init((atstype_sint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_sint(p) atomic_is_lock_free((atstype_sint*)p)
 
 #define atsatomic_atomic_store_explicit_sint(p,v,mo) atomic_store_explicit((atstype,_sint*)p, v, mo)
 
-#define atsatomic_atomic_store_sint (p,v) atomic_store((atstype_sint*)p, v)
+#define atsatomic_atomic_store_sint(p,v) atomic_store((atstype_sint*)p, v)
 
-#define atsatomic_atomic_load_explicit_sint (p,mo) atomic_load_explicit((atstype_sint*)p, mo) 
+#define atsatomic_atomic_load_explicit_sint(p,mo) atomic_load_explicit((atstype_sint*)p, mo) 
 
 #define atsatomic_atomic_load_sint(p) atomic_load((atstype_sint*)p) 
 
@@ -311,15 +311,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_usint (p, v) atomic_init((atstype_usint*)p, v)
+#define atsatomic_atomic_init_usint(p, v) atomic_init((atstype_usint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_usint(p) atomic_is_lock_free((atstype_usint*)p)
 
 #define atsatomic_atomic_store_explicit_usint(p,v,mo) atomic_store_explicit((atstype,_usint*)p, v, mo)
 
-#define atsatomic_atomic_store_usint (p,v) atomic_store((atstype_usint*)p, v)
+#define atsatomic_atomic_store_usint(p,v) atomic_store((atstype_usint*)p, v)
 
-#define atsatomic_atomic_load_explicit_usint (p,mo) atomic_load_explicit((atstype_usint*)p, mo) 
+#define atsatomic_atomic_load_explicit_usint(p,mo) atomic_load_explicit((atstype_usint*)p, mo) 
 
 #define atsatomic_atomic_load_usint(p) atomic_load((atstype_usint*)p) 
 
@@ -373,15 +373,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int (p, v) atomic_init((atstype_int*)p, v)
+#define atsatomic_atomic_init_int(p, v) atomic_init((atstype_int*)p, v)
 
 #define atsatomic_atomic_is_lock_free_int(p) atomic_is_lock_free((atstype_int*)p)
 
 #define atsatomic_atomic_store_explicit_int(p,v,mo) atomic_store_explicit((atstype,_int*)p, v, mo)
 
-#define atsatomic_atomic_store_int (p,v) atomic_store((atstype_int*)p, v)
+#define atsatomic_atomic_store_int(p,v) atomic_store((atstype_int*)p, v)
 
-#define atsatomic_atomic_load_explicit_int (p,mo) atomic_load_explicit((atstype_int*)p, mo) 
+#define atsatomic_atomic_load_explicit_int(p,mo) atomic_load_explicit((atstype_int*)p, mo) 
 
 #define atsatomic_atomic_load_int(p) atomic_load((atstype_int*)p) 
 
@@ -435,15 +435,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uint (p, v) atomic_init((atstype_uint*)p, v)
+#define atsatomic_atomic_init_uint(p, v) atomic_init((atstype_uint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uint(p) atomic_is_lock_free((atstype_uint*)p)
 
 #define atsatomic_atomic_store_explicit_uint(p,v,mo) atomic_store_explicit((atstype,_uint*)p, v, mo)
 
-#define atsatomic_atomic_store_uint (p,v) atomic_store((atstype_uint*)p, v)
+#define atsatomic_atomic_store_uint(p,v) atomic_store((atstype_uint*)p, v)
 
-#define atsatomic_atomic_load_explicit_uint (p,mo) atomic_load_explicit((atstype_uint*)p, mo) 
+#define atsatomic_atomic_load_explicit_uint(p,mo) atomic_load_explicit((atstype_uint*)p, mo) 
 
 #define atsatomic_atomic_load_uint(p) atomic_load((atstype_uint*)p) 
 
@@ -497,15 +497,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_ulint (p, v) atomic_init((atstype_ulint*)p, v)
+#define atsatomic_atomic_init_ulint(p, v) atomic_init((atstype_ulint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_ulint(p) atomic_is_lock_free((atstype_ulint*)p)
 
 #define atsatomic_atomic_store_explicit_ulint(p,v,mo) atomic_store_explicit((atstype,_ulint*)p, v, mo)
 
-#define atsatomic_atomic_store_ulint (p,v) atomic_store((atstype_ulint*)p, v)
+#define atsatomic_atomic_store_ulint(p,v) atomic_store((atstype_ulint*)p, v)
 
-#define atsatomic_atomic_load_explicit_ulint (p,mo) atomic_load_explicit((atstype_ulint*)p, mo) 
+#define atsatomic_atomic_load_explicit_ulint(p,mo) atomic_load_explicit((atstype_ulint*)p, mo) 
 
 #define atsatomic_atomic_load_ulint(p) atomic_load((atstype_ulint*)p) 
 
@@ -559,15 +559,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_llint (p, v) atomic_init((atstype_llint*)p, v)
+#define atsatomic_atomic_init_llint(p, v) atomic_init((atstype_llint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_llint(p) atomic_is_lock_free((atstype_llint*)p)
 
 #define atsatomic_atomic_store_explicit_llint(p,v,mo) atomic_store_explicit((atstype,_llint*)p, v, mo)
 
-#define atsatomic_atomic_store_llint (p,v) atomic_store((atstype_llint*)p, v)
+#define atsatomic_atomic_store_llint(p,v) atomic_store((atstype_llint*)p, v)
 
-#define atsatomic_atomic_load_explicit_llint (p,mo) atomic_load_explicit((atstype_llint*)p, mo) 
+#define atsatomic_atomic_load_explicit_llint(p,mo) atomic_load_explicit((atstype_llint*)p, mo) 
 
 #define atsatomic_atomic_load_llint(p) atomic_load((atstype_llint*)p) 
 
@@ -621,15 +621,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_ullint (p, v) atomic_init((atstype_ullint*)p, v)
+#define atsatomic_atomic_init_ullint(p, v) atomic_init((atstype_ullint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_ullint(p) atomic_is_lock_free((atstype_ullint*)p)
 
 #define atsatomic_atomic_store_explicit_ullint(p,v,mo) atomic_store_explicit((atstype,_ullint*)p, v, mo)
 
-#define atsatomic_atomic_store_ullint (p,v) atomic_store((atstype_ullint*)p, v)
+#define atsatomic_atomic_store_ullint(p,v) atomic_store((atstype_ullint*)p, v)
 
-#define atsatomic_atomic_load_explicit_ullint (p,mo) atomic_load_explicit((atstype_ullint*)p, mo) 
+#define atsatomic_atomic_load_explicit_ullint(p,mo) atomic_load_explicit((atstype_ullint*)p, mo) 
 
 #define atsatomic_atomic_load_ullint(p) atomic_load((atstype_ullint*)p) 
 
@@ -683,15 +683,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int8 (p, v) atomic_init((atstype_int8*)p, v)
+#define atsatomic_atomic_init_int8(p, v) atomic_init((atstype_int8*)p, v)
 
 #define atsatomic_atomic_is_lock_free_int8(p) atomic_is_lock_free((atstype_int8*)p)
 
 #define atsatomic_atomic_store_explicit_int8(p,v,mo) atomic_store_explicit((atstype,_int8*)p, v, mo)
 
-#define atsatomic_atomic_store_int8 (p,v) atomic_store((atstype_int8*)p, v)
+#define atsatomic_atomic_store_int8(p,v) atomic_store((atstype_int8*)p, v)
 
-#define atsatomic_atomic_load_explicit_int8 (p,mo) atomic_load_explicit((atstype_int8*)p, mo) 
+#define atsatomic_atomic_load_explicit_int8(p,mo) atomic_load_explicit((atstype_int8*)p, mo) 
 
 #define atsatomic_atomic_load_int8(p) atomic_load((atstype_int8*)p) 
 
@@ -745,15 +745,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uint8 (p, v) atomic_init((atstype_uint8*)p, v)
+#define atsatomic_atomic_init_uint8(p, v) atomic_init((atstype_uint8*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uint8(p) atomic_is_lock_free((atstype_uint8*)p)
 
 #define atsatomic_atomic_store_explicit_uint8(p,v,mo) atomic_store_explicit((atstype,_uint8*)p, v, mo)
 
-#define atsatomic_atomic_store_uint8 (p,v) atomic_store((atstype_uint8*)p, v)
+#define atsatomic_atomic_store_uint8(p,v) atomic_store((atstype_uint8*)p, v)
 
-#define atsatomic_atomic_load_explicit_uint8 (p,mo) atomic_load_explicit((atstype_uint8*)p, mo) 
+#define atsatomic_atomic_load_explicit_uint8(p,mo) atomic_load_explicit((atstype_uint8*)p, mo) 
 
 #define atsatomic_atomic_load_uint8(p) atomic_load((atstype_uint8*)p) 
 
@@ -807,15 +807,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int16 (p, v) atomic_init((atstype_int16*)p, v)
+#define atsatomic_atomic_init_int16(p, v) atomic_init((atstype_int16*)p, v)
 
 #define atsatomic_atomic_is_lock_free_int16(p) atomic_is_lock_free((atstype_int16*)p)
 
 #define atsatomic_atomic_store_explicit_int16(p,v,mo) atomic_store_explicit((atstype,_int16*)p, v, mo)
 
-#define atsatomic_atomic_store_int16 (p,v) atomic_store((atstype_int16*)p, v)
+#define atsatomic_atomic_store_int16(p,v) atomic_store((atstype_int16*)p, v)
 
-#define atsatomic_atomic_load_explicit_int16 (p,mo) atomic_load_explicit((atstype_int16*)p, mo) 
+#define atsatomic_atomic_load_explicit_int16(p,mo) atomic_load_explicit((atstype_int16*)p, mo) 
 
 #define atsatomic_atomic_load_int16(p) atomic_load((atstype_int16*)p) 
 
@@ -869,15 +869,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uint16 (p, v) atomic_init((atstype_uint16*)p, v)
+#define atsatomic_atomic_init_uint16(p, v) atomic_init((atstype_uint16*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uint16(p) atomic_is_lock_free((atstype_uint16*)p)
 
 #define atsatomic_atomic_store_explicit_uint16(p,v,mo) atomic_store_explicit((atstype,_uint16*)p, v, mo)
 
-#define atsatomic_atomic_store_uint16 (p,v) atomic_store((atstype_uint16*)p, v)
+#define atsatomic_atomic_store_uint16(p,v) atomic_store((atstype_uint16*)p, v)
 
-#define atsatomic_atomic_load_explicit_uint16 (p,mo) atomic_load_explicit((atstype_uint16*)p, mo) 
+#define atsatomic_atomic_load_explicit_uint16(p,mo) atomic_load_explicit((atstype_uint16*)p, mo) 
 
 #define atsatomic_atomic_load_uint16(p) atomic_load((atstype_uint16*)p) 
 
@@ -931,15 +931,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int32 (p, v) atomic_init((atstype_int32*)p, v)
+#define atsatomic_atomic_init_int32(p, v) atomic_init((atstype_int32*)p, v)
 
 #define atsatomic_atomic_is_lock_free_int32(p) atomic_is_lock_free((atstype_int32*)p)
 
 #define atsatomic_atomic_store_explicit_int32(p,v,mo) atomic_store_explicit((atstype,_int32*)p, v, mo)
 
-#define atsatomic_atomic_store_int32 (p,v) atomic_store((atstype_int32*)p, v)
+#define atsatomic_atomic_store_int32(p,v) atomic_store((atstype_int32*)p, v)
 
-#define atsatomic_atomic_load_explicit_int32 (p,mo) atomic_load_explicit((atstype_int32*)p, mo) 
+#define atsatomic_atomic_load_explicit_int32(p,mo) atomic_load_explicit((atstype_int32*)p, mo) 
 
 #define atsatomic_atomic_load_int32(p) atomic_load((atstype_int32*)p) 
 
@@ -993,15 +993,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uint32 (p, v) atomic_init((atstype_uint32*)p, v)
+#define atsatomic_atomic_init_uint32(p, v) atomic_init((atstype_uint32*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uint32(p) atomic_is_lock_free((atstype_uint32*)p)
 
 #define atsatomic_atomic_store_explicit_uint32(p,v,mo) atomic_store_explicit((atstype,_uint32*)p, v, mo)
 
-#define atsatomic_atomic_store_uint32 (p,v) atomic_store((atstype_uint32*)p, v)
+#define atsatomic_atomic_store_uint32(p,v) atomic_store((atstype_uint32*)p, v)
 
-#define atsatomic_atomic_load_explicit_uint32 (p,mo) atomic_load_explicit((atstype_uint32*)p, mo) 
+#define atsatomic_atomic_load_explicit_uint32(p,mo) atomic_load_explicit((atstype_uint32*)p, mo) 
 
 #define atsatomic_atomic_load_uint32(p) atomic_load((atstype_uint32*)p) 
 
@@ -1055,15 +1055,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int64 (p, v) atomic_init((atstype_int64*)p, v)
+#define atsatomic_atomic_init_int64(p, v) atomic_init((atstype_int64*)p, v)
 
 #define atsatomic_atomic_is_lock_free_int64(p) atomic_is_lock_free((atstype_int64*)p)
 
 #define atsatomic_atomic_store_explicit_int64(p,v,mo) atomic_store_explicit((atstype,_int64*)p, v, mo)
 
-#define atsatomic_atomic_store_int64 (p,v) atomic_store((atstype_int64*)p, v)
+#define atsatomic_atomic_store_int64(p,v) atomic_store((atstype_int64*)p, v)
 
-#define atsatomic_atomic_load_explicit_int64 (p,mo) atomic_load_explicit((atstype_int64*)p, mo) 
+#define atsatomic_atomic_load_explicit_int64(p,mo) atomic_load_explicit((atstype_int64*)p, mo) 
 
 #define atsatomic_atomic_load_int64(p) atomic_load((atstype_int64*)p) 
 
@@ -1117,15 +1117,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uint64 (p, v) atomic_init((atstype_uint64*)p, v)
+#define atsatomic_atomic_init_uint64(p, v) atomic_init((atstype_uint64*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uint64(p) atomic_is_lock_free((atstype_uint64*)p)
 
 #define atsatomic_atomic_store_explicit_uint64(p,v,mo) atomic_store_explicit((atstype,_uint64*)p, v, mo)
 
-#define atsatomic_atomic_store_uint64 (p,v) atomic_store((atstype_uint64*)p, v)
+#define atsatomic_atomic_store_uint64(p,v) atomic_store((atstype_uint64*)p, v)
 
-#define atsatomic_atomic_load_explicit_uint64 (p,mo) atomic_load_explicit((atstype_uint64*)p, mo) 
+#define atsatomic_atomic_load_explicit_uint64(p,mo) atomic_load_explicit((atstype_uint64*)p, mo) 
 
 #define atsatomic_atomic_load_uint64(p) atomic_load((atstype_uint64*)p) 
 
@@ -1179,15 +1179,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_intptr (p, v) atomic_init((atstype_intptr*)p, v)
+#define atsatomic_atomic_init_intptr(p, v) atomic_init((atstype_intptr*)p, v)
 
 #define atsatomic_atomic_is_lock_free_intptr(p) atomic_is_lock_free((atstype_intptr*)p)
 
 #define atsatomic_atomic_store_explicit_intptr(p,v,mo) atomic_store_explicit((atstype,_intptr*)p, v, mo)
 
-#define atsatomic_atomic_store_intptr (p,v) atomic_store((atstype_intptr*)p, v)
+#define atsatomic_atomic_store_intptr(p,v) atomic_store((atstype_intptr*)p, v)
 
-#define atsatomic_atomic_load_explicit_intptr (p,mo) atomic_load_explicit((atstype_intptr*)p, mo) 
+#define atsatomic_atomic_load_explicit_intptr(p,mo) atomic_load_explicit((atstype_intptr*)p, mo) 
 
 #define atsatomic_atomic_load_intptr(p) atomic_load((atstype_intptr*)p) 
 
@@ -1241,15 +1241,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_uintptr (p, v) atomic_init((atstype_uintptr*)p, v)
+#define atsatomic_atomic_init_uintptr(p, v) atomic_init((atstype_uintptr*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uintptr(p) atomic_is_lock_free((atstype_uintptr*)p)
 
 #define atsatomic_atomic_store_explicit_uintptr(p,v,mo) atomic_store_explicit((atstype,_uintptr*)p, v, mo)
 
-#define atsatomic_atomic_store_uintptr (p,v) atomic_store((atstype_uintptr*)p, v)
+#define atsatomic_atomic_store_uintptr(p,v) atomic_store((atstype_uintptr*)p, v)
 
-#define atsatomic_atomic_load_explicit_uintptr (p,mo) atomic_load_explicit((atstype_uintptr*)p, mo) 
+#define atsatomic_atomic_load_explicit_uintptr(p,mo) atomic_load_explicit((atstype_uintptr*)p, mo) 
 
 #define atsatomic_atomic_load_uintptr(p) atomic_load((atstype_uintptr*)p) 
 
@@ -1303,15 +1303,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_size (p, v) atomic_init((atstype_size*)p, v)
+#define atsatomic_atomic_init_size(p, v) atomic_init((atstype_size*)p, v)
 
 #define atsatomic_atomic_is_lock_free_size(p) atomic_is_lock_free((atstype_size*)p)
 
 #define atsatomic_atomic_store_explicit_size(p,v,mo) atomic_store_explicit((atstype,_size*)p, v, mo)
 
-#define atsatomic_atomic_store_size (p,v) atomic_store((atstype_size*)p, v)
+#define atsatomic_atomic_store_size(p,v) atomic_store((atstype_size*)p, v)
 
-#define atsatomic_atomic_load_explicit_size (p,mo) atomic_load_explicit((atstype_size*)p, mo) 
+#define atsatomic_atomic_load_explicit_size(p,mo) atomic_load_explicit((atstype_size*)p, mo) 
 
 #define atsatomic_atomic_load_size(p) atomic_load((atstype_size*)p) 
 
@@ -1365,15 +1365,15 @@
 
 /** **/
 
-#define atsatomic_atomic_init_ssize (p, v) atomic_init((atstype_ssize*)p, v)
+#define atsatomic_atomic_init_ssize(p, v) atomic_init((atstype_ssize*)p, v)
 
 #define atsatomic_atomic_is_lock_free_ssize(p) atomic_is_lock_free((atstype_ssize*)p)
 
 #define atsatomic_atomic_store_explicit_ssize(p,v,mo) atomic_store_explicit((atstype,_ssize*)p, v, mo)
 
-#define atsatomic_atomic_store_ssize (p,v) atomic_store((atstype_ssize*)p, v)
+#define atsatomic_atomic_store_ssize(p,v) atomic_store((atstype_ssize*)p, v)
 
-#define atsatomic_atomic_load_explicit_ssize (p,mo) atomic_load_explicit((atstype_ssize*)p, mo) 
+#define atsatomic_atomic_load_explicit_ssize(p,mo) atomic_load_explicit((atstype_ssize*)p, mo) 
 
 #define atsatomic_atomic_load_ssize(p) atomic_load((atstype_ssize*)p) 
 
