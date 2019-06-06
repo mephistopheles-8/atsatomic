@@ -10,12 +10,12 @@
 
 typedef memory_order = $extype"memory_order"
 
-macdef memory_order_relaxed  = $extval(memory_order,"memory_order_relaxed ")
-macdef memory_order_consume  = $extval(memory_order,"memory_order_consume ")
-macdef memory_order_acquire  = $extval(memory_order,"memory_order_acquire ")
-macdef memory_order_release  = $extval(memory_order,"memory_order_release ")
-macdef memory_order_acq_rel  = $extval(memory_order,"memory_order_acq_rel ")
-macdef memory_order_seq_cst  = $extval(memory_order,"memory_order_seq_cst ")
+macdef memory_order_relaxed  = $extval(memory_order,"memory_order_relaxed")
+macdef memory_order_consume  = $extval(memory_order,"memory_order_consume")
+macdef memory_order_acquire  = $extval(memory_order,"memory_order_acquire")
+macdef memory_order_release  = $extval(memory_order,"memory_order_release")
+macdef memory_order_acq_rel  = $extval(memory_order,"memory_order_acq_rel")
+macdef memory_order_seq_cst  = $extval(memory_order,"memory_order_seq_cst")
 
 typedef atomic_bool = $extype"atomic_bool"
 typedef atomic_char = $extype"atomic_char"
