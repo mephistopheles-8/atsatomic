@@ -1,12 +1,14 @@
-# ats2-atomic
+# atsatomic
 
 __Work in progress...__
 
-Cross-platform bindings for atomic operations.
+Cross-platform bindings for atomic operations;
+`stdatomic.h`, `__sync_*` and `__atomic_*` bindings are provided.
 
-Currently, only C11 and GCC are supported.
+The `__sync` bindings do not support lists.
 
-Clang should have support for GCC builtins. I have not
-tested this thoroughly.
+Not finished:
+- Functions for types with subtyping
+- Prelude for `atomic_*` types.
 
 License: MIT
