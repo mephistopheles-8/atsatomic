@@ -304,7 +304,7 @@ fn stdatomic_cats(
 
 #define ", ns ,"_atomic_load_", ty , "(p) atomic_load((",prens,"_",ty,"*)p) 
 
-#define ", ns ,"_atomic_exchange_explicit_", ty , "(p,v,mo) atomic_load_explicit((",prens,"_",ty,"*)p,v,mo)
+#define ", ns ,"_atomic_exchange_explicit_", ty , "(p,v,mo) atomic_exchange_explicit((",prens,"_",ty,"*)p,v,mo)
 
 #define ", ns ,"_atomic_exchange_", ty , "(p,v) atomic_exchange((",prens,"_",ty,"*)p, v)
 

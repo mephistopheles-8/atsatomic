@@ -13,7 +13,7 @@
 
 #define atsatomic_atomic_load_bool(p) atomic_load((atstype_bool*)p) 
 
-#define atsatomic_atomic_exchange_explicit_bool(p,v,mo) atomic_load_explicit((atstype_bool*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_bool(p,v,mo) atomic_exchange_explicit((atstype_bool*)p,v,mo)
 
 #define atsatomic_atomic_exchange_bool(p,v) atomic_exchange((atstype_bool*)p, v)
 
@@ -75,7 +75,7 @@
 
 #define atsatomic_atomic_load_char(p) atomic_load((atstype_char*)p) 
 
-#define atsatomic_atomic_exchange_explicit_char(p,v,mo) atomic_load_explicit((atstype_char*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_char(p,v,mo) atomic_exchange_explicit((atstype_char*)p,v,mo)
 
 #define atsatomic_atomic_exchange_char(p,v) atomic_exchange((atstype_char*)p, v)
 
@@ -137,7 +137,7 @@
 
 #define atsatomic_atomic_load_schar(p) atomic_load((atstype_schar*)p) 
 
-#define atsatomic_atomic_exchange_explicit_schar(p,v,mo) atomic_load_explicit((atstype_schar*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_schar(p,v,mo) atomic_exchange_explicit((atstype_schar*)p,v,mo)
 
 #define atsatomic_atomic_exchange_schar(p,v) atomic_exchange((atstype_schar*)p, v)
 
@@ -199,7 +199,7 @@
 
 #define atsatomic_atomic_load_uchar(p) atomic_load((atstype_uchar*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uchar(p,v,mo) atomic_load_explicit((atstype_uchar*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uchar(p,v,mo) atomic_exchange_explicit((atstype_uchar*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uchar(p,v) atomic_exchange((atstype_uchar*)p, v)
 
@@ -261,7 +261,7 @@
 
 #define atsatomic_atomic_load_sint(p) atomic_load((atstype_sint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_sint(p,v,mo) atomic_load_explicit((atstype_sint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_sint(p,v,mo) atomic_exchange_explicit((atstype_sint*)p,v,mo)
 
 #define atsatomic_atomic_exchange_sint(p,v) atomic_exchange((atstype_sint*)p, v)
 
@@ -323,7 +323,7 @@
 
 #define atsatomic_atomic_load_usint(p) atomic_load((atstype_usint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_usint(p,v,mo) atomic_load_explicit((atstype_usint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_usint(p,v,mo) atomic_exchange_explicit((atstype_usint*)p,v,mo)
 
 #define atsatomic_atomic_exchange_usint(p,v) atomic_exchange((atstype_usint*)p, v)
 
@@ -385,7 +385,7 @@
 
 #define atsatomic_atomic_load_int(p) atomic_load((atstype_int*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int(p,v,mo) atomic_load_explicit((atstype_int*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_int(p,v,mo) atomic_exchange_explicit((atstype_int*)p,v,mo)
 
 #define atsatomic_atomic_exchange_int(p,v) atomic_exchange((atstype_int*)p, v)
 
@@ -447,7 +447,7 @@
 
 #define atsatomic_atomic_load_uint(p) atomic_load((atstype_uint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uint(p,v,mo) atomic_load_explicit((atstype_uint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uint(p,v,mo) atomic_exchange_explicit((atstype_uint*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uint(p,v) atomic_exchange((atstype_uint*)p, v)
 
@@ -509,7 +509,7 @@
 
 #define atsatomic_atomic_load_ulint(p) atomic_load((atstype_ulint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_ulint(p,v,mo) atomic_load_explicit((atstype_ulint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_ulint(p,v,mo) atomic_exchange_explicit((atstype_ulint*)p,v,mo)
 
 #define atsatomic_atomic_exchange_ulint(p,v) atomic_exchange((atstype_ulint*)p, v)
 
@@ -571,7 +571,7 @@
 
 #define atsatomic_atomic_load_llint(p) atomic_load((atstype_llint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_llint(p,v,mo) atomic_load_explicit((atstype_llint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_llint(p,v,mo) atomic_exchange_explicit((atstype_llint*)p,v,mo)
 
 #define atsatomic_atomic_exchange_llint(p,v) atomic_exchange((atstype_llint*)p, v)
 
@@ -633,7 +633,7 @@
 
 #define atsatomic_atomic_load_ullint(p) atomic_load((atstype_ullint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_ullint(p,v,mo) atomic_load_explicit((atstype_ullint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_ullint(p,v,mo) atomic_exchange_explicit((atstype_ullint*)p,v,mo)
 
 #define atsatomic_atomic_exchange_ullint(p,v) atomic_exchange((atstype_ullint*)p, v)
 
@@ -695,7 +695,7 @@
 
 #define atsatomic_atomic_load_int8(p) atomic_load((atstype_int8*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int8(p,v,mo) atomic_load_explicit((atstype_int8*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_int8(p,v,mo) atomic_exchange_explicit((atstype_int8*)p,v,mo)
 
 #define atsatomic_atomic_exchange_int8(p,v) atomic_exchange((atstype_int8*)p, v)
 
@@ -757,7 +757,7 @@
 
 #define atsatomic_atomic_load_uint8(p) atomic_load((atstype_uint8*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uint8(p,v,mo) atomic_load_explicit((atstype_uint8*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uint8(p,v,mo) atomic_exchange_explicit((atstype_uint8*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uint8(p,v) atomic_exchange((atstype_uint8*)p, v)
 
@@ -819,7 +819,7 @@
 
 #define atsatomic_atomic_load_int16(p) atomic_load((atstype_int16*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int16(p,v,mo) atomic_load_explicit((atstype_int16*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_int16(p,v,mo) atomic_exchange_explicit((atstype_int16*)p,v,mo)
 
 #define atsatomic_atomic_exchange_int16(p,v) atomic_exchange((atstype_int16*)p, v)
 
@@ -881,7 +881,7 @@
 
 #define atsatomic_atomic_load_uint16(p) atomic_load((atstype_uint16*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uint16(p,v,mo) atomic_load_explicit((atstype_uint16*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uint16(p,v,mo) atomic_exchange_explicit((atstype_uint16*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uint16(p,v) atomic_exchange((atstype_uint16*)p, v)
 
@@ -943,7 +943,7 @@
 
 #define atsatomic_atomic_load_int32(p) atomic_load((atstype_int32*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int32(p,v,mo) atomic_load_explicit((atstype_int32*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_int32(p,v,mo) atomic_exchange_explicit((atstype_int32*)p,v,mo)
 
 #define atsatomic_atomic_exchange_int32(p,v) atomic_exchange((atstype_int32*)p, v)
 
@@ -1005,7 +1005,7 @@
 
 #define atsatomic_atomic_load_uint32(p) atomic_load((atstype_uint32*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uint32(p,v,mo) atomic_load_explicit((atstype_uint32*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uint32(p,v,mo) atomic_exchange_explicit((atstype_uint32*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uint32(p,v) atomic_exchange((atstype_uint32*)p, v)
 
@@ -1067,7 +1067,7 @@
 
 #define atsatomic_atomic_load_int64(p) atomic_load((atstype_int64*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int64(p,v,mo) atomic_load_explicit((atstype_int64*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_int64(p,v,mo) atomic_exchange_explicit((atstype_int64*)p,v,mo)
 
 #define atsatomic_atomic_exchange_int64(p,v) atomic_exchange((atstype_int64*)p, v)
 
@@ -1129,7 +1129,7 @@
 
 #define atsatomic_atomic_load_uint64(p) atomic_load((atstype_uint64*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uint64(p,v,mo) atomic_load_explicit((atstype_uint64*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uint64(p,v,mo) atomic_exchange_explicit((atstype_uint64*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uint64(p,v) atomic_exchange((atstype_uint64*)p, v)
 
@@ -1191,7 +1191,7 @@
 
 #define atsatomic_atomic_load_intptr(p) atomic_load((atstype_intptr*)p) 
 
-#define atsatomic_atomic_exchange_explicit_intptr(p,v,mo) atomic_load_explicit((atstype_intptr*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_intptr(p,v,mo) atomic_exchange_explicit((atstype_intptr*)p,v,mo)
 
 #define atsatomic_atomic_exchange_intptr(p,v) atomic_exchange((atstype_intptr*)p, v)
 
@@ -1253,7 +1253,7 @@
 
 #define atsatomic_atomic_load_uintptr(p) atomic_load((atstype_uintptr*)p) 
 
-#define atsatomic_atomic_exchange_explicit_uintptr(p,v,mo) atomic_load_explicit((atstype_uintptr*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_uintptr(p,v,mo) atomic_exchange_explicit((atstype_uintptr*)p,v,mo)
 
 #define atsatomic_atomic_exchange_uintptr(p,v) atomic_exchange((atstype_uintptr*)p, v)
 
@@ -1315,7 +1315,7 @@
 
 #define atsatomic_atomic_load_size(p) atomic_load((atstype_size*)p) 
 
-#define atsatomic_atomic_exchange_explicit_size(p,v,mo) atomic_load_explicit((atstype_size*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_size(p,v,mo) atomic_exchange_explicit((atstype_size*)p,v,mo)
 
 #define atsatomic_atomic_exchange_size(p,v) atomic_exchange((atstype_size*)p, v)
 
@@ -1377,7 +1377,7 @@
 
 #define atsatomic_atomic_load_ssize(p) atomic_load((atstype_ssize*)p) 
 
-#define atsatomic_atomic_exchange_explicit_ssize(p,v,mo) atomic_load_explicit((atstype_ssize*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_ssize(p,v,mo) atomic_exchange_explicit((atstype_ssize*)p,v,mo)
 
 #define atsatomic_atomic_exchange_ssize(p,v) atomic_exchange((atstype_ssize*)p, v)
 
