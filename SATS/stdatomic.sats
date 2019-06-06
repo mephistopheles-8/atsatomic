@@ -102,7 +102,7 @@ symintr atomic_fetch_or atomic_fetch_or_explicit
 symintr atomic_fetch_xor atomic_fetch_xor_explicit
 symintr atomic_fetch_and atomic_fetch_and_explicit
 
-#include "./stdatomic_gen.sats"
+#include "./SHARE/stdatomic_gen.sats"
 
 
 
