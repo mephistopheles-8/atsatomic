@@ -1,5 +1,122 @@
 #include "share/atspre_staload.hats"
 
+fn __sync_cats(
+   fr : FILEref
+ , ns : string
+ , prens : string
+ , ty : string 
+) : void = (
+    fprintln!(fr, "
+/** **/
+#define ",ns,"__sync_add_and_fetch_",ty,"(p,v)\\
+  __sync_add_and_fetch((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_sub_and_fetch_",ty,"(p,v)\\
+  __sync_sub_and_fetch((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_and_and_fetch_",ty,"(p,v)\\
+  __sync_and_and_fetch((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_xor_and_fetch_",ty,"(p,v)\\
+  __sync_xor_and_fetch((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_or_and_fetch_",ty,"(p,v)\\
+  __sync_or_and_fetch((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_nand_and_fetch_",ty,"(p,v)\\
+  __sync_nand_and_fetch((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_fetch_and_add_",ty,"(p,v)\\
+  __sync_fetch_and_add((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_fetch_and_sub_",ty,"(p,v)\\
+  __sync_fetch_and_sub((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_fetch_and_and_",ty,"(p,v)\\
+  __sync_fetch_and_and((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_fetch_and_xor_",ty,"(p,v)\\
+  __sync_fetch_and_xor((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_fetch_and_or_",ty,"(p,v)\\
+  __sync_fetch_and_or((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_fetch_and_nand_",ty,"(p,v)\\
+  __sync_fetch_and_nand((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_bool_compare_and_swap_",ty,"(p,vold,vnew)\\
+  __sync_bool_compare_and_swap((",prens,"_",ty,"*)p,vold,vnew)
+
+#define ",ns,"__sync_val_compare_and_swap_",ty,"(p,vold,vnew)\\
+  __sync_val_compare_and_swap((",prens,"_",ty,"*)p,vold,vnew)
+
+#define ",ns,"__sync_lock_test_and_set_",ty,"(p,v)\\
+  __sync_lock_test_and_set((",prens,"_",ty,"*)p,v)
+
+#define ",ns,"__sync_lock_release_",ty,"(p)\\
+  __sync_lock_release((",prens,"_",ty,"*)p)
+
+")
+  )
+
+fn __sync_sats(
+    fr : FILEref 
+  , ty0 : string 
+) : void = (
+  fprintln!(fr, "
+
+
+fun __sync_add_and_fetch_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_sub_and_fetch_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_and_and_fetch_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_xor_and_fetch_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_or_and_fetch_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_nand_and_fetch_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+
+fun __sync_fetch_and_add_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_fetch_and_sub_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_fetch_and_and_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_fetch_and_xor_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_fetch_and_or_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_fetch_and_nand_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+
+fun __sync_bool_compare_and_swap_",ty0,"( p: &",ty1," >> _, oldval: ",ty1,", newval: ",ty1," ) : bool = \"mac#%\"
+fun __sync_val_compare_and_swap_",ty0,"( p: &",ty1," >> _, oldval: ",ty1,", newval: ",ty1," ) : ",ty1," = \"mac#%\"
+
+fun __sync_lock_test_and_set_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
+fun __sync_lock_release_",ty0,"( &",ty1," >> _  ) : void = \"mac#%\"
+
+overload __sync_add_and_fetch with __sync_add_and_fetch_",ty0,"
+overload __sync_sub_and_fetch with __sync_sub_and_fetch_",ty0,"
+overload __sync_and_and_fetch with __sync_and_and_fetch_",ty0,"
+overload __sync_xor_and_fetch with __sync_xor_and_fetch_",ty0,"
+overload __sync_or_and_fetch with __sync_or_and_fetch_",ty0,"
+overload __sync_nand_and_fetch with __sync_nand_and_fetch_",ty0,"
+
+overload __sync_fetch_and_add with __sync_fetch_and_add_",ty0,"
+overload __sync_fetch_and_sub with __sync_fetch_and_sub_",ty0,"
+overload __sync_fetch_and_and with __sync_fetch_and_and_",ty0,"
+overload __sync_fetch_and_xor with __sync_fetch_and_xor_",ty0,"
+overload __sync_fetch_and_or with __sync_fetch_and_or_",ty0,"
+overload __sync_fetch_and_nand with __sync_fetch_and_nand_",ty0,"
+
+overload __sync_bool_compare_and_swap with __sync_bool_compare_and_swap_",ty0,"
+overload __sync_val_compare_and_swap with __sync_val_compare_and_swap_",ty0,"
+
+overload __sync_lock_test_and_set with __sync_lock_test_and_set_",ty0,"
+overload __sync_lock_release with __sync_lock_release_",ty0,"
+
+
+")
+
+) where {
+    val ty1 : string = ( 
+      ifcase 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
+      ) : string
+  }
 
 fn __atomic_cats(
    fr : FILEref
@@ -412,7 +529,7 @@ implement main0()
     val () = fileref_close( fsats )
     val () = fileref_close( fcats )
     
-    //
+    // ** //
 
     var fsats = fileref_open_exn("__atomic_gen.sats", file_mode_ww )
     var fcats = fileref_open_exn("__atomic_gen.cats", file_mode_ww )
@@ -430,10 +547,33 @@ implement main0()
  
     val _ = list_vt_foreach_env<string><FILEref>( types, fcats ) 
 
-    //
 
     val () = fileref_close( fsats )
     val () = fileref_close( fcats )
+    
+    // ** //
+    
+    var fsats = fileref_open_exn("__sync_gen.sats", file_mode_ww )
+    var fcats = fileref_open_exn("__sync_gen.cats", file_mode_ww )
+
+
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fsats ) =
+        __sync_sats( fsats, ty ) 
+
+    val _ = list_vt_foreach_env<string><FILEref>( types, fsats ) 
+    
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fcats ) =
+        __sync_cats( fcats, "atsatomic", "atstype", ty )
+ 
+    val _ = list_vt_foreach_env<string><FILEref>( types, fcats ) 
+
+
+    val () = fileref_close( fsats )
+    val () = fileref_close( fcats )
+
+
     val () = list_vt_free<string>(types)
 
   }

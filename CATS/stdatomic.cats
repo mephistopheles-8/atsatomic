@@ -21,5 +21,6 @@
 #define atsatomic_atomic_flag_clear_explicit(p,mo) \
   atomic_flag_clear_explicit((atomic_flag*)p,mo)
 
-#include "atsatomic/CATS/stdatomic_gen.cats"
+#include "atsatomic/CATS/SHARE/stdatomic_gen.cats"
+
 #endif

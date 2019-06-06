@@ -52,5 +52,5 @@ symintr __atomic_fetch_xor
 symintr __atomic_fetch_or 
 symintr __atomic_fetch_nand 
 
-#include "./__atomic_gen.sats"
+#include "./SHARE/__atomic_gen.sats"
 
