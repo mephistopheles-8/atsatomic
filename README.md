@@ -25,7 +25,7 @@ cast the void pointers appropriately.  That's what I am doing (for now...)
 ## Why bind builtins?
 
 It would seem that several platforms do not have support for C11 atomics; `__atomic_*` and `__sync_*` 
-builtins have been a de-facto standard for some time (at least if you're using gcc or clang).
+builtins have been a de-facto standard for some time, and are available in GCC and Clang.
 
 
 License: MIT
