@@ -59,6 +59,49 @@ fn __sync_cats(
 ")
   )
 
+fn atx__sync_dats(
+    fr : FILEref 
+  , ty0 : string 
+  ) : void = (
+
+  fprintln!(fr, "
+(** **)
+
+implement atx_fetch_add<",ty1,">(p,v)
+  = __sync_fetch_and_add_",ty0,"(p,v)
+
+implement atx_fetch_sub<",ty1,">(p,v)
+  = __sync_fetch_and_sub_",ty0,"(p,v)
+
+implement atx_fetch_lor<",ty1,">(p,v)
+  = __sync_fetch_and_or_",ty0,"(p,v)
+
+implement atx_fetch_lxor<",ty1,">(p,v)
+  = __sync_fetch_and_xor_",ty0,"(p,v)
+
+implement atx_fetch_land<",ty1,">(p,v)
+  = __sync_fetch_and_and_",ty0,"(p,v)
+
+implement atx_fetch_lnand<",ty1,">(p,v)
+  = __sync_fetch_and_nand_",ty0,"(p,v)
+
+implement atx_compare_and_swap<",ty1,">( p, e, d ) 
+  = __sync_bool_compare_and_swap_",ty0,"(p, e, d )
+
+")
+  ) where {
+    val ty1 : string = ( 
+      ifcase 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
+      ) : string
+  }
+
+
+
+
+
 fn __sync_sats(
     fr : FILEref 
   , ty0 : string 
@@ -192,6 +235,58 @@ fn __atomic_cats(
 
   )
 
+fn atx__atomic_dats(
+    fr : FILEref 
+  , ty0 : string 
+  ) : void = (
+
+  fprintln!(fr, "
+(** **)
+
+implement atx_load<",ty1,">(p) 
+  = __atomic_load_n_",ty0,"( p, __ATOMIC_RELAXED )
+
+implement atx_store<",ty1,">(p,v) 
+  = __atomic_store_n_",ty0,"( p, v, __ATOMIC_RELAXED )
+
+implement atx_fetch_add<",ty1,">(p,v)
+  = __atomic_fetch_add_",ty0,"(p,v,__ATOMIC_RELAXED)
+
+implement atx_fetch_sub<",ty1,">(p,v)
+  = __atomic_fetch_sub_",ty0,"(p,v,__ATOMIC_RELAXED)
+
+implement atx_fetch_lor<",ty1,">(p,v)
+  = __atomic_fetch_or_",ty0,"(p,v,__ATOMIC_RELAXED)
+
+implement atx_fetch_lxor<",ty1,">(p,v)
+  = __atomic_fetch_xor_",ty0,"(p,v,__ATOMIC_RELAXED)
+
+implement atx_fetch_land<",ty1,">(p,v)
+  = __atomic_fetch_and_",ty0,"(p,v,__ATOMIC_RELAXED)
+
+implement atx_fetch_lnand<",ty1,">(p,v)
+  = __atomic_fetch_nand_",ty0,"(p,v,__ATOMIC_RELAXED)
+
+implement atx_compare_and_swap<",ty1,">( p, e, d ) 
+  = let
+     var e : ",ty1," = e
+     in  __atomic_compare_exchange_n_",ty0,"(
+        p, e, d, false,__ATOMIC_RELAXED, __ATOMIC_RELAXED
+      )
+    end
+
+")
+  ) where {
+    val ty1 : string = ( 
+      ifcase 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
+      ) : string
+  }
+
+
+
 fn __atomic_sats(
     fr : FILEref 
   , ty0 : string 
@@ -308,17 +403,17 @@ fn stdatomic_cats(
 
 #define ", ns ,"_atomic_exchange_", ty , "(p,v) atomic_exchange((",prens,"_",ty,"*)p, v)
 
-#define ", ns ,"_atomic_compare_exchange_strong_explicit_", ty , "(p1,v,p2,mo1,mo2)\\
-  atomic_compare_exchange_strong_explicit((",prens,"_",ty,"*)p1,v,(",prens,"_",ty,"*)p2,mo1,mo2) 
+#define ", ns ,"_atomic_compare_exchange_strong_explicit_", ty , "(p1,p2,v,mo1,mo2)\\
+  atomic_compare_exchange_strong_explicit((",prens,"_",ty,"*)p1,(",prens,"_",ty,"*)p2,v,mo1,mo2) 
 
-#define ", ns ,"_atomic_compare_exchange_strong_", ty , "(p1,v,p2)\\
-  atomic_compare_exchange_strong((",prens,"_",ty,"*)p1,v,(",prens,"_",ty,"*)p2) 
+#define ", ns ,"_atomic_compare_exchange_strong_", ty , "(p1,p2,v)\\
+  atomic_compare_exchange_strong((",prens,"_",ty,"*)p1,(",prens,"_",ty,"*)p2,v) 
 
-#define ", ns ,"_atomic_compare_exchange_weak_explicit_", ty , "(p1,v,p2,mo1,mo2)\\
-  atomic_compare_exchange_weak_explicit((",prens,"_",ty,"*)p1,v,(",prens,"_",ty,"*)p2,mo1,mo2) 
+#define ", ns ,"_atomic_compare_exchange_weak_explicit_", ty , "(p1,p2,v,mo1,mo2)\\
+  atomic_compare_exchange_weak_explicit((",prens,"_",ty,"*)p1,(",prens,"_",ty,"*)p2,v,mo1,mo2) 
 
-#define ", ns ,"_atomic_compare_exchange_weak_", ty , "(p1,v,p2)\\
-  atomic_compare_exchange_weak((",prens,"_",ty,"*)p1,v,(",prens,"_",ty,"*)p2) 
+#define ", ns ,"_atomic_compare_exchange_weak_", ty , "(p1,p2,v)\\
+  atomic_compare_exchange_weak((",prens,"_",ty,"*)p1,(",prens,"_",ty,"*)p2, v) 
 
 #define ", ns ,"_atomic_fetch_add_", ty , "(p,v)\\
   atomic_fetch_add((",prens,"_",ty,"*)p, v)
@@ -355,6 +450,62 @@ fn stdatomic_cats(
 
   )
 
+
+
+fn atx_stdatomic_dats(
+    fr : FILEref 
+  , ty0 : string 
+  ) : void = (
+
+  fprintln!(fr, "
+(** **)
+
+implement atx_load<",ty1,">(p) 
+  = atomic_load_",ty0,"( p )
+
+implement atx_store<",ty1,">(p,v) 
+  = atomic_store_",ty0,"( p, v )
+
+implement atx_fetch_add<",ty1,">(p,v)
+  = atomic_fetch_add_",ty0,"( p,v )
+
+implement atx_fetch_sub<",ty1,">(p,v)
+  = atomic_fetch_sub_",ty0,"( p,v )
+
+implement atx_fetch_lor<",ty1,">(p,v)
+  = atomic_fetch_or_",ty0,"( p,v )
+
+implement atx_fetch_lxor<",ty1,">(p,v)
+  = atomic_fetch_xor_",ty0,"( p,v )
+
+implement atx_fetch_land<",ty1,">(p,v)
+  = atomic_fetch_and_",ty0,"( p,v )
+
+implement atx_fetch_lnand<",ty1,">(p,v)
+  = atomic_fetch_nand_",ty0,"( p,v )
+
+implement atx_compare_and_swap<",ty1,">( p, e, d ) 
+  = let
+     var e : ",ty1," = e
+     in  atomic_compare_exchange_strong_",ty0,"(
+        p, e, d
+      )
+    end
+
+")
+  ) where {
+    val ty1 : string = ( 
+      ifcase 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
+      ) : string
+  }
+
+
+
+
+
 fn stdatomic_sats(
     fr : FILEref 
   , ty0 : string 
@@ -387,16 +538,16 @@ fun
   atomic_exchange_", ty0 , "( &", ty1 , " >> _, ",ty1,") : ",ty1," = \"mac#%\"
 
 fun
-  atomic_compare_exchange_strong_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _, memory_order, memory_order  ) : bool = \"mac#%\"
+  atomic_compare_exchange_strong_explicit_", ty0 , "( &", ty1 , " >> _,  &", ty1 , " >> _, ",ty1,", memory_order, memory_order  ) : bool = \"mac#%\"
 
 fun
-  atomic_compare_exchange_strong_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _   ) : bool = \"mac#%\"
+  atomic_compare_exchange_strong_", ty0 , "( &", ty1 , " >> _, &", ty1 , " >> _ , ",ty1,"  ) : bool = \"mac#%\"
 
 fun
-  atomic_compare_exchange_weak_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _, memory_order, memory_order  ) : bool = \"mac#%\"
+  atomic_compare_exchange_weak_explicit_", ty0 , "( &", ty1 , " >> _, &", ty1 , " >> _, ",ty1,", memory_order, memory_order  ) : bool = \"mac#%\"
 
 fun
-  atomic_compare_exchange_weak_", ty0 , "( &", ty1 , " >> _, ",ty1,", &", ty1 , " >> _ ) : bool = \"mac#%\"
+  atomic_compare_exchange_weak_", ty0 , "( &", ty1 , " >> _,  &", ty1 , " >> _, ",ty1," ) : bool = \"mac#%\"
 
 fun
   atomic_fetch_add_", ty0 , "( &", ty1 , " >> _ , ",ty1," ) : ",ty1," = \"mac#%\"

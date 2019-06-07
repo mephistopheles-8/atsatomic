@@ -24,16 +24,16 @@ fun
   atomic_exchange_bool( &bool >> _, bool) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_bool( &bool >> _, bool, &bool >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_bool( &bool >> _,  &bool >> _, bool, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_bool( &bool >> _, bool, &bool >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_bool( &bool >> _, &bool >> _ , bool  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_bool( &bool >> _, bool, &bool >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_bool( &bool >> _, &bool >> _, bool, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_bool( &bool >> _, bool, &bool >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_bool( &bool >> _,  &bool >> _, bool ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_bool( &bool >> _ , bool ) : bool = "mac#%"
@@ -115,16 +115,16 @@ fun
   atomic_exchange_char( &char >> _, char) : char = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_char( &char >> _, char, &char >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_char( &char >> _,  &char >> _, char, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_char( &char >> _, char, &char >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_char( &char >> _, &char >> _ , char  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_char( &char >> _, char, &char >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_char( &char >> _, &char >> _, char, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_char( &char >> _, char, &char >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_char( &char >> _,  &char >> _, char ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_char( &char >> _ , char ) : char = "mac#%"
@@ -206,16 +206,16 @@ fun
   atomic_exchange_schar( &schar >> _, schar) : schar = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_schar( &schar >> _, schar, &schar >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_schar( &schar >> _,  &schar >> _, schar, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_schar( &schar >> _, schar, &schar >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_schar( &schar >> _, &schar >> _ , schar  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_schar( &schar >> _, schar, &schar >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_schar( &schar >> _, &schar >> _, schar, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_schar( &schar >> _, schar, &schar >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_schar( &schar >> _,  &schar >> _, schar ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_schar( &schar >> _ , schar ) : schar = "mac#%"
@@ -297,16 +297,16 @@ fun
   atomic_exchange_uchar( &uchar >> _, uchar) : uchar = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uchar( &uchar >> _, uchar, &uchar >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uchar( &uchar >> _,  &uchar >> _, uchar, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uchar( &uchar >> _, uchar, &uchar >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uchar( &uchar >> _, &uchar >> _ , uchar  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uchar( &uchar >> _, uchar, &uchar >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uchar( &uchar >> _, &uchar >> _, uchar, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uchar( &uchar >> _, uchar, &uchar >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uchar( &uchar >> _,  &uchar >> _, uchar ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uchar( &uchar >> _ , uchar ) : uchar = "mac#%"
@@ -388,16 +388,16 @@ fun
   atomic_exchange_sint( &sint >> _, sint) : sint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_sint( &sint >> _, sint, &sint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_sint( &sint >> _,  &sint >> _, sint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_sint( &sint >> _, sint, &sint >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_sint( &sint >> _, &sint >> _ , sint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_sint( &sint >> _, sint, &sint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_sint( &sint >> _, &sint >> _, sint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_sint( &sint >> _, sint, &sint >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_sint( &sint >> _,  &sint >> _, sint ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_sint( &sint >> _ , sint ) : sint = "mac#%"
@@ -479,16 +479,16 @@ fun
   atomic_exchange_usint( &usint >> _, usint) : usint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_usint( &usint >> _, usint, &usint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_usint( &usint >> _,  &usint >> _, usint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_usint( &usint >> _, usint, &usint >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_usint( &usint >> _, &usint >> _ , usint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_usint( &usint >> _, usint, &usint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_usint( &usint >> _, &usint >> _, usint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_usint( &usint >> _, usint, &usint >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_usint( &usint >> _,  &usint >> _, usint ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_usint( &usint >> _ , usint ) : usint = "mac#%"
@@ -570,16 +570,16 @@ fun
   atomic_exchange_int( &int >> _, int) : int = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int( &int >> _, int, &int >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_int( &int >> _,  &int >> _, int, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int( &int >> _, int, &int >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_int( &int >> _, &int >> _ , int  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int( &int >> _, int, &int >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_int( &int >> _, &int >> _, int, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int( &int >> _, int, &int >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_int( &int >> _,  &int >> _, int ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_int( &int >> _ , int ) : int = "mac#%"
@@ -661,16 +661,16 @@ fun
   atomic_exchange_uint( &uint >> _, uint) : uint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uint( &uint >> _, uint, &uint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uint( &uint >> _,  &uint >> _, uint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uint( &uint >> _, uint, &uint >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uint( &uint >> _, &uint >> _ , uint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uint( &uint >> _, uint, &uint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uint( &uint >> _, &uint >> _, uint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uint( &uint >> _, uint, &uint >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uint( &uint >> _,  &uint >> _, uint ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uint( &uint >> _ , uint ) : uint = "mac#%"
@@ -752,16 +752,16 @@ fun
   atomic_exchange_ulint( &ulint >> _, ulint) : ulint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_ulint( &ulint >> _, ulint, &ulint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_ulint( &ulint >> _,  &ulint >> _, ulint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_ulint( &ulint >> _, ulint, &ulint >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_ulint( &ulint >> _, &ulint >> _ , ulint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_ulint( &ulint >> _, ulint, &ulint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_ulint( &ulint >> _, &ulint >> _, ulint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_ulint( &ulint >> _, ulint, &ulint >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_ulint( &ulint >> _,  &ulint >> _, ulint ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_ulint( &ulint >> _ , ulint ) : ulint = "mac#%"
@@ -843,16 +843,16 @@ fun
   atomic_exchange_llint( &llint >> _, llint) : llint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_llint( &llint >> _, llint, &llint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_llint( &llint >> _,  &llint >> _, llint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_llint( &llint >> _, llint, &llint >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_llint( &llint >> _, &llint >> _ , llint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_llint( &llint >> _, llint, &llint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_llint( &llint >> _, &llint >> _, llint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_llint( &llint >> _, llint, &llint >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_llint( &llint >> _,  &llint >> _, llint ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_llint( &llint >> _ , llint ) : llint = "mac#%"
@@ -934,16 +934,16 @@ fun
   atomic_exchange_ullint( &ullint >> _, ullint) : ullint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_ullint( &ullint >> _, ullint, &ullint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_ullint( &ullint >> _,  &ullint >> _, ullint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_ullint( &ullint >> _, ullint, &ullint >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_ullint( &ullint >> _, &ullint >> _ , ullint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_ullint( &ullint >> _, ullint, &ullint >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_ullint( &ullint >> _, &ullint >> _, ullint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_ullint( &ullint >> _, ullint, &ullint >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_ullint( &ullint >> _,  &ullint >> _, ullint ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_ullint( &ullint >> _ , ullint ) : ullint = "mac#%"
@@ -1025,16 +1025,16 @@ fun
   atomic_exchange_int8( &int8 >> _, int8) : int8 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int8( &int8 >> _, int8, &int8 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_int8( &int8 >> _,  &int8 >> _, int8, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int8( &int8 >> _, int8, &int8 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_int8( &int8 >> _, &int8 >> _ , int8  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int8( &int8 >> _, int8, &int8 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_int8( &int8 >> _, &int8 >> _, int8, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int8( &int8 >> _, int8, &int8 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_int8( &int8 >> _,  &int8 >> _, int8 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_int8( &int8 >> _ , int8 ) : int8 = "mac#%"
@@ -1116,16 +1116,16 @@ fun
   atomic_exchange_uint8( &uint8 >> _, uint8) : uint8 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uint8( &uint8 >> _, uint8, &uint8 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uint8( &uint8 >> _,  &uint8 >> _, uint8, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uint8( &uint8 >> _, uint8, &uint8 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uint8( &uint8 >> _, &uint8 >> _ , uint8  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uint8( &uint8 >> _, uint8, &uint8 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uint8( &uint8 >> _, &uint8 >> _, uint8, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uint8( &uint8 >> _, uint8, &uint8 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uint8( &uint8 >> _,  &uint8 >> _, uint8 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uint8( &uint8 >> _ , uint8 ) : uint8 = "mac#%"
@@ -1207,16 +1207,16 @@ fun
   atomic_exchange_int16( &int16 >> _, int16) : int16 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int16( &int16 >> _, int16, &int16 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_int16( &int16 >> _,  &int16 >> _, int16, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int16( &int16 >> _, int16, &int16 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_int16( &int16 >> _, &int16 >> _ , int16  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int16( &int16 >> _, int16, &int16 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_int16( &int16 >> _, &int16 >> _, int16, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int16( &int16 >> _, int16, &int16 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_int16( &int16 >> _,  &int16 >> _, int16 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_int16( &int16 >> _ , int16 ) : int16 = "mac#%"
@@ -1298,16 +1298,16 @@ fun
   atomic_exchange_uint16( &uint16 >> _, uint16) : uint16 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uint16( &uint16 >> _, uint16, &uint16 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uint16( &uint16 >> _,  &uint16 >> _, uint16, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uint16( &uint16 >> _, uint16, &uint16 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uint16( &uint16 >> _, &uint16 >> _ , uint16  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uint16( &uint16 >> _, uint16, &uint16 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uint16( &uint16 >> _, &uint16 >> _, uint16, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uint16( &uint16 >> _, uint16, &uint16 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uint16( &uint16 >> _,  &uint16 >> _, uint16 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uint16( &uint16 >> _ , uint16 ) : uint16 = "mac#%"
@@ -1389,16 +1389,16 @@ fun
   atomic_exchange_int32( &int32 >> _, int32) : int32 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int32( &int32 >> _, int32, &int32 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_int32( &int32 >> _,  &int32 >> _, int32, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int32( &int32 >> _, int32, &int32 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_int32( &int32 >> _, &int32 >> _ , int32  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int32( &int32 >> _, int32, &int32 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_int32( &int32 >> _, &int32 >> _, int32, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int32( &int32 >> _, int32, &int32 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_int32( &int32 >> _,  &int32 >> _, int32 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_int32( &int32 >> _ , int32 ) : int32 = "mac#%"
@@ -1480,16 +1480,16 @@ fun
   atomic_exchange_uint32( &uint32 >> _, uint32) : uint32 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uint32( &uint32 >> _, uint32, &uint32 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uint32( &uint32 >> _,  &uint32 >> _, uint32, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uint32( &uint32 >> _, uint32, &uint32 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uint32( &uint32 >> _, &uint32 >> _ , uint32  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uint32( &uint32 >> _, uint32, &uint32 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uint32( &uint32 >> _, &uint32 >> _, uint32, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uint32( &uint32 >> _, uint32, &uint32 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uint32( &uint32 >> _,  &uint32 >> _, uint32 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uint32( &uint32 >> _ , uint32 ) : uint32 = "mac#%"
@@ -1571,16 +1571,16 @@ fun
   atomic_exchange_int64( &int64 >> _, int64) : int64 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int64( &int64 >> _, int64, &int64 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_int64( &int64 >> _,  &int64 >> _, int64, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int64( &int64 >> _, int64, &int64 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_int64( &int64 >> _, &int64 >> _ , int64  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int64( &int64 >> _, int64, &int64 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_int64( &int64 >> _, &int64 >> _, int64, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int64( &int64 >> _, int64, &int64 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_int64( &int64 >> _,  &int64 >> _, int64 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_int64( &int64 >> _ , int64 ) : int64 = "mac#%"
@@ -1662,16 +1662,16 @@ fun
   atomic_exchange_uint64( &uint64 >> _, uint64) : uint64 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uint64( &uint64 >> _, uint64, &uint64 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uint64( &uint64 >> _,  &uint64 >> _, uint64, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uint64( &uint64 >> _, uint64, &uint64 >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uint64( &uint64 >> _, &uint64 >> _ , uint64  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uint64( &uint64 >> _, uint64, &uint64 >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uint64( &uint64 >> _, &uint64 >> _, uint64, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uint64( &uint64 >> _, uint64, &uint64 >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uint64( &uint64 >> _,  &uint64 >> _, uint64 ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uint64( &uint64 >> _ , uint64 ) : uint64 = "mac#%"
@@ -1753,16 +1753,16 @@ fun
   atomic_exchange_intptr( &intptr >> _, intptr) : intptr = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_intptr( &intptr >> _, intptr, &intptr >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_intptr( &intptr >> _,  &intptr >> _, intptr, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_intptr( &intptr >> _, intptr, &intptr >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_intptr( &intptr >> _, &intptr >> _ , intptr  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_intptr( &intptr >> _, intptr, &intptr >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_intptr( &intptr >> _, &intptr >> _, intptr, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_intptr( &intptr >> _, intptr, &intptr >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_intptr( &intptr >> _,  &intptr >> _, intptr ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_intptr( &intptr >> _ , intptr ) : intptr = "mac#%"
@@ -1844,16 +1844,16 @@ fun
   atomic_exchange_uintptr( &uintptr >> _, uintptr) : uintptr = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_uintptr( &uintptr >> _, uintptr, &uintptr >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_uintptr( &uintptr >> _,  &uintptr >> _, uintptr, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_uintptr( &uintptr >> _, uintptr, &uintptr >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_uintptr( &uintptr >> _, &uintptr >> _ , uintptr  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_uintptr( &uintptr >> _, uintptr, &uintptr >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_uintptr( &uintptr >> _, &uintptr >> _, uintptr, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_uintptr( &uintptr >> _, uintptr, &uintptr >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_uintptr( &uintptr >> _,  &uintptr >> _, uintptr ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_uintptr( &uintptr >> _ , uintptr ) : uintptr = "mac#%"
@@ -1935,16 +1935,16 @@ fun
   atomic_exchange_size( &size_t >> _, size_t) : size_t = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_size( &size_t >> _, size_t, &size_t >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_size( &size_t >> _,  &size_t >> _, size_t, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_size( &size_t >> _, size_t, &size_t >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_size( &size_t >> _, &size_t >> _ , size_t  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_size( &size_t >> _, size_t, &size_t >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_size( &size_t >> _, &size_t >> _, size_t, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_size( &size_t >> _, size_t, &size_t >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_size( &size_t >> _,  &size_t >> _, size_t ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_size( &size_t >> _ , size_t ) : size_t = "mac#%"
@@ -2026,16 +2026,16 @@ fun
   atomic_exchange_ssize( &ssize_t >> _, ssize_t) : ssize_t = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_ssize( &ssize_t >> _, ssize_t, &ssize_t >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_ssize( &ssize_t >> _,  &ssize_t >> _, ssize_t, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_ssize( &ssize_t >> _, ssize_t, &ssize_t >> _   ) : bool = "mac#%"
+  atomic_compare_exchange_strong_ssize( &ssize_t >> _, &ssize_t >> _ , ssize_t  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_ssize( &ssize_t >> _, ssize_t, &ssize_t >> _, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_ssize( &ssize_t >> _, &ssize_t >> _, ssize_t, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_ssize( &ssize_t >> _, ssize_t, &ssize_t >> _ ) : bool = "mac#%"
+  atomic_compare_exchange_weak_ssize( &ssize_t >> _,  &ssize_t >> _, ssize_t ) : bool = "mac#%"
 
 fun
   atomic_fetch_add_ssize( &ssize_t >> _ , ssize_t ) : ssize_t = "mac#%"
