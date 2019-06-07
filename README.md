@@ -19,7 +19,7 @@ word types.  Pointers in ATS2-generated C code are often not typed, and this cau
 errors with `__atomic` and `stdatomic.h`. In addition, macros are not expanded
 when using `$extfcall`, so this was not an option, either.  
 
-The most robust solution currently seemed to be to create bindings for each type and 
+The most robust solution seems to be to create bindings for each type and 
 cast the void pointers appropriately.  That's what I am doing (for now...) 
 
 ## Why bind builtins?
