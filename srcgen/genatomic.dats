@@ -67,41 +67,39 @@ fn atx__sync_dats(
   fprintln!(fr, "
 (** **)
 
-implement atx_load<",ty1,">(p) 
+impltmp atx_load<",ty1,">(p) 
   = __sync_fetch_and_add_",ty0,"(p, $UNSAFE.cast{",ty1,"}(0))
 
-implement atx_store<",ty1,">(p,v)
+impltmp atx_store<",ty1,">(p,v)
   = while(~__sync_bool_compare_and_swap_",ty0,"( p, atx_load<",ty1,">(p), v )) () 
 
-implement atx_fetch_add<",ty1,">(p,v)
+impltmp atx_fetch_add<",ty1,">(p,v)
   = __sync_fetch_and_add_",ty0,"(p,v)
 
-implement atx_fetch_sub<",ty1,">(p,v)
+impltmp atx_fetch_sub<",ty1,">(p,v)
   = __sync_fetch_and_sub_",ty0,"(p,v)
 
-implement atx_fetch_lor<",ty1,">(p,v)
+impltmp atx_fetch_lor<",ty1,">(p,v)
   = __sync_fetch_and_or_",ty0,"(p,v)
 
-implement atx_fetch_lxor<",ty1,">(p,v)
+impltmp atx_fetch_lxor<",ty1,">(p,v)
   = __sync_fetch_and_xor_",ty0,"(p,v)
 
-implement atx_fetch_land<",ty1,">(p,v)
+impltmp atx_fetch_land<",ty1,">(p,v)
   = __sync_fetch_and_and_",ty0,"(p,v)
 
 (*
-implement atx_fetch_lnand<",ty1,">(p,v)
+impltmp atx_fetch_lnand<",ty1,">(p,v)
   = __sync_fetch_and_nand_",ty0,"(p,v)
 *)
 
-implement atx_compare_and_swap<",ty1,">( p, e, d ) 
+impltmp atx_compare_and_swap<",ty1,">( p, e, d ) 
   = __sync_bool_compare_and_swap_",ty0,"(p, e, d )
 
 ")
   ) where {
     val ty1 : string = ( 
       ifcase 
-       | ty0 = "size" => "size_t"
-       | ty0 = "ssize" => "ssize_t"
        | _ => ty0 
       ) : string
   }
@@ -137,25 +135,25 @@ fun __sync_val_compare_and_swap_",ty0,"( p: &",ty1," >> _, oldval: ",ty1,", newv
 fun __sync_lock_test_and_set_",ty0,"( &",ty1," >> _, ",ty1," ) : ",ty1," = \"mac#%\"
 fun __sync_lock_release_",ty0,"( &",ty1," >> _  ) : void = \"mac#%\"
 
-overload __sync_add_and_fetch with __sync_add_and_fetch_",ty0,"
-overload __sync_sub_and_fetch with __sync_sub_and_fetch_",ty0,"
-overload __sync_and_and_fetch with __sync_and_and_fetch_",ty0,"
-overload __sync_xor_and_fetch with __sync_xor_and_fetch_",ty0,"
-overload __sync_or_and_fetch with __sync_or_and_fetch_",ty0,"
-overload __sync_nand_and_fetch with __sync_nand_and_fetch_",ty0,"
+#symload __sync_add_and_fetch with __sync_add_and_fetch_",ty0,"
+#symload __sync_sub_and_fetch with __sync_sub_and_fetch_",ty0,"
+#symload __sync_and_and_fetch with __sync_and_and_fetch_",ty0,"
+#symload __sync_xor_and_fetch with __sync_xor_and_fetch_",ty0,"
+#symload __sync_or_and_fetch with __sync_or_and_fetch_",ty0,"
+#symload __sync_nand_and_fetch with __sync_nand_and_fetch_",ty0,"
 
-overload __sync_fetch_and_add with __sync_fetch_and_add_",ty0,"
-overload __sync_fetch_and_sub with __sync_fetch_and_sub_",ty0,"
-overload __sync_fetch_and_and with __sync_fetch_and_and_",ty0,"
-overload __sync_fetch_and_xor with __sync_fetch_and_xor_",ty0,"
-overload __sync_fetch_and_or with __sync_fetch_and_or_",ty0,"
-overload __sync_fetch_and_nand with __sync_fetch_and_nand_",ty0,"
+#symload __sync_fetch_and_add with __sync_fetch_and_add_",ty0,"
+#symload __sync_fetch_and_sub with __sync_fetch_and_sub_",ty0,"
+#symload __sync_fetch_and_and with __sync_fetch_and_and_",ty0,"
+#symload __sync_fetch_and_xor with __sync_fetch_and_xor_",ty0,"
+#symload __sync_fetch_and_or with __sync_fetch_and_or_",ty0,"
+#symload __sync_fetch_and_nand with __sync_fetch_and_nand_",ty0,"
 
-overload __sync_bool_compare_and_swap with __sync_bool_compare_and_swap_",ty0,"
-overload __sync_val_compare_and_swap with __sync_val_compare_and_swap_",ty0,"
+#symload __sync_bool_compare_and_swap with __sync_bool_compare_and_swap_",ty0,"
+#symload __sync_val_compare_and_swap with __sync_val_compare_and_swap_",ty0,"
 
-overload __sync_lock_test_and_set with __sync_lock_test_and_set_",ty0,"
-overload __sync_lock_release with __sync_lock_release_",ty0,"
+#symload __sync_lock_test_and_set with __sync_lock_test_and_set_",ty0,"
+#symload __sync_lock_release with __sync_lock_release_",ty0,"
 
 
 ")
@@ -163,8 +161,6 @@ overload __sync_lock_release with __sync_lock_release_",ty0,"
 ) where {
     val ty1 : string = ( 
       ifcase 
-       | ty0 = "size" => "size_t"
-       | ty0 = "ssize" => "ssize_t"
        | _ => ty0 
       ) : string
   }
@@ -251,33 +247,33 @@ fn atx__atomic_dats(
   fprintln!(fr, "
 (** **)
 
-implement atx_load<",ty1,">(p) 
+impltmp atx_load<",ty1,">(p) 
   = __atomic_load_n_",ty0,"( p, __ATOMIC_RELAXED )
 
-implement atx_store<",ty1,">(p,v) 
+impltmp atx_store<",ty1,">(p,v) 
   = __atomic_store_n_",ty0,"( p, v, __ATOMIC_RELAXED )
 
-implement atx_fetch_add<",ty1,">(p,v)
+impltmp atx_fetch_add<",ty1,">(p,v)
   = __atomic_fetch_add_",ty0,"(p,v,__ATOMIC_RELAXED)
 
-implement atx_fetch_sub<",ty1,">(p,v)
+impltmp atx_fetch_sub<",ty1,">(p,v)
   = __atomic_fetch_sub_",ty0,"(p,v,__ATOMIC_RELAXED)
 
-implement atx_fetch_lor<",ty1,">(p,v)
+impltmp atx_fetch_lor<",ty1,">(p,v)
   = __atomic_fetch_or_",ty0,"(p,v,__ATOMIC_RELAXED)
 
-implement atx_fetch_lxor<",ty1,">(p,v)
+impltmp atx_fetch_lxor<",ty1,">(p,v)
   = __atomic_fetch_xor_",ty0,"(p,v,__ATOMIC_RELAXED)
 
-implement atx_fetch_land<",ty1,">(p,v)
+impltmp atx_fetch_land<",ty1,">(p,v)
   = __atomic_fetch_and_",ty0,"(p,v,__ATOMIC_RELAXED)
 
 (*
-implement atx_fetch_lnand<",ty1,">(p,v)
+impltmp atx_fetch_lnand<",ty1,">(p,v)
   = __atomic_fetch_nand_",ty0,"(p,v,__ATOMIC_RELAXED)
 *)
 
-implement atx_compare_and_swap<",ty1,">( p, e, d ) 
+impltmp atx_compare_and_swap<",ty1,">( p, e, d ) 
   = let
      var e : ",ty1," = e
      in  __atomic_compare_exchange_n_",ty0,"(
@@ -289,8 +285,6 @@ implement atx_compare_and_swap<",ty1,">( p, e, d )
   ) where {
     val ty1 : string = ( 
       ifcase 
-       | ty0 = "size" => "size_t"
-       | ty0 = "ssize" => "ssize_t"
        | _ => ty0 
       ) : string
   }
@@ -344,39 +338,37 @@ fun __atomic_fetch_xor_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \
 fun __atomic_fetch_or_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
 fun __atomic_fetch_nand_",ty0,"( &",ty1," >> _, ",ty1,", memmodel ) : ",ty1," = \"mac#%\"
 
-overload __atomic_load with __atomic_load_",ty0,"
-overload __atomic_load_n with __atomic_load_n_",ty0,"
+#symload __atomic_load with __atomic_load_",ty0,"
+#symload __atomic_load_n with __atomic_load_n_",ty0,"
 
-overload __atomic_store with __atomic_store_",ty0,"
-overload __atomic_store_n with __atomic_store_n_",ty0,"
+#symload __atomic_store with __atomic_store_",ty0,"
+#symload __atomic_store_n with __atomic_store_n_",ty0,"
 
-overload __atomic_exchange with __atomic_exchange_",ty0,"
-overload __atomic_exchange_n with __atomic_exchange_n_",ty0,"
+#symload __atomic_exchange with __atomic_exchange_",ty0,"
+#symload __atomic_exchange_n with __atomic_exchange_n_",ty0,"
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_",ty0,"
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_",ty0,"
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_",ty0,"
+#symload __atomic_compare_exchange with __atomic_compare_exchange_",ty0,"
 
-overload __atomic_add_fetch with __atomic_add_fetch_",ty0,"
-overload __atomic_sub_fetch with __atomic_sub_fetch_",ty0,"
-overload __atomic_and_fetch with __atomic_and_fetch_",ty0,"
-overload __atomic_xor_fetch with __atomic_xor_fetch_",ty0,"
-overload __atomic_or_fetch with __atomic_or_fetch_",ty0,"
-overload __atomic_nand_fetch with __atomic_nand_fetch_",ty0,"
+#symload __atomic_add_fetch with __atomic_add_fetch_",ty0,"
+#symload __atomic_sub_fetch with __atomic_sub_fetch_",ty0,"
+#symload __atomic_and_fetch with __atomic_and_fetch_",ty0,"
+#symload __atomic_xor_fetch with __atomic_xor_fetch_",ty0,"
+#symload __atomic_or_fetch with __atomic_or_fetch_",ty0,"
+#symload __atomic_nand_fetch with __atomic_nand_fetch_",ty0,"
 
-overload __atomic_fetch_add with __atomic_fetch_add_",ty0,"
-overload __atomic_fetch_sub with __atomic_fetch_sub_",ty0,"
-overload __atomic_fetch_and with __atomic_fetch_and_",ty0,"
-overload __atomic_fetch_xor with __atomic_fetch_xor_",ty0,"
-overload __atomic_fetch_or with __atomic_fetch_or_",ty0,"
-overload __atomic_fetch_nand with __atomic_fetch_nand_",ty0,"
+#symload __atomic_fetch_add with __atomic_fetch_add_",ty0,"
+#symload __atomic_fetch_sub with __atomic_fetch_sub_",ty0,"
+#symload __atomic_fetch_and with __atomic_fetch_and_",ty0,"
+#symload __atomic_fetch_xor with __atomic_fetch_xor_",ty0,"
+#symload __atomic_fetch_or with __atomic_fetch_or_",ty0,"
+#symload __atomic_fetch_nand with __atomic_fetch_nand_",ty0,"
 
 ")
   ) where {
     val ty1 : string = ( 
       ifcase 
-       | ty0 = "size" => "size_t"
-       | ty0 = "ssize" => "ssize_t"
        | _ => ty0 
       ) : string
 
@@ -470,33 +462,33 @@ fn atx_stdatomic_dats(
   fprintln!(fr, "
 (** **)
 
-implement atx_load<",ty1,">(p) 
+impltmp atx_load<",ty1,">(p) 
   = atomic_load_",ty0,"( p )
 
-implement atx_store<",ty1,">(p,v) 
+impltmp atx_store<",ty1,">(p,v) 
   = atomic_store_",ty0,"( p, v )
 
-implement atx_fetch_add<",ty1,">(p,v)
+impltmp atx_fetch_add<",ty1,">(p,v)
   = atomic_fetch_add_",ty0,"( p,v )
 
-implement atx_fetch_sub<",ty1,">(p,v)
+impltmp atx_fetch_sub<",ty1,">(p,v)
   = atomic_fetch_sub_",ty0,"( p,v )
 
-implement atx_fetch_lor<",ty1,">(p,v)
+impltmp atx_fetch_lor<",ty1,">(p,v)
   = atomic_fetch_or_",ty0,"( p,v )
 
-implement atx_fetch_lxor<",ty1,">(p,v)
+impltmp atx_fetch_lxor<",ty1,">(p,v)
   = atomic_fetch_xor_",ty0,"( p,v )
 
-implement atx_fetch_land<",ty1,">(p,v)
+impltmp atx_fetch_land<",ty1,">(p,v)
   = atomic_fetch_and_",ty0,"( p,v )
 
 (*
-implement atx_fetch_lnand<",ty1,">(p,v)
+impltmp atx_fetch_lnand<",ty1,">(p,v)
   = atomic_fetch_nand_",ty0,"( p,v )
 *)
 
-implement atx_compare_and_swap<",ty1,">( p, e, d ) 
+impltmp atx_compare_and_swap<",ty1,">( p, e, d ) 
   = let
      var e : ",ty1," = e
      in  atomic_compare_exchange_strong_",ty0,"(
@@ -508,8 +500,6 @@ implement atx_compare_and_swap<",ty1,">( p, e, d )
   ) where {
     val ty1 : string = ( 
       ifcase 
-       | ty0 = "size" => "size_t"
-       | ty0 = "ssize" => "ssize_t"
        | _ => ty0 
       ) : string
   }
@@ -592,27 +582,27 @@ fun
   atomic_fetch_and_explicit_", ty0 , "( &", ty1 , " >> _, ",ty1,", memory_order ) : ",ty1," = \"mac#%\"
 
 
-overload atomic_init with atomic_init_",ty0,"
-overload atomic_store with atomic_store_",ty0,"
-overload atomic_store_explicit with atomic_store_explicit_",ty0,"
-overload atomic_load with atomic_load_",ty0,"
-overload atomic_load_explicit with atomic_load_explicit_",ty0,"
-overload atomic_exchange with atomic_exchange_",ty0,"
-overload atomic_exchange_explicit with atomic_exchange_explicit_",ty0,"
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_",ty0,"
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_",ty0,"
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_",ty0,"
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_",ty0,"
-overload atomic_fetch_add with atomic_fetch_add_",ty0,"
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_",ty0,"
-overload atomic_fetch_sub with atomic_fetch_sub_",ty0,"
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_",ty0,"
-overload atomic_fetch_or with atomic_fetch_or_",ty0,"
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_",ty0,"
-overload atomic_fetch_xor with atomic_fetch_xor_",ty0,"
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_",ty0,"
-overload atomic_fetch_and with atomic_fetch_and_",ty0,"
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_",ty0,"
+#symload atomic_init with atomic_init_",ty0,"
+#symload atomic_store with atomic_store_",ty0,"
+#symload atomic_store_explicit with atomic_store_explicit_",ty0,"
+#symload atomic_load with atomic_load_",ty0,"
+#symload atomic_load_explicit with atomic_load_explicit_",ty0,"
+#symload atomic_exchange with atomic_exchange_",ty0,"
+#symload atomic_exchange_explicit with atomic_exchange_explicit_",ty0,"
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_",ty0,"
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_",ty0,"
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_",ty0,"
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_",ty0,"
+#symload atomic_fetch_add with atomic_fetch_add_",ty0,"
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_",ty0,"
+#symload atomic_fetch_sub with atomic_fetch_sub_",ty0,"
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_",ty0,"
+#symload atomic_fetch_or with atomic_fetch_or_",ty0,"
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_",ty0,"
+#symload atomic_fetch_xor with atomic_fetch_xor_",ty0,"
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_",ty0,"
+#symload atomic_fetch_and with atomic_fetch_and_",ty0,"
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_",ty0,"
 
 ")
 
@@ -621,8 +611,6 @@ overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_",ty0,"
 
     val ty1 : string = ( 
       ifcase 
-       | ty0 = "size" => "size_t"
-       | ty0 = "ssize" => "ssize_t"
        | _ => ty0 
       ) : string
   }
@@ -642,34 +630,24 @@ implement main0()
     val types =
      $list_vt(
         "bool"
-      , "char"
       , "schar"
       , "uchar"
       , "sint"
-      , "usint"
-      , "int"
       , "uint"
       , "ulint"
-      , "llint"
+      , "slint"
       , "ullint"
-      //, "char16"
-      //, "char32"
-      //, "wchar"
-      , "int8"
+      , "sllint"
+      , "sint8"
       , "uint8"
-      , "int16"
+      , "sint16"
       , "uint16"
-      , "int32"
+      , "sint32"
       , "uint32"
-      , "int64"
+      , "sint64"
       , "uint64"
-      , "intptr"
-      , "uintptr"
-      , "size"
       , "ssize"
-      //, "ptrdiff"
-      //, "intmax"
-      //, "uintmax"
+      , "usize"
     )
 
     var fsats = fileref_open_exn("stdatomic_gen.sats", file_mode_ww )

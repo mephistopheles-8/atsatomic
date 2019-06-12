@@ -66,118 +66,27 @@ fun
   atomic_fetch_and_explicit_bool( &bool >> _, bool, memory_order ) : bool = "mac#%"
 
 
-overload atomic_init with atomic_init_bool
-overload atomic_store with atomic_store_bool
-overload atomic_store_explicit with atomic_store_explicit_bool
-overload atomic_load with atomic_load_bool
-overload atomic_load_explicit with atomic_load_explicit_bool
-overload atomic_exchange with atomic_exchange_bool
-overload atomic_exchange_explicit with atomic_exchange_explicit_bool
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_bool
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_bool
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_bool
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_bool
-overload atomic_fetch_add with atomic_fetch_add_bool
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_bool
-overload atomic_fetch_sub with atomic_fetch_sub_bool
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_bool
-overload atomic_fetch_or with atomic_fetch_or_bool
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_bool
-overload atomic_fetch_xor with atomic_fetch_xor_bool
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_bool
-overload atomic_fetch_and with atomic_fetch_and_bool
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_bool
-
-
-
-(** **)
-
-fun atomic_init_char( &char? >> char, char) : void = "mac#%"  
-
-fun  atomic_is_lock_free_char(&char) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_char(&char? >> char, char, memory_order) : void = "mac#%"
-
-fun
-  atomic_store_char(&char? >> char, char ) : void = "mac#%"
-
-fun
-  atomic_load_explicit_char( &char, memory_order ) : char = "mac#%"
-
-fun
-  atomic_load_char( &char ) : char = "mac#%"
-
-fun
-  atomic_exchange_explicit_char( &char >> _, char, memory_order ) : char = "mac#%"
-
-fun
-  atomic_exchange_char( &char >> _, char) : char = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_explicit_char( &char >> _,  &char >> _, char, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_char( &char >> _, &char >> _ , char  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_explicit_char( &char >> _, &char >> _, char, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_char( &char >> _,  &char >> _, char ) : bool = "mac#%"
-
-fun
-  atomic_fetch_add_char( &char >> _ , char ) : char = "mac#%"
-
-fun
-  atomic_fetch_add_explicit_char( &char >> _, char, memory_order ) : char = "mac#%"
-
-fun
-  atomic_fetch_sub_char( &char >> _, char ) : char = "mac#%"
-
-fun
-  atomic_fetch_sub_explicit_char( &char >> _, char, memory_order ) : char = "mac#%"
-
-fun
-  atomic_fetch_or_char( &char >> _, char ) : char = "mac#%"
-
-fun
-  atomic_fetch_or_explicit_char( &char >> _, char, memory_order ) : char = "mac#%"
-
-fun
-  atomic_fetch_xor_char( &char >> _, char ) : char = "mac#%"
-
-fun
-  atomic_fetch_xor_explicit_char( &char >> _, char, memory_order ) : char = "mac#%"
-
-fun
-  atomic_fetch_and_char( &char >> _, char ) : char = "mac#%"
-
-fun
-  atomic_fetch_and_explicit_char( &char >> _, char, memory_order ) : char = "mac#%"
-
-
-overload atomic_init with atomic_init_char
-overload atomic_store with atomic_store_char
-overload atomic_store_explicit with atomic_store_explicit_char
-overload atomic_load with atomic_load_char
-overload atomic_load_explicit with atomic_load_explicit_char
-overload atomic_exchange with atomic_exchange_char
-overload atomic_exchange_explicit with atomic_exchange_explicit_char
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_char
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_char
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_char
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_char
-overload atomic_fetch_add with atomic_fetch_add_char
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_char
-overload atomic_fetch_sub with atomic_fetch_sub_char
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_char
-overload atomic_fetch_or with atomic_fetch_or_char
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_char
-overload atomic_fetch_xor with atomic_fetch_xor_char
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_char
-overload atomic_fetch_and with atomic_fetch_and_char
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_char
+#symload atomic_init with atomic_init_bool
+#symload atomic_store with atomic_store_bool
+#symload atomic_store_explicit with atomic_store_explicit_bool
+#symload atomic_load with atomic_load_bool
+#symload atomic_load_explicit with atomic_load_explicit_bool
+#symload atomic_exchange with atomic_exchange_bool
+#symload atomic_exchange_explicit with atomic_exchange_explicit_bool
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_bool
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_bool
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_bool
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_bool
+#symload atomic_fetch_add with atomic_fetch_add_bool
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_bool
+#symload atomic_fetch_sub with atomic_fetch_sub_bool
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_bool
+#symload atomic_fetch_or with atomic_fetch_or_bool
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_bool
+#symload atomic_fetch_xor with atomic_fetch_xor_bool
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_bool
+#symload atomic_fetch_and with atomic_fetch_and_bool
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_bool
 
 
 
@@ -248,27 +157,27 @@ fun
   atomic_fetch_and_explicit_schar( &schar >> _, schar, memory_order ) : schar = "mac#%"
 
 
-overload atomic_init with atomic_init_schar
-overload atomic_store with atomic_store_schar
-overload atomic_store_explicit with atomic_store_explicit_schar
-overload atomic_load with atomic_load_schar
-overload atomic_load_explicit with atomic_load_explicit_schar
-overload atomic_exchange with atomic_exchange_schar
-overload atomic_exchange_explicit with atomic_exchange_explicit_schar
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_schar
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_schar
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_schar
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_schar
-overload atomic_fetch_add with atomic_fetch_add_schar
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_schar
-overload atomic_fetch_sub with atomic_fetch_sub_schar
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_schar
-overload atomic_fetch_or with atomic_fetch_or_schar
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_schar
-overload atomic_fetch_xor with atomic_fetch_xor_schar
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_schar
-overload atomic_fetch_and with atomic_fetch_and_schar
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_schar
+#symload atomic_init with atomic_init_schar
+#symload atomic_store with atomic_store_schar
+#symload atomic_store_explicit with atomic_store_explicit_schar
+#symload atomic_load with atomic_load_schar
+#symload atomic_load_explicit with atomic_load_explicit_schar
+#symload atomic_exchange with atomic_exchange_schar
+#symload atomic_exchange_explicit with atomic_exchange_explicit_schar
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_schar
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_schar
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_schar
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_schar
+#symload atomic_fetch_add with atomic_fetch_add_schar
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_schar
+#symload atomic_fetch_sub with atomic_fetch_sub_schar
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_schar
+#symload atomic_fetch_or with atomic_fetch_or_schar
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_schar
+#symload atomic_fetch_xor with atomic_fetch_xor_schar
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_schar
+#symload atomic_fetch_and with atomic_fetch_and_schar
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_schar
 
 
 
@@ -339,27 +248,27 @@ fun
   atomic_fetch_and_explicit_uchar( &uchar >> _, uchar, memory_order ) : uchar = "mac#%"
 
 
-overload atomic_init with atomic_init_uchar
-overload atomic_store with atomic_store_uchar
-overload atomic_store_explicit with atomic_store_explicit_uchar
-overload atomic_load with atomic_load_uchar
-overload atomic_load_explicit with atomic_load_explicit_uchar
-overload atomic_exchange with atomic_exchange_uchar
-overload atomic_exchange_explicit with atomic_exchange_explicit_uchar
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uchar
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uchar
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uchar
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uchar
-overload atomic_fetch_add with atomic_fetch_add_uchar
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uchar
-overload atomic_fetch_sub with atomic_fetch_sub_uchar
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uchar
-overload atomic_fetch_or with atomic_fetch_or_uchar
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uchar
-overload atomic_fetch_xor with atomic_fetch_xor_uchar
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uchar
-overload atomic_fetch_and with atomic_fetch_and_uchar
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uchar
+#symload atomic_init with atomic_init_uchar
+#symload atomic_store with atomic_store_uchar
+#symload atomic_store_explicit with atomic_store_explicit_uchar
+#symload atomic_load with atomic_load_uchar
+#symload atomic_load_explicit with atomic_load_explicit_uchar
+#symload atomic_exchange with atomic_exchange_uchar
+#symload atomic_exchange_explicit with atomic_exchange_explicit_uchar
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uchar
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uchar
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uchar
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uchar
+#symload atomic_fetch_add with atomic_fetch_add_uchar
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uchar
+#symload atomic_fetch_sub with atomic_fetch_sub_uchar
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uchar
+#symload atomic_fetch_or with atomic_fetch_or_uchar
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uchar
+#symload atomic_fetch_xor with atomic_fetch_xor_uchar
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uchar
+#symload atomic_fetch_and with atomic_fetch_and_uchar
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uchar
 
 
 
@@ -430,209 +339,27 @@ fun
   atomic_fetch_and_explicit_sint( &sint >> _, sint, memory_order ) : sint = "mac#%"
 
 
-overload atomic_init with atomic_init_sint
-overload atomic_store with atomic_store_sint
-overload atomic_store_explicit with atomic_store_explicit_sint
-overload atomic_load with atomic_load_sint
-overload atomic_load_explicit with atomic_load_explicit_sint
-overload atomic_exchange with atomic_exchange_sint
-overload atomic_exchange_explicit with atomic_exchange_explicit_sint
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sint
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sint
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sint
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sint
-overload atomic_fetch_add with atomic_fetch_add_sint
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sint
-overload atomic_fetch_sub with atomic_fetch_sub_sint
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sint
-overload atomic_fetch_or with atomic_fetch_or_sint
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sint
-overload atomic_fetch_xor with atomic_fetch_xor_sint
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sint
-overload atomic_fetch_and with atomic_fetch_and_sint
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sint
-
-
-
-(** **)
-
-fun atomic_init_usint( &usint? >> usint, usint) : void = "mac#%"  
-
-fun  atomic_is_lock_free_usint(&usint) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_usint(&usint? >> usint, usint, memory_order) : void = "mac#%"
-
-fun
-  atomic_store_usint(&usint? >> usint, usint ) : void = "mac#%"
-
-fun
-  atomic_load_explicit_usint( &usint, memory_order ) : usint = "mac#%"
-
-fun
-  atomic_load_usint( &usint ) : usint = "mac#%"
-
-fun
-  atomic_exchange_explicit_usint( &usint >> _, usint, memory_order ) : usint = "mac#%"
-
-fun
-  atomic_exchange_usint( &usint >> _, usint) : usint = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_explicit_usint( &usint >> _,  &usint >> _, usint, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_usint( &usint >> _, &usint >> _ , usint  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_explicit_usint( &usint >> _, &usint >> _, usint, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_usint( &usint >> _,  &usint >> _, usint ) : bool = "mac#%"
-
-fun
-  atomic_fetch_add_usint( &usint >> _ , usint ) : usint = "mac#%"
-
-fun
-  atomic_fetch_add_explicit_usint( &usint >> _, usint, memory_order ) : usint = "mac#%"
-
-fun
-  atomic_fetch_sub_usint( &usint >> _, usint ) : usint = "mac#%"
-
-fun
-  atomic_fetch_sub_explicit_usint( &usint >> _, usint, memory_order ) : usint = "mac#%"
-
-fun
-  atomic_fetch_or_usint( &usint >> _, usint ) : usint = "mac#%"
-
-fun
-  atomic_fetch_or_explicit_usint( &usint >> _, usint, memory_order ) : usint = "mac#%"
-
-fun
-  atomic_fetch_xor_usint( &usint >> _, usint ) : usint = "mac#%"
-
-fun
-  atomic_fetch_xor_explicit_usint( &usint >> _, usint, memory_order ) : usint = "mac#%"
-
-fun
-  atomic_fetch_and_usint( &usint >> _, usint ) : usint = "mac#%"
-
-fun
-  atomic_fetch_and_explicit_usint( &usint >> _, usint, memory_order ) : usint = "mac#%"
-
-
-overload atomic_init with atomic_init_usint
-overload atomic_store with atomic_store_usint
-overload atomic_store_explicit with atomic_store_explicit_usint
-overload atomic_load with atomic_load_usint
-overload atomic_load_explicit with atomic_load_explicit_usint
-overload atomic_exchange with atomic_exchange_usint
-overload atomic_exchange_explicit with atomic_exchange_explicit_usint
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_usint
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_usint
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_usint
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_usint
-overload atomic_fetch_add with atomic_fetch_add_usint
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_usint
-overload atomic_fetch_sub with atomic_fetch_sub_usint
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_usint
-overload atomic_fetch_or with atomic_fetch_or_usint
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_usint
-overload atomic_fetch_xor with atomic_fetch_xor_usint
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_usint
-overload atomic_fetch_and with atomic_fetch_and_usint
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_usint
-
-
-
-(** **)
-
-fun atomic_init_int( &int? >> int, int) : void = "mac#%"  
-
-fun  atomic_is_lock_free_int(&int) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_int(&int? >> int, int, memory_order) : void = "mac#%"
-
-fun
-  atomic_store_int(&int? >> int, int ) : void = "mac#%"
-
-fun
-  atomic_load_explicit_int( &int, memory_order ) : int = "mac#%"
-
-fun
-  atomic_load_int( &int ) : int = "mac#%"
-
-fun
-  atomic_exchange_explicit_int( &int >> _, int, memory_order ) : int = "mac#%"
-
-fun
-  atomic_exchange_int( &int >> _, int) : int = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_explicit_int( &int >> _,  &int >> _, int, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_int( &int >> _, &int >> _ , int  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_explicit_int( &int >> _, &int >> _, int, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_int( &int >> _,  &int >> _, int ) : bool = "mac#%"
-
-fun
-  atomic_fetch_add_int( &int >> _ , int ) : int = "mac#%"
-
-fun
-  atomic_fetch_add_explicit_int( &int >> _, int, memory_order ) : int = "mac#%"
-
-fun
-  atomic_fetch_sub_int( &int >> _, int ) : int = "mac#%"
-
-fun
-  atomic_fetch_sub_explicit_int( &int >> _, int, memory_order ) : int = "mac#%"
-
-fun
-  atomic_fetch_or_int( &int >> _, int ) : int = "mac#%"
-
-fun
-  atomic_fetch_or_explicit_int( &int >> _, int, memory_order ) : int = "mac#%"
-
-fun
-  atomic_fetch_xor_int( &int >> _, int ) : int = "mac#%"
-
-fun
-  atomic_fetch_xor_explicit_int( &int >> _, int, memory_order ) : int = "mac#%"
-
-fun
-  atomic_fetch_and_int( &int >> _, int ) : int = "mac#%"
-
-fun
-  atomic_fetch_and_explicit_int( &int >> _, int, memory_order ) : int = "mac#%"
-
-
-overload atomic_init with atomic_init_int
-overload atomic_store with atomic_store_int
-overload atomic_store_explicit with atomic_store_explicit_int
-overload atomic_load with atomic_load_int
-overload atomic_load_explicit with atomic_load_explicit_int
-overload atomic_exchange with atomic_exchange_int
-overload atomic_exchange_explicit with atomic_exchange_explicit_int
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_int
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_int
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_int
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_int
-overload atomic_fetch_add with atomic_fetch_add_int
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_int
-overload atomic_fetch_sub with atomic_fetch_sub_int
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_int
-overload atomic_fetch_or with atomic_fetch_or_int
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_int
-overload atomic_fetch_xor with atomic_fetch_xor_int
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_int
-overload atomic_fetch_and with atomic_fetch_and_int
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_int
+#symload atomic_init with atomic_init_sint
+#symload atomic_store with atomic_store_sint
+#symload atomic_store_explicit with atomic_store_explicit_sint
+#symload atomic_load with atomic_load_sint
+#symload atomic_load_explicit with atomic_load_explicit_sint
+#symload atomic_exchange with atomic_exchange_sint
+#symload atomic_exchange_explicit with atomic_exchange_explicit_sint
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sint
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sint
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sint
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sint
+#symload atomic_fetch_add with atomic_fetch_add_sint
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sint
+#symload atomic_fetch_sub with atomic_fetch_sub_sint
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sint
+#symload atomic_fetch_or with atomic_fetch_or_sint
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sint
+#symload atomic_fetch_xor with atomic_fetch_xor_sint
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sint
+#symload atomic_fetch_and with atomic_fetch_and_sint
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sint
 
 
 
@@ -703,27 +430,27 @@ fun
   atomic_fetch_and_explicit_uint( &uint >> _, uint, memory_order ) : uint = "mac#%"
 
 
-overload atomic_init with atomic_init_uint
-overload atomic_store with atomic_store_uint
-overload atomic_store_explicit with atomic_store_explicit_uint
-overload atomic_load with atomic_load_uint
-overload atomic_load_explicit with atomic_load_explicit_uint
-overload atomic_exchange with atomic_exchange_uint
-overload atomic_exchange_explicit with atomic_exchange_explicit_uint
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint
-overload atomic_fetch_add with atomic_fetch_add_uint
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint
-overload atomic_fetch_sub with atomic_fetch_sub_uint
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint
-overload atomic_fetch_or with atomic_fetch_or_uint
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint
-overload atomic_fetch_xor with atomic_fetch_xor_uint
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint
-overload atomic_fetch_and with atomic_fetch_and_uint
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint
+#symload atomic_init with atomic_init_uint
+#symload atomic_store with atomic_store_uint
+#symload atomic_store_explicit with atomic_store_explicit_uint
+#symload atomic_load with atomic_load_uint
+#symload atomic_load_explicit with atomic_load_explicit_uint
+#symload atomic_exchange with atomic_exchange_uint
+#symload atomic_exchange_explicit with atomic_exchange_explicit_uint
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint
+#symload atomic_fetch_add with atomic_fetch_add_uint
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint
+#symload atomic_fetch_sub with atomic_fetch_sub_uint
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint
+#symload atomic_fetch_or with atomic_fetch_or_uint
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint
+#symload atomic_fetch_xor with atomic_fetch_xor_uint
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint
+#symload atomic_fetch_and with atomic_fetch_and_uint
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint
 
 
 
@@ -794,118 +521,118 @@ fun
   atomic_fetch_and_explicit_ulint( &ulint >> _, ulint, memory_order ) : ulint = "mac#%"
 
 
-overload atomic_init with atomic_init_ulint
-overload atomic_store with atomic_store_ulint
-overload atomic_store_explicit with atomic_store_explicit_ulint
-overload atomic_load with atomic_load_ulint
-overload atomic_load_explicit with atomic_load_explicit_ulint
-overload atomic_exchange with atomic_exchange_ulint
-overload atomic_exchange_explicit with atomic_exchange_explicit_ulint
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_ulint
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_ulint
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_ulint
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_ulint
-overload atomic_fetch_add with atomic_fetch_add_ulint
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_ulint
-overload atomic_fetch_sub with atomic_fetch_sub_ulint
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_ulint
-overload atomic_fetch_or with atomic_fetch_or_ulint
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_ulint
-overload atomic_fetch_xor with atomic_fetch_xor_ulint
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_ulint
-overload atomic_fetch_and with atomic_fetch_and_ulint
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_ulint
+#symload atomic_init with atomic_init_ulint
+#symload atomic_store with atomic_store_ulint
+#symload atomic_store_explicit with atomic_store_explicit_ulint
+#symload atomic_load with atomic_load_ulint
+#symload atomic_load_explicit with atomic_load_explicit_ulint
+#symload atomic_exchange with atomic_exchange_ulint
+#symload atomic_exchange_explicit with atomic_exchange_explicit_ulint
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_ulint
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_ulint
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_ulint
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_ulint
+#symload atomic_fetch_add with atomic_fetch_add_ulint
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_ulint
+#symload atomic_fetch_sub with atomic_fetch_sub_ulint
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_ulint
+#symload atomic_fetch_or with atomic_fetch_or_ulint
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_ulint
+#symload atomic_fetch_xor with atomic_fetch_xor_ulint
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_ulint
+#symload atomic_fetch_and with atomic_fetch_and_ulint
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_ulint
 
 
 
 (** **)
 
-fun atomic_init_llint( &llint? >> llint, llint) : void = "mac#%"  
+fun atomic_init_slint( &slint? >> slint, slint) : void = "mac#%"  
 
-fun  atomic_is_lock_free_llint(&llint) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_llint(&llint? >> llint, llint, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_slint(&slint) : bool = "mac#%"
 
 fun
-  atomic_store_llint(&llint? >> llint, llint ) : void = "mac#%"
+  atomic_store_explicit_slint(&slint? >> slint, slint, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_llint( &llint, memory_order ) : llint = "mac#%"
+  atomic_store_slint(&slint? >> slint, slint ) : void = "mac#%"
 
 fun
-  atomic_load_llint( &llint ) : llint = "mac#%"
+  atomic_load_explicit_slint( &slint, memory_order ) : slint = "mac#%"
 
 fun
-  atomic_exchange_explicit_llint( &llint >> _, llint, memory_order ) : llint = "mac#%"
+  atomic_load_slint( &slint ) : slint = "mac#%"
 
 fun
-  atomic_exchange_llint( &llint >> _, llint) : llint = "mac#%"
+  atomic_exchange_explicit_slint( &slint >> _, slint, memory_order ) : slint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_llint( &llint >> _,  &llint >> _, llint, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_slint( &slint >> _, slint) : slint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_llint( &llint >> _, &llint >> _ , llint  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_slint( &slint >> _,  &slint >> _, slint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_llint( &llint >> _, &llint >> _, llint, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_slint( &slint >> _, &slint >> _ , slint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_llint( &llint >> _,  &llint >> _, llint ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_slint( &slint >> _, &slint >> _, slint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_llint( &llint >> _ , llint ) : llint = "mac#%"
+  atomic_compare_exchange_weak_slint( &slint >> _,  &slint >> _, slint ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_llint( &llint >> _, llint, memory_order ) : llint = "mac#%"
+  atomic_fetch_add_slint( &slint >> _ , slint ) : slint = "mac#%"
 
 fun
-  atomic_fetch_sub_llint( &llint >> _, llint ) : llint = "mac#%"
+  atomic_fetch_add_explicit_slint( &slint >> _, slint, memory_order ) : slint = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_llint( &llint >> _, llint, memory_order ) : llint = "mac#%"
+  atomic_fetch_sub_slint( &slint >> _, slint ) : slint = "mac#%"
 
 fun
-  atomic_fetch_or_llint( &llint >> _, llint ) : llint = "mac#%"
+  atomic_fetch_sub_explicit_slint( &slint >> _, slint, memory_order ) : slint = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_llint( &llint >> _, llint, memory_order ) : llint = "mac#%"
+  atomic_fetch_or_slint( &slint >> _, slint ) : slint = "mac#%"
 
 fun
-  atomic_fetch_xor_llint( &llint >> _, llint ) : llint = "mac#%"
+  atomic_fetch_or_explicit_slint( &slint >> _, slint, memory_order ) : slint = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_llint( &llint >> _, llint, memory_order ) : llint = "mac#%"
+  atomic_fetch_xor_slint( &slint >> _, slint ) : slint = "mac#%"
 
 fun
-  atomic_fetch_and_llint( &llint >> _, llint ) : llint = "mac#%"
+  atomic_fetch_xor_explicit_slint( &slint >> _, slint, memory_order ) : slint = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_llint( &llint >> _, llint, memory_order ) : llint = "mac#%"
+  atomic_fetch_and_slint( &slint >> _, slint ) : slint = "mac#%"
+
+fun
+  atomic_fetch_and_explicit_slint( &slint >> _, slint, memory_order ) : slint = "mac#%"
 
 
-overload atomic_init with atomic_init_llint
-overload atomic_store with atomic_store_llint
-overload atomic_store_explicit with atomic_store_explicit_llint
-overload atomic_load with atomic_load_llint
-overload atomic_load_explicit with atomic_load_explicit_llint
-overload atomic_exchange with atomic_exchange_llint
-overload atomic_exchange_explicit with atomic_exchange_explicit_llint
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_llint
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_llint
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_llint
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_llint
-overload atomic_fetch_add with atomic_fetch_add_llint
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_llint
-overload atomic_fetch_sub with atomic_fetch_sub_llint
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_llint
-overload atomic_fetch_or with atomic_fetch_or_llint
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_llint
-overload atomic_fetch_xor with atomic_fetch_xor_llint
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_llint
-overload atomic_fetch_and with atomic_fetch_and_llint
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_llint
+#symload atomic_init with atomic_init_slint
+#symload atomic_store with atomic_store_slint
+#symload atomic_store_explicit with atomic_store_explicit_slint
+#symload atomic_load with atomic_load_slint
+#symload atomic_load_explicit with atomic_load_explicit_slint
+#symload atomic_exchange with atomic_exchange_slint
+#symload atomic_exchange_explicit with atomic_exchange_explicit_slint
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_slint
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_slint
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_slint
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_slint
+#symload atomic_fetch_add with atomic_fetch_add_slint
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_slint
+#symload atomic_fetch_sub with atomic_fetch_sub_slint
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_slint
+#symload atomic_fetch_or with atomic_fetch_or_slint
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_slint
+#symload atomic_fetch_xor with atomic_fetch_xor_slint
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_slint
+#symload atomic_fetch_and with atomic_fetch_and_slint
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_slint
 
 
 
@@ -976,118 +703,209 @@ fun
   atomic_fetch_and_explicit_ullint( &ullint >> _, ullint, memory_order ) : ullint = "mac#%"
 
 
-overload atomic_init with atomic_init_ullint
-overload atomic_store with atomic_store_ullint
-overload atomic_store_explicit with atomic_store_explicit_ullint
-overload atomic_load with atomic_load_ullint
-overload atomic_load_explicit with atomic_load_explicit_ullint
-overload atomic_exchange with atomic_exchange_ullint
-overload atomic_exchange_explicit with atomic_exchange_explicit_ullint
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_ullint
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_ullint
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_ullint
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_ullint
-overload atomic_fetch_add with atomic_fetch_add_ullint
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_ullint
-overload atomic_fetch_sub with atomic_fetch_sub_ullint
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_ullint
-overload atomic_fetch_or with atomic_fetch_or_ullint
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_ullint
-overload atomic_fetch_xor with atomic_fetch_xor_ullint
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_ullint
-overload atomic_fetch_and with atomic_fetch_and_ullint
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_ullint
+#symload atomic_init with atomic_init_ullint
+#symload atomic_store with atomic_store_ullint
+#symload atomic_store_explicit with atomic_store_explicit_ullint
+#symload atomic_load with atomic_load_ullint
+#symload atomic_load_explicit with atomic_load_explicit_ullint
+#symload atomic_exchange with atomic_exchange_ullint
+#symload atomic_exchange_explicit with atomic_exchange_explicit_ullint
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_ullint
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_ullint
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_ullint
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_ullint
+#symload atomic_fetch_add with atomic_fetch_add_ullint
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_ullint
+#symload atomic_fetch_sub with atomic_fetch_sub_ullint
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_ullint
+#symload atomic_fetch_or with atomic_fetch_or_ullint
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_ullint
+#symload atomic_fetch_xor with atomic_fetch_xor_ullint
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_ullint
+#symload atomic_fetch_and with atomic_fetch_and_ullint
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_ullint
 
 
 
 (** **)
 
-fun atomic_init_int8( &int8? >> int8, int8) : void = "mac#%"  
+fun atomic_init_sllint( &sllint? >> sllint, sllint) : void = "mac#%"  
 
-fun  atomic_is_lock_free_int8(&int8) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_int8(&int8? >> int8, int8, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_sllint(&sllint) : bool = "mac#%"
 
 fun
-  atomic_store_int8(&int8? >> int8, int8 ) : void = "mac#%"
+  atomic_store_explicit_sllint(&sllint? >> sllint, sllint, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_int8( &int8, memory_order ) : int8 = "mac#%"
+  atomic_store_sllint(&sllint? >> sllint, sllint ) : void = "mac#%"
 
 fun
-  atomic_load_int8( &int8 ) : int8 = "mac#%"
+  atomic_load_explicit_sllint( &sllint, memory_order ) : sllint = "mac#%"
 
 fun
-  atomic_exchange_explicit_int8( &int8 >> _, int8, memory_order ) : int8 = "mac#%"
+  atomic_load_sllint( &sllint ) : sllint = "mac#%"
 
 fun
-  atomic_exchange_int8( &int8 >> _, int8) : int8 = "mac#%"
+  atomic_exchange_explicit_sllint( &sllint >> _, sllint, memory_order ) : sllint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int8( &int8 >> _,  &int8 >> _, int8, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_sllint( &sllint >> _, sllint) : sllint = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int8( &int8 >> _, &int8 >> _ , int8  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_sllint( &sllint >> _,  &sllint >> _, sllint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int8( &int8 >> _, &int8 >> _, int8, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_sllint( &sllint >> _, &sllint >> _ , sllint  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int8( &int8 >> _,  &int8 >> _, int8 ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_sllint( &sllint >> _, &sllint >> _, sllint, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_int8( &int8 >> _ , int8 ) : int8 = "mac#%"
+  atomic_compare_exchange_weak_sllint( &sllint >> _,  &sllint >> _, sllint ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_int8( &int8 >> _, int8, memory_order ) : int8 = "mac#%"
+  atomic_fetch_add_sllint( &sllint >> _ , sllint ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_sub_int8( &int8 >> _, int8 ) : int8 = "mac#%"
+  atomic_fetch_add_explicit_sllint( &sllint >> _, sllint, memory_order ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_int8( &int8 >> _, int8, memory_order ) : int8 = "mac#%"
+  atomic_fetch_sub_sllint( &sllint >> _, sllint ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_or_int8( &int8 >> _, int8 ) : int8 = "mac#%"
+  atomic_fetch_sub_explicit_sllint( &sllint >> _, sllint, memory_order ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_int8( &int8 >> _, int8, memory_order ) : int8 = "mac#%"
+  atomic_fetch_or_sllint( &sllint >> _, sllint ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_xor_int8( &int8 >> _, int8 ) : int8 = "mac#%"
+  atomic_fetch_or_explicit_sllint( &sllint >> _, sllint, memory_order ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_int8( &int8 >> _, int8, memory_order ) : int8 = "mac#%"
+  atomic_fetch_xor_sllint( &sllint >> _, sllint ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_and_int8( &int8 >> _, int8 ) : int8 = "mac#%"
+  atomic_fetch_xor_explicit_sllint( &sllint >> _, sllint, memory_order ) : sllint = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_int8( &int8 >> _, int8, memory_order ) : int8 = "mac#%"
+  atomic_fetch_and_sllint( &sllint >> _, sllint ) : sllint = "mac#%"
+
+fun
+  atomic_fetch_and_explicit_sllint( &sllint >> _, sllint, memory_order ) : sllint = "mac#%"
 
 
-overload atomic_init with atomic_init_int8
-overload atomic_store with atomic_store_int8
-overload atomic_store_explicit with atomic_store_explicit_int8
-overload atomic_load with atomic_load_int8
-overload atomic_load_explicit with atomic_load_explicit_int8
-overload atomic_exchange with atomic_exchange_int8
-overload atomic_exchange_explicit with atomic_exchange_explicit_int8
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_int8
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_int8
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_int8
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_int8
-overload atomic_fetch_add with atomic_fetch_add_int8
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_int8
-overload atomic_fetch_sub with atomic_fetch_sub_int8
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_int8
-overload atomic_fetch_or with atomic_fetch_or_int8
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_int8
-overload atomic_fetch_xor with atomic_fetch_xor_int8
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_int8
-overload atomic_fetch_and with atomic_fetch_and_int8
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_int8
+#symload atomic_init with atomic_init_sllint
+#symload atomic_store with atomic_store_sllint
+#symload atomic_store_explicit with atomic_store_explicit_sllint
+#symload atomic_load with atomic_load_sllint
+#symload atomic_load_explicit with atomic_load_explicit_sllint
+#symload atomic_exchange with atomic_exchange_sllint
+#symload atomic_exchange_explicit with atomic_exchange_explicit_sllint
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sllint
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sllint
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sllint
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sllint
+#symload atomic_fetch_add with atomic_fetch_add_sllint
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sllint
+#symload atomic_fetch_sub with atomic_fetch_sub_sllint
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sllint
+#symload atomic_fetch_or with atomic_fetch_or_sllint
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sllint
+#symload atomic_fetch_xor with atomic_fetch_xor_sllint
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sllint
+#symload atomic_fetch_and with atomic_fetch_and_sllint
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sllint
+
+
+
+(** **)
+
+fun atomic_init_sint8( &sint8? >> sint8, sint8) : void = "mac#%"  
+
+fun  atomic_is_lock_free_sint8(&sint8) : bool = "mac#%"
+
+fun
+  atomic_store_explicit_sint8(&sint8? >> sint8, sint8, memory_order) : void = "mac#%"
+
+fun
+  atomic_store_sint8(&sint8? >> sint8, sint8 ) : void = "mac#%"
+
+fun
+  atomic_load_explicit_sint8( &sint8, memory_order ) : sint8 = "mac#%"
+
+fun
+  atomic_load_sint8( &sint8 ) : sint8 = "mac#%"
+
+fun
+  atomic_exchange_explicit_sint8( &sint8 >> _, sint8, memory_order ) : sint8 = "mac#%"
+
+fun
+  atomic_exchange_sint8( &sint8 >> _, sint8) : sint8 = "mac#%"
+
+fun
+  atomic_compare_exchange_strong_explicit_sint8( &sint8 >> _,  &sint8 >> _, sint8, memory_order, memory_order  ) : bool = "mac#%"
+
+fun
+  atomic_compare_exchange_strong_sint8( &sint8 >> _, &sint8 >> _ , sint8  ) : bool = "mac#%"
+
+fun
+  atomic_compare_exchange_weak_explicit_sint8( &sint8 >> _, &sint8 >> _, sint8, memory_order, memory_order  ) : bool = "mac#%"
+
+fun
+  atomic_compare_exchange_weak_sint8( &sint8 >> _,  &sint8 >> _, sint8 ) : bool = "mac#%"
+
+fun
+  atomic_fetch_add_sint8( &sint8 >> _ , sint8 ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_add_explicit_sint8( &sint8 >> _, sint8, memory_order ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_sub_sint8( &sint8 >> _, sint8 ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_sub_explicit_sint8( &sint8 >> _, sint8, memory_order ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_or_sint8( &sint8 >> _, sint8 ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_or_explicit_sint8( &sint8 >> _, sint8, memory_order ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_xor_sint8( &sint8 >> _, sint8 ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_xor_explicit_sint8( &sint8 >> _, sint8, memory_order ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_and_sint8( &sint8 >> _, sint8 ) : sint8 = "mac#%"
+
+fun
+  atomic_fetch_and_explicit_sint8( &sint8 >> _, sint8, memory_order ) : sint8 = "mac#%"
+
+
+#symload atomic_init with atomic_init_sint8
+#symload atomic_store with atomic_store_sint8
+#symload atomic_store_explicit with atomic_store_explicit_sint8
+#symload atomic_load with atomic_load_sint8
+#symload atomic_load_explicit with atomic_load_explicit_sint8
+#symload atomic_exchange with atomic_exchange_sint8
+#symload atomic_exchange_explicit with atomic_exchange_explicit_sint8
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sint8
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sint8
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sint8
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sint8
+#symload atomic_fetch_add with atomic_fetch_add_sint8
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sint8
+#symload atomic_fetch_sub with atomic_fetch_sub_sint8
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sint8
+#symload atomic_fetch_or with atomic_fetch_or_sint8
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sint8
+#symload atomic_fetch_xor with atomic_fetch_xor_sint8
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sint8
+#symload atomic_fetch_and with atomic_fetch_and_sint8
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sint8
 
 
 
@@ -1158,118 +976,118 @@ fun
   atomic_fetch_and_explicit_uint8( &uint8 >> _, uint8, memory_order ) : uint8 = "mac#%"
 
 
-overload atomic_init with atomic_init_uint8
-overload atomic_store with atomic_store_uint8
-overload atomic_store_explicit with atomic_store_explicit_uint8
-overload atomic_load with atomic_load_uint8
-overload atomic_load_explicit with atomic_load_explicit_uint8
-overload atomic_exchange with atomic_exchange_uint8
-overload atomic_exchange_explicit with atomic_exchange_explicit_uint8
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint8
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint8
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint8
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint8
-overload atomic_fetch_add with atomic_fetch_add_uint8
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint8
-overload atomic_fetch_sub with atomic_fetch_sub_uint8
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint8
-overload atomic_fetch_or with atomic_fetch_or_uint8
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint8
-overload atomic_fetch_xor with atomic_fetch_xor_uint8
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint8
-overload atomic_fetch_and with atomic_fetch_and_uint8
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint8
+#symload atomic_init with atomic_init_uint8
+#symload atomic_store with atomic_store_uint8
+#symload atomic_store_explicit with atomic_store_explicit_uint8
+#symload atomic_load with atomic_load_uint8
+#symload atomic_load_explicit with atomic_load_explicit_uint8
+#symload atomic_exchange with atomic_exchange_uint8
+#symload atomic_exchange_explicit with atomic_exchange_explicit_uint8
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint8
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint8
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint8
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint8
+#symload atomic_fetch_add with atomic_fetch_add_uint8
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint8
+#symload atomic_fetch_sub with atomic_fetch_sub_uint8
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint8
+#symload atomic_fetch_or with atomic_fetch_or_uint8
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint8
+#symload atomic_fetch_xor with atomic_fetch_xor_uint8
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint8
+#symload atomic_fetch_and with atomic_fetch_and_uint8
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint8
 
 
 
 (** **)
 
-fun atomic_init_int16( &int16? >> int16, int16) : void = "mac#%"  
+fun atomic_init_sint16( &sint16? >> sint16, sint16) : void = "mac#%"  
 
-fun  atomic_is_lock_free_int16(&int16) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_int16(&int16? >> int16, int16, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_sint16(&sint16) : bool = "mac#%"
 
 fun
-  atomic_store_int16(&int16? >> int16, int16 ) : void = "mac#%"
+  atomic_store_explicit_sint16(&sint16? >> sint16, sint16, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_int16( &int16, memory_order ) : int16 = "mac#%"
+  atomic_store_sint16(&sint16? >> sint16, sint16 ) : void = "mac#%"
 
 fun
-  atomic_load_int16( &int16 ) : int16 = "mac#%"
+  atomic_load_explicit_sint16( &sint16, memory_order ) : sint16 = "mac#%"
 
 fun
-  atomic_exchange_explicit_int16( &int16 >> _, int16, memory_order ) : int16 = "mac#%"
+  atomic_load_sint16( &sint16 ) : sint16 = "mac#%"
 
 fun
-  atomic_exchange_int16( &int16 >> _, int16) : int16 = "mac#%"
+  atomic_exchange_explicit_sint16( &sint16 >> _, sint16, memory_order ) : sint16 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int16( &int16 >> _,  &int16 >> _, int16, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_sint16( &sint16 >> _, sint16) : sint16 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int16( &int16 >> _, &int16 >> _ , int16  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_sint16( &sint16 >> _,  &sint16 >> _, sint16, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int16( &int16 >> _, &int16 >> _, int16, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_sint16( &sint16 >> _, &sint16 >> _ , sint16  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int16( &int16 >> _,  &int16 >> _, int16 ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_sint16( &sint16 >> _, &sint16 >> _, sint16, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_int16( &int16 >> _ , int16 ) : int16 = "mac#%"
+  atomic_compare_exchange_weak_sint16( &sint16 >> _,  &sint16 >> _, sint16 ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_int16( &int16 >> _, int16, memory_order ) : int16 = "mac#%"
+  atomic_fetch_add_sint16( &sint16 >> _ , sint16 ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_sub_int16( &int16 >> _, int16 ) : int16 = "mac#%"
+  atomic_fetch_add_explicit_sint16( &sint16 >> _, sint16, memory_order ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_int16( &int16 >> _, int16, memory_order ) : int16 = "mac#%"
+  atomic_fetch_sub_sint16( &sint16 >> _, sint16 ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_or_int16( &int16 >> _, int16 ) : int16 = "mac#%"
+  atomic_fetch_sub_explicit_sint16( &sint16 >> _, sint16, memory_order ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_int16( &int16 >> _, int16, memory_order ) : int16 = "mac#%"
+  atomic_fetch_or_sint16( &sint16 >> _, sint16 ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_xor_int16( &int16 >> _, int16 ) : int16 = "mac#%"
+  atomic_fetch_or_explicit_sint16( &sint16 >> _, sint16, memory_order ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_int16( &int16 >> _, int16, memory_order ) : int16 = "mac#%"
+  atomic_fetch_xor_sint16( &sint16 >> _, sint16 ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_and_int16( &int16 >> _, int16 ) : int16 = "mac#%"
+  atomic_fetch_xor_explicit_sint16( &sint16 >> _, sint16, memory_order ) : sint16 = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_int16( &int16 >> _, int16, memory_order ) : int16 = "mac#%"
+  atomic_fetch_and_sint16( &sint16 >> _, sint16 ) : sint16 = "mac#%"
+
+fun
+  atomic_fetch_and_explicit_sint16( &sint16 >> _, sint16, memory_order ) : sint16 = "mac#%"
 
 
-overload atomic_init with atomic_init_int16
-overload atomic_store with atomic_store_int16
-overload atomic_store_explicit with atomic_store_explicit_int16
-overload atomic_load with atomic_load_int16
-overload atomic_load_explicit with atomic_load_explicit_int16
-overload atomic_exchange with atomic_exchange_int16
-overload atomic_exchange_explicit with atomic_exchange_explicit_int16
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_int16
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_int16
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_int16
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_int16
-overload atomic_fetch_add with atomic_fetch_add_int16
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_int16
-overload atomic_fetch_sub with atomic_fetch_sub_int16
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_int16
-overload atomic_fetch_or with atomic_fetch_or_int16
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_int16
-overload atomic_fetch_xor with atomic_fetch_xor_int16
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_int16
-overload atomic_fetch_and with atomic_fetch_and_int16
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_int16
+#symload atomic_init with atomic_init_sint16
+#symload atomic_store with atomic_store_sint16
+#symload atomic_store_explicit with atomic_store_explicit_sint16
+#symload atomic_load with atomic_load_sint16
+#symload atomic_load_explicit with atomic_load_explicit_sint16
+#symload atomic_exchange with atomic_exchange_sint16
+#symload atomic_exchange_explicit with atomic_exchange_explicit_sint16
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sint16
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sint16
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sint16
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sint16
+#symload atomic_fetch_add with atomic_fetch_add_sint16
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sint16
+#symload atomic_fetch_sub with atomic_fetch_sub_sint16
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sint16
+#symload atomic_fetch_or with atomic_fetch_or_sint16
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sint16
+#symload atomic_fetch_xor with atomic_fetch_xor_sint16
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sint16
+#symload atomic_fetch_and with atomic_fetch_and_sint16
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sint16
 
 
 
@@ -1340,118 +1158,118 @@ fun
   atomic_fetch_and_explicit_uint16( &uint16 >> _, uint16, memory_order ) : uint16 = "mac#%"
 
 
-overload atomic_init with atomic_init_uint16
-overload atomic_store with atomic_store_uint16
-overload atomic_store_explicit with atomic_store_explicit_uint16
-overload atomic_load with atomic_load_uint16
-overload atomic_load_explicit with atomic_load_explicit_uint16
-overload atomic_exchange with atomic_exchange_uint16
-overload atomic_exchange_explicit with atomic_exchange_explicit_uint16
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint16
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint16
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint16
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint16
-overload atomic_fetch_add with atomic_fetch_add_uint16
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint16
-overload atomic_fetch_sub with atomic_fetch_sub_uint16
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint16
-overload atomic_fetch_or with atomic_fetch_or_uint16
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint16
-overload atomic_fetch_xor with atomic_fetch_xor_uint16
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint16
-overload atomic_fetch_and with atomic_fetch_and_uint16
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint16
+#symload atomic_init with atomic_init_uint16
+#symload atomic_store with atomic_store_uint16
+#symload atomic_store_explicit with atomic_store_explicit_uint16
+#symload atomic_load with atomic_load_uint16
+#symload atomic_load_explicit with atomic_load_explicit_uint16
+#symload atomic_exchange with atomic_exchange_uint16
+#symload atomic_exchange_explicit with atomic_exchange_explicit_uint16
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint16
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint16
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint16
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint16
+#symload atomic_fetch_add with atomic_fetch_add_uint16
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint16
+#symload atomic_fetch_sub with atomic_fetch_sub_uint16
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint16
+#symload atomic_fetch_or with atomic_fetch_or_uint16
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint16
+#symload atomic_fetch_xor with atomic_fetch_xor_uint16
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint16
+#symload atomic_fetch_and with atomic_fetch_and_uint16
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint16
 
 
 
 (** **)
 
-fun atomic_init_int32( &int32? >> int32, int32) : void = "mac#%"  
+fun atomic_init_sint32( &sint32? >> sint32, sint32) : void = "mac#%"  
 
-fun  atomic_is_lock_free_int32(&int32) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_int32(&int32? >> int32, int32, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_sint32(&sint32) : bool = "mac#%"
 
 fun
-  atomic_store_int32(&int32? >> int32, int32 ) : void = "mac#%"
+  atomic_store_explicit_sint32(&sint32? >> sint32, sint32, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_int32( &int32, memory_order ) : int32 = "mac#%"
+  atomic_store_sint32(&sint32? >> sint32, sint32 ) : void = "mac#%"
 
 fun
-  atomic_load_int32( &int32 ) : int32 = "mac#%"
+  atomic_load_explicit_sint32( &sint32, memory_order ) : sint32 = "mac#%"
 
 fun
-  atomic_exchange_explicit_int32( &int32 >> _, int32, memory_order ) : int32 = "mac#%"
+  atomic_load_sint32( &sint32 ) : sint32 = "mac#%"
 
 fun
-  atomic_exchange_int32( &int32 >> _, int32) : int32 = "mac#%"
+  atomic_exchange_explicit_sint32( &sint32 >> _, sint32, memory_order ) : sint32 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int32( &int32 >> _,  &int32 >> _, int32, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_sint32( &sint32 >> _, sint32) : sint32 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int32( &int32 >> _, &int32 >> _ , int32  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_sint32( &sint32 >> _,  &sint32 >> _, sint32, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int32( &int32 >> _, &int32 >> _, int32, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_sint32( &sint32 >> _, &sint32 >> _ , sint32  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int32( &int32 >> _,  &int32 >> _, int32 ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_sint32( &sint32 >> _, &sint32 >> _, sint32, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_int32( &int32 >> _ , int32 ) : int32 = "mac#%"
+  atomic_compare_exchange_weak_sint32( &sint32 >> _,  &sint32 >> _, sint32 ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_int32( &int32 >> _, int32, memory_order ) : int32 = "mac#%"
+  atomic_fetch_add_sint32( &sint32 >> _ , sint32 ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_sub_int32( &int32 >> _, int32 ) : int32 = "mac#%"
+  atomic_fetch_add_explicit_sint32( &sint32 >> _, sint32, memory_order ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_int32( &int32 >> _, int32, memory_order ) : int32 = "mac#%"
+  atomic_fetch_sub_sint32( &sint32 >> _, sint32 ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_or_int32( &int32 >> _, int32 ) : int32 = "mac#%"
+  atomic_fetch_sub_explicit_sint32( &sint32 >> _, sint32, memory_order ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_int32( &int32 >> _, int32, memory_order ) : int32 = "mac#%"
+  atomic_fetch_or_sint32( &sint32 >> _, sint32 ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_xor_int32( &int32 >> _, int32 ) : int32 = "mac#%"
+  atomic_fetch_or_explicit_sint32( &sint32 >> _, sint32, memory_order ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_int32( &int32 >> _, int32, memory_order ) : int32 = "mac#%"
+  atomic_fetch_xor_sint32( &sint32 >> _, sint32 ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_and_int32( &int32 >> _, int32 ) : int32 = "mac#%"
+  atomic_fetch_xor_explicit_sint32( &sint32 >> _, sint32, memory_order ) : sint32 = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_int32( &int32 >> _, int32, memory_order ) : int32 = "mac#%"
+  atomic_fetch_and_sint32( &sint32 >> _, sint32 ) : sint32 = "mac#%"
+
+fun
+  atomic_fetch_and_explicit_sint32( &sint32 >> _, sint32, memory_order ) : sint32 = "mac#%"
 
 
-overload atomic_init with atomic_init_int32
-overload atomic_store with atomic_store_int32
-overload atomic_store_explicit with atomic_store_explicit_int32
-overload atomic_load with atomic_load_int32
-overload atomic_load_explicit with atomic_load_explicit_int32
-overload atomic_exchange with atomic_exchange_int32
-overload atomic_exchange_explicit with atomic_exchange_explicit_int32
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_int32
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_int32
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_int32
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_int32
-overload atomic_fetch_add with atomic_fetch_add_int32
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_int32
-overload atomic_fetch_sub with atomic_fetch_sub_int32
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_int32
-overload atomic_fetch_or with atomic_fetch_or_int32
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_int32
-overload atomic_fetch_xor with atomic_fetch_xor_int32
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_int32
-overload atomic_fetch_and with atomic_fetch_and_int32
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_int32
+#symload atomic_init with atomic_init_sint32
+#symload atomic_store with atomic_store_sint32
+#symload atomic_store_explicit with atomic_store_explicit_sint32
+#symload atomic_load with atomic_load_sint32
+#symload atomic_load_explicit with atomic_load_explicit_sint32
+#symload atomic_exchange with atomic_exchange_sint32
+#symload atomic_exchange_explicit with atomic_exchange_explicit_sint32
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sint32
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sint32
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sint32
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sint32
+#symload atomic_fetch_add with atomic_fetch_add_sint32
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sint32
+#symload atomic_fetch_sub with atomic_fetch_sub_sint32
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sint32
+#symload atomic_fetch_or with atomic_fetch_or_sint32
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sint32
+#symload atomic_fetch_xor with atomic_fetch_xor_sint32
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sint32
+#symload atomic_fetch_and with atomic_fetch_and_sint32
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sint32
 
 
 
@@ -1522,118 +1340,118 @@ fun
   atomic_fetch_and_explicit_uint32( &uint32 >> _, uint32, memory_order ) : uint32 = "mac#%"
 
 
-overload atomic_init with atomic_init_uint32
-overload atomic_store with atomic_store_uint32
-overload atomic_store_explicit with atomic_store_explicit_uint32
-overload atomic_load with atomic_load_uint32
-overload atomic_load_explicit with atomic_load_explicit_uint32
-overload atomic_exchange with atomic_exchange_uint32
-overload atomic_exchange_explicit with atomic_exchange_explicit_uint32
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint32
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint32
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint32
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint32
-overload atomic_fetch_add with atomic_fetch_add_uint32
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint32
-overload atomic_fetch_sub with atomic_fetch_sub_uint32
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint32
-overload atomic_fetch_or with atomic_fetch_or_uint32
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint32
-overload atomic_fetch_xor with atomic_fetch_xor_uint32
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint32
-overload atomic_fetch_and with atomic_fetch_and_uint32
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint32
+#symload atomic_init with atomic_init_uint32
+#symload atomic_store with atomic_store_uint32
+#symload atomic_store_explicit with atomic_store_explicit_uint32
+#symload atomic_load with atomic_load_uint32
+#symload atomic_load_explicit with atomic_load_explicit_uint32
+#symload atomic_exchange with atomic_exchange_uint32
+#symload atomic_exchange_explicit with atomic_exchange_explicit_uint32
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint32
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint32
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint32
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint32
+#symload atomic_fetch_add with atomic_fetch_add_uint32
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint32
+#symload atomic_fetch_sub with atomic_fetch_sub_uint32
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint32
+#symload atomic_fetch_or with atomic_fetch_or_uint32
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint32
+#symload atomic_fetch_xor with atomic_fetch_xor_uint32
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint32
+#symload atomic_fetch_and with atomic_fetch_and_uint32
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint32
 
 
 
 (** **)
 
-fun atomic_init_int64( &int64? >> int64, int64) : void = "mac#%"  
+fun atomic_init_sint64( &sint64? >> sint64, sint64) : void = "mac#%"  
 
-fun  atomic_is_lock_free_int64(&int64) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_int64(&int64? >> int64, int64, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_sint64(&sint64) : bool = "mac#%"
 
 fun
-  atomic_store_int64(&int64? >> int64, int64 ) : void = "mac#%"
+  atomic_store_explicit_sint64(&sint64? >> sint64, sint64, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_int64( &int64, memory_order ) : int64 = "mac#%"
+  atomic_store_sint64(&sint64? >> sint64, sint64 ) : void = "mac#%"
 
 fun
-  atomic_load_int64( &int64 ) : int64 = "mac#%"
+  atomic_load_explicit_sint64( &sint64, memory_order ) : sint64 = "mac#%"
 
 fun
-  atomic_exchange_explicit_int64( &int64 >> _, int64, memory_order ) : int64 = "mac#%"
+  atomic_load_sint64( &sint64 ) : sint64 = "mac#%"
 
 fun
-  atomic_exchange_int64( &int64 >> _, int64) : int64 = "mac#%"
+  atomic_exchange_explicit_sint64( &sint64 >> _, sint64, memory_order ) : sint64 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_int64( &int64 >> _,  &int64 >> _, int64, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_sint64( &sint64 >> _, sint64) : sint64 = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_int64( &int64 >> _, &int64 >> _ , int64  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_sint64( &sint64 >> _,  &sint64 >> _, sint64, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_int64( &int64 >> _, &int64 >> _, int64, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_sint64( &sint64 >> _, &sint64 >> _ , sint64  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_int64( &int64 >> _,  &int64 >> _, int64 ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_sint64( &sint64 >> _, &sint64 >> _, sint64, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_int64( &int64 >> _ , int64 ) : int64 = "mac#%"
+  atomic_compare_exchange_weak_sint64( &sint64 >> _,  &sint64 >> _, sint64 ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_int64( &int64 >> _, int64, memory_order ) : int64 = "mac#%"
+  atomic_fetch_add_sint64( &sint64 >> _ , sint64 ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_sub_int64( &int64 >> _, int64 ) : int64 = "mac#%"
+  atomic_fetch_add_explicit_sint64( &sint64 >> _, sint64, memory_order ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_int64( &int64 >> _, int64, memory_order ) : int64 = "mac#%"
+  atomic_fetch_sub_sint64( &sint64 >> _, sint64 ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_or_int64( &int64 >> _, int64 ) : int64 = "mac#%"
+  atomic_fetch_sub_explicit_sint64( &sint64 >> _, sint64, memory_order ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_int64( &int64 >> _, int64, memory_order ) : int64 = "mac#%"
+  atomic_fetch_or_sint64( &sint64 >> _, sint64 ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_xor_int64( &int64 >> _, int64 ) : int64 = "mac#%"
+  atomic_fetch_or_explicit_sint64( &sint64 >> _, sint64, memory_order ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_int64( &int64 >> _, int64, memory_order ) : int64 = "mac#%"
+  atomic_fetch_xor_sint64( &sint64 >> _, sint64 ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_and_int64( &int64 >> _, int64 ) : int64 = "mac#%"
+  atomic_fetch_xor_explicit_sint64( &sint64 >> _, sint64, memory_order ) : sint64 = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_int64( &int64 >> _, int64, memory_order ) : int64 = "mac#%"
+  atomic_fetch_and_sint64( &sint64 >> _, sint64 ) : sint64 = "mac#%"
+
+fun
+  atomic_fetch_and_explicit_sint64( &sint64 >> _, sint64, memory_order ) : sint64 = "mac#%"
 
 
-overload atomic_init with atomic_init_int64
-overload atomic_store with atomic_store_int64
-overload atomic_store_explicit with atomic_store_explicit_int64
-overload atomic_load with atomic_load_int64
-overload atomic_load_explicit with atomic_load_explicit_int64
-overload atomic_exchange with atomic_exchange_int64
-overload atomic_exchange_explicit with atomic_exchange_explicit_int64
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_int64
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_int64
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_int64
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_int64
-overload atomic_fetch_add with atomic_fetch_add_int64
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_int64
-overload atomic_fetch_sub with atomic_fetch_sub_int64
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_int64
-overload atomic_fetch_or with atomic_fetch_or_int64
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_int64
-overload atomic_fetch_xor with atomic_fetch_xor_int64
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_int64
-overload atomic_fetch_and with atomic_fetch_and_int64
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_int64
+#symload atomic_init with atomic_init_sint64
+#symload atomic_store with atomic_store_sint64
+#symload atomic_store_explicit with atomic_store_explicit_sint64
+#symload atomic_load with atomic_load_sint64
+#symload atomic_load_explicit with atomic_load_explicit_sint64
+#symload atomic_exchange with atomic_exchange_sint64
+#symload atomic_exchange_explicit with atomic_exchange_explicit_sint64
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_sint64
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_sint64
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_sint64
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_sint64
+#symload atomic_fetch_add with atomic_fetch_add_sint64
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_sint64
+#symload atomic_fetch_sub with atomic_fetch_sub_sint64
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_sint64
+#symload atomic_fetch_or with atomic_fetch_or_sint64
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_sint64
+#symload atomic_fetch_xor with atomic_fetch_xor_sint64
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_sint64
+#symload atomic_fetch_and with atomic_fetch_and_sint64
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_sint64
 
 
 
@@ -1704,390 +1522,208 @@ fun
   atomic_fetch_and_explicit_uint64( &uint64 >> _, uint64, memory_order ) : uint64 = "mac#%"
 
 
-overload atomic_init with atomic_init_uint64
-overload atomic_store with atomic_store_uint64
-overload atomic_store_explicit with atomic_store_explicit_uint64
-overload atomic_load with atomic_load_uint64
-overload atomic_load_explicit with atomic_load_explicit_uint64
-overload atomic_exchange with atomic_exchange_uint64
-overload atomic_exchange_explicit with atomic_exchange_explicit_uint64
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint64
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint64
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint64
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint64
-overload atomic_fetch_add with atomic_fetch_add_uint64
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint64
-overload atomic_fetch_sub with atomic_fetch_sub_uint64
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint64
-overload atomic_fetch_or with atomic_fetch_or_uint64
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint64
-overload atomic_fetch_xor with atomic_fetch_xor_uint64
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint64
-overload atomic_fetch_and with atomic_fetch_and_uint64
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint64
+#symload atomic_init with atomic_init_uint64
+#symload atomic_store with atomic_store_uint64
+#symload atomic_store_explicit with atomic_store_explicit_uint64
+#symload atomic_load with atomic_load_uint64
+#symload atomic_load_explicit with atomic_load_explicit_uint64
+#symload atomic_exchange with atomic_exchange_uint64
+#symload atomic_exchange_explicit with atomic_exchange_explicit_uint64
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uint64
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uint64
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uint64
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uint64
+#symload atomic_fetch_add with atomic_fetch_add_uint64
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uint64
+#symload atomic_fetch_sub with atomic_fetch_sub_uint64
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uint64
+#symload atomic_fetch_or with atomic_fetch_or_uint64
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uint64
+#symload atomic_fetch_xor with atomic_fetch_xor_uint64
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uint64
+#symload atomic_fetch_and with atomic_fetch_and_uint64
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uint64
 
 
 
 (** **)
 
-fun atomic_init_intptr( &intptr? >> intptr, intptr) : void = "mac#%"  
+fun atomic_init_ssize( &ssize? >> ssize, ssize) : void = "mac#%"  
 
-fun  atomic_is_lock_free_intptr(&intptr) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_intptr(&intptr? >> intptr, intptr, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_ssize(&ssize) : bool = "mac#%"
 
 fun
-  atomic_store_intptr(&intptr? >> intptr, intptr ) : void = "mac#%"
+  atomic_store_explicit_ssize(&ssize? >> ssize, ssize, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_intptr( &intptr, memory_order ) : intptr = "mac#%"
+  atomic_store_ssize(&ssize? >> ssize, ssize ) : void = "mac#%"
 
 fun
-  atomic_load_intptr( &intptr ) : intptr = "mac#%"
+  atomic_load_explicit_ssize( &ssize, memory_order ) : ssize = "mac#%"
 
 fun
-  atomic_exchange_explicit_intptr( &intptr >> _, intptr, memory_order ) : intptr = "mac#%"
+  atomic_load_ssize( &ssize ) : ssize = "mac#%"
 
 fun
-  atomic_exchange_intptr( &intptr >> _, intptr) : intptr = "mac#%"
+  atomic_exchange_explicit_ssize( &ssize >> _, ssize, memory_order ) : ssize = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_intptr( &intptr >> _,  &intptr >> _, intptr, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_ssize( &ssize >> _, ssize) : ssize = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_intptr( &intptr >> _, &intptr >> _ , intptr  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_ssize( &ssize >> _,  &ssize >> _, ssize, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_intptr( &intptr >> _, &intptr >> _, intptr, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_ssize( &ssize >> _, &ssize >> _ , ssize  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_intptr( &intptr >> _,  &intptr >> _, intptr ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_ssize( &ssize >> _, &ssize >> _, ssize, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_intptr( &intptr >> _ , intptr ) : intptr = "mac#%"
+  atomic_compare_exchange_weak_ssize( &ssize >> _,  &ssize >> _, ssize ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_intptr( &intptr >> _, intptr, memory_order ) : intptr = "mac#%"
+  atomic_fetch_add_ssize( &ssize >> _ , ssize ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_sub_intptr( &intptr >> _, intptr ) : intptr = "mac#%"
+  atomic_fetch_add_explicit_ssize( &ssize >> _, ssize, memory_order ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_intptr( &intptr >> _, intptr, memory_order ) : intptr = "mac#%"
+  atomic_fetch_sub_ssize( &ssize >> _, ssize ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_or_intptr( &intptr >> _, intptr ) : intptr = "mac#%"
+  atomic_fetch_sub_explicit_ssize( &ssize >> _, ssize, memory_order ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_intptr( &intptr >> _, intptr, memory_order ) : intptr = "mac#%"
+  atomic_fetch_or_ssize( &ssize >> _, ssize ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_xor_intptr( &intptr >> _, intptr ) : intptr = "mac#%"
+  atomic_fetch_or_explicit_ssize( &ssize >> _, ssize, memory_order ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_intptr( &intptr >> _, intptr, memory_order ) : intptr = "mac#%"
+  atomic_fetch_xor_ssize( &ssize >> _, ssize ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_and_intptr( &intptr >> _, intptr ) : intptr = "mac#%"
+  atomic_fetch_xor_explicit_ssize( &ssize >> _, ssize, memory_order ) : ssize = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_intptr( &intptr >> _, intptr, memory_order ) : intptr = "mac#%"
-
-
-overload atomic_init with atomic_init_intptr
-overload atomic_store with atomic_store_intptr
-overload atomic_store_explicit with atomic_store_explicit_intptr
-overload atomic_load with atomic_load_intptr
-overload atomic_load_explicit with atomic_load_explicit_intptr
-overload atomic_exchange with atomic_exchange_intptr
-overload atomic_exchange_explicit with atomic_exchange_explicit_intptr
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_intptr
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_intptr
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_intptr
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_intptr
-overload atomic_fetch_add with atomic_fetch_add_intptr
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_intptr
-overload atomic_fetch_sub with atomic_fetch_sub_intptr
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_intptr
-overload atomic_fetch_or with atomic_fetch_or_intptr
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_intptr
-overload atomic_fetch_xor with atomic_fetch_xor_intptr
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_intptr
-overload atomic_fetch_and with atomic_fetch_and_intptr
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_intptr
-
-
-
-(** **)
-
-fun atomic_init_uintptr( &uintptr? >> uintptr, uintptr) : void = "mac#%"  
-
-fun  atomic_is_lock_free_uintptr(&uintptr) : bool = "mac#%"
+  atomic_fetch_and_ssize( &ssize >> _, ssize ) : ssize = "mac#%"
 
 fun
-  atomic_store_explicit_uintptr(&uintptr? >> uintptr, uintptr, memory_order) : void = "mac#%"
-
-fun
-  atomic_store_uintptr(&uintptr? >> uintptr, uintptr ) : void = "mac#%"
-
-fun
-  atomic_load_explicit_uintptr( &uintptr, memory_order ) : uintptr = "mac#%"
-
-fun
-  atomic_load_uintptr( &uintptr ) : uintptr = "mac#%"
-
-fun
-  atomic_exchange_explicit_uintptr( &uintptr >> _, uintptr, memory_order ) : uintptr = "mac#%"
-
-fun
-  atomic_exchange_uintptr( &uintptr >> _, uintptr) : uintptr = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_explicit_uintptr( &uintptr >> _,  &uintptr >> _, uintptr, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_uintptr( &uintptr >> _, &uintptr >> _ , uintptr  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_explicit_uintptr( &uintptr >> _, &uintptr >> _, uintptr, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_uintptr( &uintptr >> _,  &uintptr >> _, uintptr ) : bool = "mac#%"
-
-fun
-  atomic_fetch_add_uintptr( &uintptr >> _ , uintptr ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_add_explicit_uintptr( &uintptr >> _, uintptr, memory_order ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_sub_uintptr( &uintptr >> _, uintptr ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_sub_explicit_uintptr( &uintptr >> _, uintptr, memory_order ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_or_uintptr( &uintptr >> _, uintptr ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_or_explicit_uintptr( &uintptr >> _, uintptr, memory_order ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_xor_uintptr( &uintptr >> _, uintptr ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_xor_explicit_uintptr( &uintptr >> _, uintptr, memory_order ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_and_uintptr( &uintptr >> _, uintptr ) : uintptr = "mac#%"
-
-fun
-  atomic_fetch_and_explicit_uintptr( &uintptr >> _, uintptr, memory_order ) : uintptr = "mac#%"
+  atomic_fetch_and_explicit_ssize( &ssize >> _, ssize, memory_order ) : ssize = "mac#%"
 
 
-overload atomic_init with atomic_init_uintptr
-overload atomic_store with atomic_store_uintptr
-overload atomic_store_explicit with atomic_store_explicit_uintptr
-overload atomic_load with atomic_load_uintptr
-overload atomic_load_explicit with atomic_load_explicit_uintptr
-overload atomic_exchange with atomic_exchange_uintptr
-overload atomic_exchange_explicit with atomic_exchange_explicit_uintptr
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_uintptr
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_uintptr
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_uintptr
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_uintptr
-overload atomic_fetch_add with atomic_fetch_add_uintptr
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_uintptr
-overload atomic_fetch_sub with atomic_fetch_sub_uintptr
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_uintptr
-overload atomic_fetch_or with atomic_fetch_or_uintptr
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_uintptr
-overload atomic_fetch_xor with atomic_fetch_xor_uintptr
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_uintptr
-overload atomic_fetch_and with atomic_fetch_and_uintptr
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_uintptr
+#symload atomic_init with atomic_init_ssize
+#symload atomic_store with atomic_store_ssize
+#symload atomic_store_explicit with atomic_store_explicit_ssize
+#symload atomic_load with atomic_load_ssize
+#symload atomic_load_explicit with atomic_load_explicit_ssize
+#symload atomic_exchange with atomic_exchange_ssize
+#symload atomic_exchange_explicit with atomic_exchange_explicit_ssize
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_ssize
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_ssize
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_ssize
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_ssize
+#symload atomic_fetch_add with atomic_fetch_add_ssize
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_ssize
+#symload atomic_fetch_sub with atomic_fetch_sub_ssize
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_ssize
+#symload atomic_fetch_or with atomic_fetch_or_ssize
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_ssize
+#symload atomic_fetch_xor with atomic_fetch_xor_ssize
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_ssize
+#symload atomic_fetch_and with atomic_fetch_and_ssize
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_ssize
 
 
 
 (** **)
 
-fun atomic_init_size( &size_t? >> size_t, size_t) : void = "mac#%"  
+fun atomic_init_usize( &usize? >> usize, usize) : void = "mac#%"  
 
-fun  atomic_is_lock_free_size(&size_t) : bool = "mac#%"
-
-fun
-  atomic_store_explicit_size(&size_t? >> size_t, size_t, memory_order) : void = "mac#%"
+fun  atomic_is_lock_free_usize(&usize) : bool = "mac#%"
 
 fun
-  atomic_store_size(&size_t? >> size_t, size_t ) : void = "mac#%"
+  atomic_store_explicit_usize(&usize? >> usize, usize, memory_order) : void = "mac#%"
 
 fun
-  atomic_load_explicit_size( &size_t, memory_order ) : size_t = "mac#%"
+  atomic_store_usize(&usize? >> usize, usize ) : void = "mac#%"
 
 fun
-  atomic_load_size( &size_t ) : size_t = "mac#%"
+  atomic_load_explicit_usize( &usize, memory_order ) : usize = "mac#%"
 
 fun
-  atomic_exchange_explicit_size( &size_t >> _, size_t, memory_order ) : size_t = "mac#%"
+  atomic_load_usize( &usize ) : usize = "mac#%"
 
 fun
-  atomic_exchange_size( &size_t >> _, size_t) : size_t = "mac#%"
+  atomic_exchange_explicit_usize( &usize >> _, usize, memory_order ) : usize = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_explicit_size( &size_t >> _,  &size_t >> _, size_t, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_exchange_usize( &usize >> _, usize) : usize = "mac#%"
 
 fun
-  atomic_compare_exchange_strong_size( &size_t >> _, &size_t >> _ , size_t  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_explicit_usize( &usize >> _,  &usize >> _, usize, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_explicit_size( &size_t >> _, &size_t >> _, size_t, memory_order, memory_order  ) : bool = "mac#%"
+  atomic_compare_exchange_strong_usize( &usize >> _, &usize >> _ , usize  ) : bool = "mac#%"
 
 fun
-  atomic_compare_exchange_weak_size( &size_t >> _,  &size_t >> _, size_t ) : bool = "mac#%"
+  atomic_compare_exchange_weak_explicit_usize( &usize >> _, &usize >> _, usize, memory_order, memory_order  ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_size( &size_t >> _ , size_t ) : size_t = "mac#%"
+  atomic_compare_exchange_weak_usize( &usize >> _,  &usize >> _, usize ) : bool = "mac#%"
 
 fun
-  atomic_fetch_add_explicit_size( &size_t >> _, size_t, memory_order ) : size_t = "mac#%"
+  atomic_fetch_add_usize( &usize >> _ , usize ) : usize = "mac#%"
 
 fun
-  atomic_fetch_sub_size( &size_t >> _, size_t ) : size_t = "mac#%"
+  atomic_fetch_add_explicit_usize( &usize >> _, usize, memory_order ) : usize = "mac#%"
 
 fun
-  atomic_fetch_sub_explicit_size( &size_t >> _, size_t, memory_order ) : size_t = "mac#%"
+  atomic_fetch_sub_usize( &usize >> _, usize ) : usize = "mac#%"
 
 fun
-  atomic_fetch_or_size( &size_t >> _, size_t ) : size_t = "mac#%"
+  atomic_fetch_sub_explicit_usize( &usize >> _, usize, memory_order ) : usize = "mac#%"
 
 fun
-  atomic_fetch_or_explicit_size( &size_t >> _, size_t, memory_order ) : size_t = "mac#%"
+  atomic_fetch_or_usize( &usize >> _, usize ) : usize = "mac#%"
 
 fun
-  atomic_fetch_xor_size( &size_t >> _, size_t ) : size_t = "mac#%"
+  atomic_fetch_or_explicit_usize( &usize >> _, usize, memory_order ) : usize = "mac#%"
 
 fun
-  atomic_fetch_xor_explicit_size( &size_t >> _, size_t, memory_order ) : size_t = "mac#%"
+  atomic_fetch_xor_usize( &usize >> _, usize ) : usize = "mac#%"
 
 fun
-  atomic_fetch_and_size( &size_t >> _, size_t ) : size_t = "mac#%"
+  atomic_fetch_xor_explicit_usize( &usize >> _, usize, memory_order ) : usize = "mac#%"
 
 fun
-  atomic_fetch_and_explicit_size( &size_t >> _, size_t, memory_order ) : size_t = "mac#%"
-
-
-overload atomic_init with atomic_init_size
-overload atomic_store with atomic_store_size
-overload atomic_store_explicit with atomic_store_explicit_size
-overload atomic_load with atomic_load_size
-overload atomic_load_explicit with atomic_load_explicit_size
-overload atomic_exchange with atomic_exchange_size
-overload atomic_exchange_explicit with atomic_exchange_explicit_size
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_size
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_size
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_size
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_size
-overload atomic_fetch_add with atomic_fetch_add_size
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_size
-overload atomic_fetch_sub with atomic_fetch_sub_size
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_size
-overload atomic_fetch_or with atomic_fetch_or_size
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_size
-overload atomic_fetch_xor with atomic_fetch_xor_size
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_size
-overload atomic_fetch_and with atomic_fetch_and_size
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_size
-
-
-
-(** **)
-
-fun atomic_init_ssize( &ssize_t? >> ssize_t, ssize_t) : void = "mac#%"  
-
-fun  atomic_is_lock_free_ssize(&ssize_t) : bool = "mac#%"
+  atomic_fetch_and_usize( &usize >> _, usize ) : usize = "mac#%"
 
 fun
-  atomic_store_explicit_ssize(&ssize_t? >> ssize_t, ssize_t, memory_order) : void = "mac#%"
-
-fun
-  atomic_store_ssize(&ssize_t? >> ssize_t, ssize_t ) : void = "mac#%"
-
-fun
-  atomic_load_explicit_ssize( &ssize_t, memory_order ) : ssize_t = "mac#%"
-
-fun
-  atomic_load_ssize( &ssize_t ) : ssize_t = "mac#%"
-
-fun
-  atomic_exchange_explicit_ssize( &ssize_t >> _, ssize_t, memory_order ) : ssize_t = "mac#%"
-
-fun
-  atomic_exchange_ssize( &ssize_t >> _, ssize_t) : ssize_t = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_explicit_ssize( &ssize_t >> _,  &ssize_t >> _, ssize_t, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_strong_ssize( &ssize_t >> _, &ssize_t >> _ , ssize_t  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_explicit_ssize( &ssize_t >> _, &ssize_t >> _, ssize_t, memory_order, memory_order  ) : bool = "mac#%"
-
-fun
-  atomic_compare_exchange_weak_ssize( &ssize_t >> _,  &ssize_t >> _, ssize_t ) : bool = "mac#%"
-
-fun
-  atomic_fetch_add_ssize( &ssize_t >> _ , ssize_t ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_add_explicit_ssize( &ssize_t >> _, ssize_t, memory_order ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_sub_ssize( &ssize_t >> _, ssize_t ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_sub_explicit_ssize( &ssize_t >> _, ssize_t, memory_order ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_or_ssize( &ssize_t >> _, ssize_t ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_or_explicit_ssize( &ssize_t >> _, ssize_t, memory_order ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_xor_ssize( &ssize_t >> _, ssize_t ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_xor_explicit_ssize( &ssize_t >> _, ssize_t, memory_order ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_and_ssize( &ssize_t >> _, ssize_t ) : ssize_t = "mac#%"
-
-fun
-  atomic_fetch_and_explicit_ssize( &ssize_t >> _, ssize_t, memory_order ) : ssize_t = "mac#%"
+  atomic_fetch_and_explicit_usize( &usize >> _, usize, memory_order ) : usize = "mac#%"
 
 
-overload atomic_init with atomic_init_ssize
-overload atomic_store with atomic_store_ssize
-overload atomic_store_explicit with atomic_store_explicit_ssize
-overload atomic_load with atomic_load_ssize
-overload atomic_load_explicit with atomic_load_explicit_ssize
-overload atomic_exchange with atomic_exchange_ssize
-overload atomic_exchange_explicit with atomic_exchange_explicit_ssize
-overload atomic_compare_exchange_strong with atomic_compare_exchange_strong_ssize
-overload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_ssize
-overload atomic_compare_exchange_weak with atomic_compare_exchange_weak_ssize
-overload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_ssize
-overload atomic_fetch_add with atomic_fetch_add_ssize
-overload atomic_fetch_add_explicit with atomic_fetch_add_explicit_ssize
-overload atomic_fetch_sub with atomic_fetch_sub_ssize
-overload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_ssize
-overload atomic_fetch_or with atomic_fetch_or_ssize
-overload atomic_fetch_or_explicit with atomic_fetch_or_explicit_ssize
-overload atomic_fetch_xor with atomic_fetch_xor_ssize
-overload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_ssize
-overload atomic_fetch_and with atomic_fetch_and_ssize
-overload atomic_fetch_and_explicit with atomic_fetch_and_explicit_ssize
+#symload atomic_init with atomic_init_usize
+#symload atomic_store with atomic_store_usize
+#symload atomic_store_explicit with atomic_store_explicit_usize
+#symload atomic_load with atomic_load_usize
+#symload atomic_load_explicit with atomic_load_explicit_usize
+#symload atomic_exchange with atomic_exchange_usize
+#symload atomic_exchange_explicit with atomic_exchange_explicit_usize
+#symload atomic_compare_exchange_strong with atomic_compare_exchange_strong_usize
+#symload atomic_compare_exchange_strong_explicit with atomic_compare_exchange_strong_explicit_usize
+#symload atomic_compare_exchange_weak with atomic_compare_exchange_weak_usize
+#symload atomic_compare_exchange_weak_explicit with atomic_compare_exchange_weak_explicit_usize
+#symload atomic_fetch_add with atomic_fetch_add_usize
+#symload atomic_fetch_add_explicit with atomic_fetch_add_explicit_usize
+#symload atomic_fetch_sub with atomic_fetch_sub_usize
+#symload atomic_fetch_sub_explicit with atomic_fetch_sub_explicit_usize
+#symload atomic_fetch_or with atomic_fetch_or_usize
+#symload atomic_fetch_or_explicit with atomic_fetch_or_explicit_usize
+#symload atomic_fetch_xor with atomic_fetch_xor_usize
+#symload atomic_fetch_xor_explicit with atomic_fetch_xor_explicit_usize
+#symload atomic_fetch_and with atomic_fetch_and_usize
+#symload atomic_fetch_and_explicit with atomic_fetch_and_explicit_usize
 
 

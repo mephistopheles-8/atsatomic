@@ -1,16 +1,18 @@
 
 #include "./../HATS/project.hats"
+#staload "libats/SATS/gint.sats"
 
-staload "./../SATS/__atomic.sats"
-staload "./../SATS/atx.sats"
+#staload "./../SATS/__atomic.sats"
+#staload "./../SATS/atx.sats"
+
 
 absimpl atx_lock = bool
 
-implement {}
+impltmp {}
 atx_lock_init( lock ) =
   lock := false
 
-implement {}
+impltmp {}
 atx_test_and_set{l}(pf | p )  =
   if __atomic_test_and_set( !p, __ATOMIC_RELAXED )
   then ( Some_v(pf) | true )
@@ -21,7 +23,7 @@ atx_test_and_set{l}(pf | p )  =
     }
   else ( None_v() | false )
 
-implement {}
+impltmp {}
 atx_release{l}( pf1, pf2 | p ) =
    __atomic_clear( !p, __ATOMIC_RELAXED )
     where {
@@ -32,7 +34,7 @@ atx_release{l}( pf1, pf2 | p ) =
 
 (** Please verify **)
 
-implement {}
+impltmp {}
 atx_barrier() = 
   __atomic_thread_fence( __ATOMIC_RELAXED ) 
 

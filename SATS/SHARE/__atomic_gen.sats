@@ -41,103 +41,32 @@ fun __atomic_fetch_xor_bool( &bool >> _, bool, memmodel ) : bool = "mac#%"
 fun __atomic_fetch_or_bool( &bool >> _, bool, memmodel ) : bool = "mac#%"
 fun __atomic_fetch_nand_bool( &bool >> _, bool, memmodel ) : bool = "mac#%"
 
-overload __atomic_load with __atomic_load_bool
-overload __atomic_load_n with __atomic_load_n_bool
+#symload __atomic_load with __atomic_load_bool
+#symload __atomic_load_n with __atomic_load_n_bool
 
-overload __atomic_store with __atomic_store_bool
-overload __atomic_store_n with __atomic_store_n_bool
+#symload __atomic_store with __atomic_store_bool
+#symload __atomic_store_n with __atomic_store_n_bool
 
-overload __atomic_exchange with __atomic_exchange_bool
-overload __atomic_exchange_n with __atomic_exchange_n_bool
+#symload __atomic_exchange with __atomic_exchange_bool
+#symload __atomic_exchange_n with __atomic_exchange_n_bool
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_bool
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_bool
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_bool
+#symload __atomic_compare_exchange with __atomic_compare_exchange_bool
 
-overload __atomic_add_fetch with __atomic_add_fetch_bool
-overload __atomic_sub_fetch with __atomic_sub_fetch_bool
-overload __atomic_and_fetch with __atomic_and_fetch_bool
-overload __atomic_xor_fetch with __atomic_xor_fetch_bool
-overload __atomic_or_fetch with __atomic_or_fetch_bool
-overload __atomic_nand_fetch with __atomic_nand_fetch_bool
+#symload __atomic_add_fetch with __atomic_add_fetch_bool
+#symload __atomic_sub_fetch with __atomic_sub_fetch_bool
+#symload __atomic_and_fetch with __atomic_and_fetch_bool
+#symload __atomic_xor_fetch with __atomic_xor_fetch_bool
+#symload __atomic_or_fetch with __atomic_or_fetch_bool
+#symload __atomic_nand_fetch with __atomic_nand_fetch_bool
 
-overload __atomic_fetch_add with __atomic_fetch_add_bool
-overload __atomic_fetch_sub with __atomic_fetch_sub_bool
-overload __atomic_fetch_and with __atomic_fetch_and_bool
-overload __atomic_fetch_xor with __atomic_fetch_xor_bool
-overload __atomic_fetch_or with __atomic_fetch_or_bool
-overload __atomic_fetch_nand with __atomic_fetch_nand_bool
-
-
-
-
-fun __atomic_load_char( &char, &char? >> char, memmodel ) : void = "mac#%"
-fun __atomic_load_n_char( &char, memmodel ) : char = "mac#%"
-
-fun __atomic_store_char( &char >> _, &char, memmodel ) : void = "mac#%"
-fun __atomic_store_n_char( &char >> _, char, memmodel ) : void = "mac#%"
-
-fun __atomic_exchange_char( &char >> _, &char, &char? >> char, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_char( &char >> _, char, memmodel ) : char = "mac#%"
-
-fun __atomic_compare_exchange_n_char( 
-      p: &char >> _
-    , expected: &char
-    , desired: char
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_compare_exchange_char( 
-      p: &char >> _
-    , expected: &char
-    , desired: &char
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_add_fetch_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_sub_fetch_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_and_fetch_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_xor_fetch_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_or_fetch_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_nand_fetch_char( &char >> _, char, memmodel ) : char = "mac#%"
-
-fun __atomic_fetch_add_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_fetch_sub_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_fetch_and_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_fetch_xor_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_fetch_or_char( &char >> _, char, memmodel ) : char = "mac#%"
-fun __atomic_fetch_nand_char( &char >> _, char, memmodel ) : char = "mac#%"
-
-overload __atomic_load with __atomic_load_char
-overload __atomic_load_n with __atomic_load_n_char
-
-overload __atomic_store with __atomic_store_char
-overload __atomic_store_n with __atomic_store_n_char
-
-overload __atomic_exchange with __atomic_exchange_char
-overload __atomic_exchange_n with __atomic_exchange_n_char
-
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_char
-
-overload __atomic_compare_exchange with __atomic_compare_exchange_char
-
-overload __atomic_add_fetch with __atomic_add_fetch_char
-overload __atomic_sub_fetch with __atomic_sub_fetch_char
-overload __atomic_and_fetch with __atomic_and_fetch_char
-overload __atomic_xor_fetch with __atomic_xor_fetch_char
-overload __atomic_or_fetch with __atomic_or_fetch_char
-overload __atomic_nand_fetch with __atomic_nand_fetch_char
-
-overload __atomic_fetch_add with __atomic_fetch_add_char
-overload __atomic_fetch_sub with __atomic_fetch_sub_char
-overload __atomic_fetch_and with __atomic_fetch_and_char
-overload __atomic_fetch_xor with __atomic_fetch_xor_char
-overload __atomic_fetch_or with __atomic_fetch_or_char
-overload __atomic_fetch_nand with __atomic_fetch_nand_char
+#symload __atomic_fetch_add with __atomic_fetch_add_bool
+#symload __atomic_fetch_sub with __atomic_fetch_sub_bool
+#symload __atomic_fetch_and with __atomic_fetch_and_bool
+#symload __atomic_fetch_xor with __atomic_fetch_xor_bool
+#symload __atomic_fetch_or with __atomic_fetch_or_bool
+#symload __atomic_fetch_nand with __atomic_fetch_nand_bool
 
 
 
@@ -183,32 +112,32 @@ fun __atomic_fetch_xor_schar( &schar >> _, schar, memmodel ) : schar = "mac#%"
 fun __atomic_fetch_or_schar( &schar >> _, schar, memmodel ) : schar = "mac#%"
 fun __atomic_fetch_nand_schar( &schar >> _, schar, memmodel ) : schar = "mac#%"
 
-overload __atomic_load with __atomic_load_schar
-overload __atomic_load_n with __atomic_load_n_schar
+#symload __atomic_load with __atomic_load_schar
+#symload __atomic_load_n with __atomic_load_n_schar
 
-overload __atomic_store with __atomic_store_schar
-overload __atomic_store_n with __atomic_store_n_schar
+#symload __atomic_store with __atomic_store_schar
+#symload __atomic_store_n with __atomic_store_n_schar
 
-overload __atomic_exchange with __atomic_exchange_schar
-overload __atomic_exchange_n with __atomic_exchange_n_schar
+#symload __atomic_exchange with __atomic_exchange_schar
+#symload __atomic_exchange_n with __atomic_exchange_n_schar
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_schar
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_schar
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_schar
+#symload __atomic_compare_exchange with __atomic_compare_exchange_schar
 
-overload __atomic_add_fetch with __atomic_add_fetch_schar
-overload __atomic_sub_fetch with __atomic_sub_fetch_schar
-overload __atomic_and_fetch with __atomic_and_fetch_schar
-overload __atomic_xor_fetch with __atomic_xor_fetch_schar
-overload __atomic_or_fetch with __atomic_or_fetch_schar
-overload __atomic_nand_fetch with __atomic_nand_fetch_schar
+#symload __atomic_add_fetch with __atomic_add_fetch_schar
+#symload __atomic_sub_fetch with __atomic_sub_fetch_schar
+#symload __atomic_and_fetch with __atomic_and_fetch_schar
+#symload __atomic_xor_fetch with __atomic_xor_fetch_schar
+#symload __atomic_or_fetch with __atomic_or_fetch_schar
+#symload __atomic_nand_fetch with __atomic_nand_fetch_schar
 
-overload __atomic_fetch_add with __atomic_fetch_add_schar
-overload __atomic_fetch_sub with __atomic_fetch_sub_schar
-overload __atomic_fetch_and with __atomic_fetch_and_schar
-overload __atomic_fetch_xor with __atomic_fetch_xor_schar
-overload __atomic_fetch_or with __atomic_fetch_or_schar
-overload __atomic_fetch_nand with __atomic_fetch_nand_schar
+#symload __atomic_fetch_add with __atomic_fetch_add_schar
+#symload __atomic_fetch_sub with __atomic_fetch_sub_schar
+#symload __atomic_fetch_and with __atomic_fetch_and_schar
+#symload __atomic_fetch_xor with __atomic_fetch_xor_schar
+#symload __atomic_fetch_or with __atomic_fetch_or_schar
+#symload __atomic_fetch_nand with __atomic_fetch_nand_schar
 
 
 
@@ -254,32 +183,32 @@ fun __atomic_fetch_xor_uchar( &uchar >> _, uchar, memmodel ) : uchar = "mac#%"
 fun __atomic_fetch_or_uchar( &uchar >> _, uchar, memmodel ) : uchar = "mac#%"
 fun __atomic_fetch_nand_uchar( &uchar >> _, uchar, memmodel ) : uchar = "mac#%"
 
-overload __atomic_load with __atomic_load_uchar
-overload __atomic_load_n with __atomic_load_n_uchar
+#symload __atomic_load with __atomic_load_uchar
+#symload __atomic_load_n with __atomic_load_n_uchar
 
-overload __atomic_store with __atomic_store_uchar
-overload __atomic_store_n with __atomic_store_n_uchar
+#symload __atomic_store with __atomic_store_uchar
+#symload __atomic_store_n with __atomic_store_n_uchar
 
-overload __atomic_exchange with __atomic_exchange_uchar
-overload __atomic_exchange_n with __atomic_exchange_n_uchar
+#symload __atomic_exchange with __atomic_exchange_uchar
+#symload __atomic_exchange_n with __atomic_exchange_n_uchar
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uchar
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uchar
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_uchar
+#symload __atomic_compare_exchange with __atomic_compare_exchange_uchar
 
-overload __atomic_add_fetch with __atomic_add_fetch_uchar
-overload __atomic_sub_fetch with __atomic_sub_fetch_uchar
-overload __atomic_and_fetch with __atomic_and_fetch_uchar
-overload __atomic_xor_fetch with __atomic_xor_fetch_uchar
-overload __atomic_or_fetch with __atomic_or_fetch_uchar
-overload __atomic_nand_fetch with __atomic_nand_fetch_uchar
+#symload __atomic_add_fetch with __atomic_add_fetch_uchar
+#symload __atomic_sub_fetch with __atomic_sub_fetch_uchar
+#symload __atomic_and_fetch with __atomic_and_fetch_uchar
+#symload __atomic_xor_fetch with __atomic_xor_fetch_uchar
+#symload __atomic_or_fetch with __atomic_or_fetch_uchar
+#symload __atomic_nand_fetch with __atomic_nand_fetch_uchar
 
-overload __atomic_fetch_add with __atomic_fetch_add_uchar
-overload __atomic_fetch_sub with __atomic_fetch_sub_uchar
-overload __atomic_fetch_and with __atomic_fetch_and_uchar
-overload __atomic_fetch_xor with __atomic_fetch_xor_uchar
-overload __atomic_fetch_or with __atomic_fetch_or_uchar
-overload __atomic_fetch_nand with __atomic_fetch_nand_uchar
+#symload __atomic_fetch_add with __atomic_fetch_add_uchar
+#symload __atomic_fetch_sub with __atomic_fetch_sub_uchar
+#symload __atomic_fetch_and with __atomic_fetch_and_uchar
+#symload __atomic_fetch_xor with __atomic_fetch_xor_uchar
+#symload __atomic_fetch_or with __atomic_fetch_or_uchar
+#symload __atomic_fetch_nand with __atomic_fetch_nand_uchar
 
 
 
@@ -325,174 +254,32 @@ fun __atomic_fetch_xor_sint( &sint >> _, sint, memmodel ) : sint = "mac#%"
 fun __atomic_fetch_or_sint( &sint >> _, sint, memmodel ) : sint = "mac#%"
 fun __atomic_fetch_nand_sint( &sint >> _, sint, memmodel ) : sint = "mac#%"
 
-overload __atomic_load with __atomic_load_sint
-overload __atomic_load_n with __atomic_load_n_sint
+#symload __atomic_load with __atomic_load_sint
+#symload __atomic_load_n with __atomic_load_n_sint
 
-overload __atomic_store with __atomic_store_sint
-overload __atomic_store_n with __atomic_store_n_sint
+#symload __atomic_store with __atomic_store_sint
+#symload __atomic_store_n with __atomic_store_n_sint
 
-overload __atomic_exchange with __atomic_exchange_sint
-overload __atomic_exchange_n with __atomic_exchange_n_sint
+#symload __atomic_exchange with __atomic_exchange_sint
+#symload __atomic_exchange_n with __atomic_exchange_n_sint
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sint
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sint
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_sint
+#symload __atomic_compare_exchange with __atomic_compare_exchange_sint
 
-overload __atomic_add_fetch with __atomic_add_fetch_sint
-overload __atomic_sub_fetch with __atomic_sub_fetch_sint
-overload __atomic_and_fetch with __atomic_and_fetch_sint
-overload __atomic_xor_fetch with __atomic_xor_fetch_sint
-overload __atomic_or_fetch with __atomic_or_fetch_sint
-overload __atomic_nand_fetch with __atomic_nand_fetch_sint
+#symload __atomic_add_fetch with __atomic_add_fetch_sint
+#symload __atomic_sub_fetch with __atomic_sub_fetch_sint
+#symload __atomic_and_fetch with __atomic_and_fetch_sint
+#symload __atomic_xor_fetch with __atomic_xor_fetch_sint
+#symload __atomic_or_fetch with __atomic_or_fetch_sint
+#symload __atomic_nand_fetch with __atomic_nand_fetch_sint
 
-overload __atomic_fetch_add with __atomic_fetch_add_sint
-overload __atomic_fetch_sub with __atomic_fetch_sub_sint
-overload __atomic_fetch_and with __atomic_fetch_and_sint
-overload __atomic_fetch_xor with __atomic_fetch_xor_sint
-overload __atomic_fetch_or with __atomic_fetch_or_sint
-overload __atomic_fetch_nand with __atomic_fetch_nand_sint
-
-
-
-
-fun __atomic_load_usint( &usint, &usint? >> usint, memmodel ) : void = "mac#%"
-fun __atomic_load_n_usint( &usint, memmodel ) : usint = "mac#%"
-
-fun __atomic_store_usint( &usint >> _, &usint, memmodel ) : void = "mac#%"
-fun __atomic_store_n_usint( &usint >> _, usint, memmodel ) : void = "mac#%"
-
-fun __atomic_exchange_usint( &usint >> _, &usint, &usint? >> usint, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-
-fun __atomic_compare_exchange_n_usint( 
-      p: &usint >> _
-    , expected: &usint
-    , desired: usint
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_compare_exchange_usint( 
-      p: &usint >> _
-    , expected: &usint
-    , desired: &usint
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_add_fetch_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_sub_fetch_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_and_fetch_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_xor_fetch_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_or_fetch_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_nand_fetch_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-
-fun __atomic_fetch_add_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_fetch_sub_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_fetch_and_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_fetch_xor_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_fetch_or_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-fun __atomic_fetch_nand_usint( &usint >> _, usint, memmodel ) : usint = "mac#%"
-
-overload __atomic_load with __atomic_load_usint
-overload __atomic_load_n with __atomic_load_n_usint
-
-overload __atomic_store with __atomic_store_usint
-overload __atomic_store_n with __atomic_store_n_usint
-
-overload __atomic_exchange with __atomic_exchange_usint
-overload __atomic_exchange_n with __atomic_exchange_n_usint
-
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_usint
-
-overload __atomic_compare_exchange with __atomic_compare_exchange_usint
-
-overload __atomic_add_fetch with __atomic_add_fetch_usint
-overload __atomic_sub_fetch with __atomic_sub_fetch_usint
-overload __atomic_and_fetch with __atomic_and_fetch_usint
-overload __atomic_xor_fetch with __atomic_xor_fetch_usint
-overload __atomic_or_fetch with __atomic_or_fetch_usint
-overload __atomic_nand_fetch with __atomic_nand_fetch_usint
-
-overload __atomic_fetch_add with __atomic_fetch_add_usint
-overload __atomic_fetch_sub with __atomic_fetch_sub_usint
-overload __atomic_fetch_and with __atomic_fetch_and_usint
-overload __atomic_fetch_xor with __atomic_fetch_xor_usint
-overload __atomic_fetch_or with __atomic_fetch_or_usint
-overload __atomic_fetch_nand with __atomic_fetch_nand_usint
-
-
-
-
-fun __atomic_load_int( &int, &int? >> int, memmodel ) : void = "mac#%"
-fun __atomic_load_n_int( &int, memmodel ) : int = "mac#%"
-
-fun __atomic_store_int( &int >> _, &int, memmodel ) : void = "mac#%"
-fun __atomic_store_n_int( &int >> _, int, memmodel ) : void = "mac#%"
-
-fun __atomic_exchange_int( &int >> _, &int, &int? >> int, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_int( &int >> _, int, memmodel ) : int = "mac#%"
-
-fun __atomic_compare_exchange_n_int( 
-      p: &int >> _
-    , expected: &int
-    , desired: int
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_compare_exchange_int( 
-      p: &int >> _
-    , expected: &int
-    , desired: &int
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_add_fetch_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_sub_fetch_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_and_fetch_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_xor_fetch_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_or_fetch_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_nand_fetch_int( &int >> _, int, memmodel ) : int = "mac#%"
-
-fun __atomic_fetch_add_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_fetch_sub_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_fetch_and_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_fetch_xor_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_fetch_or_int( &int >> _, int, memmodel ) : int = "mac#%"
-fun __atomic_fetch_nand_int( &int >> _, int, memmodel ) : int = "mac#%"
-
-overload __atomic_load with __atomic_load_int
-overload __atomic_load_n with __atomic_load_n_int
-
-overload __atomic_store with __atomic_store_int
-overload __atomic_store_n with __atomic_store_n_int
-
-overload __atomic_exchange with __atomic_exchange_int
-overload __atomic_exchange_n with __atomic_exchange_n_int
-
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_int
-
-overload __atomic_compare_exchange with __atomic_compare_exchange_int
-
-overload __atomic_add_fetch with __atomic_add_fetch_int
-overload __atomic_sub_fetch with __atomic_sub_fetch_int
-overload __atomic_and_fetch with __atomic_and_fetch_int
-overload __atomic_xor_fetch with __atomic_xor_fetch_int
-overload __atomic_or_fetch with __atomic_or_fetch_int
-overload __atomic_nand_fetch with __atomic_nand_fetch_int
-
-overload __atomic_fetch_add with __atomic_fetch_add_int
-overload __atomic_fetch_sub with __atomic_fetch_sub_int
-overload __atomic_fetch_and with __atomic_fetch_and_int
-overload __atomic_fetch_xor with __atomic_fetch_xor_int
-overload __atomic_fetch_or with __atomic_fetch_or_int
-overload __atomic_fetch_nand with __atomic_fetch_nand_int
+#symload __atomic_fetch_add with __atomic_fetch_add_sint
+#symload __atomic_fetch_sub with __atomic_fetch_sub_sint
+#symload __atomic_fetch_and with __atomic_fetch_and_sint
+#symload __atomic_fetch_xor with __atomic_fetch_xor_sint
+#symload __atomic_fetch_or with __atomic_fetch_or_sint
+#symload __atomic_fetch_nand with __atomic_fetch_nand_sint
 
 
 
@@ -538,32 +325,32 @@ fun __atomic_fetch_xor_uint( &uint >> _, uint, memmodel ) : uint = "mac#%"
 fun __atomic_fetch_or_uint( &uint >> _, uint, memmodel ) : uint = "mac#%"
 fun __atomic_fetch_nand_uint( &uint >> _, uint, memmodel ) : uint = "mac#%"
 
-overload __atomic_load with __atomic_load_uint
-overload __atomic_load_n with __atomic_load_n_uint
+#symload __atomic_load with __atomic_load_uint
+#symload __atomic_load_n with __atomic_load_n_uint
 
-overload __atomic_store with __atomic_store_uint
-overload __atomic_store_n with __atomic_store_n_uint
+#symload __atomic_store with __atomic_store_uint
+#symload __atomic_store_n with __atomic_store_n_uint
 
-overload __atomic_exchange with __atomic_exchange_uint
-overload __atomic_exchange_n with __atomic_exchange_n_uint
+#symload __atomic_exchange with __atomic_exchange_uint
+#symload __atomic_exchange_n with __atomic_exchange_n_uint
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_uint
+#symload __atomic_compare_exchange with __atomic_compare_exchange_uint
 
-overload __atomic_add_fetch with __atomic_add_fetch_uint
-overload __atomic_sub_fetch with __atomic_sub_fetch_uint
-overload __atomic_and_fetch with __atomic_and_fetch_uint
-overload __atomic_xor_fetch with __atomic_xor_fetch_uint
-overload __atomic_or_fetch with __atomic_or_fetch_uint
-overload __atomic_nand_fetch with __atomic_nand_fetch_uint
+#symload __atomic_add_fetch with __atomic_add_fetch_uint
+#symload __atomic_sub_fetch with __atomic_sub_fetch_uint
+#symload __atomic_and_fetch with __atomic_and_fetch_uint
+#symload __atomic_xor_fetch with __atomic_xor_fetch_uint
+#symload __atomic_or_fetch with __atomic_or_fetch_uint
+#symload __atomic_nand_fetch with __atomic_nand_fetch_uint
 
-overload __atomic_fetch_add with __atomic_fetch_add_uint
-overload __atomic_fetch_sub with __atomic_fetch_sub_uint
-overload __atomic_fetch_and with __atomic_fetch_and_uint
-overload __atomic_fetch_xor with __atomic_fetch_xor_uint
-overload __atomic_fetch_or with __atomic_fetch_or_uint
-overload __atomic_fetch_nand with __atomic_fetch_nand_uint
+#symload __atomic_fetch_add with __atomic_fetch_add_uint
+#symload __atomic_fetch_sub with __atomic_fetch_sub_uint
+#symload __atomic_fetch_and with __atomic_fetch_and_uint
+#symload __atomic_fetch_xor with __atomic_fetch_xor_uint
+#symload __atomic_fetch_or with __atomic_fetch_or_uint
+#symload __atomic_fetch_nand with __atomic_fetch_nand_uint
 
 
 
@@ -609,103 +396,103 @@ fun __atomic_fetch_xor_ulint( &ulint >> _, ulint, memmodel ) : ulint = "mac#%"
 fun __atomic_fetch_or_ulint( &ulint >> _, ulint, memmodel ) : ulint = "mac#%"
 fun __atomic_fetch_nand_ulint( &ulint >> _, ulint, memmodel ) : ulint = "mac#%"
 
-overload __atomic_load with __atomic_load_ulint
-overload __atomic_load_n with __atomic_load_n_ulint
+#symload __atomic_load with __atomic_load_ulint
+#symload __atomic_load_n with __atomic_load_n_ulint
 
-overload __atomic_store with __atomic_store_ulint
-overload __atomic_store_n with __atomic_store_n_ulint
+#symload __atomic_store with __atomic_store_ulint
+#symload __atomic_store_n with __atomic_store_n_ulint
 
-overload __atomic_exchange with __atomic_exchange_ulint
-overload __atomic_exchange_n with __atomic_exchange_n_ulint
+#symload __atomic_exchange with __atomic_exchange_ulint
+#symload __atomic_exchange_n with __atomic_exchange_n_ulint
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_ulint
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_ulint
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_ulint
+#symload __atomic_compare_exchange with __atomic_compare_exchange_ulint
 
-overload __atomic_add_fetch with __atomic_add_fetch_ulint
-overload __atomic_sub_fetch with __atomic_sub_fetch_ulint
-overload __atomic_and_fetch with __atomic_and_fetch_ulint
-overload __atomic_xor_fetch with __atomic_xor_fetch_ulint
-overload __atomic_or_fetch with __atomic_or_fetch_ulint
-overload __atomic_nand_fetch with __atomic_nand_fetch_ulint
+#symload __atomic_add_fetch with __atomic_add_fetch_ulint
+#symload __atomic_sub_fetch with __atomic_sub_fetch_ulint
+#symload __atomic_and_fetch with __atomic_and_fetch_ulint
+#symload __atomic_xor_fetch with __atomic_xor_fetch_ulint
+#symload __atomic_or_fetch with __atomic_or_fetch_ulint
+#symload __atomic_nand_fetch with __atomic_nand_fetch_ulint
 
-overload __atomic_fetch_add with __atomic_fetch_add_ulint
-overload __atomic_fetch_sub with __atomic_fetch_sub_ulint
-overload __atomic_fetch_and with __atomic_fetch_and_ulint
-overload __atomic_fetch_xor with __atomic_fetch_xor_ulint
-overload __atomic_fetch_or with __atomic_fetch_or_ulint
-overload __atomic_fetch_nand with __atomic_fetch_nand_ulint
-
-
+#symload __atomic_fetch_add with __atomic_fetch_add_ulint
+#symload __atomic_fetch_sub with __atomic_fetch_sub_ulint
+#symload __atomic_fetch_and with __atomic_fetch_and_ulint
+#symload __atomic_fetch_xor with __atomic_fetch_xor_ulint
+#symload __atomic_fetch_or with __atomic_fetch_or_ulint
+#symload __atomic_fetch_nand with __atomic_fetch_nand_ulint
 
 
-fun __atomic_load_llint( &llint, &llint? >> llint, memmodel ) : void = "mac#%"
-fun __atomic_load_n_llint( &llint, memmodel ) : llint = "mac#%"
 
-fun __atomic_store_llint( &llint >> _, &llint, memmodel ) : void = "mac#%"
-fun __atomic_store_n_llint( &llint >> _, llint, memmodel ) : void = "mac#%"
 
-fun __atomic_exchange_llint( &llint >> _, &llint, &llint? >> llint, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
+fun __atomic_load_slint( &slint, &slint? >> slint, memmodel ) : void = "mac#%"
+fun __atomic_load_n_slint( &slint, memmodel ) : slint = "mac#%"
 
-fun __atomic_compare_exchange_n_llint( 
-      p: &llint >> _
-    , expected: &llint
-    , desired: llint
+fun __atomic_store_slint( &slint >> _, &slint, memmodel ) : void = "mac#%"
+fun __atomic_store_n_slint( &slint >> _, slint, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_slint( &slint >> _, &slint, &slint? >> slint, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+
+fun __atomic_compare_exchange_n_slint( 
+      p: &slint >> _
+    , expected: &slint
+    , desired: slint
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_compare_exchange_llint( 
-      p: &llint >> _
-    , expected: &llint
-    , desired: &llint
+fun __atomic_compare_exchange_slint( 
+      p: &slint >> _
+    , expected: &slint
+    , desired: &slint
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_add_fetch_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_sub_fetch_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_and_fetch_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_xor_fetch_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_or_fetch_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_nand_fetch_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
+fun __atomic_add_fetch_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_sub_fetch_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_and_fetch_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_xor_fetch_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_or_fetch_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_nand_fetch_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
 
-fun __atomic_fetch_add_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_fetch_sub_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_fetch_and_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_fetch_xor_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_fetch_or_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
-fun __atomic_fetch_nand_llint( &llint >> _, llint, memmodel ) : llint = "mac#%"
+fun __atomic_fetch_add_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_fetch_sub_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_fetch_and_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_fetch_xor_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_fetch_or_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
+fun __atomic_fetch_nand_slint( &slint >> _, slint, memmodel ) : slint = "mac#%"
 
-overload __atomic_load with __atomic_load_llint
-overload __atomic_load_n with __atomic_load_n_llint
+#symload __atomic_load with __atomic_load_slint
+#symload __atomic_load_n with __atomic_load_n_slint
 
-overload __atomic_store with __atomic_store_llint
-overload __atomic_store_n with __atomic_store_n_llint
+#symload __atomic_store with __atomic_store_slint
+#symload __atomic_store_n with __atomic_store_n_slint
 
-overload __atomic_exchange with __atomic_exchange_llint
-overload __atomic_exchange_n with __atomic_exchange_n_llint
+#symload __atomic_exchange with __atomic_exchange_slint
+#symload __atomic_exchange_n with __atomic_exchange_n_slint
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_llint
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_slint
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_llint
+#symload __atomic_compare_exchange with __atomic_compare_exchange_slint
 
-overload __atomic_add_fetch with __atomic_add_fetch_llint
-overload __atomic_sub_fetch with __atomic_sub_fetch_llint
-overload __atomic_and_fetch with __atomic_and_fetch_llint
-overload __atomic_xor_fetch with __atomic_xor_fetch_llint
-overload __atomic_or_fetch with __atomic_or_fetch_llint
-overload __atomic_nand_fetch with __atomic_nand_fetch_llint
+#symload __atomic_add_fetch with __atomic_add_fetch_slint
+#symload __atomic_sub_fetch with __atomic_sub_fetch_slint
+#symload __atomic_and_fetch with __atomic_and_fetch_slint
+#symload __atomic_xor_fetch with __atomic_xor_fetch_slint
+#symload __atomic_or_fetch with __atomic_or_fetch_slint
+#symload __atomic_nand_fetch with __atomic_nand_fetch_slint
 
-overload __atomic_fetch_add with __atomic_fetch_add_llint
-overload __atomic_fetch_sub with __atomic_fetch_sub_llint
-overload __atomic_fetch_and with __atomic_fetch_and_llint
-overload __atomic_fetch_xor with __atomic_fetch_xor_llint
-overload __atomic_fetch_or with __atomic_fetch_or_llint
-overload __atomic_fetch_nand with __atomic_fetch_nand_llint
+#symload __atomic_fetch_add with __atomic_fetch_add_slint
+#symload __atomic_fetch_sub with __atomic_fetch_sub_slint
+#symload __atomic_fetch_and with __atomic_fetch_and_slint
+#symload __atomic_fetch_xor with __atomic_fetch_xor_slint
+#symload __atomic_fetch_or with __atomic_fetch_or_slint
+#symload __atomic_fetch_nand with __atomic_fetch_nand_slint
 
 
 
@@ -751,103 +538,174 @@ fun __atomic_fetch_xor_ullint( &ullint >> _, ullint, memmodel ) : ullint = "mac#
 fun __atomic_fetch_or_ullint( &ullint >> _, ullint, memmodel ) : ullint = "mac#%"
 fun __atomic_fetch_nand_ullint( &ullint >> _, ullint, memmodel ) : ullint = "mac#%"
 
-overload __atomic_load with __atomic_load_ullint
-overload __atomic_load_n with __atomic_load_n_ullint
+#symload __atomic_load with __atomic_load_ullint
+#symload __atomic_load_n with __atomic_load_n_ullint
 
-overload __atomic_store with __atomic_store_ullint
-overload __atomic_store_n with __atomic_store_n_ullint
+#symload __atomic_store with __atomic_store_ullint
+#symload __atomic_store_n with __atomic_store_n_ullint
 
-overload __atomic_exchange with __atomic_exchange_ullint
-overload __atomic_exchange_n with __atomic_exchange_n_ullint
+#symload __atomic_exchange with __atomic_exchange_ullint
+#symload __atomic_exchange_n with __atomic_exchange_n_ullint
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_ullint
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_ullint
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_ullint
+#symload __atomic_compare_exchange with __atomic_compare_exchange_ullint
 
-overload __atomic_add_fetch with __atomic_add_fetch_ullint
-overload __atomic_sub_fetch with __atomic_sub_fetch_ullint
-overload __atomic_and_fetch with __atomic_and_fetch_ullint
-overload __atomic_xor_fetch with __atomic_xor_fetch_ullint
-overload __atomic_or_fetch with __atomic_or_fetch_ullint
-overload __atomic_nand_fetch with __atomic_nand_fetch_ullint
+#symload __atomic_add_fetch with __atomic_add_fetch_ullint
+#symload __atomic_sub_fetch with __atomic_sub_fetch_ullint
+#symload __atomic_and_fetch with __atomic_and_fetch_ullint
+#symload __atomic_xor_fetch with __atomic_xor_fetch_ullint
+#symload __atomic_or_fetch with __atomic_or_fetch_ullint
+#symload __atomic_nand_fetch with __atomic_nand_fetch_ullint
 
-overload __atomic_fetch_add with __atomic_fetch_add_ullint
-overload __atomic_fetch_sub with __atomic_fetch_sub_ullint
-overload __atomic_fetch_and with __atomic_fetch_and_ullint
-overload __atomic_fetch_xor with __atomic_fetch_xor_ullint
-overload __atomic_fetch_or with __atomic_fetch_or_ullint
-overload __atomic_fetch_nand with __atomic_fetch_nand_ullint
-
-
+#symload __atomic_fetch_add with __atomic_fetch_add_ullint
+#symload __atomic_fetch_sub with __atomic_fetch_sub_ullint
+#symload __atomic_fetch_and with __atomic_fetch_and_ullint
+#symload __atomic_fetch_xor with __atomic_fetch_xor_ullint
+#symload __atomic_fetch_or with __atomic_fetch_or_ullint
+#symload __atomic_fetch_nand with __atomic_fetch_nand_ullint
 
 
-fun __atomic_load_int8( &int8, &int8? >> int8, memmodel ) : void = "mac#%"
-fun __atomic_load_n_int8( &int8, memmodel ) : int8 = "mac#%"
 
-fun __atomic_store_int8( &int8 >> _, &int8, memmodel ) : void = "mac#%"
-fun __atomic_store_n_int8( &int8 >> _, int8, memmodel ) : void = "mac#%"
 
-fun __atomic_exchange_int8( &int8 >> _, &int8, &int8? >> int8, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
+fun __atomic_load_sllint( &sllint, &sllint? >> sllint, memmodel ) : void = "mac#%"
+fun __atomic_load_n_sllint( &sllint, memmodel ) : sllint = "mac#%"
 
-fun __atomic_compare_exchange_n_int8( 
-      p: &int8 >> _
-    , expected: &int8
-    , desired: int8
+fun __atomic_store_sllint( &sllint >> _, &sllint, memmodel ) : void = "mac#%"
+fun __atomic_store_n_sllint( &sllint >> _, sllint, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_sllint( &sllint >> _, &sllint, &sllint? >> sllint, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+
+fun __atomic_compare_exchange_n_sllint( 
+      p: &sllint >> _
+    , expected: &sllint
+    , desired: sllint
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_compare_exchange_int8( 
-      p: &int8 >> _
-    , expected: &int8
-    , desired: &int8
+fun __atomic_compare_exchange_sllint( 
+      p: &sllint >> _
+    , expected: &sllint
+    , desired: &sllint
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_add_fetch_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_sub_fetch_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_and_fetch_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_xor_fetch_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_or_fetch_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_nand_fetch_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
+fun __atomic_add_fetch_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_sub_fetch_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_and_fetch_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_xor_fetch_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_or_fetch_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_nand_fetch_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
 
-fun __atomic_fetch_add_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_fetch_sub_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_fetch_and_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_fetch_xor_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_fetch_or_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
-fun __atomic_fetch_nand_int8( &int8 >> _, int8, memmodel ) : int8 = "mac#%"
+fun __atomic_fetch_add_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_fetch_sub_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_fetch_and_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_fetch_xor_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_fetch_or_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
+fun __atomic_fetch_nand_sllint( &sllint >> _, sllint, memmodel ) : sllint = "mac#%"
 
-overload __atomic_load with __atomic_load_int8
-overload __atomic_load_n with __atomic_load_n_int8
+#symload __atomic_load with __atomic_load_sllint
+#symload __atomic_load_n with __atomic_load_n_sllint
 
-overload __atomic_store with __atomic_store_int8
-overload __atomic_store_n with __atomic_store_n_int8
+#symload __atomic_store with __atomic_store_sllint
+#symload __atomic_store_n with __atomic_store_n_sllint
 
-overload __atomic_exchange with __atomic_exchange_int8
-overload __atomic_exchange_n with __atomic_exchange_n_int8
+#symload __atomic_exchange with __atomic_exchange_sllint
+#symload __atomic_exchange_n with __atomic_exchange_n_sllint
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_int8
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sllint
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_int8
+#symload __atomic_compare_exchange with __atomic_compare_exchange_sllint
 
-overload __atomic_add_fetch with __atomic_add_fetch_int8
-overload __atomic_sub_fetch with __atomic_sub_fetch_int8
-overload __atomic_and_fetch with __atomic_and_fetch_int8
-overload __atomic_xor_fetch with __atomic_xor_fetch_int8
-overload __atomic_or_fetch with __atomic_or_fetch_int8
-overload __atomic_nand_fetch with __atomic_nand_fetch_int8
+#symload __atomic_add_fetch with __atomic_add_fetch_sllint
+#symload __atomic_sub_fetch with __atomic_sub_fetch_sllint
+#symload __atomic_and_fetch with __atomic_and_fetch_sllint
+#symload __atomic_xor_fetch with __atomic_xor_fetch_sllint
+#symload __atomic_or_fetch with __atomic_or_fetch_sllint
+#symload __atomic_nand_fetch with __atomic_nand_fetch_sllint
 
-overload __atomic_fetch_add with __atomic_fetch_add_int8
-overload __atomic_fetch_sub with __atomic_fetch_sub_int8
-overload __atomic_fetch_and with __atomic_fetch_and_int8
-overload __atomic_fetch_xor with __atomic_fetch_xor_int8
-overload __atomic_fetch_or with __atomic_fetch_or_int8
-overload __atomic_fetch_nand with __atomic_fetch_nand_int8
+#symload __atomic_fetch_add with __atomic_fetch_add_sllint
+#symload __atomic_fetch_sub with __atomic_fetch_sub_sllint
+#symload __atomic_fetch_and with __atomic_fetch_and_sllint
+#symload __atomic_fetch_xor with __atomic_fetch_xor_sllint
+#symload __atomic_fetch_or with __atomic_fetch_or_sllint
+#symload __atomic_fetch_nand with __atomic_fetch_nand_sllint
+
+
+
+
+fun __atomic_load_sint8( &sint8, &sint8? >> sint8, memmodel ) : void = "mac#%"
+fun __atomic_load_n_sint8( &sint8, memmodel ) : sint8 = "mac#%"
+
+fun __atomic_store_sint8( &sint8 >> _, &sint8, memmodel ) : void = "mac#%"
+fun __atomic_store_n_sint8( &sint8 >> _, sint8, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_sint8( &sint8 >> _, &sint8, &sint8? >> sint8, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+
+fun __atomic_compare_exchange_n_sint8( 
+      p: &sint8 >> _
+    , expected: &sint8
+    , desired: sint8
+    , weak: bool
+    , succ: memmodel
+    , fail: memmodel 
+  ) : bool = "mac#%"
+
+fun __atomic_compare_exchange_sint8( 
+      p: &sint8 >> _
+    , expected: &sint8
+    , desired: &sint8
+    , weak: bool
+    , succ: memmodel
+    , fail: memmodel 
+  ) : bool = "mac#%"
+
+fun __atomic_add_fetch_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_sub_fetch_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_and_fetch_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_xor_fetch_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_or_fetch_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_nand_fetch_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+
+fun __atomic_fetch_add_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_fetch_sub_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_fetch_and_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_fetch_xor_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_fetch_or_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+fun __atomic_fetch_nand_sint8( &sint8 >> _, sint8, memmodel ) : sint8 = "mac#%"
+
+#symload __atomic_load with __atomic_load_sint8
+#symload __atomic_load_n with __atomic_load_n_sint8
+
+#symload __atomic_store with __atomic_store_sint8
+#symload __atomic_store_n with __atomic_store_n_sint8
+
+#symload __atomic_exchange with __atomic_exchange_sint8
+#symload __atomic_exchange_n with __atomic_exchange_n_sint8
+
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sint8
+
+#symload __atomic_compare_exchange with __atomic_compare_exchange_sint8
+
+#symload __atomic_add_fetch with __atomic_add_fetch_sint8
+#symload __atomic_sub_fetch with __atomic_sub_fetch_sint8
+#symload __atomic_and_fetch with __atomic_and_fetch_sint8
+#symload __atomic_xor_fetch with __atomic_xor_fetch_sint8
+#symload __atomic_or_fetch with __atomic_or_fetch_sint8
+#symload __atomic_nand_fetch with __atomic_nand_fetch_sint8
+
+#symload __atomic_fetch_add with __atomic_fetch_add_sint8
+#symload __atomic_fetch_sub with __atomic_fetch_sub_sint8
+#symload __atomic_fetch_and with __atomic_fetch_and_sint8
+#symload __atomic_fetch_xor with __atomic_fetch_xor_sint8
+#symload __atomic_fetch_or with __atomic_fetch_or_sint8
+#symload __atomic_fetch_nand with __atomic_fetch_nand_sint8
 
 
 
@@ -893,103 +751,103 @@ fun __atomic_fetch_xor_uint8( &uint8 >> _, uint8, memmodel ) : uint8 = "mac#%"
 fun __atomic_fetch_or_uint8( &uint8 >> _, uint8, memmodel ) : uint8 = "mac#%"
 fun __atomic_fetch_nand_uint8( &uint8 >> _, uint8, memmodel ) : uint8 = "mac#%"
 
-overload __atomic_load with __atomic_load_uint8
-overload __atomic_load_n with __atomic_load_n_uint8
+#symload __atomic_load with __atomic_load_uint8
+#symload __atomic_load_n with __atomic_load_n_uint8
 
-overload __atomic_store with __atomic_store_uint8
-overload __atomic_store_n with __atomic_store_n_uint8
+#symload __atomic_store with __atomic_store_uint8
+#symload __atomic_store_n with __atomic_store_n_uint8
 
-overload __atomic_exchange with __atomic_exchange_uint8
-overload __atomic_exchange_n with __atomic_exchange_n_uint8
+#symload __atomic_exchange with __atomic_exchange_uint8
+#symload __atomic_exchange_n with __atomic_exchange_n_uint8
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint8
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint8
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_uint8
+#symload __atomic_compare_exchange with __atomic_compare_exchange_uint8
 
-overload __atomic_add_fetch with __atomic_add_fetch_uint8
-overload __atomic_sub_fetch with __atomic_sub_fetch_uint8
-overload __atomic_and_fetch with __atomic_and_fetch_uint8
-overload __atomic_xor_fetch with __atomic_xor_fetch_uint8
-overload __atomic_or_fetch with __atomic_or_fetch_uint8
-overload __atomic_nand_fetch with __atomic_nand_fetch_uint8
+#symload __atomic_add_fetch with __atomic_add_fetch_uint8
+#symload __atomic_sub_fetch with __atomic_sub_fetch_uint8
+#symload __atomic_and_fetch with __atomic_and_fetch_uint8
+#symload __atomic_xor_fetch with __atomic_xor_fetch_uint8
+#symload __atomic_or_fetch with __atomic_or_fetch_uint8
+#symload __atomic_nand_fetch with __atomic_nand_fetch_uint8
 
-overload __atomic_fetch_add with __atomic_fetch_add_uint8
-overload __atomic_fetch_sub with __atomic_fetch_sub_uint8
-overload __atomic_fetch_and with __atomic_fetch_and_uint8
-overload __atomic_fetch_xor with __atomic_fetch_xor_uint8
-overload __atomic_fetch_or with __atomic_fetch_or_uint8
-overload __atomic_fetch_nand with __atomic_fetch_nand_uint8
-
-
+#symload __atomic_fetch_add with __atomic_fetch_add_uint8
+#symload __atomic_fetch_sub with __atomic_fetch_sub_uint8
+#symload __atomic_fetch_and with __atomic_fetch_and_uint8
+#symload __atomic_fetch_xor with __atomic_fetch_xor_uint8
+#symload __atomic_fetch_or with __atomic_fetch_or_uint8
+#symload __atomic_fetch_nand with __atomic_fetch_nand_uint8
 
 
-fun __atomic_load_int16( &int16, &int16? >> int16, memmodel ) : void = "mac#%"
-fun __atomic_load_n_int16( &int16, memmodel ) : int16 = "mac#%"
 
-fun __atomic_store_int16( &int16 >> _, &int16, memmodel ) : void = "mac#%"
-fun __atomic_store_n_int16( &int16 >> _, int16, memmodel ) : void = "mac#%"
 
-fun __atomic_exchange_int16( &int16 >> _, &int16, &int16? >> int16, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
+fun __atomic_load_sint16( &sint16, &sint16? >> sint16, memmodel ) : void = "mac#%"
+fun __atomic_load_n_sint16( &sint16, memmodel ) : sint16 = "mac#%"
 
-fun __atomic_compare_exchange_n_int16( 
-      p: &int16 >> _
-    , expected: &int16
-    , desired: int16
+fun __atomic_store_sint16( &sint16 >> _, &sint16, memmodel ) : void = "mac#%"
+fun __atomic_store_n_sint16( &sint16 >> _, sint16, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_sint16( &sint16 >> _, &sint16, &sint16? >> sint16, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+
+fun __atomic_compare_exchange_n_sint16( 
+      p: &sint16 >> _
+    , expected: &sint16
+    , desired: sint16
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_compare_exchange_int16( 
-      p: &int16 >> _
-    , expected: &int16
-    , desired: &int16
+fun __atomic_compare_exchange_sint16( 
+      p: &sint16 >> _
+    , expected: &sint16
+    , desired: &sint16
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_add_fetch_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_sub_fetch_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_and_fetch_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_xor_fetch_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_or_fetch_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_nand_fetch_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
+fun __atomic_add_fetch_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_sub_fetch_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_and_fetch_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_xor_fetch_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_or_fetch_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_nand_fetch_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
 
-fun __atomic_fetch_add_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_fetch_sub_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_fetch_and_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_fetch_xor_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_fetch_or_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
-fun __atomic_fetch_nand_int16( &int16 >> _, int16, memmodel ) : int16 = "mac#%"
+fun __atomic_fetch_add_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_fetch_sub_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_fetch_and_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_fetch_xor_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_fetch_or_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
+fun __atomic_fetch_nand_sint16( &sint16 >> _, sint16, memmodel ) : sint16 = "mac#%"
 
-overload __atomic_load with __atomic_load_int16
-overload __atomic_load_n with __atomic_load_n_int16
+#symload __atomic_load with __atomic_load_sint16
+#symload __atomic_load_n with __atomic_load_n_sint16
 
-overload __atomic_store with __atomic_store_int16
-overload __atomic_store_n with __atomic_store_n_int16
+#symload __atomic_store with __atomic_store_sint16
+#symload __atomic_store_n with __atomic_store_n_sint16
 
-overload __atomic_exchange with __atomic_exchange_int16
-overload __atomic_exchange_n with __atomic_exchange_n_int16
+#symload __atomic_exchange with __atomic_exchange_sint16
+#symload __atomic_exchange_n with __atomic_exchange_n_sint16
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_int16
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sint16
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_int16
+#symload __atomic_compare_exchange with __atomic_compare_exchange_sint16
 
-overload __atomic_add_fetch with __atomic_add_fetch_int16
-overload __atomic_sub_fetch with __atomic_sub_fetch_int16
-overload __atomic_and_fetch with __atomic_and_fetch_int16
-overload __atomic_xor_fetch with __atomic_xor_fetch_int16
-overload __atomic_or_fetch with __atomic_or_fetch_int16
-overload __atomic_nand_fetch with __atomic_nand_fetch_int16
+#symload __atomic_add_fetch with __atomic_add_fetch_sint16
+#symload __atomic_sub_fetch with __atomic_sub_fetch_sint16
+#symload __atomic_and_fetch with __atomic_and_fetch_sint16
+#symload __atomic_xor_fetch with __atomic_xor_fetch_sint16
+#symload __atomic_or_fetch with __atomic_or_fetch_sint16
+#symload __atomic_nand_fetch with __atomic_nand_fetch_sint16
 
-overload __atomic_fetch_add with __atomic_fetch_add_int16
-overload __atomic_fetch_sub with __atomic_fetch_sub_int16
-overload __atomic_fetch_and with __atomic_fetch_and_int16
-overload __atomic_fetch_xor with __atomic_fetch_xor_int16
-overload __atomic_fetch_or with __atomic_fetch_or_int16
-overload __atomic_fetch_nand with __atomic_fetch_nand_int16
+#symload __atomic_fetch_add with __atomic_fetch_add_sint16
+#symload __atomic_fetch_sub with __atomic_fetch_sub_sint16
+#symload __atomic_fetch_and with __atomic_fetch_and_sint16
+#symload __atomic_fetch_xor with __atomic_fetch_xor_sint16
+#symload __atomic_fetch_or with __atomic_fetch_or_sint16
+#symload __atomic_fetch_nand with __atomic_fetch_nand_sint16
 
 
 
@@ -1035,103 +893,103 @@ fun __atomic_fetch_xor_uint16( &uint16 >> _, uint16, memmodel ) : uint16 = "mac#
 fun __atomic_fetch_or_uint16( &uint16 >> _, uint16, memmodel ) : uint16 = "mac#%"
 fun __atomic_fetch_nand_uint16( &uint16 >> _, uint16, memmodel ) : uint16 = "mac#%"
 
-overload __atomic_load with __atomic_load_uint16
-overload __atomic_load_n with __atomic_load_n_uint16
+#symload __atomic_load with __atomic_load_uint16
+#symload __atomic_load_n with __atomic_load_n_uint16
 
-overload __atomic_store with __atomic_store_uint16
-overload __atomic_store_n with __atomic_store_n_uint16
+#symload __atomic_store with __atomic_store_uint16
+#symload __atomic_store_n with __atomic_store_n_uint16
 
-overload __atomic_exchange with __atomic_exchange_uint16
-overload __atomic_exchange_n with __atomic_exchange_n_uint16
+#symload __atomic_exchange with __atomic_exchange_uint16
+#symload __atomic_exchange_n with __atomic_exchange_n_uint16
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint16
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint16
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_uint16
+#symload __atomic_compare_exchange with __atomic_compare_exchange_uint16
 
-overload __atomic_add_fetch with __atomic_add_fetch_uint16
-overload __atomic_sub_fetch with __atomic_sub_fetch_uint16
-overload __atomic_and_fetch with __atomic_and_fetch_uint16
-overload __atomic_xor_fetch with __atomic_xor_fetch_uint16
-overload __atomic_or_fetch with __atomic_or_fetch_uint16
-overload __atomic_nand_fetch with __atomic_nand_fetch_uint16
+#symload __atomic_add_fetch with __atomic_add_fetch_uint16
+#symload __atomic_sub_fetch with __atomic_sub_fetch_uint16
+#symload __atomic_and_fetch with __atomic_and_fetch_uint16
+#symload __atomic_xor_fetch with __atomic_xor_fetch_uint16
+#symload __atomic_or_fetch with __atomic_or_fetch_uint16
+#symload __atomic_nand_fetch with __atomic_nand_fetch_uint16
 
-overload __atomic_fetch_add with __atomic_fetch_add_uint16
-overload __atomic_fetch_sub with __atomic_fetch_sub_uint16
-overload __atomic_fetch_and with __atomic_fetch_and_uint16
-overload __atomic_fetch_xor with __atomic_fetch_xor_uint16
-overload __atomic_fetch_or with __atomic_fetch_or_uint16
-overload __atomic_fetch_nand with __atomic_fetch_nand_uint16
-
-
+#symload __atomic_fetch_add with __atomic_fetch_add_uint16
+#symload __atomic_fetch_sub with __atomic_fetch_sub_uint16
+#symload __atomic_fetch_and with __atomic_fetch_and_uint16
+#symload __atomic_fetch_xor with __atomic_fetch_xor_uint16
+#symload __atomic_fetch_or with __atomic_fetch_or_uint16
+#symload __atomic_fetch_nand with __atomic_fetch_nand_uint16
 
 
-fun __atomic_load_int32( &int32, &int32? >> int32, memmodel ) : void = "mac#%"
-fun __atomic_load_n_int32( &int32, memmodel ) : int32 = "mac#%"
 
-fun __atomic_store_int32( &int32 >> _, &int32, memmodel ) : void = "mac#%"
-fun __atomic_store_n_int32( &int32 >> _, int32, memmodel ) : void = "mac#%"
 
-fun __atomic_exchange_int32( &int32 >> _, &int32, &int32? >> int32, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
+fun __atomic_load_sint32( &sint32, &sint32? >> sint32, memmodel ) : void = "mac#%"
+fun __atomic_load_n_sint32( &sint32, memmodel ) : sint32 = "mac#%"
 
-fun __atomic_compare_exchange_n_int32( 
-      p: &int32 >> _
-    , expected: &int32
-    , desired: int32
+fun __atomic_store_sint32( &sint32 >> _, &sint32, memmodel ) : void = "mac#%"
+fun __atomic_store_n_sint32( &sint32 >> _, sint32, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_sint32( &sint32 >> _, &sint32, &sint32? >> sint32, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+
+fun __atomic_compare_exchange_n_sint32( 
+      p: &sint32 >> _
+    , expected: &sint32
+    , desired: sint32
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_compare_exchange_int32( 
-      p: &int32 >> _
-    , expected: &int32
-    , desired: &int32
+fun __atomic_compare_exchange_sint32( 
+      p: &sint32 >> _
+    , expected: &sint32
+    , desired: &sint32
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_add_fetch_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_sub_fetch_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_and_fetch_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_xor_fetch_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_or_fetch_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_nand_fetch_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
+fun __atomic_add_fetch_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_sub_fetch_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_and_fetch_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_xor_fetch_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_or_fetch_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_nand_fetch_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
 
-fun __atomic_fetch_add_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_fetch_sub_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_fetch_and_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_fetch_xor_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_fetch_or_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
-fun __atomic_fetch_nand_int32( &int32 >> _, int32, memmodel ) : int32 = "mac#%"
+fun __atomic_fetch_add_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_fetch_sub_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_fetch_and_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_fetch_xor_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_fetch_or_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
+fun __atomic_fetch_nand_sint32( &sint32 >> _, sint32, memmodel ) : sint32 = "mac#%"
 
-overload __atomic_load with __atomic_load_int32
-overload __atomic_load_n with __atomic_load_n_int32
+#symload __atomic_load with __atomic_load_sint32
+#symload __atomic_load_n with __atomic_load_n_sint32
 
-overload __atomic_store with __atomic_store_int32
-overload __atomic_store_n with __atomic_store_n_int32
+#symload __atomic_store with __atomic_store_sint32
+#symload __atomic_store_n with __atomic_store_n_sint32
 
-overload __atomic_exchange with __atomic_exchange_int32
-overload __atomic_exchange_n with __atomic_exchange_n_int32
+#symload __atomic_exchange with __atomic_exchange_sint32
+#symload __atomic_exchange_n with __atomic_exchange_n_sint32
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_int32
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sint32
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_int32
+#symload __atomic_compare_exchange with __atomic_compare_exchange_sint32
 
-overload __atomic_add_fetch with __atomic_add_fetch_int32
-overload __atomic_sub_fetch with __atomic_sub_fetch_int32
-overload __atomic_and_fetch with __atomic_and_fetch_int32
-overload __atomic_xor_fetch with __atomic_xor_fetch_int32
-overload __atomic_or_fetch with __atomic_or_fetch_int32
-overload __atomic_nand_fetch with __atomic_nand_fetch_int32
+#symload __atomic_add_fetch with __atomic_add_fetch_sint32
+#symload __atomic_sub_fetch with __atomic_sub_fetch_sint32
+#symload __atomic_and_fetch with __atomic_and_fetch_sint32
+#symload __atomic_xor_fetch with __atomic_xor_fetch_sint32
+#symload __atomic_or_fetch with __atomic_or_fetch_sint32
+#symload __atomic_nand_fetch with __atomic_nand_fetch_sint32
 
-overload __atomic_fetch_add with __atomic_fetch_add_int32
-overload __atomic_fetch_sub with __atomic_fetch_sub_int32
-overload __atomic_fetch_and with __atomic_fetch_and_int32
-overload __atomic_fetch_xor with __atomic_fetch_xor_int32
-overload __atomic_fetch_or with __atomic_fetch_or_int32
-overload __atomic_fetch_nand with __atomic_fetch_nand_int32
+#symload __atomic_fetch_add with __atomic_fetch_add_sint32
+#symload __atomic_fetch_sub with __atomic_fetch_sub_sint32
+#symload __atomic_fetch_and with __atomic_fetch_and_sint32
+#symload __atomic_fetch_xor with __atomic_fetch_xor_sint32
+#symload __atomic_fetch_or with __atomic_fetch_or_sint32
+#symload __atomic_fetch_nand with __atomic_fetch_nand_sint32
 
 
 
@@ -1177,103 +1035,103 @@ fun __atomic_fetch_xor_uint32( &uint32 >> _, uint32, memmodel ) : uint32 = "mac#
 fun __atomic_fetch_or_uint32( &uint32 >> _, uint32, memmodel ) : uint32 = "mac#%"
 fun __atomic_fetch_nand_uint32( &uint32 >> _, uint32, memmodel ) : uint32 = "mac#%"
 
-overload __atomic_load with __atomic_load_uint32
-overload __atomic_load_n with __atomic_load_n_uint32
+#symload __atomic_load with __atomic_load_uint32
+#symload __atomic_load_n with __atomic_load_n_uint32
 
-overload __atomic_store with __atomic_store_uint32
-overload __atomic_store_n with __atomic_store_n_uint32
+#symload __atomic_store with __atomic_store_uint32
+#symload __atomic_store_n with __atomic_store_n_uint32
 
-overload __atomic_exchange with __atomic_exchange_uint32
-overload __atomic_exchange_n with __atomic_exchange_n_uint32
+#symload __atomic_exchange with __atomic_exchange_uint32
+#symload __atomic_exchange_n with __atomic_exchange_n_uint32
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint32
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint32
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_uint32
+#symload __atomic_compare_exchange with __atomic_compare_exchange_uint32
 
-overload __atomic_add_fetch with __atomic_add_fetch_uint32
-overload __atomic_sub_fetch with __atomic_sub_fetch_uint32
-overload __atomic_and_fetch with __atomic_and_fetch_uint32
-overload __atomic_xor_fetch with __atomic_xor_fetch_uint32
-overload __atomic_or_fetch with __atomic_or_fetch_uint32
-overload __atomic_nand_fetch with __atomic_nand_fetch_uint32
+#symload __atomic_add_fetch with __atomic_add_fetch_uint32
+#symload __atomic_sub_fetch with __atomic_sub_fetch_uint32
+#symload __atomic_and_fetch with __atomic_and_fetch_uint32
+#symload __atomic_xor_fetch with __atomic_xor_fetch_uint32
+#symload __atomic_or_fetch with __atomic_or_fetch_uint32
+#symload __atomic_nand_fetch with __atomic_nand_fetch_uint32
 
-overload __atomic_fetch_add with __atomic_fetch_add_uint32
-overload __atomic_fetch_sub with __atomic_fetch_sub_uint32
-overload __atomic_fetch_and with __atomic_fetch_and_uint32
-overload __atomic_fetch_xor with __atomic_fetch_xor_uint32
-overload __atomic_fetch_or with __atomic_fetch_or_uint32
-overload __atomic_fetch_nand with __atomic_fetch_nand_uint32
-
-
+#symload __atomic_fetch_add with __atomic_fetch_add_uint32
+#symload __atomic_fetch_sub with __atomic_fetch_sub_uint32
+#symload __atomic_fetch_and with __atomic_fetch_and_uint32
+#symload __atomic_fetch_xor with __atomic_fetch_xor_uint32
+#symload __atomic_fetch_or with __atomic_fetch_or_uint32
+#symload __atomic_fetch_nand with __atomic_fetch_nand_uint32
 
 
-fun __atomic_load_int64( &int64, &int64? >> int64, memmodel ) : void = "mac#%"
-fun __atomic_load_n_int64( &int64, memmodel ) : int64 = "mac#%"
 
-fun __atomic_store_int64( &int64 >> _, &int64, memmodel ) : void = "mac#%"
-fun __atomic_store_n_int64( &int64 >> _, int64, memmodel ) : void = "mac#%"
 
-fun __atomic_exchange_int64( &int64 >> _, &int64, &int64? >> int64, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
+fun __atomic_load_sint64( &sint64, &sint64? >> sint64, memmodel ) : void = "mac#%"
+fun __atomic_load_n_sint64( &sint64, memmodel ) : sint64 = "mac#%"
 
-fun __atomic_compare_exchange_n_int64( 
-      p: &int64 >> _
-    , expected: &int64
-    , desired: int64
+fun __atomic_store_sint64( &sint64 >> _, &sint64, memmodel ) : void = "mac#%"
+fun __atomic_store_n_sint64( &sint64 >> _, sint64, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_sint64( &sint64 >> _, &sint64, &sint64? >> sint64, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+
+fun __atomic_compare_exchange_n_sint64( 
+      p: &sint64 >> _
+    , expected: &sint64
+    , desired: sint64
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_compare_exchange_int64( 
-      p: &int64 >> _
-    , expected: &int64
-    , desired: &int64
+fun __atomic_compare_exchange_sint64( 
+      p: &sint64 >> _
+    , expected: &sint64
+    , desired: &sint64
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_add_fetch_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_sub_fetch_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_and_fetch_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_xor_fetch_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_or_fetch_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_nand_fetch_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
+fun __atomic_add_fetch_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_sub_fetch_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_and_fetch_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_xor_fetch_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_or_fetch_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_nand_fetch_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
 
-fun __atomic_fetch_add_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_fetch_sub_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_fetch_and_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_fetch_xor_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_fetch_or_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
-fun __atomic_fetch_nand_int64( &int64 >> _, int64, memmodel ) : int64 = "mac#%"
+fun __atomic_fetch_add_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_fetch_sub_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_fetch_and_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_fetch_xor_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_fetch_or_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
+fun __atomic_fetch_nand_sint64( &sint64 >> _, sint64, memmodel ) : sint64 = "mac#%"
 
-overload __atomic_load with __atomic_load_int64
-overload __atomic_load_n with __atomic_load_n_int64
+#symload __atomic_load with __atomic_load_sint64
+#symload __atomic_load_n with __atomic_load_n_sint64
 
-overload __atomic_store with __atomic_store_int64
-overload __atomic_store_n with __atomic_store_n_int64
+#symload __atomic_store with __atomic_store_sint64
+#symload __atomic_store_n with __atomic_store_n_sint64
 
-overload __atomic_exchange with __atomic_exchange_int64
-overload __atomic_exchange_n with __atomic_exchange_n_int64
+#symload __atomic_exchange with __atomic_exchange_sint64
+#symload __atomic_exchange_n with __atomic_exchange_n_sint64
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_int64
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_sint64
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_int64
+#symload __atomic_compare_exchange with __atomic_compare_exchange_sint64
 
-overload __atomic_add_fetch with __atomic_add_fetch_int64
-overload __atomic_sub_fetch with __atomic_sub_fetch_int64
-overload __atomic_and_fetch with __atomic_and_fetch_int64
-overload __atomic_xor_fetch with __atomic_xor_fetch_int64
-overload __atomic_or_fetch with __atomic_or_fetch_int64
-overload __atomic_nand_fetch with __atomic_nand_fetch_int64
+#symload __atomic_add_fetch with __atomic_add_fetch_sint64
+#symload __atomic_sub_fetch with __atomic_sub_fetch_sint64
+#symload __atomic_and_fetch with __atomic_and_fetch_sint64
+#symload __atomic_xor_fetch with __atomic_xor_fetch_sint64
+#symload __atomic_or_fetch with __atomic_or_fetch_sint64
+#symload __atomic_nand_fetch with __atomic_nand_fetch_sint64
 
-overload __atomic_fetch_add with __atomic_fetch_add_int64
-overload __atomic_fetch_sub with __atomic_fetch_sub_int64
-overload __atomic_fetch_and with __atomic_fetch_and_int64
-overload __atomic_fetch_xor with __atomic_fetch_xor_int64
-overload __atomic_fetch_or with __atomic_fetch_or_int64
-overload __atomic_fetch_nand with __atomic_fetch_nand_int64
+#symload __atomic_fetch_add with __atomic_fetch_add_sint64
+#symload __atomic_fetch_sub with __atomic_fetch_sub_sint64
+#symload __atomic_fetch_and with __atomic_fetch_and_sint64
+#symload __atomic_fetch_xor with __atomic_fetch_xor_sint64
+#symload __atomic_fetch_or with __atomic_fetch_or_sint64
+#symload __atomic_fetch_nand with __atomic_fetch_nand_sint64
 
 
 
@@ -1319,315 +1177,173 @@ fun __atomic_fetch_xor_uint64( &uint64 >> _, uint64, memmodel ) : uint64 = "mac#
 fun __atomic_fetch_or_uint64( &uint64 >> _, uint64, memmodel ) : uint64 = "mac#%"
 fun __atomic_fetch_nand_uint64( &uint64 >> _, uint64, memmodel ) : uint64 = "mac#%"
 
-overload __atomic_load with __atomic_load_uint64
-overload __atomic_load_n with __atomic_load_n_uint64
+#symload __atomic_load with __atomic_load_uint64
+#symload __atomic_load_n with __atomic_load_n_uint64
 
-overload __atomic_store with __atomic_store_uint64
-overload __atomic_store_n with __atomic_store_n_uint64
+#symload __atomic_store with __atomic_store_uint64
+#symload __atomic_store_n with __atomic_store_n_uint64
 
-overload __atomic_exchange with __atomic_exchange_uint64
-overload __atomic_exchange_n with __atomic_exchange_n_uint64
+#symload __atomic_exchange with __atomic_exchange_uint64
+#symload __atomic_exchange_n with __atomic_exchange_n_uint64
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint64
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uint64
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_uint64
+#symload __atomic_compare_exchange with __atomic_compare_exchange_uint64
 
-overload __atomic_add_fetch with __atomic_add_fetch_uint64
-overload __atomic_sub_fetch with __atomic_sub_fetch_uint64
-overload __atomic_and_fetch with __atomic_and_fetch_uint64
-overload __atomic_xor_fetch with __atomic_xor_fetch_uint64
-overload __atomic_or_fetch with __atomic_or_fetch_uint64
-overload __atomic_nand_fetch with __atomic_nand_fetch_uint64
+#symload __atomic_add_fetch with __atomic_add_fetch_uint64
+#symload __atomic_sub_fetch with __atomic_sub_fetch_uint64
+#symload __atomic_and_fetch with __atomic_and_fetch_uint64
+#symload __atomic_xor_fetch with __atomic_xor_fetch_uint64
+#symload __atomic_or_fetch with __atomic_or_fetch_uint64
+#symload __atomic_nand_fetch with __atomic_nand_fetch_uint64
 
-overload __atomic_fetch_add with __atomic_fetch_add_uint64
-overload __atomic_fetch_sub with __atomic_fetch_sub_uint64
-overload __atomic_fetch_and with __atomic_fetch_and_uint64
-overload __atomic_fetch_xor with __atomic_fetch_xor_uint64
-overload __atomic_fetch_or with __atomic_fetch_or_uint64
-overload __atomic_fetch_nand with __atomic_fetch_nand_uint64
-
-
-
-
-fun __atomic_load_intptr( &intptr, &intptr? >> intptr, memmodel ) : void = "mac#%"
-fun __atomic_load_n_intptr( &intptr, memmodel ) : intptr = "mac#%"
-
-fun __atomic_store_intptr( &intptr >> _, &intptr, memmodel ) : void = "mac#%"
-fun __atomic_store_n_intptr( &intptr >> _, intptr, memmodel ) : void = "mac#%"
-
-fun __atomic_exchange_intptr( &intptr >> _, &intptr, &intptr? >> intptr, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-
-fun __atomic_compare_exchange_n_intptr( 
-      p: &intptr >> _
-    , expected: &intptr
-    , desired: intptr
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_compare_exchange_intptr( 
-      p: &intptr >> _
-    , expected: &intptr
-    , desired: &intptr
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_add_fetch_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_sub_fetch_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_and_fetch_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_xor_fetch_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_or_fetch_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_nand_fetch_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-
-fun __atomic_fetch_add_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_fetch_sub_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_fetch_and_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_fetch_xor_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_fetch_or_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-fun __atomic_fetch_nand_intptr( &intptr >> _, intptr, memmodel ) : intptr = "mac#%"
-
-overload __atomic_load with __atomic_load_intptr
-overload __atomic_load_n with __atomic_load_n_intptr
-
-overload __atomic_store with __atomic_store_intptr
-overload __atomic_store_n with __atomic_store_n_intptr
-
-overload __atomic_exchange with __atomic_exchange_intptr
-overload __atomic_exchange_n with __atomic_exchange_n_intptr
-
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_intptr
-
-overload __atomic_compare_exchange with __atomic_compare_exchange_intptr
-
-overload __atomic_add_fetch with __atomic_add_fetch_intptr
-overload __atomic_sub_fetch with __atomic_sub_fetch_intptr
-overload __atomic_and_fetch with __atomic_and_fetch_intptr
-overload __atomic_xor_fetch with __atomic_xor_fetch_intptr
-overload __atomic_or_fetch with __atomic_or_fetch_intptr
-overload __atomic_nand_fetch with __atomic_nand_fetch_intptr
-
-overload __atomic_fetch_add with __atomic_fetch_add_intptr
-overload __atomic_fetch_sub with __atomic_fetch_sub_intptr
-overload __atomic_fetch_and with __atomic_fetch_and_intptr
-overload __atomic_fetch_xor with __atomic_fetch_xor_intptr
-overload __atomic_fetch_or with __atomic_fetch_or_intptr
-overload __atomic_fetch_nand with __atomic_fetch_nand_intptr
+#symload __atomic_fetch_add with __atomic_fetch_add_uint64
+#symload __atomic_fetch_sub with __atomic_fetch_sub_uint64
+#symload __atomic_fetch_and with __atomic_fetch_and_uint64
+#symload __atomic_fetch_xor with __atomic_fetch_xor_uint64
+#symload __atomic_fetch_or with __atomic_fetch_or_uint64
+#symload __atomic_fetch_nand with __atomic_fetch_nand_uint64
 
 
 
 
-fun __atomic_load_uintptr( &uintptr, &uintptr? >> uintptr, memmodel ) : void = "mac#%"
-fun __atomic_load_n_uintptr( &uintptr, memmodel ) : uintptr = "mac#%"
+fun __atomic_load_ssize( &ssize, &ssize? >> ssize, memmodel ) : void = "mac#%"
+fun __atomic_load_n_ssize( &ssize, memmodel ) : ssize = "mac#%"
 
-fun __atomic_store_uintptr( &uintptr >> _, &uintptr, memmodel ) : void = "mac#%"
-fun __atomic_store_n_uintptr( &uintptr >> _, uintptr, memmodel ) : void = "mac#%"
+fun __atomic_store_ssize( &ssize >> _, &ssize, memmodel ) : void = "mac#%"
+fun __atomic_store_n_ssize( &ssize >> _, ssize, memmodel ) : void = "mac#%"
 
-fun __atomic_exchange_uintptr( &uintptr >> _, &uintptr, &uintptr? >> uintptr, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-
-fun __atomic_compare_exchange_n_uintptr( 
-      p: &uintptr >> _
-    , expected: &uintptr
-    , desired: uintptr
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_compare_exchange_uintptr( 
-      p: &uintptr >> _
-    , expected: &uintptr
-    , desired: &uintptr
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_add_fetch_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_sub_fetch_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_and_fetch_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_xor_fetch_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_or_fetch_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_nand_fetch_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-
-fun __atomic_fetch_add_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_fetch_sub_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_fetch_and_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_fetch_xor_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_fetch_or_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-fun __atomic_fetch_nand_uintptr( &uintptr >> _, uintptr, memmodel ) : uintptr = "mac#%"
-
-overload __atomic_load with __atomic_load_uintptr
-overload __atomic_load_n with __atomic_load_n_uintptr
-
-overload __atomic_store with __atomic_store_uintptr
-overload __atomic_store_n with __atomic_store_n_uintptr
-
-overload __atomic_exchange with __atomic_exchange_uintptr
-overload __atomic_exchange_n with __atomic_exchange_n_uintptr
-
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_uintptr
-
-overload __atomic_compare_exchange with __atomic_compare_exchange_uintptr
-
-overload __atomic_add_fetch with __atomic_add_fetch_uintptr
-overload __atomic_sub_fetch with __atomic_sub_fetch_uintptr
-overload __atomic_and_fetch with __atomic_and_fetch_uintptr
-overload __atomic_xor_fetch with __atomic_xor_fetch_uintptr
-overload __atomic_or_fetch with __atomic_or_fetch_uintptr
-overload __atomic_nand_fetch with __atomic_nand_fetch_uintptr
-
-overload __atomic_fetch_add with __atomic_fetch_add_uintptr
-overload __atomic_fetch_sub with __atomic_fetch_sub_uintptr
-overload __atomic_fetch_and with __atomic_fetch_and_uintptr
-overload __atomic_fetch_xor with __atomic_fetch_xor_uintptr
-overload __atomic_fetch_or with __atomic_fetch_or_uintptr
-overload __atomic_fetch_nand with __atomic_fetch_nand_uintptr
-
-
-
-
-fun __atomic_load_size( &size_t, &size_t? >> size_t, memmodel ) : void = "mac#%"
-fun __atomic_load_n_size( &size_t, memmodel ) : size_t = "mac#%"
-
-fun __atomic_store_size( &size_t >> _, &size_t, memmodel ) : void = "mac#%"
-fun __atomic_store_n_size( &size_t >> _, size_t, memmodel ) : void = "mac#%"
-
-fun __atomic_exchange_size( &size_t >> _, &size_t, &size_t? >> size_t, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-
-fun __atomic_compare_exchange_n_size( 
-      p: &size_t >> _
-    , expected: &size_t
-    , desired: size_t
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_compare_exchange_size( 
-      p: &size_t >> _
-    , expected: &size_t
-    , desired: &size_t
-    , weak: bool
-    , succ: memmodel
-    , fail: memmodel 
-  ) : bool = "mac#%"
-
-fun __atomic_add_fetch_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_sub_fetch_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_and_fetch_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_xor_fetch_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_or_fetch_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_nand_fetch_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-
-fun __atomic_fetch_add_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_fetch_sub_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_fetch_and_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_fetch_xor_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_fetch_or_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-fun __atomic_fetch_nand_size( &size_t >> _, size_t, memmodel ) : size_t = "mac#%"
-
-overload __atomic_load with __atomic_load_size
-overload __atomic_load_n with __atomic_load_n_size
-
-overload __atomic_store with __atomic_store_size
-overload __atomic_store_n with __atomic_store_n_size
-
-overload __atomic_exchange with __atomic_exchange_size
-overload __atomic_exchange_n with __atomic_exchange_n_size
-
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_size
-
-overload __atomic_compare_exchange with __atomic_compare_exchange_size
-
-overload __atomic_add_fetch with __atomic_add_fetch_size
-overload __atomic_sub_fetch with __atomic_sub_fetch_size
-overload __atomic_and_fetch with __atomic_and_fetch_size
-overload __atomic_xor_fetch with __atomic_xor_fetch_size
-overload __atomic_or_fetch with __atomic_or_fetch_size
-overload __atomic_nand_fetch with __atomic_nand_fetch_size
-
-overload __atomic_fetch_add with __atomic_fetch_add_size
-overload __atomic_fetch_sub with __atomic_fetch_sub_size
-overload __atomic_fetch_and with __atomic_fetch_and_size
-overload __atomic_fetch_xor with __atomic_fetch_xor_size
-overload __atomic_fetch_or with __atomic_fetch_or_size
-overload __atomic_fetch_nand with __atomic_fetch_nand_size
-
-
-
-
-fun __atomic_load_ssize( &ssize_t, &ssize_t? >> ssize_t, memmodel ) : void = "mac#%"
-fun __atomic_load_n_ssize( &ssize_t, memmodel ) : ssize_t = "mac#%"
-
-fun __atomic_store_ssize( &ssize_t >> _, &ssize_t, memmodel ) : void = "mac#%"
-fun __atomic_store_n_ssize( &ssize_t >> _, ssize_t, memmodel ) : void = "mac#%"
-
-fun __atomic_exchange_ssize( &ssize_t >> _, &ssize_t, &ssize_t? >> ssize_t, memmodel ) : void = "mac#%"
-fun __atomic_exchange_n_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
+fun __atomic_exchange_ssize( &ssize >> _, &ssize, &ssize? >> ssize, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
 
 fun __atomic_compare_exchange_n_ssize( 
-      p: &ssize_t >> _
-    , expected: &ssize_t
-    , desired: ssize_t
+      p: &ssize >> _
+    , expected: &ssize
+    , desired: ssize
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
 fun __atomic_compare_exchange_ssize( 
-      p: &ssize_t >> _
-    , expected: &ssize_t
-    , desired: &ssize_t
+      p: &ssize >> _
+    , expected: &ssize
+    , desired: &ssize
     , weak: bool
     , succ: memmodel
     , fail: memmodel 
   ) : bool = "mac#%"
 
-fun __atomic_add_fetch_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_sub_fetch_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_and_fetch_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_xor_fetch_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_or_fetch_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_nand_fetch_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
+fun __atomic_add_fetch_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_sub_fetch_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_and_fetch_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_xor_fetch_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_or_fetch_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_nand_fetch_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
 
-fun __atomic_fetch_add_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_fetch_sub_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_fetch_and_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_fetch_xor_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_fetch_or_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
-fun __atomic_fetch_nand_ssize( &ssize_t >> _, ssize_t, memmodel ) : ssize_t = "mac#%"
+fun __atomic_fetch_add_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_fetch_sub_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_fetch_and_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_fetch_xor_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_fetch_or_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
+fun __atomic_fetch_nand_ssize( &ssize >> _, ssize, memmodel ) : ssize = "mac#%"
 
-overload __atomic_load with __atomic_load_ssize
-overload __atomic_load_n with __atomic_load_n_ssize
+#symload __atomic_load with __atomic_load_ssize
+#symload __atomic_load_n with __atomic_load_n_ssize
 
-overload __atomic_store with __atomic_store_ssize
-overload __atomic_store_n with __atomic_store_n_ssize
+#symload __atomic_store with __atomic_store_ssize
+#symload __atomic_store_n with __atomic_store_n_ssize
 
-overload __atomic_exchange with __atomic_exchange_ssize
-overload __atomic_exchange_n with __atomic_exchange_n_ssize
+#symload __atomic_exchange with __atomic_exchange_ssize
+#symload __atomic_exchange_n with __atomic_exchange_n_ssize
 
-overload __atomic_compare_exchange_n with __atomic_compare_exchange_n_ssize
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_ssize
 
-overload __atomic_compare_exchange with __atomic_compare_exchange_ssize
+#symload __atomic_compare_exchange with __atomic_compare_exchange_ssize
 
-overload __atomic_add_fetch with __atomic_add_fetch_ssize
-overload __atomic_sub_fetch with __atomic_sub_fetch_ssize
-overload __atomic_and_fetch with __atomic_and_fetch_ssize
-overload __atomic_xor_fetch with __atomic_xor_fetch_ssize
-overload __atomic_or_fetch with __atomic_or_fetch_ssize
-overload __atomic_nand_fetch with __atomic_nand_fetch_ssize
+#symload __atomic_add_fetch with __atomic_add_fetch_ssize
+#symload __atomic_sub_fetch with __atomic_sub_fetch_ssize
+#symload __atomic_and_fetch with __atomic_and_fetch_ssize
+#symload __atomic_xor_fetch with __atomic_xor_fetch_ssize
+#symload __atomic_or_fetch with __atomic_or_fetch_ssize
+#symload __atomic_nand_fetch with __atomic_nand_fetch_ssize
 
-overload __atomic_fetch_add with __atomic_fetch_add_ssize
-overload __atomic_fetch_sub with __atomic_fetch_sub_ssize
-overload __atomic_fetch_and with __atomic_fetch_and_ssize
-overload __atomic_fetch_xor with __atomic_fetch_xor_ssize
-overload __atomic_fetch_or with __atomic_fetch_or_ssize
-overload __atomic_fetch_nand with __atomic_fetch_nand_ssize
+#symload __atomic_fetch_add with __atomic_fetch_add_ssize
+#symload __atomic_fetch_sub with __atomic_fetch_sub_ssize
+#symload __atomic_fetch_and with __atomic_fetch_and_ssize
+#symload __atomic_fetch_xor with __atomic_fetch_xor_ssize
+#symload __atomic_fetch_or with __atomic_fetch_or_ssize
+#symload __atomic_fetch_nand with __atomic_fetch_nand_ssize
+
+
+
+
+fun __atomic_load_usize( &usize, &usize? >> usize, memmodel ) : void = "mac#%"
+fun __atomic_load_n_usize( &usize, memmodel ) : usize = "mac#%"
+
+fun __atomic_store_usize( &usize >> _, &usize, memmodel ) : void = "mac#%"
+fun __atomic_store_n_usize( &usize >> _, usize, memmodel ) : void = "mac#%"
+
+fun __atomic_exchange_usize( &usize >> _, &usize, &usize? >> usize, memmodel ) : void = "mac#%"
+fun __atomic_exchange_n_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+
+fun __atomic_compare_exchange_n_usize( 
+      p: &usize >> _
+    , expected: &usize
+    , desired: usize
+    , weak: bool
+    , succ: memmodel
+    , fail: memmodel 
+  ) : bool = "mac#%"
+
+fun __atomic_compare_exchange_usize( 
+      p: &usize >> _
+    , expected: &usize
+    , desired: &usize
+    , weak: bool
+    , succ: memmodel
+    , fail: memmodel 
+  ) : bool = "mac#%"
+
+fun __atomic_add_fetch_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_sub_fetch_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_and_fetch_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_xor_fetch_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_or_fetch_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_nand_fetch_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+
+fun __atomic_fetch_add_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_fetch_sub_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_fetch_and_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_fetch_xor_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_fetch_or_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+fun __atomic_fetch_nand_usize( &usize >> _, usize, memmodel ) : usize = "mac#%"
+
+#symload __atomic_load with __atomic_load_usize
+#symload __atomic_load_n with __atomic_load_n_usize
+
+#symload __atomic_store with __atomic_store_usize
+#symload __atomic_store_n with __atomic_store_n_usize
+
+#symload __atomic_exchange with __atomic_exchange_usize
+#symload __atomic_exchange_n with __atomic_exchange_n_usize
+
+#symload __atomic_compare_exchange_n with __atomic_compare_exchange_n_usize
+
+#symload __atomic_compare_exchange with __atomic_compare_exchange_usize
+
+#symload __atomic_add_fetch with __atomic_add_fetch_usize
+#symload __atomic_sub_fetch with __atomic_sub_fetch_usize
+#symload __atomic_and_fetch with __atomic_and_fetch_usize
+#symload __atomic_xor_fetch with __atomic_xor_fetch_usize
+#symload __atomic_or_fetch with __atomic_or_fetch_usize
+#symload __atomic_nand_fetch with __atomic_nand_fetch_usize
+
+#symload __atomic_fetch_add with __atomic_fetch_add_usize
+#symload __atomic_fetch_sub with __atomic_fetch_sub_usize
+#symload __atomic_fetch_and with __atomic_fetch_and_usize
+#symload __atomic_fetch_xor with __atomic_fetch_xor_usize
+#symload __atomic_fetch_or with __atomic_fetch_or_usize
+#symload __atomic_fetch_nand with __atomic_fetch_nand_usize
 
 

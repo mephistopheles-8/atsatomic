@@ -1,17 +1,21 @@
 
 #include "./../HATS/project.hats"
-#include "share/atspre_staload.hats"
 
-staload "./../SATS/__sync.sats"
-staload "./../SATS/atx.sats"
+#staload "libats/SATS/gint.sats"
+#staload "libats/SATS/bool.sats"
+
+#staload UNSAFE = "libats/SATS/unsafe.sats"
+
+#staload "./../SATS/__sync.sats"
+#staload "./../SATS/atx.sats"
 
 absimpl atx_lock = bool
 
-implement {}
+impltmp {}
 atx_lock_init( lock ) =
   lock := false
 
-implement {}
+impltmp {}
 atx_test_and_set{l}(pf | p )  =
   if __sync_lock_test_and_set_bool( !p, true )
   then ( Some_v(pf) | true )
@@ -23,7 +27,7 @@ atx_test_and_set{l}(pf | p )  =
   else ( None_v() | false )
 
 
-implement {}
+impltmp {}
 atx_release{l}( pf1, pf2 | p ) =
    __sync_lock_release( !p )
     where {
@@ -35,7 +39,7 @@ atx_release{l}( pf1, pf2 | p ) =
 
 (** Please verify **)
 
-implement {}
+impltmp {}
 atx_barrier() = __sync_synchronize() 
 
 

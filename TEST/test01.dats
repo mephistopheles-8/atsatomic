@@ -1,11 +1,12 @@
-#include "share/atspre_staload.hats"
+#include "share/HATS/temptory_staload_bucs320.hats"
+#define ATSATOMIC_C11
 #include "../mylibies.hats"
 
 
 implement main0 () 
   = println!("Hello [test0]")
   where {
-    var sz : size_t = ATOMIC_VAR_INIT(i2sz(200))
+    var sz : size = ATOMIC_VAR_INIT(i2sz(200))
 
     val () = atomic_init(sz, i2sz(0)) 
 

@@ -63,68 +63,6 @@
 
 /** **/
 
-#define atsatomic_atomic_init_char(p, v) atomic_init((atstype_char*)p, v)
-
-#define atsatomic_atomic_is_lock_free_char(p) atomic_is_lock_free((atstype_char*)p)
-
-#define atsatomic_atomic_store_explicit_char(p,v,mo) atomic_store_explicit((atstype,_char*)p, v, mo)
-
-#define atsatomic_atomic_store_char(p,v) atomic_store((atstype_char*)p, v)
-
-#define atsatomic_atomic_load_explicit_char(p,mo) atomic_load_explicit((atstype_char*)p, mo) 
-
-#define atsatomic_atomic_load_char(p) atomic_load((atstype_char*)p) 
-
-#define atsatomic_atomic_exchange_explicit_char(p,v,mo) atomic_exchange_explicit((atstype_char*)p,v,mo)
-
-#define atsatomic_atomic_exchange_char(p,v) atomic_exchange((atstype_char*)p, v)
-
-#define atsatomic_atomic_compare_exchange_strong_explicit_char(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_char*)p1,(atstype_char*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_strong_char(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_char*)p1,(atstype_char*)p2,v) 
-
-#define atsatomic_atomic_compare_exchange_weak_explicit_char(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_char*)p1,(atstype_char*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_weak_char(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_char*)p1,(atstype_char*)p2, v) 
-
-#define atsatomic_atomic_fetch_add_char(p,v)\
-  atomic_fetch_add((atstype_char*)p, v)
-
-#define atsatomic_atomic_fetch_add_explicit_char(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_char*)p, v,mo)
-
-#define atsatomic_atomic_fetch_sub_char(p,v)\
-  atomic_fetch_sub((atstype_char*)p, v)
-
-#define atsatomic_atomic_fetch_sub_explicit_char(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_char*)p, v,mo)
-
-#define atsatomic_atomic_fetch_or_char(p,v)\
-  atomic_fetch_or((atstype_char*)p, v)
-
-#define atsatomic_atomic_fetch_or_explicit_char(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_char*)p, v,mo)
-
-#define atsatomic_atomic_fetch_xor_char(p,v)\
-  atomic_fetch_xor((atstype_char*)p, v)
-
-#define atsatomic_atomic_fetch_xor_explicit_char(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_char*)p, v,mo)
-
-#define atsatomic_atomic_fetch_and_char(p,v)\
-  atomic_fetch_and((atstype_char*)p, v)
-
-#define atsatomic_atomic_fetch_and_explicit_char(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_char*)p, v,mo)
-
-
-
-/** **/
-
 #define atsatomic_atomic_init_schar(p, v) atomic_init((atstype_schar*)p, v)
 
 #define atsatomic_atomic_is_lock_free_schar(p) atomic_is_lock_free((atstype_schar*)p)
@@ -311,130 +249,6 @@
 
 /** **/
 
-#define atsatomic_atomic_init_usint(p, v) atomic_init((atstype_usint*)p, v)
-
-#define atsatomic_atomic_is_lock_free_usint(p) atomic_is_lock_free((atstype_usint*)p)
-
-#define atsatomic_atomic_store_explicit_usint(p,v,mo) atomic_store_explicit((atstype,_usint*)p, v, mo)
-
-#define atsatomic_atomic_store_usint(p,v) atomic_store((atstype_usint*)p, v)
-
-#define atsatomic_atomic_load_explicit_usint(p,mo) atomic_load_explicit((atstype_usint*)p, mo) 
-
-#define atsatomic_atomic_load_usint(p) atomic_load((atstype_usint*)p) 
-
-#define atsatomic_atomic_exchange_explicit_usint(p,v,mo) atomic_exchange_explicit((atstype_usint*)p,v,mo)
-
-#define atsatomic_atomic_exchange_usint(p,v) atomic_exchange((atstype_usint*)p, v)
-
-#define atsatomic_atomic_compare_exchange_strong_explicit_usint(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_usint*)p1,(atstype_usint*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_strong_usint(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_usint*)p1,(atstype_usint*)p2,v) 
-
-#define atsatomic_atomic_compare_exchange_weak_explicit_usint(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_usint*)p1,(atstype_usint*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_weak_usint(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_usint*)p1,(atstype_usint*)p2, v) 
-
-#define atsatomic_atomic_fetch_add_usint(p,v)\
-  atomic_fetch_add((atstype_usint*)p, v)
-
-#define atsatomic_atomic_fetch_add_explicit_usint(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_usint*)p, v,mo)
-
-#define atsatomic_atomic_fetch_sub_usint(p,v)\
-  atomic_fetch_sub((atstype_usint*)p, v)
-
-#define atsatomic_atomic_fetch_sub_explicit_usint(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_usint*)p, v,mo)
-
-#define atsatomic_atomic_fetch_or_usint(p,v)\
-  atomic_fetch_or((atstype_usint*)p, v)
-
-#define atsatomic_atomic_fetch_or_explicit_usint(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_usint*)p, v,mo)
-
-#define atsatomic_atomic_fetch_xor_usint(p,v)\
-  atomic_fetch_xor((atstype_usint*)p, v)
-
-#define atsatomic_atomic_fetch_xor_explicit_usint(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_usint*)p, v,mo)
-
-#define atsatomic_atomic_fetch_and_usint(p,v)\
-  atomic_fetch_and((atstype_usint*)p, v)
-
-#define atsatomic_atomic_fetch_and_explicit_usint(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_usint*)p, v,mo)
-
-
-
-/** **/
-
-#define atsatomic_atomic_init_int(p, v) atomic_init((atstype_int*)p, v)
-
-#define atsatomic_atomic_is_lock_free_int(p) atomic_is_lock_free((atstype_int*)p)
-
-#define atsatomic_atomic_store_explicit_int(p,v,mo) atomic_store_explicit((atstype,_int*)p, v, mo)
-
-#define atsatomic_atomic_store_int(p,v) atomic_store((atstype_int*)p, v)
-
-#define atsatomic_atomic_load_explicit_int(p,mo) atomic_load_explicit((atstype_int*)p, mo) 
-
-#define atsatomic_atomic_load_int(p) atomic_load((atstype_int*)p) 
-
-#define atsatomic_atomic_exchange_explicit_int(p,v,mo) atomic_exchange_explicit((atstype_int*)p,v,mo)
-
-#define atsatomic_atomic_exchange_int(p,v) atomic_exchange((atstype_int*)p, v)
-
-#define atsatomic_atomic_compare_exchange_strong_explicit_int(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_int*)p1,(atstype_int*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_strong_int(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_int*)p1,(atstype_int*)p2,v) 
-
-#define atsatomic_atomic_compare_exchange_weak_explicit_int(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_int*)p1,(atstype_int*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_weak_int(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_int*)p1,(atstype_int*)p2, v) 
-
-#define atsatomic_atomic_fetch_add_int(p,v)\
-  atomic_fetch_add((atstype_int*)p, v)
-
-#define atsatomic_atomic_fetch_add_explicit_int(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_int*)p, v,mo)
-
-#define atsatomic_atomic_fetch_sub_int(p,v)\
-  atomic_fetch_sub((atstype_int*)p, v)
-
-#define atsatomic_atomic_fetch_sub_explicit_int(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_int*)p, v,mo)
-
-#define atsatomic_atomic_fetch_or_int(p,v)\
-  atomic_fetch_or((atstype_int*)p, v)
-
-#define atsatomic_atomic_fetch_or_explicit_int(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_int*)p, v,mo)
-
-#define atsatomic_atomic_fetch_xor_int(p,v)\
-  atomic_fetch_xor((atstype_int*)p, v)
-
-#define atsatomic_atomic_fetch_xor_explicit_int(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_int*)p, v,mo)
-
-#define atsatomic_atomic_fetch_and_int(p,v)\
-  atomic_fetch_and((atstype_int*)p, v)
-
-#define atsatomic_atomic_fetch_and_explicit_int(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_int*)p, v,mo)
-
-
-
-/** **/
-
 #define atsatomic_atomic_init_uint(p, v) atomic_init((atstype_uint*)p, v)
 
 #define atsatomic_atomic_is_lock_free_uint(p) atomic_is_lock_free((atstype_uint*)p)
@@ -559,63 +373,63 @@
 
 /** **/
 
-#define atsatomic_atomic_init_llint(p, v) atomic_init((atstype_llint*)p, v)
+#define atsatomic_atomic_init_slint(p, v) atomic_init((atstype_slint*)p, v)
 
-#define atsatomic_atomic_is_lock_free_llint(p) atomic_is_lock_free((atstype_llint*)p)
+#define atsatomic_atomic_is_lock_free_slint(p) atomic_is_lock_free((atstype_slint*)p)
 
-#define atsatomic_atomic_store_explicit_llint(p,v,mo) atomic_store_explicit((atstype,_llint*)p, v, mo)
+#define atsatomic_atomic_store_explicit_slint(p,v,mo) atomic_store_explicit((atstype,_slint*)p, v, mo)
 
-#define atsatomic_atomic_store_llint(p,v) atomic_store((atstype_llint*)p, v)
+#define atsatomic_atomic_store_slint(p,v) atomic_store((atstype_slint*)p, v)
 
-#define atsatomic_atomic_load_explicit_llint(p,mo) atomic_load_explicit((atstype_llint*)p, mo) 
+#define atsatomic_atomic_load_explicit_slint(p,mo) atomic_load_explicit((atstype_slint*)p, mo) 
 
-#define atsatomic_atomic_load_llint(p) atomic_load((atstype_llint*)p) 
+#define atsatomic_atomic_load_slint(p) atomic_load((atstype_slint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_llint(p,v,mo) atomic_exchange_explicit((atstype_llint*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_slint(p,v,mo) atomic_exchange_explicit((atstype_slint*)p,v,mo)
 
-#define atsatomic_atomic_exchange_llint(p,v) atomic_exchange((atstype_llint*)p, v)
+#define atsatomic_atomic_exchange_slint(p,v) atomic_exchange((atstype_slint*)p, v)
 
-#define atsatomic_atomic_compare_exchange_strong_explicit_llint(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_llint*)p1,(atstype_llint*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_strong_explicit_slint(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_slint*)p1,(atstype_slint*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_strong_llint(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_llint*)p1,(atstype_llint*)p2,v) 
+#define atsatomic_atomic_compare_exchange_strong_slint(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_slint*)p1,(atstype_slint*)p2,v) 
 
-#define atsatomic_atomic_compare_exchange_weak_explicit_llint(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_llint*)p1,(atstype_llint*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_weak_explicit_slint(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_slint*)p1,(atstype_slint*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_weak_llint(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_llint*)p1,(atstype_llint*)p2, v) 
+#define atsatomic_atomic_compare_exchange_weak_slint(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_slint*)p1,(atstype_slint*)p2, v) 
 
-#define atsatomic_atomic_fetch_add_llint(p,v)\
-  atomic_fetch_add((atstype_llint*)p, v)
+#define atsatomic_atomic_fetch_add_slint(p,v)\
+  atomic_fetch_add((atstype_slint*)p, v)
 
-#define atsatomic_atomic_fetch_add_explicit_llint(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_llint*)p, v,mo)
+#define atsatomic_atomic_fetch_add_explicit_slint(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_slint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_sub_llint(p,v)\
-  atomic_fetch_sub((atstype_llint*)p, v)
+#define atsatomic_atomic_fetch_sub_slint(p,v)\
+  atomic_fetch_sub((atstype_slint*)p, v)
 
-#define atsatomic_atomic_fetch_sub_explicit_llint(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_llint*)p, v,mo)
+#define atsatomic_atomic_fetch_sub_explicit_slint(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_slint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_or_llint(p,v)\
-  atomic_fetch_or((atstype_llint*)p, v)
+#define atsatomic_atomic_fetch_or_slint(p,v)\
+  atomic_fetch_or((atstype_slint*)p, v)
 
-#define atsatomic_atomic_fetch_or_explicit_llint(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_llint*)p, v,mo)
+#define atsatomic_atomic_fetch_or_explicit_slint(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_slint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_xor_llint(p,v)\
-  atomic_fetch_xor((atstype_llint*)p, v)
+#define atsatomic_atomic_fetch_xor_slint(p,v)\
+  atomic_fetch_xor((atstype_slint*)p, v)
 
-#define atsatomic_atomic_fetch_xor_explicit_llint(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_llint*)p, v,mo)
+#define atsatomic_atomic_fetch_xor_explicit_slint(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_slint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_and_llint(p,v)\
-  atomic_fetch_and((atstype_llint*)p, v)
+#define atsatomic_atomic_fetch_and_slint(p,v)\
+  atomic_fetch_and((atstype_slint*)p, v)
 
-#define atsatomic_atomic_fetch_and_explicit_llint(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_llint*)p, v,mo)
+#define atsatomic_atomic_fetch_and_explicit_slint(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_slint*)p, v,mo)
 
 
 
@@ -683,63 +497,125 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int8(p, v) atomic_init((atstype_int8*)p, v)
+#define atsatomic_atomic_init_sllint(p, v) atomic_init((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_is_lock_free_int8(p) atomic_is_lock_free((atstype_int8*)p)
+#define atsatomic_atomic_is_lock_free_sllint(p) atomic_is_lock_free((atstype_sllint*)p)
 
-#define atsatomic_atomic_store_explicit_int8(p,v,mo) atomic_store_explicit((atstype,_int8*)p, v, mo)
+#define atsatomic_atomic_store_explicit_sllint(p,v,mo) atomic_store_explicit((atstype,_sllint*)p, v, mo)
 
-#define atsatomic_atomic_store_int8(p,v) atomic_store((atstype_int8*)p, v)
+#define atsatomic_atomic_store_sllint(p,v) atomic_store((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_load_explicit_int8(p,mo) atomic_load_explicit((atstype_int8*)p, mo) 
+#define atsatomic_atomic_load_explicit_sllint(p,mo) atomic_load_explicit((atstype_sllint*)p, mo) 
 
-#define atsatomic_atomic_load_int8(p) atomic_load((atstype_int8*)p) 
+#define atsatomic_atomic_load_sllint(p) atomic_load((atstype_sllint*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int8(p,v,mo) atomic_exchange_explicit((atstype_int8*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_sllint(p,v,mo) atomic_exchange_explicit((atstype_sllint*)p,v,mo)
 
-#define atsatomic_atomic_exchange_int8(p,v) atomic_exchange((atstype_int8*)p, v)
+#define atsatomic_atomic_exchange_sllint(p,v) atomic_exchange((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_compare_exchange_strong_explicit_int8(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_int8*)p1,(atstype_int8*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_strong_explicit_sllint(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_sllint*)p1,(atstype_sllint*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_strong_int8(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_int8*)p1,(atstype_int8*)p2,v) 
+#define atsatomic_atomic_compare_exchange_strong_sllint(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_sllint*)p1,(atstype_sllint*)p2,v) 
 
-#define atsatomic_atomic_compare_exchange_weak_explicit_int8(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_int8*)p1,(atstype_int8*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_weak_explicit_sllint(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_sllint*)p1,(atstype_sllint*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_weak_int8(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_int8*)p1,(atstype_int8*)p2, v) 
+#define atsatomic_atomic_compare_exchange_weak_sllint(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_sllint*)p1,(atstype_sllint*)p2, v) 
 
-#define atsatomic_atomic_fetch_add_int8(p,v)\
-  atomic_fetch_add((atstype_int8*)p, v)
+#define atsatomic_atomic_fetch_add_sllint(p,v)\
+  atomic_fetch_add((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_fetch_add_explicit_int8(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_int8*)p, v,mo)
+#define atsatomic_atomic_fetch_add_explicit_sllint(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_sllint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_sub_int8(p,v)\
-  atomic_fetch_sub((atstype_int8*)p, v)
+#define atsatomic_atomic_fetch_sub_sllint(p,v)\
+  atomic_fetch_sub((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_fetch_sub_explicit_int8(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_int8*)p, v,mo)
+#define atsatomic_atomic_fetch_sub_explicit_sllint(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_sllint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_or_int8(p,v)\
-  atomic_fetch_or((atstype_int8*)p, v)
+#define atsatomic_atomic_fetch_or_sllint(p,v)\
+  atomic_fetch_or((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_fetch_or_explicit_int8(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_int8*)p, v,mo)
+#define atsatomic_atomic_fetch_or_explicit_sllint(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_sllint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_xor_int8(p,v)\
-  atomic_fetch_xor((atstype_int8*)p, v)
+#define atsatomic_atomic_fetch_xor_sllint(p,v)\
+  atomic_fetch_xor((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_fetch_xor_explicit_int8(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_int8*)p, v,mo)
+#define atsatomic_atomic_fetch_xor_explicit_sllint(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_sllint*)p, v,mo)
 
-#define atsatomic_atomic_fetch_and_int8(p,v)\
-  atomic_fetch_and((atstype_int8*)p, v)
+#define atsatomic_atomic_fetch_and_sllint(p,v)\
+  atomic_fetch_and((atstype_sllint*)p, v)
 
-#define atsatomic_atomic_fetch_and_explicit_int8(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_int8*)p, v,mo)
+#define atsatomic_atomic_fetch_and_explicit_sllint(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_sllint*)p, v,mo)
+
+
+
+/** **/
+
+#define atsatomic_atomic_init_sint8(p, v) atomic_init((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_is_lock_free_sint8(p) atomic_is_lock_free((atstype_sint8*)p)
+
+#define atsatomic_atomic_store_explicit_sint8(p,v,mo) atomic_store_explicit((atstype,_sint8*)p, v, mo)
+
+#define atsatomic_atomic_store_sint8(p,v) atomic_store((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_load_explicit_sint8(p,mo) atomic_load_explicit((atstype_sint8*)p, mo) 
+
+#define atsatomic_atomic_load_sint8(p) atomic_load((atstype_sint8*)p) 
+
+#define atsatomic_atomic_exchange_explicit_sint8(p,v,mo) atomic_exchange_explicit((atstype_sint8*)p,v,mo)
+
+#define atsatomic_atomic_exchange_sint8(p,v) atomic_exchange((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_compare_exchange_strong_explicit_sint8(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_sint8*)p1,(atstype_sint8*)p2,v,mo1,mo2) 
+
+#define atsatomic_atomic_compare_exchange_strong_sint8(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_sint8*)p1,(atstype_sint8*)p2,v) 
+
+#define atsatomic_atomic_compare_exchange_weak_explicit_sint8(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_sint8*)p1,(atstype_sint8*)p2,v,mo1,mo2) 
+
+#define atsatomic_atomic_compare_exchange_weak_sint8(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_sint8*)p1,(atstype_sint8*)p2, v) 
+
+#define atsatomic_atomic_fetch_add_sint8(p,v)\
+  atomic_fetch_add((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_fetch_add_explicit_sint8(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_sint8*)p, v,mo)
+
+#define atsatomic_atomic_fetch_sub_sint8(p,v)\
+  atomic_fetch_sub((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_fetch_sub_explicit_sint8(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_sint8*)p, v,mo)
+
+#define atsatomic_atomic_fetch_or_sint8(p,v)\
+  atomic_fetch_or((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_fetch_or_explicit_sint8(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_sint8*)p, v,mo)
+
+#define atsatomic_atomic_fetch_xor_sint8(p,v)\
+  atomic_fetch_xor((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_fetch_xor_explicit_sint8(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_sint8*)p, v,mo)
+
+#define atsatomic_atomic_fetch_and_sint8(p,v)\
+  atomic_fetch_and((atstype_sint8*)p, v)
+
+#define atsatomic_atomic_fetch_and_explicit_sint8(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_sint8*)p, v,mo)
 
 
 
@@ -807,63 +683,63 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int16(p, v) atomic_init((atstype_int16*)p, v)
+#define atsatomic_atomic_init_sint16(p, v) atomic_init((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_is_lock_free_int16(p) atomic_is_lock_free((atstype_int16*)p)
+#define atsatomic_atomic_is_lock_free_sint16(p) atomic_is_lock_free((atstype_sint16*)p)
 
-#define atsatomic_atomic_store_explicit_int16(p,v,mo) atomic_store_explicit((atstype,_int16*)p, v, mo)
+#define atsatomic_atomic_store_explicit_sint16(p,v,mo) atomic_store_explicit((atstype,_sint16*)p, v, mo)
 
-#define atsatomic_atomic_store_int16(p,v) atomic_store((atstype_int16*)p, v)
+#define atsatomic_atomic_store_sint16(p,v) atomic_store((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_load_explicit_int16(p,mo) atomic_load_explicit((atstype_int16*)p, mo) 
+#define atsatomic_atomic_load_explicit_sint16(p,mo) atomic_load_explicit((atstype_sint16*)p, mo) 
 
-#define atsatomic_atomic_load_int16(p) atomic_load((atstype_int16*)p) 
+#define atsatomic_atomic_load_sint16(p) atomic_load((atstype_sint16*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int16(p,v,mo) atomic_exchange_explicit((atstype_int16*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_sint16(p,v,mo) atomic_exchange_explicit((atstype_sint16*)p,v,mo)
 
-#define atsatomic_atomic_exchange_int16(p,v) atomic_exchange((atstype_int16*)p, v)
+#define atsatomic_atomic_exchange_sint16(p,v) atomic_exchange((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_compare_exchange_strong_explicit_int16(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_int16*)p1,(atstype_int16*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_strong_explicit_sint16(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_sint16*)p1,(atstype_sint16*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_strong_int16(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_int16*)p1,(atstype_int16*)p2,v) 
+#define atsatomic_atomic_compare_exchange_strong_sint16(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_sint16*)p1,(atstype_sint16*)p2,v) 
 
-#define atsatomic_atomic_compare_exchange_weak_explicit_int16(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_int16*)p1,(atstype_int16*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_weak_explicit_sint16(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_sint16*)p1,(atstype_sint16*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_weak_int16(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_int16*)p1,(atstype_int16*)p2, v) 
+#define atsatomic_atomic_compare_exchange_weak_sint16(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_sint16*)p1,(atstype_sint16*)p2, v) 
 
-#define atsatomic_atomic_fetch_add_int16(p,v)\
-  atomic_fetch_add((atstype_int16*)p, v)
+#define atsatomic_atomic_fetch_add_sint16(p,v)\
+  atomic_fetch_add((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_fetch_add_explicit_int16(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_int16*)p, v,mo)
+#define atsatomic_atomic_fetch_add_explicit_sint16(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_sint16*)p, v,mo)
 
-#define atsatomic_atomic_fetch_sub_int16(p,v)\
-  atomic_fetch_sub((atstype_int16*)p, v)
+#define atsatomic_atomic_fetch_sub_sint16(p,v)\
+  atomic_fetch_sub((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_fetch_sub_explicit_int16(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_int16*)p, v,mo)
+#define atsatomic_atomic_fetch_sub_explicit_sint16(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_sint16*)p, v,mo)
 
-#define atsatomic_atomic_fetch_or_int16(p,v)\
-  atomic_fetch_or((atstype_int16*)p, v)
+#define atsatomic_atomic_fetch_or_sint16(p,v)\
+  atomic_fetch_or((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_fetch_or_explicit_int16(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_int16*)p, v,mo)
+#define atsatomic_atomic_fetch_or_explicit_sint16(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_sint16*)p, v,mo)
 
-#define atsatomic_atomic_fetch_xor_int16(p,v)\
-  atomic_fetch_xor((atstype_int16*)p, v)
+#define atsatomic_atomic_fetch_xor_sint16(p,v)\
+  atomic_fetch_xor((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_fetch_xor_explicit_int16(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_int16*)p, v,mo)
+#define atsatomic_atomic_fetch_xor_explicit_sint16(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_sint16*)p, v,mo)
 
-#define atsatomic_atomic_fetch_and_int16(p,v)\
-  atomic_fetch_and((atstype_int16*)p, v)
+#define atsatomic_atomic_fetch_and_sint16(p,v)\
+  atomic_fetch_and((atstype_sint16*)p, v)
 
-#define atsatomic_atomic_fetch_and_explicit_int16(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_int16*)p, v,mo)
+#define atsatomic_atomic_fetch_and_explicit_sint16(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_sint16*)p, v,mo)
 
 
 
@@ -931,63 +807,63 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int32(p, v) atomic_init((atstype_int32*)p, v)
+#define atsatomic_atomic_init_sint32(p, v) atomic_init((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_is_lock_free_int32(p) atomic_is_lock_free((atstype_int32*)p)
+#define atsatomic_atomic_is_lock_free_sint32(p) atomic_is_lock_free((atstype_sint32*)p)
 
-#define atsatomic_atomic_store_explicit_int32(p,v,mo) atomic_store_explicit((atstype,_int32*)p, v, mo)
+#define atsatomic_atomic_store_explicit_sint32(p,v,mo) atomic_store_explicit((atstype,_sint32*)p, v, mo)
 
-#define atsatomic_atomic_store_int32(p,v) atomic_store((atstype_int32*)p, v)
+#define atsatomic_atomic_store_sint32(p,v) atomic_store((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_load_explicit_int32(p,mo) atomic_load_explicit((atstype_int32*)p, mo) 
+#define atsatomic_atomic_load_explicit_sint32(p,mo) atomic_load_explicit((atstype_sint32*)p, mo) 
 
-#define atsatomic_atomic_load_int32(p) atomic_load((atstype_int32*)p) 
+#define atsatomic_atomic_load_sint32(p) atomic_load((atstype_sint32*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int32(p,v,mo) atomic_exchange_explicit((atstype_int32*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_sint32(p,v,mo) atomic_exchange_explicit((atstype_sint32*)p,v,mo)
 
-#define atsatomic_atomic_exchange_int32(p,v) atomic_exchange((atstype_int32*)p, v)
+#define atsatomic_atomic_exchange_sint32(p,v) atomic_exchange((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_compare_exchange_strong_explicit_int32(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_int32*)p1,(atstype_int32*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_strong_explicit_sint32(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_sint32*)p1,(atstype_sint32*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_strong_int32(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_int32*)p1,(atstype_int32*)p2,v) 
+#define atsatomic_atomic_compare_exchange_strong_sint32(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_sint32*)p1,(atstype_sint32*)p2,v) 
 
-#define atsatomic_atomic_compare_exchange_weak_explicit_int32(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_int32*)p1,(atstype_int32*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_weak_explicit_sint32(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_sint32*)p1,(atstype_sint32*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_weak_int32(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_int32*)p1,(atstype_int32*)p2, v) 
+#define atsatomic_atomic_compare_exchange_weak_sint32(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_sint32*)p1,(atstype_sint32*)p2, v) 
 
-#define atsatomic_atomic_fetch_add_int32(p,v)\
-  atomic_fetch_add((atstype_int32*)p, v)
+#define atsatomic_atomic_fetch_add_sint32(p,v)\
+  atomic_fetch_add((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_fetch_add_explicit_int32(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_int32*)p, v,mo)
+#define atsatomic_atomic_fetch_add_explicit_sint32(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_sint32*)p, v,mo)
 
-#define atsatomic_atomic_fetch_sub_int32(p,v)\
-  atomic_fetch_sub((atstype_int32*)p, v)
+#define atsatomic_atomic_fetch_sub_sint32(p,v)\
+  atomic_fetch_sub((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_fetch_sub_explicit_int32(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_int32*)p, v,mo)
+#define atsatomic_atomic_fetch_sub_explicit_sint32(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_sint32*)p, v,mo)
 
-#define atsatomic_atomic_fetch_or_int32(p,v)\
-  atomic_fetch_or((atstype_int32*)p, v)
+#define atsatomic_atomic_fetch_or_sint32(p,v)\
+  atomic_fetch_or((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_fetch_or_explicit_int32(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_int32*)p, v,mo)
+#define atsatomic_atomic_fetch_or_explicit_sint32(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_sint32*)p, v,mo)
 
-#define atsatomic_atomic_fetch_xor_int32(p,v)\
-  atomic_fetch_xor((atstype_int32*)p, v)
+#define atsatomic_atomic_fetch_xor_sint32(p,v)\
+  atomic_fetch_xor((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_fetch_xor_explicit_int32(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_int32*)p, v,mo)
+#define atsatomic_atomic_fetch_xor_explicit_sint32(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_sint32*)p, v,mo)
 
-#define atsatomic_atomic_fetch_and_int32(p,v)\
-  atomic_fetch_and((atstype_int32*)p, v)
+#define atsatomic_atomic_fetch_and_sint32(p,v)\
+  atomic_fetch_and((atstype_sint32*)p, v)
 
-#define atsatomic_atomic_fetch_and_explicit_int32(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_int32*)p, v,mo)
+#define atsatomic_atomic_fetch_and_explicit_sint32(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_sint32*)p, v,mo)
 
 
 
@@ -1055,63 +931,63 @@
 
 /** **/
 
-#define atsatomic_atomic_init_int64(p, v) atomic_init((atstype_int64*)p, v)
+#define atsatomic_atomic_init_sint64(p, v) atomic_init((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_is_lock_free_int64(p) atomic_is_lock_free((atstype_int64*)p)
+#define atsatomic_atomic_is_lock_free_sint64(p) atomic_is_lock_free((atstype_sint64*)p)
 
-#define atsatomic_atomic_store_explicit_int64(p,v,mo) atomic_store_explicit((atstype,_int64*)p, v, mo)
+#define atsatomic_atomic_store_explicit_sint64(p,v,mo) atomic_store_explicit((atstype,_sint64*)p, v, mo)
 
-#define atsatomic_atomic_store_int64(p,v) atomic_store((atstype_int64*)p, v)
+#define atsatomic_atomic_store_sint64(p,v) atomic_store((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_load_explicit_int64(p,mo) atomic_load_explicit((atstype_int64*)p, mo) 
+#define atsatomic_atomic_load_explicit_sint64(p,mo) atomic_load_explicit((atstype_sint64*)p, mo) 
 
-#define atsatomic_atomic_load_int64(p) atomic_load((atstype_int64*)p) 
+#define atsatomic_atomic_load_sint64(p) atomic_load((atstype_sint64*)p) 
 
-#define atsatomic_atomic_exchange_explicit_int64(p,v,mo) atomic_exchange_explicit((atstype_int64*)p,v,mo)
+#define atsatomic_atomic_exchange_explicit_sint64(p,v,mo) atomic_exchange_explicit((atstype_sint64*)p,v,mo)
 
-#define atsatomic_atomic_exchange_int64(p,v) atomic_exchange((atstype_int64*)p, v)
+#define atsatomic_atomic_exchange_sint64(p,v) atomic_exchange((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_compare_exchange_strong_explicit_int64(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_int64*)p1,(atstype_int64*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_strong_explicit_sint64(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_sint64*)p1,(atstype_sint64*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_strong_int64(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_int64*)p1,(atstype_int64*)p2,v) 
+#define atsatomic_atomic_compare_exchange_strong_sint64(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_sint64*)p1,(atstype_sint64*)p2,v) 
 
-#define atsatomic_atomic_compare_exchange_weak_explicit_int64(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_int64*)p1,(atstype_int64*)p2,v,mo1,mo2) 
+#define atsatomic_atomic_compare_exchange_weak_explicit_sint64(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_sint64*)p1,(atstype_sint64*)p2,v,mo1,mo2) 
 
-#define atsatomic_atomic_compare_exchange_weak_int64(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_int64*)p1,(atstype_int64*)p2, v) 
+#define atsatomic_atomic_compare_exchange_weak_sint64(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_sint64*)p1,(atstype_sint64*)p2, v) 
 
-#define atsatomic_atomic_fetch_add_int64(p,v)\
-  atomic_fetch_add((atstype_int64*)p, v)
+#define atsatomic_atomic_fetch_add_sint64(p,v)\
+  atomic_fetch_add((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_fetch_add_explicit_int64(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_int64*)p, v,mo)
+#define atsatomic_atomic_fetch_add_explicit_sint64(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_sint64*)p, v,mo)
 
-#define atsatomic_atomic_fetch_sub_int64(p,v)\
-  atomic_fetch_sub((atstype_int64*)p, v)
+#define atsatomic_atomic_fetch_sub_sint64(p,v)\
+  atomic_fetch_sub((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_fetch_sub_explicit_int64(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_int64*)p, v,mo)
+#define atsatomic_atomic_fetch_sub_explicit_sint64(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_sint64*)p, v,mo)
 
-#define atsatomic_atomic_fetch_or_int64(p,v)\
-  atomic_fetch_or((atstype_int64*)p, v)
+#define atsatomic_atomic_fetch_or_sint64(p,v)\
+  atomic_fetch_or((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_fetch_or_explicit_int64(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_int64*)p, v,mo)
+#define atsatomic_atomic_fetch_or_explicit_sint64(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_sint64*)p, v,mo)
 
-#define atsatomic_atomic_fetch_xor_int64(p,v)\
-  atomic_fetch_xor((atstype_int64*)p, v)
+#define atsatomic_atomic_fetch_xor_sint64(p,v)\
+  atomic_fetch_xor((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_fetch_xor_explicit_int64(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_int64*)p, v,mo)
+#define atsatomic_atomic_fetch_xor_explicit_sint64(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_sint64*)p, v,mo)
 
-#define atsatomic_atomic_fetch_and_int64(p,v)\
-  atomic_fetch_and((atstype_int64*)p, v)
+#define atsatomic_atomic_fetch_and_sint64(p,v)\
+  atomic_fetch_and((atstype_sint64*)p, v)
 
-#define atsatomic_atomic_fetch_and_explicit_int64(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_int64*)p, v,mo)
+#define atsatomic_atomic_fetch_and_explicit_sint64(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_sint64*)p, v,mo)
 
 
 
@@ -1179,192 +1055,6 @@
 
 /** **/
 
-#define atsatomic_atomic_init_intptr(p, v) atomic_init((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_is_lock_free_intptr(p) atomic_is_lock_free((atstype_intptr*)p)
-
-#define atsatomic_atomic_store_explicit_intptr(p,v,mo) atomic_store_explicit((atstype,_intptr*)p, v, mo)
-
-#define atsatomic_atomic_store_intptr(p,v) atomic_store((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_load_explicit_intptr(p,mo) atomic_load_explicit((atstype_intptr*)p, mo) 
-
-#define atsatomic_atomic_load_intptr(p) atomic_load((atstype_intptr*)p) 
-
-#define atsatomic_atomic_exchange_explicit_intptr(p,v,mo) atomic_exchange_explicit((atstype_intptr*)p,v,mo)
-
-#define atsatomic_atomic_exchange_intptr(p,v) atomic_exchange((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_compare_exchange_strong_explicit_intptr(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_intptr*)p1,(atstype_intptr*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_strong_intptr(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_intptr*)p1,(atstype_intptr*)p2,v) 
-
-#define atsatomic_atomic_compare_exchange_weak_explicit_intptr(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_intptr*)p1,(atstype_intptr*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_weak_intptr(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_intptr*)p1,(atstype_intptr*)p2, v) 
-
-#define atsatomic_atomic_fetch_add_intptr(p,v)\
-  atomic_fetch_add((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_fetch_add_explicit_intptr(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_intptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_sub_intptr(p,v)\
-  atomic_fetch_sub((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_fetch_sub_explicit_intptr(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_intptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_or_intptr(p,v)\
-  atomic_fetch_or((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_fetch_or_explicit_intptr(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_intptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_xor_intptr(p,v)\
-  atomic_fetch_xor((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_fetch_xor_explicit_intptr(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_intptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_and_intptr(p,v)\
-  atomic_fetch_and((atstype_intptr*)p, v)
-
-#define atsatomic_atomic_fetch_and_explicit_intptr(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_intptr*)p, v,mo)
-
-
-
-/** **/
-
-#define atsatomic_atomic_init_uintptr(p, v) atomic_init((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_is_lock_free_uintptr(p) atomic_is_lock_free((atstype_uintptr*)p)
-
-#define atsatomic_atomic_store_explicit_uintptr(p,v,mo) atomic_store_explicit((atstype,_uintptr*)p, v, mo)
-
-#define atsatomic_atomic_store_uintptr(p,v) atomic_store((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_load_explicit_uintptr(p,mo) atomic_load_explicit((atstype_uintptr*)p, mo) 
-
-#define atsatomic_atomic_load_uintptr(p) atomic_load((atstype_uintptr*)p) 
-
-#define atsatomic_atomic_exchange_explicit_uintptr(p,v,mo) atomic_exchange_explicit((atstype_uintptr*)p,v,mo)
-
-#define atsatomic_atomic_exchange_uintptr(p,v) atomic_exchange((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_compare_exchange_strong_explicit_uintptr(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_uintptr*)p1,(atstype_uintptr*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_strong_uintptr(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_uintptr*)p1,(atstype_uintptr*)p2,v) 
-
-#define atsatomic_atomic_compare_exchange_weak_explicit_uintptr(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_uintptr*)p1,(atstype_uintptr*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_weak_uintptr(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_uintptr*)p1,(atstype_uintptr*)p2, v) 
-
-#define atsatomic_atomic_fetch_add_uintptr(p,v)\
-  atomic_fetch_add((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_fetch_add_explicit_uintptr(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_uintptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_sub_uintptr(p,v)\
-  atomic_fetch_sub((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_fetch_sub_explicit_uintptr(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_uintptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_or_uintptr(p,v)\
-  atomic_fetch_or((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_fetch_or_explicit_uintptr(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_uintptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_xor_uintptr(p,v)\
-  atomic_fetch_xor((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_fetch_xor_explicit_uintptr(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_uintptr*)p, v,mo)
-
-#define atsatomic_atomic_fetch_and_uintptr(p,v)\
-  atomic_fetch_and((atstype_uintptr*)p, v)
-
-#define atsatomic_atomic_fetch_and_explicit_uintptr(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_uintptr*)p, v,mo)
-
-
-
-/** **/
-
-#define atsatomic_atomic_init_size(p, v) atomic_init((atstype_size*)p, v)
-
-#define atsatomic_atomic_is_lock_free_size(p) atomic_is_lock_free((atstype_size*)p)
-
-#define atsatomic_atomic_store_explicit_size(p,v,mo) atomic_store_explicit((atstype,_size*)p, v, mo)
-
-#define atsatomic_atomic_store_size(p,v) atomic_store((atstype_size*)p, v)
-
-#define atsatomic_atomic_load_explicit_size(p,mo) atomic_load_explicit((atstype_size*)p, mo) 
-
-#define atsatomic_atomic_load_size(p) atomic_load((atstype_size*)p) 
-
-#define atsatomic_atomic_exchange_explicit_size(p,v,mo) atomic_exchange_explicit((atstype_size*)p,v,mo)
-
-#define atsatomic_atomic_exchange_size(p,v) atomic_exchange((atstype_size*)p, v)
-
-#define atsatomic_atomic_compare_exchange_strong_explicit_size(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_strong_explicit((atstype_size*)p1,(atstype_size*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_strong_size(p1,p2,v)\
-  atomic_compare_exchange_strong((atstype_size*)p1,(atstype_size*)p2,v) 
-
-#define atsatomic_atomic_compare_exchange_weak_explicit_size(p1,p2,v,mo1,mo2)\
-  atomic_compare_exchange_weak_explicit((atstype_size*)p1,(atstype_size*)p2,v,mo1,mo2) 
-
-#define atsatomic_atomic_compare_exchange_weak_size(p1,p2,v)\
-  atomic_compare_exchange_weak((atstype_size*)p1,(atstype_size*)p2, v) 
-
-#define atsatomic_atomic_fetch_add_size(p,v)\
-  atomic_fetch_add((atstype_size*)p, v)
-
-#define atsatomic_atomic_fetch_add_explicit_size(p,v,mo)\
-  atomic_fetch_add_explicit((atstype_size*)p, v,mo)
-
-#define atsatomic_atomic_fetch_sub_size(p,v)\
-  atomic_fetch_sub((atstype_size*)p, v)
-
-#define atsatomic_atomic_fetch_sub_explicit_size(p,v,mo)\
-  atomic_fetch_sub_explicit((atstype_size*)p, v,mo)
-
-#define atsatomic_atomic_fetch_or_size(p,v)\
-  atomic_fetch_or((atstype_size*)p, v)
-
-#define atsatomic_atomic_fetch_or_explicit_size(p,v,mo)\
-  atomic_fetch_or_explicit((atstype_size*)p, v,mo)
-
-#define atsatomic_atomic_fetch_xor_size(p,v)\
-  atomic_fetch_xor((atstype_size*)p, v)
-
-#define atsatomic_atomic_fetch_xor_explicit_size(p,v,mo)\
-  atomic_fetch_xor_explicit((atstype_size*)p, v,mo)
-
-#define atsatomic_atomic_fetch_and_size(p,v)\
-  atomic_fetch_and((atstype_size*)p, v)
-
-#define atsatomic_atomic_fetch_and_explicit_size(p,v,mo)\
-  atomic_fetch_and_explicit((atstype_size*)p, v,mo)
-
-
-
-/** **/
-
 #define atsatomic_atomic_init_ssize(p, v) atomic_init((atstype_ssize*)p, v)
 
 #define atsatomic_atomic_is_lock_free_ssize(p) atomic_is_lock_free((atstype_ssize*)p)
@@ -1422,5 +1112,67 @@
 
 #define atsatomic_atomic_fetch_and_explicit_ssize(p,v,mo)\
   atomic_fetch_and_explicit((atstype_ssize*)p, v,mo)
+
+
+
+/** **/
+
+#define atsatomic_atomic_init_usize(p, v) atomic_init((atstype_usize*)p, v)
+
+#define atsatomic_atomic_is_lock_free_usize(p) atomic_is_lock_free((atstype_usize*)p)
+
+#define atsatomic_atomic_store_explicit_usize(p,v,mo) atomic_store_explicit((atstype,_usize*)p, v, mo)
+
+#define atsatomic_atomic_store_usize(p,v) atomic_store((atstype_usize*)p, v)
+
+#define atsatomic_atomic_load_explicit_usize(p,mo) atomic_load_explicit((atstype_usize*)p, mo) 
+
+#define atsatomic_atomic_load_usize(p) atomic_load((atstype_usize*)p) 
+
+#define atsatomic_atomic_exchange_explicit_usize(p,v,mo) atomic_exchange_explicit((atstype_usize*)p,v,mo)
+
+#define atsatomic_atomic_exchange_usize(p,v) atomic_exchange((atstype_usize*)p, v)
+
+#define atsatomic_atomic_compare_exchange_strong_explicit_usize(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_strong_explicit((atstype_usize*)p1,(atstype_usize*)p2,v,mo1,mo2) 
+
+#define atsatomic_atomic_compare_exchange_strong_usize(p1,p2,v)\
+  atomic_compare_exchange_strong((atstype_usize*)p1,(atstype_usize*)p2,v) 
+
+#define atsatomic_atomic_compare_exchange_weak_explicit_usize(p1,p2,v,mo1,mo2)\
+  atomic_compare_exchange_weak_explicit((atstype_usize*)p1,(atstype_usize*)p2,v,mo1,mo2) 
+
+#define atsatomic_atomic_compare_exchange_weak_usize(p1,p2,v)\
+  atomic_compare_exchange_weak((atstype_usize*)p1,(atstype_usize*)p2, v) 
+
+#define atsatomic_atomic_fetch_add_usize(p,v)\
+  atomic_fetch_add((atstype_usize*)p, v)
+
+#define atsatomic_atomic_fetch_add_explicit_usize(p,v,mo)\
+  atomic_fetch_add_explicit((atstype_usize*)p, v,mo)
+
+#define atsatomic_atomic_fetch_sub_usize(p,v)\
+  atomic_fetch_sub((atstype_usize*)p, v)
+
+#define atsatomic_atomic_fetch_sub_explicit_usize(p,v,mo)\
+  atomic_fetch_sub_explicit((atstype_usize*)p, v,mo)
+
+#define atsatomic_atomic_fetch_or_usize(p,v)\
+  atomic_fetch_or((atstype_usize*)p, v)
+
+#define atsatomic_atomic_fetch_or_explicit_usize(p,v,mo)\
+  atomic_fetch_or_explicit((atstype_usize*)p, v,mo)
+
+#define atsatomic_atomic_fetch_xor_usize(p,v)\
+  atomic_fetch_xor((atstype_usize*)p, v)
+
+#define atsatomic_atomic_fetch_xor_explicit_usize(p,v,mo)\
+  atomic_fetch_xor_explicit((atstype_usize*)p, v,mo)
+
+#define atsatomic_atomic_fetch_and_usize(p,v)\
+  atomic_fetch_and((atstype_usize*)p, v)
+
+#define atsatomic_atomic_fetch_and_explicit_usize(p,v,mo)\
+  atomic_fetch_and_explicit((atstype_usize*)p, v,mo)
 
 

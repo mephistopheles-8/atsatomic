@@ -51,57 +51,6 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_char(p,v)\
-  __sync_add_and_fetch((atstype_char*)p,v)
-
-#define atsatomic__sync_sub_and_fetch_char(p,v)\
-  __sync_sub_and_fetch((atstype_char*)p,v)
-
-#define atsatomic__sync_and_and_fetch_char(p,v)\
-  __sync_and_and_fetch((atstype_char*)p,v)
-
-#define atsatomic__sync_xor_and_fetch_char(p,v)\
-  __sync_xor_and_fetch((atstype_char*)p,v)
-
-#define atsatomic__sync_or_and_fetch_char(p,v)\
-  __sync_or_and_fetch((atstype_char*)p,v)
-
-#define atsatomic__sync_nand_and_fetch_char(p,v)\
-  __sync_nand_and_fetch((atstype_char*)p,v)
-
-#define atsatomic__sync_fetch_and_add_char(p,v)\
-  __sync_fetch_and_add((atstype_char*)p,v)
-
-#define atsatomic__sync_fetch_and_sub_char(p,v)\
-  __sync_fetch_and_sub((atstype_char*)p,v)
-
-#define atsatomic__sync_fetch_and_and_char(p,v)\
-  __sync_fetch_and_and((atstype_char*)p,v)
-
-#define atsatomic__sync_fetch_and_xor_char(p,v)\
-  __sync_fetch_and_xor((atstype_char*)p,v)
-
-#define atsatomic__sync_fetch_and_or_char(p,v)\
-  __sync_fetch_and_or((atstype_char*)p,v)
-
-#define atsatomic__sync_fetch_and_nand_char(p,v)\
-  __sync_fetch_and_nand((atstype_char*)p,v)
-
-#define atsatomic__sync_bool_compare_and_swap_char(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_char*)p,vold,vnew)
-
-#define atsatomic__sync_val_compare_and_swap_char(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_char*)p,vold,vnew)
-
-#define atsatomic__sync_lock_test_and_set_char(p,v)\
-  __sync_lock_test_and_set((atstype_char*)p,v)
-
-#define atsatomic__sync_lock_release_char(p)\
-  __sync_lock_release((atstype_char*)p)
-
-
-
-/** **/
 #define atsatomic__sync_add_and_fetch_schar(p,v)\
   __sync_add_and_fetch((atstype_schar*)p,v)
 
@@ -255,108 +204,6 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_usint(p,v)\
-  __sync_add_and_fetch((atstype_usint*)p,v)
-
-#define atsatomic__sync_sub_and_fetch_usint(p,v)\
-  __sync_sub_and_fetch((atstype_usint*)p,v)
-
-#define atsatomic__sync_and_and_fetch_usint(p,v)\
-  __sync_and_and_fetch((atstype_usint*)p,v)
-
-#define atsatomic__sync_xor_and_fetch_usint(p,v)\
-  __sync_xor_and_fetch((atstype_usint*)p,v)
-
-#define atsatomic__sync_or_and_fetch_usint(p,v)\
-  __sync_or_and_fetch((atstype_usint*)p,v)
-
-#define atsatomic__sync_nand_and_fetch_usint(p,v)\
-  __sync_nand_and_fetch((atstype_usint*)p,v)
-
-#define atsatomic__sync_fetch_and_add_usint(p,v)\
-  __sync_fetch_and_add((atstype_usint*)p,v)
-
-#define atsatomic__sync_fetch_and_sub_usint(p,v)\
-  __sync_fetch_and_sub((atstype_usint*)p,v)
-
-#define atsatomic__sync_fetch_and_and_usint(p,v)\
-  __sync_fetch_and_and((atstype_usint*)p,v)
-
-#define atsatomic__sync_fetch_and_xor_usint(p,v)\
-  __sync_fetch_and_xor((atstype_usint*)p,v)
-
-#define atsatomic__sync_fetch_and_or_usint(p,v)\
-  __sync_fetch_and_or((atstype_usint*)p,v)
-
-#define atsatomic__sync_fetch_and_nand_usint(p,v)\
-  __sync_fetch_and_nand((atstype_usint*)p,v)
-
-#define atsatomic__sync_bool_compare_and_swap_usint(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_usint*)p,vold,vnew)
-
-#define atsatomic__sync_val_compare_and_swap_usint(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_usint*)p,vold,vnew)
-
-#define atsatomic__sync_lock_test_and_set_usint(p,v)\
-  __sync_lock_test_and_set((atstype_usint*)p,v)
-
-#define atsatomic__sync_lock_release_usint(p)\
-  __sync_lock_release((atstype_usint*)p)
-
-
-
-/** **/
-#define atsatomic__sync_add_and_fetch_int(p,v)\
-  __sync_add_and_fetch((atstype_int*)p,v)
-
-#define atsatomic__sync_sub_and_fetch_int(p,v)\
-  __sync_sub_and_fetch((atstype_int*)p,v)
-
-#define atsatomic__sync_and_and_fetch_int(p,v)\
-  __sync_and_and_fetch((atstype_int*)p,v)
-
-#define atsatomic__sync_xor_and_fetch_int(p,v)\
-  __sync_xor_and_fetch((atstype_int*)p,v)
-
-#define atsatomic__sync_or_and_fetch_int(p,v)\
-  __sync_or_and_fetch((atstype_int*)p,v)
-
-#define atsatomic__sync_nand_and_fetch_int(p,v)\
-  __sync_nand_and_fetch((atstype_int*)p,v)
-
-#define atsatomic__sync_fetch_and_add_int(p,v)\
-  __sync_fetch_and_add((atstype_int*)p,v)
-
-#define atsatomic__sync_fetch_and_sub_int(p,v)\
-  __sync_fetch_and_sub((atstype_int*)p,v)
-
-#define atsatomic__sync_fetch_and_and_int(p,v)\
-  __sync_fetch_and_and((atstype_int*)p,v)
-
-#define atsatomic__sync_fetch_and_xor_int(p,v)\
-  __sync_fetch_and_xor((atstype_int*)p,v)
-
-#define atsatomic__sync_fetch_and_or_int(p,v)\
-  __sync_fetch_and_or((atstype_int*)p,v)
-
-#define atsatomic__sync_fetch_and_nand_int(p,v)\
-  __sync_fetch_and_nand((atstype_int*)p,v)
-
-#define atsatomic__sync_bool_compare_and_swap_int(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_int*)p,vold,vnew)
-
-#define atsatomic__sync_val_compare_and_swap_int(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_int*)p,vold,vnew)
-
-#define atsatomic__sync_lock_test_and_set_int(p,v)\
-  __sync_lock_test_and_set((atstype_int*)p,v)
-
-#define atsatomic__sync_lock_release_int(p)\
-  __sync_lock_release((atstype_int*)p)
-
-
-
-/** **/
 #define atsatomic__sync_add_and_fetch_uint(p,v)\
   __sync_add_and_fetch((atstype_uint*)p,v)
 
@@ -459,53 +306,53 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_llint(p,v)\
-  __sync_add_and_fetch((atstype_llint*)p,v)
+#define atsatomic__sync_add_and_fetch_slint(p,v)\
+  __sync_add_and_fetch((atstype_slint*)p,v)
 
-#define atsatomic__sync_sub_and_fetch_llint(p,v)\
-  __sync_sub_and_fetch((atstype_llint*)p,v)
+#define atsatomic__sync_sub_and_fetch_slint(p,v)\
+  __sync_sub_and_fetch((atstype_slint*)p,v)
 
-#define atsatomic__sync_and_and_fetch_llint(p,v)\
-  __sync_and_and_fetch((atstype_llint*)p,v)
+#define atsatomic__sync_and_and_fetch_slint(p,v)\
+  __sync_and_and_fetch((atstype_slint*)p,v)
 
-#define atsatomic__sync_xor_and_fetch_llint(p,v)\
-  __sync_xor_and_fetch((atstype_llint*)p,v)
+#define atsatomic__sync_xor_and_fetch_slint(p,v)\
+  __sync_xor_and_fetch((atstype_slint*)p,v)
 
-#define atsatomic__sync_or_and_fetch_llint(p,v)\
-  __sync_or_and_fetch((atstype_llint*)p,v)
+#define atsatomic__sync_or_and_fetch_slint(p,v)\
+  __sync_or_and_fetch((atstype_slint*)p,v)
 
-#define atsatomic__sync_nand_and_fetch_llint(p,v)\
-  __sync_nand_and_fetch((atstype_llint*)p,v)
+#define atsatomic__sync_nand_and_fetch_slint(p,v)\
+  __sync_nand_and_fetch((atstype_slint*)p,v)
 
-#define atsatomic__sync_fetch_and_add_llint(p,v)\
-  __sync_fetch_and_add((atstype_llint*)p,v)
+#define atsatomic__sync_fetch_and_add_slint(p,v)\
+  __sync_fetch_and_add((atstype_slint*)p,v)
 
-#define atsatomic__sync_fetch_and_sub_llint(p,v)\
-  __sync_fetch_and_sub((atstype_llint*)p,v)
+#define atsatomic__sync_fetch_and_sub_slint(p,v)\
+  __sync_fetch_and_sub((atstype_slint*)p,v)
 
-#define atsatomic__sync_fetch_and_and_llint(p,v)\
-  __sync_fetch_and_and((atstype_llint*)p,v)
+#define atsatomic__sync_fetch_and_and_slint(p,v)\
+  __sync_fetch_and_and((atstype_slint*)p,v)
 
-#define atsatomic__sync_fetch_and_xor_llint(p,v)\
-  __sync_fetch_and_xor((atstype_llint*)p,v)
+#define atsatomic__sync_fetch_and_xor_slint(p,v)\
+  __sync_fetch_and_xor((atstype_slint*)p,v)
 
-#define atsatomic__sync_fetch_and_or_llint(p,v)\
-  __sync_fetch_and_or((atstype_llint*)p,v)
+#define atsatomic__sync_fetch_and_or_slint(p,v)\
+  __sync_fetch_and_or((atstype_slint*)p,v)
 
-#define atsatomic__sync_fetch_and_nand_llint(p,v)\
-  __sync_fetch_and_nand((atstype_llint*)p,v)
+#define atsatomic__sync_fetch_and_nand_slint(p,v)\
+  __sync_fetch_and_nand((atstype_slint*)p,v)
 
-#define atsatomic__sync_bool_compare_and_swap_llint(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_llint*)p,vold,vnew)
+#define atsatomic__sync_bool_compare_and_swap_slint(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_slint*)p,vold,vnew)
 
-#define atsatomic__sync_val_compare_and_swap_llint(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_llint*)p,vold,vnew)
+#define atsatomic__sync_val_compare_and_swap_slint(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_slint*)p,vold,vnew)
 
-#define atsatomic__sync_lock_test_and_set_llint(p,v)\
-  __sync_lock_test_and_set((atstype_llint*)p,v)
+#define atsatomic__sync_lock_test_and_set_slint(p,v)\
+  __sync_lock_test_and_set((atstype_slint*)p,v)
 
-#define atsatomic__sync_lock_release_llint(p)\
-  __sync_lock_release((atstype_llint*)p)
+#define atsatomic__sync_lock_release_slint(p)\
+  __sync_lock_release((atstype_slint*)p)
 
 
 
@@ -561,53 +408,104 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_int8(p,v)\
-  __sync_add_and_fetch((atstype_int8*)p,v)
+#define atsatomic__sync_add_and_fetch_sllint(p,v)\
+  __sync_add_and_fetch((atstype_sllint*)p,v)
 
-#define atsatomic__sync_sub_and_fetch_int8(p,v)\
-  __sync_sub_and_fetch((atstype_int8*)p,v)
+#define atsatomic__sync_sub_and_fetch_sllint(p,v)\
+  __sync_sub_and_fetch((atstype_sllint*)p,v)
 
-#define atsatomic__sync_and_and_fetch_int8(p,v)\
-  __sync_and_and_fetch((atstype_int8*)p,v)
+#define atsatomic__sync_and_and_fetch_sllint(p,v)\
+  __sync_and_and_fetch((atstype_sllint*)p,v)
 
-#define atsatomic__sync_xor_and_fetch_int8(p,v)\
-  __sync_xor_and_fetch((atstype_int8*)p,v)
+#define atsatomic__sync_xor_and_fetch_sllint(p,v)\
+  __sync_xor_and_fetch((atstype_sllint*)p,v)
 
-#define atsatomic__sync_or_and_fetch_int8(p,v)\
-  __sync_or_and_fetch((atstype_int8*)p,v)
+#define atsatomic__sync_or_and_fetch_sllint(p,v)\
+  __sync_or_and_fetch((atstype_sllint*)p,v)
 
-#define atsatomic__sync_nand_and_fetch_int8(p,v)\
-  __sync_nand_and_fetch((atstype_int8*)p,v)
+#define atsatomic__sync_nand_and_fetch_sllint(p,v)\
+  __sync_nand_and_fetch((atstype_sllint*)p,v)
 
-#define atsatomic__sync_fetch_and_add_int8(p,v)\
-  __sync_fetch_and_add((atstype_int8*)p,v)
+#define atsatomic__sync_fetch_and_add_sllint(p,v)\
+  __sync_fetch_and_add((atstype_sllint*)p,v)
 
-#define atsatomic__sync_fetch_and_sub_int8(p,v)\
-  __sync_fetch_and_sub((atstype_int8*)p,v)
+#define atsatomic__sync_fetch_and_sub_sllint(p,v)\
+  __sync_fetch_and_sub((atstype_sllint*)p,v)
 
-#define atsatomic__sync_fetch_and_and_int8(p,v)\
-  __sync_fetch_and_and((atstype_int8*)p,v)
+#define atsatomic__sync_fetch_and_and_sllint(p,v)\
+  __sync_fetch_and_and((atstype_sllint*)p,v)
 
-#define atsatomic__sync_fetch_and_xor_int8(p,v)\
-  __sync_fetch_and_xor((atstype_int8*)p,v)
+#define atsatomic__sync_fetch_and_xor_sllint(p,v)\
+  __sync_fetch_and_xor((atstype_sllint*)p,v)
 
-#define atsatomic__sync_fetch_and_or_int8(p,v)\
-  __sync_fetch_and_or((atstype_int8*)p,v)
+#define atsatomic__sync_fetch_and_or_sllint(p,v)\
+  __sync_fetch_and_or((atstype_sllint*)p,v)
 
-#define atsatomic__sync_fetch_and_nand_int8(p,v)\
-  __sync_fetch_and_nand((atstype_int8*)p,v)
+#define atsatomic__sync_fetch_and_nand_sllint(p,v)\
+  __sync_fetch_and_nand((atstype_sllint*)p,v)
 
-#define atsatomic__sync_bool_compare_and_swap_int8(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_int8*)p,vold,vnew)
+#define atsatomic__sync_bool_compare_and_swap_sllint(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_sllint*)p,vold,vnew)
 
-#define atsatomic__sync_val_compare_and_swap_int8(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_int8*)p,vold,vnew)
+#define atsatomic__sync_val_compare_and_swap_sllint(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_sllint*)p,vold,vnew)
 
-#define atsatomic__sync_lock_test_and_set_int8(p,v)\
-  __sync_lock_test_and_set((atstype_int8*)p,v)
+#define atsatomic__sync_lock_test_and_set_sllint(p,v)\
+  __sync_lock_test_and_set((atstype_sllint*)p,v)
 
-#define atsatomic__sync_lock_release_int8(p)\
-  __sync_lock_release((atstype_int8*)p)
+#define atsatomic__sync_lock_release_sllint(p)\
+  __sync_lock_release((atstype_sllint*)p)
+
+
+
+/** **/
+#define atsatomic__sync_add_and_fetch_sint8(p,v)\
+  __sync_add_and_fetch((atstype_sint8*)p,v)
+
+#define atsatomic__sync_sub_and_fetch_sint8(p,v)\
+  __sync_sub_and_fetch((atstype_sint8*)p,v)
+
+#define atsatomic__sync_and_and_fetch_sint8(p,v)\
+  __sync_and_and_fetch((atstype_sint8*)p,v)
+
+#define atsatomic__sync_xor_and_fetch_sint8(p,v)\
+  __sync_xor_and_fetch((atstype_sint8*)p,v)
+
+#define atsatomic__sync_or_and_fetch_sint8(p,v)\
+  __sync_or_and_fetch((atstype_sint8*)p,v)
+
+#define atsatomic__sync_nand_and_fetch_sint8(p,v)\
+  __sync_nand_and_fetch((atstype_sint8*)p,v)
+
+#define atsatomic__sync_fetch_and_add_sint8(p,v)\
+  __sync_fetch_and_add((atstype_sint8*)p,v)
+
+#define atsatomic__sync_fetch_and_sub_sint8(p,v)\
+  __sync_fetch_and_sub((atstype_sint8*)p,v)
+
+#define atsatomic__sync_fetch_and_and_sint8(p,v)\
+  __sync_fetch_and_and((atstype_sint8*)p,v)
+
+#define atsatomic__sync_fetch_and_xor_sint8(p,v)\
+  __sync_fetch_and_xor((atstype_sint8*)p,v)
+
+#define atsatomic__sync_fetch_and_or_sint8(p,v)\
+  __sync_fetch_and_or((atstype_sint8*)p,v)
+
+#define atsatomic__sync_fetch_and_nand_sint8(p,v)\
+  __sync_fetch_and_nand((atstype_sint8*)p,v)
+
+#define atsatomic__sync_bool_compare_and_swap_sint8(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_sint8*)p,vold,vnew)
+
+#define atsatomic__sync_val_compare_and_swap_sint8(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_sint8*)p,vold,vnew)
+
+#define atsatomic__sync_lock_test_and_set_sint8(p,v)\
+  __sync_lock_test_and_set((atstype_sint8*)p,v)
+
+#define atsatomic__sync_lock_release_sint8(p)\
+  __sync_lock_release((atstype_sint8*)p)
 
 
 
@@ -663,53 +561,53 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_int16(p,v)\
-  __sync_add_and_fetch((atstype_int16*)p,v)
+#define atsatomic__sync_add_and_fetch_sint16(p,v)\
+  __sync_add_and_fetch((atstype_sint16*)p,v)
 
-#define atsatomic__sync_sub_and_fetch_int16(p,v)\
-  __sync_sub_and_fetch((atstype_int16*)p,v)
+#define atsatomic__sync_sub_and_fetch_sint16(p,v)\
+  __sync_sub_and_fetch((atstype_sint16*)p,v)
 
-#define atsatomic__sync_and_and_fetch_int16(p,v)\
-  __sync_and_and_fetch((atstype_int16*)p,v)
+#define atsatomic__sync_and_and_fetch_sint16(p,v)\
+  __sync_and_and_fetch((atstype_sint16*)p,v)
 
-#define atsatomic__sync_xor_and_fetch_int16(p,v)\
-  __sync_xor_and_fetch((atstype_int16*)p,v)
+#define atsatomic__sync_xor_and_fetch_sint16(p,v)\
+  __sync_xor_and_fetch((atstype_sint16*)p,v)
 
-#define atsatomic__sync_or_and_fetch_int16(p,v)\
-  __sync_or_and_fetch((atstype_int16*)p,v)
+#define atsatomic__sync_or_and_fetch_sint16(p,v)\
+  __sync_or_and_fetch((atstype_sint16*)p,v)
 
-#define atsatomic__sync_nand_and_fetch_int16(p,v)\
-  __sync_nand_and_fetch((atstype_int16*)p,v)
+#define atsatomic__sync_nand_and_fetch_sint16(p,v)\
+  __sync_nand_and_fetch((atstype_sint16*)p,v)
 
-#define atsatomic__sync_fetch_and_add_int16(p,v)\
-  __sync_fetch_and_add((atstype_int16*)p,v)
+#define atsatomic__sync_fetch_and_add_sint16(p,v)\
+  __sync_fetch_and_add((atstype_sint16*)p,v)
 
-#define atsatomic__sync_fetch_and_sub_int16(p,v)\
-  __sync_fetch_and_sub((atstype_int16*)p,v)
+#define atsatomic__sync_fetch_and_sub_sint16(p,v)\
+  __sync_fetch_and_sub((atstype_sint16*)p,v)
 
-#define atsatomic__sync_fetch_and_and_int16(p,v)\
-  __sync_fetch_and_and((atstype_int16*)p,v)
+#define atsatomic__sync_fetch_and_and_sint16(p,v)\
+  __sync_fetch_and_and((atstype_sint16*)p,v)
 
-#define atsatomic__sync_fetch_and_xor_int16(p,v)\
-  __sync_fetch_and_xor((atstype_int16*)p,v)
+#define atsatomic__sync_fetch_and_xor_sint16(p,v)\
+  __sync_fetch_and_xor((atstype_sint16*)p,v)
 
-#define atsatomic__sync_fetch_and_or_int16(p,v)\
-  __sync_fetch_and_or((atstype_int16*)p,v)
+#define atsatomic__sync_fetch_and_or_sint16(p,v)\
+  __sync_fetch_and_or((atstype_sint16*)p,v)
 
-#define atsatomic__sync_fetch_and_nand_int16(p,v)\
-  __sync_fetch_and_nand((atstype_int16*)p,v)
+#define atsatomic__sync_fetch_and_nand_sint16(p,v)\
+  __sync_fetch_and_nand((atstype_sint16*)p,v)
 
-#define atsatomic__sync_bool_compare_and_swap_int16(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_int16*)p,vold,vnew)
+#define atsatomic__sync_bool_compare_and_swap_sint16(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_sint16*)p,vold,vnew)
 
-#define atsatomic__sync_val_compare_and_swap_int16(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_int16*)p,vold,vnew)
+#define atsatomic__sync_val_compare_and_swap_sint16(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_sint16*)p,vold,vnew)
 
-#define atsatomic__sync_lock_test_and_set_int16(p,v)\
-  __sync_lock_test_and_set((atstype_int16*)p,v)
+#define atsatomic__sync_lock_test_and_set_sint16(p,v)\
+  __sync_lock_test_and_set((atstype_sint16*)p,v)
 
-#define atsatomic__sync_lock_release_int16(p)\
-  __sync_lock_release((atstype_int16*)p)
+#define atsatomic__sync_lock_release_sint16(p)\
+  __sync_lock_release((atstype_sint16*)p)
 
 
 
@@ -765,53 +663,53 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_int32(p,v)\
-  __sync_add_and_fetch((atstype_int32*)p,v)
+#define atsatomic__sync_add_and_fetch_sint32(p,v)\
+  __sync_add_and_fetch((atstype_sint32*)p,v)
 
-#define atsatomic__sync_sub_and_fetch_int32(p,v)\
-  __sync_sub_and_fetch((atstype_int32*)p,v)
+#define atsatomic__sync_sub_and_fetch_sint32(p,v)\
+  __sync_sub_and_fetch((atstype_sint32*)p,v)
 
-#define atsatomic__sync_and_and_fetch_int32(p,v)\
-  __sync_and_and_fetch((atstype_int32*)p,v)
+#define atsatomic__sync_and_and_fetch_sint32(p,v)\
+  __sync_and_and_fetch((atstype_sint32*)p,v)
 
-#define atsatomic__sync_xor_and_fetch_int32(p,v)\
-  __sync_xor_and_fetch((atstype_int32*)p,v)
+#define atsatomic__sync_xor_and_fetch_sint32(p,v)\
+  __sync_xor_and_fetch((atstype_sint32*)p,v)
 
-#define atsatomic__sync_or_and_fetch_int32(p,v)\
-  __sync_or_and_fetch((atstype_int32*)p,v)
+#define atsatomic__sync_or_and_fetch_sint32(p,v)\
+  __sync_or_and_fetch((atstype_sint32*)p,v)
 
-#define atsatomic__sync_nand_and_fetch_int32(p,v)\
-  __sync_nand_and_fetch((atstype_int32*)p,v)
+#define atsatomic__sync_nand_and_fetch_sint32(p,v)\
+  __sync_nand_and_fetch((atstype_sint32*)p,v)
 
-#define atsatomic__sync_fetch_and_add_int32(p,v)\
-  __sync_fetch_and_add((atstype_int32*)p,v)
+#define atsatomic__sync_fetch_and_add_sint32(p,v)\
+  __sync_fetch_and_add((atstype_sint32*)p,v)
 
-#define atsatomic__sync_fetch_and_sub_int32(p,v)\
-  __sync_fetch_and_sub((atstype_int32*)p,v)
+#define atsatomic__sync_fetch_and_sub_sint32(p,v)\
+  __sync_fetch_and_sub((atstype_sint32*)p,v)
 
-#define atsatomic__sync_fetch_and_and_int32(p,v)\
-  __sync_fetch_and_and((atstype_int32*)p,v)
+#define atsatomic__sync_fetch_and_and_sint32(p,v)\
+  __sync_fetch_and_and((atstype_sint32*)p,v)
 
-#define atsatomic__sync_fetch_and_xor_int32(p,v)\
-  __sync_fetch_and_xor((atstype_int32*)p,v)
+#define atsatomic__sync_fetch_and_xor_sint32(p,v)\
+  __sync_fetch_and_xor((atstype_sint32*)p,v)
 
-#define atsatomic__sync_fetch_and_or_int32(p,v)\
-  __sync_fetch_and_or((atstype_int32*)p,v)
+#define atsatomic__sync_fetch_and_or_sint32(p,v)\
+  __sync_fetch_and_or((atstype_sint32*)p,v)
 
-#define atsatomic__sync_fetch_and_nand_int32(p,v)\
-  __sync_fetch_and_nand((atstype_int32*)p,v)
+#define atsatomic__sync_fetch_and_nand_sint32(p,v)\
+  __sync_fetch_and_nand((atstype_sint32*)p,v)
 
-#define atsatomic__sync_bool_compare_and_swap_int32(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_int32*)p,vold,vnew)
+#define atsatomic__sync_bool_compare_and_swap_sint32(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_sint32*)p,vold,vnew)
 
-#define atsatomic__sync_val_compare_and_swap_int32(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_int32*)p,vold,vnew)
+#define atsatomic__sync_val_compare_and_swap_sint32(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_sint32*)p,vold,vnew)
 
-#define atsatomic__sync_lock_test_and_set_int32(p,v)\
-  __sync_lock_test_and_set((atstype_int32*)p,v)
+#define atsatomic__sync_lock_test_and_set_sint32(p,v)\
+  __sync_lock_test_and_set((atstype_sint32*)p,v)
 
-#define atsatomic__sync_lock_release_int32(p)\
-  __sync_lock_release((atstype_int32*)p)
+#define atsatomic__sync_lock_release_sint32(p)\
+  __sync_lock_release((atstype_sint32*)p)
 
 
 
@@ -867,53 +765,53 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_int64(p,v)\
-  __sync_add_and_fetch((atstype_int64*)p,v)
+#define atsatomic__sync_add_and_fetch_sint64(p,v)\
+  __sync_add_and_fetch((atstype_sint64*)p,v)
 
-#define atsatomic__sync_sub_and_fetch_int64(p,v)\
-  __sync_sub_and_fetch((atstype_int64*)p,v)
+#define atsatomic__sync_sub_and_fetch_sint64(p,v)\
+  __sync_sub_and_fetch((atstype_sint64*)p,v)
 
-#define atsatomic__sync_and_and_fetch_int64(p,v)\
-  __sync_and_and_fetch((atstype_int64*)p,v)
+#define atsatomic__sync_and_and_fetch_sint64(p,v)\
+  __sync_and_and_fetch((atstype_sint64*)p,v)
 
-#define atsatomic__sync_xor_and_fetch_int64(p,v)\
-  __sync_xor_and_fetch((atstype_int64*)p,v)
+#define atsatomic__sync_xor_and_fetch_sint64(p,v)\
+  __sync_xor_and_fetch((atstype_sint64*)p,v)
 
-#define atsatomic__sync_or_and_fetch_int64(p,v)\
-  __sync_or_and_fetch((atstype_int64*)p,v)
+#define atsatomic__sync_or_and_fetch_sint64(p,v)\
+  __sync_or_and_fetch((atstype_sint64*)p,v)
 
-#define atsatomic__sync_nand_and_fetch_int64(p,v)\
-  __sync_nand_and_fetch((atstype_int64*)p,v)
+#define atsatomic__sync_nand_and_fetch_sint64(p,v)\
+  __sync_nand_and_fetch((atstype_sint64*)p,v)
 
-#define atsatomic__sync_fetch_and_add_int64(p,v)\
-  __sync_fetch_and_add((atstype_int64*)p,v)
+#define atsatomic__sync_fetch_and_add_sint64(p,v)\
+  __sync_fetch_and_add((atstype_sint64*)p,v)
 
-#define atsatomic__sync_fetch_and_sub_int64(p,v)\
-  __sync_fetch_and_sub((atstype_int64*)p,v)
+#define atsatomic__sync_fetch_and_sub_sint64(p,v)\
+  __sync_fetch_and_sub((atstype_sint64*)p,v)
 
-#define atsatomic__sync_fetch_and_and_int64(p,v)\
-  __sync_fetch_and_and((atstype_int64*)p,v)
+#define atsatomic__sync_fetch_and_and_sint64(p,v)\
+  __sync_fetch_and_and((atstype_sint64*)p,v)
 
-#define atsatomic__sync_fetch_and_xor_int64(p,v)\
-  __sync_fetch_and_xor((atstype_int64*)p,v)
+#define atsatomic__sync_fetch_and_xor_sint64(p,v)\
+  __sync_fetch_and_xor((atstype_sint64*)p,v)
 
-#define atsatomic__sync_fetch_and_or_int64(p,v)\
-  __sync_fetch_and_or((atstype_int64*)p,v)
+#define atsatomic__sync_fetch_and_or_sint64(p,v)\
+  __sync_fetch_and_or((atstype_sint64*)p,v)
 
-#define atsatomic__sync_fetch_and_nand_int64(p,v)\
-  __sync_fetch_and_nand((atstype_int64*)p,v)
+#define atsatomic__sync_fetch_and_nand_sint64(p,v)\
+  __sync_fetch_and_nand((atstype_sint64*)p,v)
 
-#define atsatomic__sync_bool_compare_and_swap_int64(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_int64*)p,vold,vnew)
+#define atsatomic__sync_bool_compare_and_swap_sint64(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_sint64*)p,vold,vnew)
 
-#define atsatomic__sync_val_compare_and_swap_int64(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_int64*)p,vold,vnew)
+#define atsatomic__sync_val_compare_and_swap_sint64(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_sint64*)p,vold,vnew)
 
-#define atsatomic__sync_lock_test_and_set_int64(p,v)\
-  __sync_lock_test_and_set((atstype_int64*)p,v)
+#define atsatomic__sync_lock_test_and_set_sint64(p,v)\
+  __sync_lock_test_and_set((atstype_sint64*)p,v)
 
-#define atsatomic__sync_lock_release_int64(p)\
-  __sync_lock_release((atstype_int64*)p)
+#define atsatomic__sync_lock_release_sint64(p)\
+  __sync_lock_release((atstype_sint64*)p)
 
 
 
@@ -969,159 +867,6 @@
 
 
 /** **/
-#define atsatomic__sync_add_and_fetch_intptr(p,v)\
-  __sync_add_and_fetch((atstype_intptr*)p,v)
-
-#define atsatomic__sync_sub_and_fetch_intptr(p,v)\
-  __sync_sub_and_fetch((atstype_intptr*)p,v)
-
-#define atsatomic__sync_and_and_fetch_intptr(p,v)\
-  __sync_and_and_fetch((atstype_intptr*)p,v)
-
-#define atsatomic__sync_xor_and_fetch_intptr(p,v)\
-  __sync_xor_and_fetch((atstype_intptr*)p,v)
-
-#define atsatomic__sync_or_and_fetch_intptr(p,v)\
-  __sync_or_and_fetch((atstype_intptr*)p,v)
-
-#define atsatomic__sync_nand_and_fetch_intptr(p,v)\
-  __sync_nand_and_fetch((atstype_intptr*)p,v)
-
-#define atsatomic__sync_fetch_and_add_intptr(p,v)\
-  __sync_fetch_and_add((atstype_intptr*)p,v)
-
-#define atsatomic__sync_fetch_and_sub_intptr(p,v)\
-  __sync_fetch_and_sub((atstype_intptr*)p,v)
-
-#define atsatomic__sync_fetch_and_and_intptr(p,v)\
-  __sync_fetch_and_and((atstype_intptr*)p,v)
-
-#define atsatomic__sync_fetch_and_xor_intptr(p,v)\
-  __sync_fetch_and_xor((atstype_intptr*)p,v)
-
-#define atsatomic__sync_fetch_and_or_intptr(p,v)\
-  __sync_fetch_and_or((atstype_intptr*)p,v)
-
-#define atsatomic__sync_fetch_and_nand_intptr(p,v)\
-  __sync_fetch_and_nand((atstype_intptr*)p,v)
-
-#define atsatomic__sync_bool_compare_and_swap_intptr(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_intptr*)p,vold,vnew)
-
-#define atsatomic__sync_val_compare_and_swap_intptr(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_intptr*)p,vold,vnew)
-
-#define atsatomic__sync_lock_test_and_set_intptr(p,v)\
-  __sync_lock_test_and_set((atstype_intptr*)p,v)
-
-#define atsatomic__sync_lock_release_intptr(p)\
-  __sync_lock_release((atstype_intptr*)p)
-
-
-
-/** **/
-#define atsatomic__sync_add_and_fetch_uintptr(p,v)\
-  __sync_add_and_fetch((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_sub_and_fetch_uintptr(p,v)\
-  __sync_sub_and_fetch((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_and_and_fetch_uintptr(p,v)\
-  __sync_and_and_fetch((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_xor_and_fetch_uintptr(p,v)\
-  __sync_xor_and_fetch((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_or_and_fetch_uintptr(p,v)\
-  __sync_or_and_fetch((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_nand_and_fetch_uintptr(p,v)\
-  __sync_nand_and_fetch((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_fetch_and_add_uintptr(p,v)\
-  __sync_fetch_and_add((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_fetch_and_sub_uintptr(p,v)\
-  __sync_fetch_and_sub((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_fetch_and_and_uintptr(p,v)\
-  __sync_fetch_and_and((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_fetch_and_xor_uintptr(p,v)\
-  __sync_fetch_and_xor((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_fetch_and_or_uintptr(p,v)\
-  __sync_fetch_and_or((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_fetch_and_nand_uintptr(p,v)\
-  __sync_fetch_and_nand((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_bool_compare_and_swap_uintptr(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_uintptr*)p,vold,vnew)
-
-#define atsatomic__sync_val_compare_and_swap_uintptr(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_uintptr*)p,vold,vnew)
-
-#define atsatomic__sync_lock_test_and_set_uintptr(p,v)\
-  __sync_lock_test_and_set((atstype_uintptr*)p,v)
-
-#define atsatomic__sync_lock_release_uintptr(p)\
-  __sync_lock_release((atstype_uintptr*)p)
-
-
-
-/** **/
-#define atsatomic__sync_add_and_fetch_size(p,v)\
-  __sync_add_and_fetch((atstype_size*)p,v)
-
-#define atsatomic__sync_sub_and_fetch_size(p,v)\
-  __sync_sub_and_fetch((atstype_size*)p,v)
-
-#define atsatomic__sync_and_and_fetch_size(p,v)\
-  __sync_and_and_fetch((atstype_size*)p,v)
-
-#define atsatomic__sync_xor_and_fetch_size(p,v)\
-  __sync_xor_and_fetch((atstype_size*)p,v)
-
-#define atsatomic__sync_or_and_fetch_size(p,v)\
-  __sync_or_and_fetch((atstype_size*)p,v)
-
-#define atsatomic__sync_nand_and_fetch_size(p,v)\
-  __sync_nand_and_fetch((atstype_size*)p,v)
-
-#define atsatomic__sync_fetch_and_add_size(p,v)\
-  __sync_fetch_and_add((atstype_size*)p,v)
-
-#define atsatomic__sync_fetch_and_sub_size(p,v)\
-  __sync_fetch_and_sub((atstype_size*)p,v)
-
-#define atsatomic__sync_fetch_and_and_size(p,v)\
-  __sync_fetch_and_and((atstype_size*)p,v)
-
-#define atsatomic__sync_fetch_and_xor_size(p,v)\
-  __sync_fetch_and_xor((atstype_size*)p,v)
-
-#define atsatomic__sync_fetch_and_or_size(p,v)\
-  __sync_fetch_and_or((atstype_size*)p,v)
-
-#define atsatomic__sync_fetch_and_nand_size(p,v)\
-  __sync_fetch_and_nand((atstype_size*)p,v)
-
-#define atsatomic__sync_bool_compare_and_swap_size(p,vold,vnew)\
-  __sync_bool_compare_and_swap((atstype_size*)p,vold,vnew)
-
-#define atsatomic__sync_val_compare_and_swap_size(p,vold,vnew)\
-  __sync_val_compare_and_swap((atstype_size*)p,vold,vnew)
-
-#define atsatomic__sync_lock_test_and_set_size(p,v)\
-  __sync_lock_test_and_set((atstype_size*)p,v)
-
-#define atsatomic__sync_lock_release_size(p)\
-  __sync_lock_release((atstype_size*)p)
-
-
-
-/** **/
 #define atsatomic__sync_add_and_fetch_ssize(p,v)\
   __sync_add_and_fetch((atstype_ssize*)p,v)
 
@@ -1169,5 +914,56 @@
 
 #define atsatomic__sync_lock_release_ssize(p)\
   __sync_lock_release((atstype_ssize*)p)
+
+
+
+/** **/
+#define atsatomic__sync_add_and_fetch_usize(p,v)\
+  __sync_add_and_fetch((atstype_usize*)p,v)
+
+#define atsatomic__sync_sub_and_fetch_usize(p,v)\
+  __sync_sub_and_fetch((atstype_usize*)p,v)
+
+#define atsatomic__sync_and_and_fetch_usize(p,v)\
+  __sync_and_and_fetch((atstype_usize*)p,v)
+
+#define atsatomic__sync_xor_and_fetch_usize(p,v)\
+  __sync_xor_and_fetch((atstype_usize*)p,v)
+
+#define atsatomic__sync_or_and_fetch_usize(p,v)\
+  __sync_or_and_fetch((atstype_usize*)p,v)
+
+#define atsatomic__sync_nand_and_fetch_usize(p,v)\
+  __sync_nand_and_fetch((atstype_usize*)p,v)
+
+#define atsatomic__sync_fetch_and_add_usize(p,v)\
+  __sync_fetch_and_add((atstype_usize*)p,v)
+
+#define atsatomic__sync_fetch_and_sub_usize(p,v)\
+  __sync_fetch_and_sub((atstype_usize*)p,v)
+
+#define atsatomic__sync_fetch_and_and_usize(p,v)\
+  __sync_fetch_and_and((atstype_usize*)p,v)
+
+#define atsatomic__sync_fetch_and_xor_usize(p,v)\
+  __sync_fetch_and_xor((atstype_usize*)p,v)
+
+#define atsatomic__sync_fetch_and_or_usize(p,v)\
+  __sync_fetch_and_or((atstype_usize*)p,v)
+
+#define atsatomic__sync_fetch_and_nand_usize(p,v)\
+  __sync_fetch_and_nand((atstype_usize*)p,v)
+
+#define atsatomic__sync_bool_compare_and_swap_usize(p,vold,vnew)\
+  __sync_bool_compare_and_swap((atstype_usize*)p,vold,vnew)
+
+#define atsatomic__sync_val_compare_and_swap_usize(p,vold,vnew)\
+  __sync_val_compare_and_swap((atstype_usize*)p,vold,vnew)
+
+#define atsatomic__sync_lock_test_and_set_usize(p,v)\
+  __sync_lock_test_and_set((atstype_usize*)p,v)
+
+#define atsatomic__sync_lock_release_usize(p)\
+  __sync_lock_release((atstype_usize*)p)
 
 

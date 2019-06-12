@@ -3,6 +3,7 @@
  **)
 
 #include "./../HATS/project.hats"
+#staload "libats/SATS/gint.sats"
 
 %{#
 #include "atsatomic/CATS/stdatomic.cats"
@@ -10,12 +11,12 @@
 
 typedef memory_order = $extype"memory_order"
 
-macdef memory_order_relaxed  = $extval(memory_order,"memory_order_relaxed")
-macdef memory_order_consume  = $extval(memory_order,"memory_order_consume")
-macdef memory_order_acquire  = $extval(memory_order,"memory_order_acquire")
-macdef memory_order_release  = $extval(memory_order,"memory_order_release")
-macdef memory_order_acq_rel  = $extval(memory_order,"memory_order_acq_rel")
-macdef memory_order_seq_cst  = $extval(memory_order,"memory_order_seq_cst")
+#macdef memory_order_relaxed  = $extval(memory_order,"memory_order_relaxed")
+#macdef memory_order_consume  = $extval(memory_order,"memory_order_consume")
+#macdef memory_order_acquire  = $extval(memory_order,"memory_order_acquire")
+#macdef memory_order_release  = $extval(memory_order,"memory_order_release")
+#macdef memory_order_acq_rel  = $extval(memory_order,"memory_order_acq_rel")
+#macdef memory_order_seq_cst  = $extval(memory_order,"memory_order_seq_cst")
 
 typedef atomic_bool = $extype"atomic_bool"
 typedef atomic_char = $extype"atomic_char"
@@ -58,30 +59,30 @@ typedef atomic_uintmax = $extype"atomic_uintmax_t"
 
 (** Try to bind these directly... **)
 
-fun ATOMIC_VAR_INIT{a:t@ype+}( a ) : a = "mac#%"
+fun ATOMIC_VAR_INIT{a:tflt}( a ) : a = "mac#%"
 
-fun kill_dependency{a:t@ype+}( a ) : a = "mac#%"
+fun kill_dependency{a:tflt}( a ) : a = "mac#%"
 
 fun atomic_thread_fence( mem : memory_order ) : void = "mac#%"
 fun atomic_signal_fence( mem : memory_order ) : void = "mac#%"
 
-abst@ype atomic_lock_free
+abstflt atomic_lock_free
 
-macdef ATOMIC_BOOL_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_BOOL_LOCK_FREE")
-macdef ATOMIC_CHAR_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_CHAR_LOCK_FREE")
-macdef ATOMIC_CHAR16_T_LOCK_FREE  = $extval(atomic_lock_free,"ATOMIC_CHAR16_T_LOCK_FREE")
-macdef ATOMIC_CHAR32_T_LOCK_FREE  = $extval(atomic_lock_free,"ATOMIC_CHAR32_T_LOCK_FREE")
-macdef ATOMIC_WCHAR_T_LOCK_FREE   = $extval(atomic_lock_free,"ATOMIC_WCHAR_T_LOCK_FREE")
-macdef ATOMIC_SHORT_LOCK_FREE     = $extval(atomic_lock_free,"ATOMIC_SHORT_LOCK_FREE")
-macdef ATOMIC_INT_LOCK_FREE       = $extval(atomic_lock_free,"ATOMIC_INT_LOCK_FREE")
-macdef ATOMIC_LONG_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_LONG_LOCK_FREE")
-macdef ATOMIC_LLONG_LOCK_FREE     = $extval(atomic_lock_free,"ATOMIC_LLONG_LOCK_FREE")
-macdef ATOMIC_POINTER_LOCK_FREE   = $extval(atomic_lock_free,"ATOMIC_POINTER_LOCK_FREE")
+#macdef ATOMIC_BOOL_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_BOOL_LOCK_FREE")
+#macdef ATOMIC_CHAR_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_CHAR_LOCK_FREE")
+#macdef ATOMIC_CHAR16_T_LOCK_FREE  = $extval(atomic_lock_free,"ATOMIC_CHAR16_T_LOCK_FREE")
+#macdef ATOMIC_CHAR32_T_LOCK_FREE  = $extval(atomic_lock_free,"ATOMIC_CHAR32_T_LOCK_FREE")
+#macdef ATOMIC_WCHAR_T_LOCK_FREE   = $extval(atomic_lock_free,"ATOMIC_WCHAR_T_LOCK_FREE")
+#macdef ATOMIC_SHORT_LOCK_FREE     = $extval(atomic_lock_free,"ATOMIC_SHORT_LOCK_FREE")
+#macdef ATOMIC_INT_LOCK_FREE       = $extval(atomic_lock_free,"ATOMIC_INT_LOCK_FREE")
+#macdef ATOMIC_LONG_LOCK_FREE      = $extval(atomic_lock_free,"ATOMIC_LONG_LOCK_FREE")
+#macdef ATOMIC_LLONG_LOCK_FREE     = $extval(atomic_lock_free,"ATOMIC_LLONG_LOCK_FREE")
+#macdef ATOMIC_POINTER_LOCK_FREE   = $extval(atomic_lock_free,"ATOMIC_POINTER_LOCK_FREE")
 
 
 typedef atomic_flag = $extype"atomic_flag"
 
-macdef ATOMIC_FLAG_INIT = $extval(atomic_flag,"ATOMIC_FLAG_INIT")
+#macdef ATOMIC_FLAG_INIT = $extval(atomic_flag,"ATOMIC_FLAG_INIT")
 
 fun atomic_flag_test_and_set( &atomic_flag ) : bool = "mac#%"
 fun atomic_flag_test_and_set_explicit( &atomic_flag, memory_order ) : bool = "mac#%"

@@ -2,10 +2,10 @@
  ** ATS API for atomics
  **)
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_load( &a ) : a
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_store( &a >> _, a ) : void
 
 
@@ -15,33 +15,38 @@ fun {a:t@ype+}
  ** if NOT EQUAL: write contents of p to expected --> return false
  **)
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_compare_and_swap( p: &a >> _, expected: a, desired: a ) : bool
 
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_fetch_add( &a >> _, a ) : a
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_fetch_sub( &a >> _, a ) : a
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_fetch_lor( &a >> _, a ) : a
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_fetch_lxor( &a >> _, a ) : a
 
-fun {a:t@ype+}
+fun {a:tflt}
   atx_fetch_land( &a >> _, a ) : a
 
 (*
-fun {a:t@ype+}
+fun {a:tflt}
   atx_fetch_lnand( &a >> _, a ) : a
 *)
 
-abst@ype atx_lock
+abstflt atx_lock
 
 absview atx_lock_acquired_v(l:addr)
+
+//  is this in the prelude?
+dataview option_v( p: view, bool) =
+  | Some_v(p,true) of p
+  | None_v(p,false)
 
 // this is just a call to "clear"
 fun {} atx_lock_init( &atx_lock? >> atx_lock )

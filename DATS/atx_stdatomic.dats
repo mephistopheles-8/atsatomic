@@ -1,16 +1,17 @@
 
 #include "./../HATS/project.hats"
+#staload "libats/SATS/gint.sats"
 
-staload "./../SATS/stdatomic.sats"
-staload "./../SATS/atx.sats"
+#staload "./../SATS/stdatomic.sats"
+#staload "./../SATS/atx.sats"
 
 absimpl atx_lock = atomic_flag
 
-implement {}
+impltmp {}
 atx_lock_init( lock ) =
   lock := ATOMIC_FLAG_INIT
 
-implement {}
+impltmp {}
 atx_test_and_set{l}(pf | p )  = 
   if atomic_flag_test_and_set( !p )
   then ( Some_v(pf) | true )
@@ -22,7 +23,7 @@ atx_test_and_set{l}(pf | p )  =
   else ( None_v() | false )
 
 
-implement {}
+impltmp {}
 atx_release( pf1, pf2 | p ) =
   atomic_flag_clear( !p )
     where {
@@ -33,7 +34,7 @@ atx_release( pf1, pf2 | p ) =
 
 (** Please verify **)
 
-implement {}
+impltmp {}
 atx_barrier() = 
   atomic_thread_fence( memory_order_relaxed ) 
 

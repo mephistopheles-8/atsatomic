@@ -65,70 +65,6 @@
 
 /** **/
 
-#define atsatomic__atomic_load_char(p1,p2,mo)\
-  __atomic_load((atstype_char*)p1, (atstype_char*)p2, mo)
-
-#define atsatomic__atomic_load_n_char(p1,mo)\
-  __atomic_load_n((atstype_char*)p1, mo)
-
-#define atsatomic__atomic_store_char(p1,p2,mo)\
-  __atomic_store((atstype_char*)p1, (atstype_char*)p2, mo)
-
-#define atsatomic__atomic_store_n_char(p1,v,mo)\
-  __atomic_store_n((atstype_char*)p1, v, mo)
-
-#define atsatomic__atomic_exchange_char(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_char*)p1, (atstype_char*)p2, (atstype_char*)p3, mo)
-
-#define atsatomic__atomic_exchange_n_char(p1,v,mo)\
-  __atomic_exchange_n((atstype_char*)p1, v, mo)
-
-#define atsatomic__atomic_compare_exchange_n_char(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_char*)p1, (atstype_char*)p2,v,w,mo1,mo2)
-
-#define atsatomic__atomic_compare_exchange_char(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_char*)p1, (atstype_char*)p2,(atstype_char*)p3,w,mo1,mo2)
-
-#define atsatomic__atomic_add_fetch_char( p1, v, mo )\
-  __atomic_add_fetch((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_sub_fetch_char( p1, v, mo )\
-  __atomic_sub_fetch((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_and_fetch_char( p1, v, mo )\
-  __atomic_and_fetch((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_xor_fetch_char( p1, v, mo )\
-  __atomic_xor_fetch((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_or_fetch_char( p1, v, mo )\
-  __atomic_or_fetch((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_nand_fetch_char( p1, v, mo )\
-  __atomic_nand_fetch((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_add_char( p1, v, mo )\
-  __atomic_fetch_add((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_sub_char( p1, v, mo )\
-  __atomic_fetch_sub((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_and_char( p1, v, mo )\
-  __atomic_fetch_and((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_xor_char( p1, v, mo )\
-  __atomic_fetch_xor((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_or_char( p1, v, mo )\
-  __atomic_fetch_or((atstype_char*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_nand_char( p1, v, mo )\
-  __atomic_fetch_nand((atstype_char*)p1,v,mo)
-
-
-
-/** **/
-
 #define atsatomic__atomic_load_schar(p1,p2,mo)\
   __atomic_load((atstype_schar*)p1, (atstype_schar*)p2, mo)
 
@@ -321,134 +257,6 @@
 
 /** **/
 
-#define atsatomic__atomic_load_usint(p1,p2,mo)\
-  __atomic_load((atstype_usint*)p1, (atstype_usint*)p2, mo)
-
-#define atsatomic__atomic_load_n_usint(p1,mo)\
-  __atomic_load_n((atstype_usint*)p1, mo)
-
-#define atsatomic__atomic_store_usint(p1,p2,mo)\
-  __atomic_store((atstype_usint*)p1, (atstype_usint*)p2, mo)
-
-#define atsatomic__atomic_store_n_usint(p1,v,mo)\
-  __atomic_store_n((atstype_usint*)p1, v, mo)
-
-#define atsatomic__atomic_exchange_usint(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_usint*)p1, (atstype_usint*)p2, (atstype_usint*)p3, mo)
-
-#define atsatomic__atomic_exchange_n_usint(p1,v,mo)\
-  __atomic_exchange_n((atstype_usint*)p1, v, mo)
-
-#define atsatomic__atomic_compare_exchange_n_usint(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_usint*)p1, (atstype_usint*)p2,v,w,mo1,mo2)
-
-#define atsatomic__atomic_compare_exchange_usint(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_usint*)p1, (atstype_usint*)p2,(atstype_usint*)p3,w,mo1,mo2)
-
-#define atsatomic__atomic_add_fetch_usint( p1, v, mo )\
-  __atomic_add_fetch((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_sub_fetch_usint( p1, v, mo )\
-  __atomic_sub_fetch((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_and_fetch_usint( p1, v, mo )\
-  __atomic_and_fetch((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_xor_fetch_usint( p1, v, mo )\
-  __atomic_xor_fetch((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_or_fetch_usint( p1, v, mo )\
-  __atomic_or_fetch((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_nand_fetch_usint( p1, v, mo )\
-  __atomic_nand_fetch((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_add_usint( p1, v, mo )\
-  __atomic_fetch_add((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_sub_usint( p1, v, mo )\
-  __atomic_fetch_sub((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_and_usint( p1, v, mo )\
-  __atomic_fetch_and((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_xor_usint( p1, v, mo )\
-  __atomic_fetch_xor((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_or_usint( p1, v, mo )\
-  __atomic_fetch_or((atstype_usint*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_nand_usint( p1, v, mo )\
-  __atomic_fetch_nand((atstype_usint*)p1,v,mo)
-
-
-
-/** **/
-
-#define atsatomic__atomic_load_int(p1,p2,mo)\
-  __atomic_load((atstype_int*)p1, (atstype_int*)p2, mo)
-
-#define atsatomic__atomic_load_n_int(p1,mo)\
-  __atomic_load_n((atstype_int*)p1, mo)
-
-#define atsatomic__atomic_store_int(p1,p2,mo)\
-  __atomic_store((atstype_int*)p1, (atstype_int*)p2, mo)
-
-#define atsatomic__atomic_store_n_int(p1,v,mo)\
-  __atomic_store_n((atstype_int*)p1, v, mo)
-
-#define atsatomic__atomic_exchange_int(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_int*)p1, (atstype_int*)p2, (atstype_int*)p3, mo)
-
-#define atsatomic__atomic_exchange_n_int(p1,v,mo)\
-  __atomic_exchange_n((atstype_int*)p1, v, mo)
-
-#define atsatomic__atomic_compare_exchange_n_int(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_int*)p1, (atstype_int*)p2,v,w,mo1,mo2)
-
-#define atsatomic__atomic_compare_exchange_int(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_int*)p1, (atstype_int*)p2,(atstype_int*)p3,w,mo1,mo2)
-
-#define atsatomic__atomic_add_fetch_int( p1, v, mo )\
-  __atomic_add_fetch((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_sub_fetch_int( p1, v, mo )\
-  __atomic_sub_fetch((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_and_fetch_int( p1, v, mo )\
-  __atomic_and_fetch((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_xor_fetch_int( p1, v, mo )\
-  __atomic_xor_fetch((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_or_fetch_int( p1, v, mo )\
-  __atomic_or_fetch((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_nand_fetch_int( p1, v, mo )\
-  __atomic_nand_fetch((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_add_int( p1, v, mo )\
-  __atomic_fetch_add((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_sub_int( p1, v, mo )\
-  __atomic_fetch_sub((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_and_int( p1, v, mo )\
-  __atomic_fetch_and((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_xor_int( p1, v, mo )\
-  __atomic_fetch_xor((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_or_int( p1, v, mo )\
-  __atomic_fetch_or((atstype_int*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_nand_int( p1, v, mo )\
-  __atomic_fetch_nand((atstype_int*)p1,v,mo)
-
-
-
-/** **/
-
 #define atsatomic__atomic_load_uint(p1,p2,mo)\
   __atomic_load((atstype_uint*)p1, (atstype_uint*)p2, mo)
 
@@ -577,65 +385,65 @@
 
 /** **/
 
-#define atsatomic__atomic_load_llint(p1,p2,mo)\
-  __atomic_load((atstype_llint*)p1, (atstype_llint*)p2, mo)
+#define atsatomic__atomic_load_slint(p1,p2,mo)\
+  __atomic_load((atstype_slint*)p1, (atstype_slint*)p2, mo)
 
-#define atsatomic__atomic_load_n_llint(p1,mo)\
-  __atomic_load_n((atstype_llint*)p1, mo)
+#define atsatomic__atomic_load_n_slint(p1,mo)\
+  __atomic_load_n((atstype_slint*)p1, mo)
 
-#define atsatomic__atomic_store_llint(p1,p2,mo)\
-  __atomic_store((atstype_llint*)p1, (atstype_llint*)p2, mo)
+#define atsatomic__atomic_store_slint(p1,p2,mo)\
+  __atomic_store((atstype_slint*)p1, (atstype_slint*)p2, mo)
 
-#define atsatomic__atomic_store_n_llint(p1,v,mo)\
-  __atomic_store_n((atstype_llint*)p1, v, mo)
+#define atsatomic__atomic_store_n_slint(p1,v,mo)\
+  __atomic_store_n((atstype_slint*)p1, v, mo)
 
-#define atsatomic__atomic_exchange_llint(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_llint*)p1, (atstype_llint*)p2, (atstype_llint*)p3, mo)
+#define atsatomic__atomic_exchange_slint(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_slint*)p1, (atstype_slint*)p2, (atstype_slint*)p3, mo)
 
-#define atsatomic__atomic_exchange_n_llint(p1,v,mo)\
-  __atomic_exchange_n((atstype_llint*)p1, v, mo)
+#define atsatomic__atomic_exchange_n_slint(p1,v,mo)\
+  __atomic_exchange_n((atstype_slint*)p1, v, mo)
 
-#define atsatomic__atomic_compare_exchange_n_llint(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_llint*)p1, (atstype_llint*)p2,v,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_n_slint(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_slint*)p1, (atstype_slint*)p2,v,w,mo1,mo2)
 
-#define atsatomic__atomic_compare_exchange_llint(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_llint*)p1, (atstype_llint*)p2,(atstype_llint*)p3,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_slint(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_slint*)p1, (atstype_slint*)p2,(atstype_slint*)p3,w,mo1,mo2)
 
-#define atsatomic__atomic_add_fetch_llint( p1, v, mo )\
-  __atomic_add_fetch((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_add_fetch_slint( p1, v, mo )\
+  __atomic_add_fetch((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_sub_fetch_llint( p1, v, mo )\
-  __atomic_sub_fetch((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_sub_fetch_slint( p1, v, mo )\
+  __atomic_sub_fetch((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_and_fetch_llint( p1, v, mo )\
-  __atomic_and_fetch((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_and_fetch_slint( p1, v, mo )\
+  __atomic_and_fetch((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_xor_fetch_llint( p1, v, mo )\
-  __atomic_xor_fetch((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_xor_fetch_slint( p1, v, mo )\
+  __atomic_xor_fetch((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_or_fetch_llint( p1, v, mo )\
-  __atomic_or_fetch((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_or_fetch_slint( p1, v, mo )\
+  __atomic_or_fetch((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_nand_fetch_llint( p1, v, mo )\
-  __atomic_nand_fetch((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_nand_fetch_slint( p1, v, mo )\
+  __atomic_nand_fetch((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_add_llint( p1, v, mo )\
-  __atomic_fetch_add((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_fetch_add_slint( p1, v, mo )\
+  __atomic_fetch_add((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_sub_llint( p1, v, mo )\
-  __atomic_fetch_sub((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_fetch_sub_slint( p1, v, mo )\
+  __atomic_fetch_sub((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_and_llint( p1, v, mo )\
-  __atomic_fetch_and((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_fetch_and_slint( p1, v, mo )\
+  __atomic_fetch_and((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_xor_llint( p1, v, mo )\
-  __atomic_fetch_xor((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_fetch_xor_slint( p1, v, mo )\
+  __atomic_fetch_xor((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_or_llint( p1, v, mo )\
-  __atomic_fetch_or((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_fetch_or_slint( p1, v, mo )\
+  __atomic_fetch_or((atstype_slint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_nand_llint( p1, v, mo )\
-  __atomic_fetch_nand((atstype_llint*)p1,v,mo)
+#define atsatomic__atomic_fetch_nand_slint( p1, v, mo )\
+  __atomic_fetch_nand((atstype_slint*)p1,v,mo)
 
 
 
@@ -705,65 +513,129 @@
 
 /** **/
 
-#define atsatomic__atomic_load_int8(p1,p2,mo)\
-  __atomic_load((atstype_int8*)p1, (atstype_int8*)p2, mo)
+#define atsatomic__atomic_load_sllint(p1,p2,mo)\
+  __atomic_load((atstype_sllint*)p1, (atstype_sllint*)p2, mo)
 
-#define atsatomic__atomic_load_n_int8(p1,mo)\
-  __atomic_load_n((atstype_int8*)p1, mo)
+#define atsatomic__atomic_load_n_sllint(p1,mo)\
+  __atomic_load_n((atstype_sllint*)p1, mo)
 
-#define atsatomic__atomic_store_int8(p1,p2,mo)\
-  __atomic_store((atstype_int8*)p1, (atstype_int8*)p2, mo)
+#define atsatomic__atomic_store_sllint(p1,p2,mo)\
+  __atomic_store((atstype_sllint*)p1, (atstype_sllint*)p2, mo)
 
-#define atsatomic__atomic_store_n_int8(p1,v,mo)\
-  __atomic_store_n((atstype_int8*)p1, v, mo)
+#define atsatomic__atomic_store_n_sllint(p1,v,mo)\
+  __atomic_store_n((atstype_sllint*)p1, v, mo)
 
-#define atsatomic__atomic_exchange_int8(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_int8*)p1, (atstype_int8*)p2, (atstype_int8*)p3, mo)
+#define atsatomic__atomic_exchange_sllint(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_sllint*)p1, (atstype_sllint*)p2, (atstype_sllint*)p3, mo)
 
-#define atsatomic__atomic_exchange_n_int8(p1,v,mo)\
-  __atomic_exchange_n((atstype_int8*)p1, v, mo)
+#define atsatomic__atomic_exchange_n_sllint(p1,v,mo)\
+  __atomic_exchange_n((atstype_sllint*)p1, v, mo)
 
-#define atsatomic__atomic_compare_exchange_n_int8(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_int8*)p1, (atstype_int8*)p2,v,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_n_sllint(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_sllint*)p1, (atstype_sllint*)p2,v,w,mo1,mo2)
 
-#define atsatomic__atomic_compare_exchange_int8(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_int8*)p1, (atstype_int8*)p2,(atstype_int8*)p3,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_sllint(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_sllint*)p1, (atstype_sllint*)p2,(atstype_sllint*)p3,w,mo1,mo2)
 
-#define atsatomic__atomic_add_fetch_int8( p1, v, mo )\
-  __atomic_add_fetch((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_add_fetch_sllint( p1, v, mo )\
+  __atomic_add_fetch((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_sub_fetch_int8( p1, v, mo )\
-  __atomic_sub_fetch((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_sub_fetch_sllint( p1, v, mo )\
+  __atomic_sub_fetch((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_and_fetch_int8( p1, v, mo )\
-  __atomic_and_fetch((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_and_fetch_sllint( p1, v, mo )\
+  __atomic_and_fetch((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_xor_fetch_int8( p1, v, mo )\
-  __atomic_xor_fetch((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_xor_fetch_sllint( p1, v, mo )\
+  __atomic_xor_fetch((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_or_fetch_int8( p1, v, mo )\
-  __atomic_or_fetch((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_or_fetch_sllint( p1, v, mo )\
+  __atomic_or_fetch((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_nand_fetch_int8( p1, v, mo )\
-  __atomic_nand_fetch((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_nand_fetch_sllint( p1, v, mo )\
+  __atomic_nand_fetch((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_add_int8( p1, v, mo )\
-  __atomic_fetch_add((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_fetch_add_sllint( p1, v, mo )\
+  __atomic_fetch_add((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_sub_int8( p1, v, mo )\
-  __atomic_fetch_sub((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_fetch_sub_sllint( p1, v, mo )\
+  __atomic_fetch_sub((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_and_int8( p1, v, mo )\
-  __atomic_fetch_and((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_fetch_and_sllint( p1, v, mo )\
+  __atomic_fetch_and((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_xor_int8( p1, v, mo )\
-  __atomic_fetch_xor((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_fetch_xor_sllint( p1, v, mo )\
+  __atomic_fetch_xor((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_or_int8( p1, v, mo )\
-  __atomic_fetch_or((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_fetch_or_sllint( p1, v, mo )\
+  __atomic_fetch_or((atstype_sllint*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_nand_int8( p1, v, mo )\
-  __atomic_fetch_nand((atstype_int8*)p1,v,mo)
+#define atsatomic__atomic_fetch_nand_sllint( p1, v, mo )\
+  __atomic_fetch_nand((atstype_sllint*)p1,v,mo)
+
+
+
+/** **/
+
+#define atsatomic__atomic_load_sint8(p1,p2,mo)\
+  __atomic_load((atstype_sint8*)p1, (atstype_sint8*)p2, mo)
+
+#define atsatomic__atomic_load_n_sint8(p1,mo)\
+  __atomic_load_n((atstype_sint8*)p1, mo)
+
+#define atsatomic__atomic_store_sint8(p1,p2,mo)\
+  __atomic_store((atstype_sint8*)p1, (atstype_sint8*)p2, mo)
+
+#define atsatomic__atomic_store_n_sint8(p1,v,mo)\
+  __atomic_store_n((atstype_sint8*)p1, v, mo)
+
+#define atsatomic__atomic_exchange_sint8(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_sint8*)p1, (atstype_sint8*)p2, (atstype_sint8*)p3, mo)
+
+#define atsatomic__atomic_exchange_n_sint8(p1,v,mo)\
+  __atomic_exchange_n((atstype_sint8*)p1, v, mo)
+
+#define atsatomic__atomic_compare_exchange_n_sint8(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_sint8*)p1, (atstype_sint8*)p2,v,w,mo1,mo2)
+
+#define atsatomic__atomic_compare_exchange_sint8(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_sint8*)p1, (atstype_sint8*)p2,(atstype_sint8*)p3,w,mo1,mo2)
+
+#define atsatomic__atomic_add_fetch_sint8( p1, v, mo )\
+  __atomic_add_fetch((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_sub_fetch_sint8( p1, v, mo )\
+  __atomic_sub_fetch((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_and_fetch_sint8( p1, v, mo )\
+  __atomic_and_fetch((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_xor_fetch_sint8( p1, v, mo )\
+  __atomic_xor_fetch((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_or_fetch_sint8( p1, v, mo )\
+  __atomic_or_fetch((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_nand_fetch_sint8( p1, v, mo )\
+  __atomic_nand_fetch((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_add_sint8( p1, v, mo )\
+  __atomic_fetch_add((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_sub_sint8( p1, v, mo )\
+  __atomic_fetch_sub((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_and_sint8( p1, v, mo )\
+  __atomic_fetch_and((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_xor_sint8( p1, v, mo )\
+  __atomic_fetch_xor((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_or_sint8( p1, v, mo )\
+  __atomic_fetch_or((atstype_sint8*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_nand_sint8( p1, v, mo )\
+  __atomic_fetch_nand((atstype_sint8*)p1,v,mo)
 
 
 
@@ -833,65 +705,65 @@
 
 /** **/
 
-#define atsatomic__atomic_load_int16(p1,p2,mo)\
-  __atomic_load((atstype_int16*)p1, (atstype_int16*)p2, mo)
+#define atsatomic__atomic_load_sint16(p1,p2,mo)\
+  __atomic_load((atstype_sint16*)p1, (atstype_sint16*)p2, mo)
 
-#define atsatomic__atomic_load_n_int16(p1,mo)\
-  __atomic_load_n((atstype_int16*)p1, mo)
+#define atsatomic__atomic_load_n_sint16(p1,mo)\
+  __atomic_load_n((atstype_sint16*)p1, mo)
 
-#define atsatomic__atomic_store_int16(p1,p2,mo)\
-  __atomic_store((atstype_int16*)p1, (atstype_int16*)p2, mo)
+#define atsatomic__atomic_store_sint16(p1,p2,mo)\
+  __atomic_store((atstype_sint16*)p1, (atstype_sint16*)p2, mo)
 
-#define atsatomic__atomic_store_n_int16(p1,v,mo)\
-  __atomic_store_n((atstype_int16*)p1, v, mo)
+#define atsatomic__atomic_store_n_sint16(p1,v,mo)\
+  __atomic_store_n((atstype_sint16*)p1, v, mo)
 
-#define atsatomic__atomic_exchange_int16(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_int16*)p1, (atstype_int16*)p2, (atstype_int16*)p3, mo)
+#define atsatomic__atomic_exchange_sint16(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_sint16*)p1, (atstype_sint16*)p2, (atstype_sint16*)p3, mo)
 
-#define atsatomic__atomic_exchange_n_int16(p1,v,mo)\
-  __atomic_exchange_n((atstype_int16*)p1, v, mo)
+#define atsatomic__atomic_exchange_n_sint16(p1,v,mo)\
+  __atomic_exchange_n((atstype_sint16*)p1, v, mo)
 
-#define atsatomic__atomic_compare_exchange_n_int16(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_int16*)p1, (atstype_int16*)p2,v,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_n_sint16(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_sint16*)p1, (atstype_sint16*)p2,v,w,mo1,mo2)
 
-#define atsatomic__atomic_compare_exchange_int16(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_int16*)p1, (atstype_int16*)p2,(atstype_int16*)p3,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_sint16(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_sint16*)p1, (atstype_sint16*)p2,(atstype_sint16*)p3,w,mo1,mo2)
 
-#define atsatomic__atomic_add_fetch_int16( p1, v, mo )\
-  __atomic_add_fetch((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_add_fetch_sint16( p1, v, mo )\
+  __atomic_add_fetch((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_sub_fetch_int16( p1, v, mo )\
-  __atomic_sub_fetch((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_sub_fetch_sint16( p1, v, mo )\
+  __atomic_sub_fetch((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_and_fetch_int16( p1, v, mo )\
-  __atomic_and_fetch((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_and_fetch_sint16( p1, v, mo )\
+  __atomic_and_fetch((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_xor_fetch_int16( p1, v, mo )\
-  __atomic_xor_fetch((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_xor_fetch_sint16( p1, v, mo )\
+  __atomic_xor_fetch((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_or_fetch_int16( p1, v, mo )\
-  __atomic_or_fetch((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_or_fetch_sint16( p1, v, mo )\
+  __atomic_or_fetch((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_nand_fetch_int16( p1, v, mo )\
-  __atomic_nand_fetch((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_nand_fetch_sint16( p1, v, mo )\
+  __atomic_nand_fetch((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_add_int16( p1, v, mo )\
-  __atomic_fetch_add((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_fetch_add_sint16( p1, v, mo )\
+  __atomic_fetch_add((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_sub_int16( p1, v, mo )\
-  __atomic_fetch_sub((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_fetch_sub_sint16( p1, v, mo )\
+  __atomic_fetch_sub((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_and_int16( p1, v, mo )\
-  __atomic_fetch_and((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_fetch_and_sint16( p1, v, mo )\
+  __atomic_fetch_and((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_xor_int16( p1, v, mo )\
-  __atomic_fetch_xor((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_fetch_xor_sint16( p1, v, mo )\
+  __atomic_fetch_xor((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_or_int16( p1, v, mo )\
-  __atomic_fetch_or((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_fetch_or_sint16( p1, v, mo )\
+  __atomic_fetch_or((atstype_sint16*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_nand_int16( p1, v, mo )\
-  __atomic_fetch_nand((atstype_int16*)p1,v,mo)
+#define atsatomic__atomic_fetch_nand_sint16( p1, v, mo )\
+  __atomic_fetch_nand((atstype_sint16*)p1,v,mo)
 
 
 
@@ -961,65 +833,65 @@
 
 /** **/
 
-#define atsatomic__atomic_load_int32(p1,p2,mo)\
-  __atomic_load((atstype_int32*)p1, (atstype_int32*)p2, mo)
+#define atsatomic__atomic_load_sint32(p1,p2,mo)\
+  __atomic_load((atstype_sint32*)p1, (atstype_sint32*)p2, mo)
 
-#define atsatomic__atomic_load_n_int32(p1,mo)\
-  __atomic_load_n((atstype_int32*)p1, mo)
+#define atsatomic__atomic_load_n_sint32(p1,mo)\
+  __atomic_load_n((atstype_sint32*)p1, mo)
 
-#define atsatomic__atomic_store_int32(p1,p2,mo)\
-  __atomic_store((atstype_int32*)p1, (atstype_int32*)p2, mo)
+#define atsatomic__atomic_store_sint32(p1,p2,mo)\
+  __atomic_store((atstype_sint32*)p1, (atstype_sint32*)p2, mo)
 
-#define atsatomic__atomic_store_n_int32(p1,v,mo)\
-  __atomic_store_n((atstype_int32*)p1, v, mo)
+#define atsatomic__atomic_store_n_sint32(p1,v,mo)\
+  __atomic_store_n((atstype_sint32*)p1, v, mo)
 
-#define atsatomic__atomic_exchange_int32(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_int32*)p1, (atstype_int32*)p2, (atstype_int32*)p3, mo)
+#define atsatomic__atomic_exchange_sint32(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_sint32*)p1, (atstype_sint32*)p2, (atstype_sint32*)p3, mo)
 
-#define atsatomic__atomic_exchange_n_int32(p1,v,mo)\
-  __atomic_exchange_n((atstype_int32*)p1, v, mo)
+#define atsatomic__atomic_exchange_n_sint32(p1,v,mo)\
+  __atomic_exchange_n((atstype_sint32*)p1, v, mo)
 
-#define atsatomic__atomic_compare_exchange_n_int32(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_int32*)p1, (atstype_int32*)p2,v,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_n_sint32(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_sint32*)p1, (atstype_sint32*)p2,v,w,mo1,mo2)
 
-#define atsatomic__atomic_compare_exchange_int32(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_int32*)p1, (atstype_int32*)p2,(atstype_int32*)p3,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_sint32(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_sint32*)p1, (atstype_sint32*)p2,(atstype_sint32*)p3,w,mo1,mo2)
 
-#define atsatomic__atomic_add_fetch_int32( p1, v, mo )\
-  __atomic_add_fetch((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_add_fetch_sint32( p1, v, mo )\
+  __atomic_add_fetch((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_sub_fetch_int32( p1, v, mo )\
-  __atomic_sub_fetch((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_sub_fetch_sint32( p1, v, mo )\
+  __atomic_sub_fetch((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_and_fetch_int32( p1, v, mo )\
-  __atomic_and_fetch((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_and_fetch_sint32( p1, v, mo )\
+  __atomic_and_fetch((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_xor_fetch_int32( p1, v, mo )\
-  __atomic_xor_fetch((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_xor_fetch_sint32( p1, v, mo )\
+  __atomic_xor_fetch((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_or_fetch_int32( p1, v, mo )\
-  __atomic_or_fetch((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_or_fetch_sint32( p1, v, mo )\
+  __atomic_or_fetch((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_nand_fetch_int32( p1, v, mo )\
-  __atomic_nand_fetch((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_nand_fetch_sint32( p1, v, mo )\
+  __atomic_nand_fetch((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_add_int32( p1, v, mo )\
-  __atomic_fetch_add((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_fetch_add_sint32( p1, v, mo )\
+  __atomic_fetch_add((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_sub_int32( p1, v, mo )\
-  __atomic_fetch_sub((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_fetch_sub_sint32( p1, v, mo )\
+  __atomic_fetch_sub((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_and_int32( p1, v, mo )\
-  __atomic_fetch_and((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_fetch_and_sint32( p1, v, mo )\
+  __atomic_fetch_and((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_xor_int32( p1, v, mo )\
-  __atomic_fetch_xor((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_fetch_xor_sint32( p1, v, mo )\
+  __atomic_fetch_xor((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_or_int32( p1, v, mo )\
-  __atomic_fetch_or((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_fetch_or_sint32( p1, v, mo )\
+  __atomic_fetch_or((atstype_sint32*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_nand_int32( p1, v, mo )\
-  __atomic_fetch_nand((atstype_int32*)p1,v,mo)
+#define atsatomic__atomic_fetch_nand_sint32( p1, v, mo )\
+  __atomic_fetch_nand((atstype_sint32*)p1,v,mo)
 
 
 
@@ -1089,65 +961,65 @@
 
 /** **/
 
-#define atsatomic__atomic_load_int64(p1,p2,mo)\
-  __atomic_load((atstype_int64*)p1, (atstype_int64*)p2, mo)
+#define atsatomic__atomic_load_sint64(p1,p2,mo)\
+  __atomic_load((atstype_sint64*)p1, (atstype_sint64*)p2, mo)
 
-#define atsatomic__atomic_load_n_int64(p1,mo)\
-  __atomic_load_n((atstype_int64*)p1, mo)
+#define atsatomic__atomic_load_n_sint64(p1,mo)\
+  __atomic_load_n((atstype_sint64*)p1, mo)
 
-#define atsatomic__atomic_store_int64(p1,p2,mo)\
-  __atomic_store((atstype_int64*)p1, (atstype_int64*)p2, mo)
+#define atsatomic__atomic_store_sint64(p1,p2,mo)\
+  __atomic_store((atstype_sint64*)p1, (atstype_sint64*)p2, mo)
 
-#define atsatomic__atomic_store_n_int64(p1,v,mo)\
-  __atomic_store_n((atstype_int64*)p1, v, mo)
+#define atsatomic__atomic_store_n_sint64(p1,v,mo)\
+  __atomic_store_n((atstype_sint64*)p1, v, mo)
 
-#define atsatomic__atomic_exchange_int64(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_int64*)p1, (atstype_int64*)p2, (atstype_int64*)p3, mo)
+#define atsatomic__atomic_exchange_sint64(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_sint64*)p1, (atstype_sint64*)p2, (atstype_sint64*)p3, mo)
 
-#define atsatomic__atomic_exchange_n_int64(p1,v,mo)\
-  __atomic_exchange_n((atstype_int64*)p1, v, mo)
+#define atsatomic__atomic_exchange_n_sint64(p1,v,mo)\
+  __atomic_exchange_n((atstype_sint64*)p1, v, mo)
 
-#define atsatomic__atomic_compare_exchange_n_int64(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_int64*)p1, (atstype_int64*)p2,v,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_n_sint64(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_sint64*)p1, (atstype_sint64*)p2,v,w,mo1,mo2)
 
-#define atsatomic__atomic_compare_exchange_int64(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_int64*)p1, (atstype_int64*)p2,(atstype_int64*)p3,w,mo1,mo2)
+#define atsatomic__atomic_compare_exchange_sint64(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_sint64*)p1, (atstype_sint64*)p2,(atstype_sint64*)p3,w,mo1,mo2)
 
-#define atsatomic__atomic_add_fetch_int64( p1, v, mo )\
-  __atomic_add_fetch((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_add_fetch_sint64( p1, v, mo )\
+  __atomic_add_fetch((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_sub_fetch_int64( p1, v, mo )\
-  __atomic_sub_fetch((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_sub_fetch_sint64( p1, v, mo )\
+  __atomic_sub_fetch((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_and_fetch_int64( p1, v, mo )\
-  __atomic_and_fetch((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_and_fetch_sint64( p1, v, mo )\
+  __atomic_and_fetch((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_xor_fetch_int64( p1, v, mo )\
-  __atomic_xor_fetch((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_xor_fetch_sint64( p1, v, mo )\
+  __atomic_xor_fetch((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_or_fetch_int64( p1, v, mo )\
-  __atomic_or_fetch((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_or_fetch_sint64( p1, v, mo )\
+  __atomic_or_fetch((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_nand_fetch_int64( p1, v, mo )\
-  __atomic_nand_fetch((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_nand_fetch_sint64( p1, v, mo )\
+  __atomic_nand_fetch((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_add_int64( p1, v, mo )\
-  __atomic_fetch_add((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_fetch_add_sint64( p1, v, mo )\
+  __atomic_fetch_add((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_sub_int64( p1, v, mo )\
-  __atomic_fetch_sub((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_fetch_sub_sint64( p1, v, mo )\
+  __atomic_fetch_sub((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_and_int64( p1, v, mo )\
-  __atomic_fetch_and((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_fetch_and_sint64( p1, v, mo )\
+  __atomic_fetch_and((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_xor_int64( p1, v, mo )\
-  __atomic_fetch_xor((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_fetch_xor_sint64( p1, v, mo )\
+  __atomic_fetch_xor((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_or_int64( p1, v, mo )\
-  __atomic_fetch_or((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_fetch_or_sint64( p1, v, mo )\
+  __atomic_fetch_or((atstype_sint64*)p1,v,mo)
 
-#define atsatomic__atomic_fetch_nand_int64( p1, v, mo )\
-  __atomic_fetch_nand((atstype_int64*)p1,v,mo)
+#define atsatomic__atomic_fetch_nand_sint64( p1, v, mo )\
+  __atomic_fetch_nand((atstype_sint64*)p1,v,mo)
 
 
 
@@ -1217,198 +1089,6 @@
 
 /** **/
 
-#define atsatomic__atomic_load_intptr(p1,p2,mo)\
-  __atomic_load((atstype_intptr*)p1, (atstype_intptr*)p2, mo)
-
-#define atsatomic__atomic_load_n_intptr(p1,mo)\
-  __atomic_load_n((atstype_intptr*)p1, mo)
-
-#define atsatomic__atomic_store_intptr(p1,p2,mo)\
-  __atomic_store((atstype_intptr*)p1, (atstype_intptr*)p2, mo)
-
-#define atsatomic__atomic_store_n_intptr(p1,v,mo)\
-  __atomic_store_n((atstype_intptr*)p1, v, mo)
-
-#define atsatomic__atomic_exchange_intptr(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_intptr*)p1, (atstype_intptr*)p2, (atstype_intptr*)p3, mo)
-
-#define atsatomic__atomic_exchange_n_intptr(p1,v,mo)\
-  __atomic_exchange_n((atstype_intptr*)p1, v, mo)
-
-#define atsatomic__atomic_compare_exchange_n_intptr(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_intptr*)p1, (atstype_intptr*)p2,v,w,mo1,mo2)
-
-#define atsatomic__atomic_compare_exchange_intptr(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_intptr*)p1, (atstype_intptr*)p2,(atstype_intptr*)p3,w,mo1,mo2)
-
-#define atsatomic__atomic_add_fetch_intptr( p1, v, mo )\
-  __atomic_add_fetch((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_sub_fetch_intptr( p1, v, mo )\
-  __atomic_sub_fetch((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_and_fetch_intptr( p1, v, mo )\
-  __atomic_and_fetch((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_xor_fetch_intptr( p1, v, mo )\
-  __atomic_xor_fetch((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_or_fetch_intptr( p1, v, mo )\
-  __atomic_or_fetch((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_nand_fetch_intptr( p1, v, mo )\
-  __atomic_nand_fetch((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_add_intptr( p1, v, mo )\
-  __atomic_fetch_add((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_sub_intptr( p1, v, mo )\
-  __atomic_fetch_sub((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_and_intptr( p1, v, mo )\
-  __atomic_fetch_and((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_xor_intptr( p1, v, mo )\
-  __atomic_fetch_xor((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_or_intptr( p1, v, mo )\
-  __atomic_fetch_or((atstype_intptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_nand_intptr( p1, v, mo )\
-  __atomic_fetch_nand((atstype_intptr*)p1,v,mo)
-
-
-
-/** **/
-
-#define atsatomic__atomic_load_uintptr(p1,p2,mo)\
-  __atomic_load((atstype_uintptr*)p1, (atstype_uintptr*)p2, mo)
-
-#define atsatomic__atomic_load_n_uintptr(p1,mo)\
-  __atomic_load_n((atstype_uintptr*)p1, mo)
-
-#define atsatomic__atomic_store_uintptr(p1,p2,mo)\
-  __atomic_store((atstype_uintptr*)p1, (atstype_uintptr*)p2, mo)
-
-#define atsatomic__atomic_store_n_uintptr(p1,v,mo)\
-  __atomic_store_n((atstype_uintptr*)p1, v, mo)
-
-#define atsatomic__atomic_exchange_uintptr(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_uintptr*)p1, (atstype_uintptr*)p2, (atstype_uintptr*)p3, mo)
-
-#define atsatomic__atomic_exchange_n_uintptr(p1,v,mo)\
-  __atomic_exchange_n((atstype_uintptr*)p1, v, mo)
-
-#define atsatomic__atomic_compare_exchange_n_uintptr(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_uintptr*)p1, (atstype_uintptr*)p2,v,w,mo1,mo2)
-
-#define atsatomic__atomic_compare_exchange_uintptr(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_uintptr*)p1, (atstype_uintptr*)p2,(atstype_uintptr*)p3,w,mo1,mo2)
-
-#define atsatomic__atomic_add_fetch_uintptr( p1, v, mo )\
-  __atomic_add_fetch((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_sub_fetch_uintptr( p1, v, mo )\
-  __atomic_sub_fetch((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_and_fetch_uintptr( p1, v, mo )\
-  __atomic_and_fetch((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_xor_fetch_uintptr( p1, v, mo )\
-  __atomic_xor_fetch((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_or_fetch_uintptr( p1, v, mo )\
-  __atomic_or_fetch((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_nand_fetch_uintptr( p1, v, mo )\
-  __atomic_nand_fetch((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_add_uintptr( p1, v, mo )\
-  __atomic_fetch_add((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_sub_uintptr( p1, v, mo )\
-  __atomic_fetch_sub((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_and_uintptr( p1, v, mo )\
-  __atomic_fetch_and((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_xor_uintptr( p1, v, mo )\
-  __atomic_fetch_xor((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_or_uintptr( p1, v, mo )\
-  __atomic_fetch_or((atstype_uintptr*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_nand_uintptr( p1, v, mo )\
-  __atomic_fetch_nand((atstype_uintptr*)p1,v,mo)
-
-
-
-/** **/
-
-#define atsatomic__atomic_load_size(p1,p2,mo)\
-  __atomic_load((atstype_size*)p1, (atstype_size*)p2, mo)
-
-#define atsatomic__atomic_load_n_size(p1,mo)\
-  __atomic_load_n((atstype_size*)p1, mo)
-
-#define atsatomic__atomic_store_size(p1,p2,mo)\
-  __atomic_store((atstype_size*)p1, (atstype_size*)p2, mo)
-
-#define atsatomic__atomic_store_n_size(p1,v,mo)\
-  __atomic_store_n((atstype_size*)p1, v, mo)
-
-#define atsatomic__atomic_exchange_size(p1,p2,p3,mo)\
-  __atomic_exchange((atstype_size*)p1, (atstype_size*)p2, (atstype_size*)p3, mo)
-
-#define atsatomic__atomic_exchange_n_size(p1,v,mo)\
-  __atomic_exchange_n((atstype_size*)p1, v, mo)
-
-#define atsatomic__atomic_compare_exchange_n_size(p1,p2,v,w,mo1,mo2)\
-  __atomic_compare_exchange_n((atstype_size*)p1, (atstype_size*)p2,v,w,mo1,mo2)
-
-#define atsatomic__atomic_compare_exchange_size(p1,p2,p3,w,mo1,mo2)\
-  __atomic_compare_exchange((atstype_size*)p1, (atstype_size*)p2,(atstype_size*)p3,w,mo1,mo2)
-
-#define atsatomic__atomic_add_fetch_size( p1, v, mo )\
-  __atomic_add_fetch((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_sub_fetch_size( p1, v, mo )\
-  __atomic_sub_fetch((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_and_fetch_size( p1, v, mo )\
-  __atomic_and_fetch((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_xor_fetch_size( p1, v, mo )\
-  __atomic_xor_fetch((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_or_fetch_size( p1, v, mo )\
-  __atomic_or_fetch((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_nand_fetch_size( p1, v, mo )\
-  __atomic_nand_fetch((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_add_size( p1, v, mo )\
-  __atomic_fetch_add((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_sub_size( p1, v, mo )\
-  __atomic_fetch_sub((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_and_size( p1, v, mo )\
-  __atomic_fetch_and((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_xor_size( p1, v, mo )\
-  __atomic_fetch_xor((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_or_size( p1, v, mo )\
-  __atomic_fetch_or((atstype_size*)p1,v,mo)
-
-#define atsatomic__atomic_fetch_nand_size( p1, v, mo )\
-  __atomic_fetch_nand((atstype_size*)p1,v,mo)
-
-
-
-/** **/
-
 #define atsatomic__atomic_load_ssize(p1,p2,mo)\
   __atomic_load((atstype_ssize*)p1, (atstype_ssize*)p2, mo)
 
@@ -1468,5 +1148,69 @@
 
 #define atsatomic__atomic_fetch_nand_ssize( p1, v, mo )\
   __atomic_fetch_nand((atstype_ssize*)p1,v,mo)
+
+
+
+/** **/
+
+#define atsatomic__atomic_load_usize(p1,p2,mo)\
+  __atomic_load((atstype_usize*)p1, (atstype_usize*)p2, mo)
+
+#define atsatomic__atomic_load_n_usize(p1,mo)\
+  __atomic_load_n((atstype_usize*)p1, mo)
+
+#define atsatomic__atomic_store_usize(p1,p2,mo)\
+  __atomic_store((atstype_usize*)p1, (atstype_usize*)p2, mo)
+
+#define atsatomic__atomic_store_n_usize(p1,v,mo)\
+  __atomic_store_n((atstype_usize*)p1, v, mo)
+
+#define atsatomic__atomic_exchange_usize(p1,p2,p3,mo)\
+  __atomic_exchange((atstype_usize*)p1, (atstype_usize*)p2, (atstype_usize*)p3, mo)
+
+#define atsatomic__atomic_exchange_n_usize(p1,v,mo)\
+  __atomic_exchange_n((atstype_usize*)p1, v, mo)
+
+#define atsatomic__atomic_compare_exchange_n_usize(p1,p2,v,w,mo1,mo2)\
+  __atomic_compare_exchange_n((atstype_usize*)p1, (atstype_usize*)p2,v,w,mo1,mo2)
+
+#define atsatomic__atomic_compare_exchange_usize(p1,p2,p3,w,mo1,mo2)\
+  __atomic_compare_exchange((atstype_usize*)p1, (atstype_usize*)p2,(atstype_usize*)p3,w,mo1,mo2)
+
+#define atsatomic__atomic_add_fetch_usize( p1, v, mo )\
+  __atomic_add_fetch((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_sub_fetch_usize( p1, v, mo )\
+  __atomic_sub_fetch((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_and_fetch_usize( p1, v, mo )\
+  __atomic_and_fetch((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_xor_fetch_usize( p1, v, mo )\
+  __atomic_xor_fetch((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_or_fetch_usize( p1, v, mo )\
+  __atomic_or_fetch((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_nand_fetch_usize( p1, v, mo )\
+  __atomic_nand_fetch((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_add_usize( p1, v, mo )\
+  __atomic_fetch_add((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_sub_usize( p1, v, mo )\
+  __atomic_fetch_sub((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_and_usize( p1, v, mo )\
+  __atomic_fetch_and((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_xor_usize( p1, v, mo )\
+  __atomic_fetch_xor((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_or_usize( p1, v, mo )\
+  __atomic_fetch_or((atstype_usize*)p1,v,mo)
+
+#define atsatomic__atomic_fetch_nand_usize( p1, v, mo )\
+  __atomic_fetch_nand((atstype_usize*)p1,v,mo)
 
 

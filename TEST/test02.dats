@@ -1,17 +1,18 @@
-#include "share/atspre_staload.hats"
+#include "share/HATS/temptory_staload_bucs320.hats"
+#define ATSATOMIC_C11
 #include "../mylibies.hats"
 
 
 implement main0 () 
   = println!("Hello [test0]")
   where {
-    var sz : size_t = i2sz(0)
+    var sz : size = i2sz(0)
 
 
-    val () = println!(  atx_load<size_t>( sz ) )
-    val () = atx_store<size_t>( sz, i2sz(1) ) 
+    val () = println!(  atx_load<size>( sz ) )
+    val () = atx_store<size>( sz, i2sz(1) ) 
 
-    val () = println!(  atx_fetch_add<size_t>( sz, i2sz(1) ) )
-    val () = println!(  atx_load<size_t>( sz ) )
+    val () = println!(  atx_fetch_add<size>( sz, i2sz(1) ) )
+    val () = println!(  atx_load<size>( sz ) )
 
   }
