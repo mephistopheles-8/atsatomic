@@ -1,5 +1,5 @@
-#ifndef _ATS2_ATOMIC_BUILTIN
-#define _ATS2_ATOMIC_BUILTIN
+#ifndef _ATSATOMIC__ATOMIC_CATS
+#define _ATSATOMIC__ATOMIC_CATS
 
 #define atsatomic__atomic_test_and_set(p,mo)\
     __atomic_test_and_set((atstype_bool*)p,mo)
