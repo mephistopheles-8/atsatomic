@@ -2,6 +2,9 @@
 
 __Work in progress...__
 
+__These are bindings for ATS2: Temtory bindings are in the atomic-temptory branch__
+
+
 Experimental cross-platform bindings for atomic operations;
 `stdatomic.h`, `__sync_*` and `__atomic_*` bindings are provided.
 
