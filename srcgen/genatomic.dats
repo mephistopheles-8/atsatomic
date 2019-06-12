@@ -67,6 +67,12 @@ fn atx__sync_dats(
   fprintln!(fr, "
 (** **)
 
+implement atx_load<",ty1,">(p) 
+  = __sync_fetch_and_add_",ty0,"(p, $UNSAFE.cast{",ty1,"}(0))
+
+implement atx_store<",ty1,">(p,v)
+  = while(~__sync_bool_compare_and_swap_",ty0,"( p, atx_load<",ty1,">(p), v )) () 
+
 implement atx_fetch_add<",ty1,">(p,v)
   = __sync_fetch_and_add_",ty0,"(p,v)
 
@@ -82,8 +88,10 @@ implement atx_fetch_lxor<",ty1,">(p,v)
 implement atx_fetch_land<",ty1,">(p,v)
   = __sync_fetch_and_and_",ty0,"(p,v)
 
+(*
 implement atx_fetch_lnand<",ty1,">(p,v)
   = __sync_fetch_and_nand_",ty0,"(p,v)
+*)
 
 implement atx_compare_and_swap<",ty1,">( p, e, d ) 
   = __sync_bool_compare_and_swap_",ty0,"(p, e, d )
@@ -264,8 +272,10 @@ implement atx_fetch_lxor<",ty1,">(p,v)
 implement atx_fetch_land<",ty1,">(p,v)
   = __atomic_fetch_and_",ty0,"(p,v,__ATOMIC_RELAXED)
 
+(*
 implement atx_fetch_lnand<",ty1,">(p,v)
   = __atomic_fetch_nand_",ty0,"(p,v,__ATOMIC_RELAXED)
+*)
 
 implement atx_compare_and_swap<",ty1,">( p, e, d ) 
   = let
@@ -481,8 +491,10 @@ implement atx_fetch_lxor<",ty1,">(p,v)
 implement atx_fetch_land<",ty1,">(p,v)
   = atomic_fetch_and_",ty0,"( p,v )
 
+(*
 implement atx_fetch_lnand<",ty1,">(p,v)
   = atomic_fetch_nand_",ty0,"( p,v )
+*)
 
 implement atx_compare_and_swap<",ty1,">( p, e, d ) 
   = let
@@ -724,6 +736,43 @@ implement main0()
     val () = fileref_close( fsats )
     val () = fileref_close( fcats )
 
+    // ** //
+    
+    var fdats = fileref_open_exn("atx__sync_gen.dats", file_mode_ww )
+
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fdats ) =
+        atx__sync_dats( fdats, ty ) 
+
+    val _ = list_vt_foreach_env<string><FILEref>( types, fdats ) 
+    
+    val () = fileref_close( fdats )
+    
+    // ** //
+    
+    var fdats = fileref_open_exn("atx__atomic_gen.dats", file_mode_ww )
+
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fdats ) =
+        atx__atomic_dats( fdats, ty ) 
+
+    val _ = list_vt_foreach_env<string><FILEref>( types, fdats ) 
+    
+    val () = fileref_close( fdats )
+    
+    // ** //
+    
+    var fdats = fileref_open_exn("atx_stdatomic_gen.dats", file_mode_ww )
+
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fdats ) =
+        atx_stdatomic_dats( fdats, ty ) 
+
+    val _ = list_vt_foreach_env<string><FILEref>( types, fdats ) 
+    
+    val () = fileref_close( fdats )
+
+    /** **/
 
     val () = list_vt_free<string>(types)
 

@@ -86,8 +86,8 @@ macdef ATOMIC_FLAG_INIT = $extval(atomic_flag,"ATOMIC_FLAG_INIT")
 fun atomic_flag_test_and_set( &atomic_flag ) : bool = "mac#%"
 fun atomic_flag_test_and_set_explicit( &atomic_flag, memory_order ) : bool = "mac#%"
 
-fun atomic_flag_clear( &atomic_flag ) : bool = "mac#%"
-fun atomic_flag_clear_explicit( &atomic_flag, memory_order ) : bool = "mac#%"
+fun atomic_flag_clear( &atomic_flag ) : void = "mac#%"
+fun atomic_flag_clear_explicit( &atomic_flag, memory_order ) : void = "mac#%"
 
 symintr atomic_init
 symintr atomic_store atomic_store_explicit

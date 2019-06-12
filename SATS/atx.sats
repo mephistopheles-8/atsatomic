@@ -6,7 +6,7 @@ fun {a:t@ype+}
   atx_load( &a ) : a
 
 fun {a:t@ype+}
-  atx_store( &a? >> a, a ) : void
+  atx_store( &a >> _, a ) : void
 
 
 (**
@@ -34,13 +34,14 @@ fun {a:t@ype+}
 fun {a:t@ype+}
   atx_fetch_land( &a >> _, a ) : a
 
+(*
 fun {a:t@ype+}
   atx_fetch_lnand( &a >> _, a ) : a
+*)
 
+abst@ype atx_lock
 
-abst@ype atx_lock = bool
-
-absview atx_lock_aquired_v(l:addr)
+absview atx_lock_acquired_v(l:addr)
 
 // this is just a call to "clear"
 fun {} atx_lock_init( &atx_lock? >> atx_lock )
@@ -48,11 +49,11 @@ fun {} atx_lock_init( &atx_lock? >> atx_lock )
 
 fun {} atx_test_and_set{l:addr}( 
   pf: !( atx_lock @ l ) | ptr l 
-) : [b:bool] (option_v(atx_lock_aquired_v(l), b) | bool b) 
+) : [b:bool] (option_v(atx_lock_acquired_v(l), b) | bool b) 
 
 fun {} atx_release{l:addr}( 
   pf1 : !(atx_lock @ l)
-, pf2 : atx_lock_aquired_v(l)
+, pf2 : atx_lock_acquired_v(l)
 | ptr l
 ) : void 
 
