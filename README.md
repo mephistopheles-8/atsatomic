@@ -39,7 +39,7 @@ builtins have been a de-facto standard for some time, and are available in GCC a
 
 ## Compiling
 
-One of the three flags must supplied to `patscc` use `mylibies.hats`: 
+One of the three flags must supplied to `tempacc` use `mylibies.hats`: 
 
 - `-DATS ATSATOMIC_C11` - `stdatomic` bindings
 - `-DATS ATSATOMIC_ATOMIC_BUILTIN` - `__atomic_*` builtins
