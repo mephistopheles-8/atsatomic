@@ -5,8 +5,8 @@
 
 #define atsatomic_ATOMIC_VAR_INIT ATOMIC_VAR_INIT 
 #define atsatomic_kill_dependency kill_dependency
-#define atsatomic_atomic_thread_fence atsatomic_thread_fence
-#define atsatomic_atomic_signal_fence atsatomic_signal_fence
+#define atsatomic_atomic_thread_fence atomic_thread_fence
+#define atsatomic_atomic_signal_fence atomic_signal_fence
 
 
 #define atsatomic_atomic_flag_test_and_set(p) \
