@@ -6,6 +6,7 @@ staload "./../SATS/__sync.sats"
 staload "./../SATS/atx.sats"
 
 absimpl atx_lock = bool
+absimpl atomic(a) = a
 
 implement {}
 atx_lock_init( lock ) =

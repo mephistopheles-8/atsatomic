@@ -243,6 +243,28 @@ fn __atomic_cats(
 
   )
 
+
+fn atx_sats( 
+   fr: FILEref
+ , ty0 : string
+) : void = (
+  fprintln!(fr, "
+(** **)
+
+castfn atomic_",ty0,"( ",ty1," ) : atomic(",ty1,")
+overload atomic with atomic_",ty0,"
+
+")
+ ) where {
+    val ty1 : string = ( 
+      ifcase 
+       | ty0 = "size" => "size_t"
+       | ty0 = "ssize" => "ssize_t"
+       | _ => ty0 
+      ) : string
+  }
+
+
 fn atx__atomic_dats(
     fr : FILEref 
   , ty0 : string 
@@ -737,6 +759,16 @@ implement main0()
     val () = fileref_close( fcats )
 
     // ** //
+    var fsats = fileref_open_exn("atx_gen.sats", file_mode_ww )
+    
+    implement
+    list_vt_foreach$fwork<string><FILEref>( ty, fsats ) =
+        atx_sats( fsats, ty ) 
+ 
+    val _ = list_vt_foreach_env<string><FILEref>( types, fsats ) 
+
+    val () = fileref_close( fsats )
+
     
     var fdats = fileref_open_exn("atx__sync_gen.dats", file_mode_ww )
 

@@ -23,7 +23,7 @@ implement main0() =
   println!("Hello [test03]") 
   where {
     #define ITERATIONS 1000000
-    var ai : int = 0
+    var ai : atomic(int) = atomic(0)
     var i  : int = 0
     var fin : int = 0
 
@@ -33,7 +33,7 @@ implement main0() =
     val cv  = condvar_create_exn()
 
 
-    fun loop {n:nat} .<n>. ( ai: &int, i: &int, n: size_t n ) 
+    fun loop {n:nat} .<n>. ( ai: &atomic(int), i: &int, n: size_t n ) 
       : void = 
         if n > 0
         then (
@@ -95,8 +95,8 @@ implement main0() =
     val () = mutex_unlock( plock | mtx )
 
 
-    val () = println!("The value of ai is ", ai, "; the value of i is ", i )
-    val () = assertloc( ai = (2*ITERATIONS) )
+    val () = println!("The value of ai is ", atx_load<int>(ai), "; the value of i is ", i )
+    val () = assertloc( atx_load<int>(ai) = (2*ITERATIONS) )
 
   }
 

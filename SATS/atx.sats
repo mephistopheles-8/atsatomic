@@ -2,11 +2,17 @@
  ** ATS API for atomics
  **)
 
-fun {a:t@ype+}
-  atx_load( &a ) : a
+#include "./../HATS/project.hats"
+
+abst@ype atomic(a:t@ype+) = a
+symintr atomic
+
 
 fun {a:t@ype+}
-  atx_store( &a >> _, a ) : void
+  atx_load( &atomic(a) ) : a
+
+fun {a:t@ype+}
+  atx_store( &atomic(a) >> _, a ) : void
 
 
 (**
@@ -16,23 +22,23 @@ fun {a:t@ype+}
  **)
 
 fun {a:t@ype+}
-  atx_compare_and_swap( p: &a >> _, expected: a, desired: a ) : bool
+  atx_compare_and_swap( p: &atomic(a) >> _, expected: a, desired: a ) : bool
 
 
 fun {a:t@ype+}
-  atx_fetch_add( &a >> _, a ) : a
+  atx_fetch_add( &atomic(a) >> _, a ) : a
 
 fun {a:t@ype+}
-  atx_fetch_sub( &a >> _, a ) : a
+  atx_fetch_sub( &atomic(a) >> _, a ) : a
 
 fun {a:t@ype+}
-  atx_fetch_lor( &a >> _, a ) : a
+  atx_fetch_lor( &atomic(a) >> _, a ) : a
 
 fun {a:t@ype+}
-  atx_fetch_lxor( &a >> _, a ) : a
+  atx_fetch_lxor( &atomic(a) >> _, a ) : a
 
 fun {a:t@ype+}
-  atx_fetch_land( &a >> _, a ) : a
+  atx_fetch_land( &atomic(a) >> _, a ) : a
 
 (*
 fun {a:t@ype+}
@@ -58,3 +64,5 @@ fun {} atx_release{l:addr}(
 ) : void 
 
 fun {} atx_barrier() : void
+
+#include "./SHARE/atx_gen.sats"

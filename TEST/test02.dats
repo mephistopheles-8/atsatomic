@@ -5,7 +5,7 @@
 implement main0 () 
   = println!("Hello [test0]")
   where {
-    var sz : size_t = i2sz(0)
+    var sz : atomic( size_t ) = atomic( i2sz(0) )
 
 
     val () = println!(  atx_load<size_t>( sz ) )

@@ -5,6 +5,7 @@ staload "./../SATS/stdatomic.sats"
 staload "./../SATS/atx.sats"
 
 absimpl atx_lock = atomic_flag
+absimpl atomic(a) = a
 
 implement {}
 atx_lock_init( lock ) =
