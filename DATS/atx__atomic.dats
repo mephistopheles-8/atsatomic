@@ -7,6 +7,7 @@
 
 
 absimpl atx_lock = bool
+absimpl atomic(a) = a
 
 impltmp {}
 atx_lock_init( lock ) =

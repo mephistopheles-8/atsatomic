@@ -4,9 +4,9 @@
 
 
 implement main0 () 
-  = println!("Hello [test0]")
+  = println!("Hello [test2]")
   where {
-    var sz : size = i2sz(0)
+    var sz : atomic( size ) = atomic( i2sz(0) )
 
 
     val () = println!(  atx_load<size>( sz ) )

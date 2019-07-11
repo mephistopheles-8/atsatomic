@@ -2,11 +2,17 @@
  ** ATS API for atomics
  **)
 
-fun {a:tflt}
-  atx_load( &a ) : a
+#include "./../HATS/project.hats"
+#staload "libats/SATS/gint.sats"
+
+abstflt atomic(a:tflt) = a
+#symintr atomic
 
 fun {a:tflt}
-  atx_store( &a >> _, a ) : void
+  atx_load( &atomic(a) ) : a
+
+fun {a:tflt}
+  atx_store( &atomic(a) >> _, a ) : void
 
 
 (**
@@ -16,27 +22,27 @@ fun {a:tflt}
  **)
 
 fun {a:tflt}
-  atx_compare_and_swap( p: &a >> _, expected: a, desired: a ) : bool
+  atx_compare_and_swap( p: &atomic(a) >> _, expected: a, desired: a ) : bool
 
 
 fun {a:tflt}
-  atx_fetch_add( &a >> _, a ) : a
+  atx_fetch_add( &atomic(a) >> _, a ) : a
 
 fun {a:tflt}
-  atx_fetch_sub( &a >> _, a ) : a
+  atx_fetch_sub( &atomic(a) >> _, a ) : a
 
 fun {a:tflt}
-  atx_fetch_lor( &a >> _, a ) : a
+  atx_fetch_lor( &atomic(a) >> _, a ) : a
 
 fun {a:tflt}
-  atx_fetch_lxor( &a >> _, a ) : a
+  atx_fetch_lxor( &atomic(a) >> _, a ) : a
 
 fun {a:tflt}
-  atx_fetch_land( &a >> _, a ) : a
+  atx_fetch_land( &atomic(a) >> _, a ) : a
 
 (*
 fun {a:tflt}
-  atx_fetch_lnand( &a >> _, a ) : a
+  atx_fetch_lnand( &atomic(a) >> _, a ) : a
 *)
 
 abstflt atx_lock
@@ -63,3 +69,5 @@ fun {} atx_release{l:addr}(
 ) : void 
 
 fun {} atx_barrier() : void
+
+#include "./SHARE/atx_gen.sats"

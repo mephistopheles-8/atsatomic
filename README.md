@@ -11,6 +11,10 @@ Experimental cross-platform bindings for atomic operations;
 Also included is the `atx_*` API, which is a uniform interface for the 3
 backends.  At the moment, consistency between backends has not been tested.
 
+The `atx_*` API introduces the `atomic` type.  This is to ensure that 
+only atomic operations are performed on the given type; this is *not* expected
+to be equivalent to the C11 `_Atomic` specifier. 
+
 Not finished:
 - Functions for types with subtyping
 - Prelude for `atomic_*` types in `stdatomic.h`.

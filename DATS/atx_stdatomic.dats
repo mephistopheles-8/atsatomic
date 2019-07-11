@@ -6,6 +6,7 @@
 #staload "./../SATS/atx.sats"
 
 absimpl atx_lock = atomic_flag
+absimpl atomic(a) = a
 
 impltmp {}
 atx_lock_init( lock ) =
